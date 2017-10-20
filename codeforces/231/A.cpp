@@ -14,6 +14,6 @@ int main()
         }
         if(cnt>1) count++;
     }
-    cout<<count<<endl;
+    cout<<count;
     return 0;
 }
