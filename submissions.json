@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF31587530": {
+    "contest_id": 486,
+    "language": "GNU C++",
+    "path": "codeforces\\486\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Calculating Function",
+    "problem_url": "https://codeforces.com/contest/486/problem/A",
+    "submission_id": "CF31587530",
+    "submission_url": "https://codeforces.com/contest/486/submission/31587530",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Oct/22/2017 03:43"
+  },
   "CF31587958": {
     "contest_id": 208,
     "language": "GNU C++",
