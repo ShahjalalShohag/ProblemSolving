@@ -1566,6 +1566,22 @@
     ],
     "timestamp": "Oct/22/2017 22:19"
   },
+  "CF31611192": {
+    "contest_id": 701,
+    "language": "GNU C++",
+    "path": "codeforces\\701\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Cells Not Under Attack",
+    "problem_url": "https://codeforces.com/contest/701/problem/B",
+    "submission_id": "CF31611192",
+    "submission_url": "https://codeforces.com/contest/701/submission/31611192",
+    "tags": [
+      "data structures",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Oct/23/2017 00:16"
+  },
   "CF31613124": {
     "contest_id": 344,
     "language": "GNU C++",
