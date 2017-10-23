@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF31623389": {
+    "contest_id": 82,
+    "language": "GNU C++",
+    "path": "codeforces\\82\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Double Cola",
+    "problem_url": "https://codeforces.com/contest/82/problem/A",
+    "submission_id": "CF31623389",
+    "submission_url": "https://codeforces.com/contest/82/submission/31623389",
+    "tags": [
+      "implementation",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Oct/23/2017 15:01"
+  },
   "CF31624096": {
     "contest_id": 460,
     "language": "GNU C++",
