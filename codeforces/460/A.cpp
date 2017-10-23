@@ -2,12 +2,17 @@
 using namespace std;
 int main()
 {
-    int a,b,n,m;
+    int a,b,n,k,i,c=1,m;
     cin>>n>>m;
     a=n;
-    while(n/m>0){
-        a+=n/m;
-        n=n%m+n/m;
+    k=n;
+    i=1;
+    while(c>0){
+            c=0;
+        for(;i<=k;i++) if(i%m==0) c++;
+        i=k+1;
+        a+=c;
+        k=a;
     }
     cout<<a<<endl;
     return 0;

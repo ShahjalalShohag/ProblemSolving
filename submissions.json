@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF31624096": {
+    "contest_id": 460,
+    "language": "GNU C++",
+    "path": "codeforces\\460\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Vasya and Socks",
+    "problem_url": "https://codeforces.com/contest/460/problem/A",
+    "submission_id": "CF31624096",
+    "submission_url": "https://codeforces.com/contest/460/submission/31624096",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Oct/23/2017 15:33"
+  },
   "CF31624178": {
     "contest_id": 460,
     "language": "GNU C++",
