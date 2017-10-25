@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF31710226": {
+    "contest_id": 750,
+    "language": "GNU C++",
+    "path": "codeforces\\750\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "New Year and Hurry",
+    "problem_url": "https://codeforces.com/contest/750/problem/A",
+    "submission_id": "CF31710226",
+    "submission_url": "https://codeforces.com/contest/750/submission/31710226",
+    "tags": [
+      "binary search",
+      "brute force",
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Oct/25/2017 19:09"
+  },
   "CF31710646": {
     "contest_id": 579,
     "language": "GNU C++",
