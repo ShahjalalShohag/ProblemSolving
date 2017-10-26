@@ -1,27 +1,26 @@
 #include<bits/stdc++.h>
+#include<cmath>
 using namespace std;
-
-const int N = 1e6 + 9;
-
-bitset<N> f;
-int32_t main() {
-   ios_base::sync_with_stdio(0);
-   cin.tie(0);
-   map<long long, int> mp;
-   f.set();
-   for (int i = 2; i < N; i++) {
-   	if (f[i] == 1) {
-   		mp[1LL * i * i] = 1;
-   		for (int j = i + i; j < N; j += i) {
-   			f[j] = 0;
-   		}
-   	}
-   }
-   int t; cin >> t;
-   while (t--) {
-   	long long n; cin >> n;
-   	if (mp[n]) cout << "YES\n";
-   	else cout << "NO\n";
-   }
-   return 0;
+int prime(long long int n)
+{
+    long long int i;
+    if(n<2) return 0;
+    if(n==2) return 1;
+    if(n%2==0) return 0;
+    for(i=3;i<=sqrt(n);i+=2){
+        if(n%i==0) return 0;
+    }
+    return 1;
+}
+int main()
+{
+    long long int n,i,k,j,a[100100];
+    cin>>n;
+    for(i=0;i<n;i++) cin>>a[i];
+    for(i=0;i<n;i++){
+            k=sqrt(a[i]);
+        if((k*k==a[i])&&prime(k)==1) cout<<"YES\n";
+        else cout<<"NO\n";
+    }
+    return 0;
 }
