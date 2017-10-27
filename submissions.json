@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF31815669": {
+    "contest_id": 519,
+    "language": "GNU C++14",
+    "path": "codeforces\\519\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "A and B and Chess",
+    "problem_url": "https://codeforces.com/contest/519/problem/A",
+    "submission_id": "CF31815669",
+    "submission_url": "https://codeforces.com/contest/519/submission/31815669",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Oct/28/2017 00:19"
+  },
   "CF31817228": {
     "contest_id": 467,
     "language": "GNU C++14",
