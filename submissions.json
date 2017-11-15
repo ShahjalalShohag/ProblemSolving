@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF32332312": {
+    "contest_id": 630,
+    "language": "GNU C++14",
+    "path": "codeforces\\630\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Lucky Numbers",
+    "problem_url": "https://codeforces.com/contest/630/problem/C",
+    "submission_id": "CF32332312",
+    "submission_url": "https://codeforces.com/contest/630/submission/32332312",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Nov/15/2017 18:59"
+  },
   "CF32355525": {
     "contest_id": 631,
     "language": "GNU C++14",
