@@ -1,12 +1,4 @@
-#pragma comment(linker, "/stack:200000000")
-#pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-#pragma GCC optimize("unroll-loops")
-
 #include<bits/stdc++.h>
-#include<ext/pb_ds/assoc_container.hpp>
-#include<ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
 using namespace std;
 
 #define ll long long
@@ -15,126 +7,105 @@ using namespace std;
 #define pii pair<int,int>
 #define pll pair<ll,ll>
 #define vi vector<int>
-#define vll vector<ll>
-#define vc vector<char>
 #define vs vector<string>
-#define vpll vector<pll>
-#define vpii vector<pii>
-#define umap unordered_map
-#define uset unordered_set
-#define PQ priority_queue
+#define vpii vector<pair<int,int>>
+#define vpll vector< pair<ll,ll> >
+#define si set<int>
+#define usi unordered_set<int>
+#define ss set<string>
+#define spii set<pair<int,int>>
+#define di deque<int>
+#define li list<int>
+#define sti stack<int>
+#define qi queue<int>
+#define pqi priority_queue<int>
+#define mii map<int,int>
+#define mll map<ll,ll>
+#define umii unordered_map<int,int>
+#define vit vector<int>::iterator
+#define mit map<int,int>::iterator
+#define sit set<int>:: iterator
 
-#define printa(a,L,R) for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?'\n':' ')
+#define fr(i,a,b) for(int i=a;i<b;i++)
+#define rfr(i,a,b) for(int i=b-1;i>=a;i--)
+#define eqfr(i,a,b) for(int i=a;i<=b;i++)
+#define reqfr(i,a,b) for(int i=b;i>=a;i--)
+#define printa(a,L,R) fr(i,L,R)cout<<a[i]<<(i==R-1?'\n':' ')
 #define printv(a) printa(a,0,a.size())
-#define print2d(a,r,c) for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?'\n':' ')
 #define pb push_back
-#define eb emplace_back
-#define mt make_tuple
-#define fbo find_by_order
-#define ook order_of_key
-#define MP make_pair
-#define UB upper_bound
-#define LB lower_bound
-#define SQ(x) ((x)*(x))
-#define issq(x) (((ll)(sqrt((x))))*((ll)(sqrt((x))))==(x))
-#define F first
-#define S second
-#define mem(a,x) memset(a,x,sizeof(a))
-#define inf 1e18
-#define E 2.71828182845904523536
-#define gamma 0.5772156649
+#define pf push_front
+#define popb pop_front
+#define popf pop_front
+#define mp make_pair
+#define fi first
+#define se second
+#define fill(a,x) memset(a,x,sizeof(a))
+#define fill2d(a,x,n,m) memset(a,x,n*m*sizeof(a[0][0]))
+#define inf INT_MAX
+#define mod 1e9+7
+#define mxn 100100
 #define nl "\n"
 #define lg(r,n) (int)(log2(n)/log2(r))
-#define pf printf
-#define sf scanf
-#define sf1(a)                scanf("%d",&a)
-#define sf2(a,b)              scanf("%d %d",&a,&b)
-#define sf3(a,b,c)            scanf("%d %d %d",&a,&b,&c)
-#define pf1(a)                printf("%d\n",a);
-#define pf2(a,b)              printf("%d %d\n",a,b)
-#define pf3(a,b,c)            printf("%d %d %d\n",a,b,c)
-#define sf1ll(a)              scanf("%lld",&a)
-#define sf2ll(a,b)            scanf("%I64d %I64d",&a,&b)
-#define sf3ll(a,b,c)          scanf("%I64d %I64d %I64d",&a,&b,&c)
-#define pf1ll(a)              printf("%lld\n",a);
-#define pf2ll(a,b)            printf("%I64d %I64d\n",a,b)
-#define pf3ll(a,b,c)          printf("%I64d %I64d %I64d\n",a,b,c)
-#define _ccase printf("Case %lld: ",++cs)
-#define _case cout<<"Case "<<++cs<<": "
-#define by(x) [](const auto& a, const auto& b) { return a.x < b.x; }
 
-#define asche cerr<<"Ekhane asche\n";
 #define rev(v) reverse(v.begin(),v.end())
 #define srt(v) sort(v.begin(),v.end())
-#define grtsrt(v) sort(v.begin(),v.end(),greater<ll>())
-#define all(v) v.begin(),v.end()
+#define grtsrt(v) sort(v.begin(),v.end(),greater<int>())
 #define mnv(v) *min_element(v.begin(),v.end())
 #define mxv(v) *max_element(v.begin(),v.end())
-#define toint(a) atoi(a.c_str())
-#define BeatMeScanf ios_base::sync_with_stdio(false)
-#define valid(tx,ty) (tx>=0&&tx<n&&ty>=0&&ty<m)
-#define one(x) __builtin_popcount(x)
-#define Unique(v) v.erase(unique(all(v)),v.end())
-#define stree l=(n<<1),r=l+1,mid=b+(e-b)/2
-#define fout(x) fixed<<setprecision(x)
-string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
-inline void yes(){cout<<"YES\n";exit(0);}
-inline void no(){cout<<"NO\n";exit(0);}
-template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-//ll dx[]={1,0,-1,0,1,-1,-1,1};
-//ll dy[]={0,1,0,-1,1,1,-1,-1};
-//random_device rd;
-//mt19937 random(rd());
-#define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
-void deb(istream_iterator<string> it) {}
-template<typename T, typename... Args>
-void deb(istream_iterator<string> it, T a, Args... args) {
-    cerr << *it << " = " << a << endl;
-    deb(++it, args...);
-}
-
-const int mod=1e9+7;
-const int N=3e5+9;
-const ld eps=1e-9;
-const ld PI=acos(-1.0);
-//ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
-//ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
-//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-
-
-//bool vis[N];
-ll d[N];
-ll par[N];
-vpll g[N];
-int main()
+#define countv(v,a) cout(v.begin(),v.end(),a)
+#define len(s) s.length()
+#define strtoint(a) atoi(a.c_str())
+vpii g[mxn];
+int dis[mxn],par[mxn],done[mxn];
+int n;
+void solve()
 {
-    BeatMeScanf;
-    ll i,j,k,n,m,u,v,w;
-    cin>>n>>m;
-    for(i=0;i<m;i++) cin>>u>>v>>w,g[u].eb(v,w),g[v].eb(u,w);
-    PQ<pll,vpll,greater<pll>>q;
-    fill(d,d+N,inf);
-    q.push({0,1});
-    d[1]=0;
-    while(!q.empty()){
-        tie(w,u)=q.top();
-        q.pop();
-        //vis[u]=1;
-        for(auto x:g[u]){
-            v=x.F,w=x.S;
-            if(d[u]+w<d[v]){
-                par[v]=u;
-                d[v]=d[u]+w;
-                q.push({d[v],v});
+    int i,j,x,y,v;
+    for(i=0;i<mxn;i++) dis[i]=inf;
+    priority_queue< pii >pq;
+    pq.push(mp(0,1));
+    dis[1]=0;
+    while(!pq.empty()){
+        pii tmp=pq.top();
+        pq.pop();
+        v=tmp.se;
+        if(v==n) return;
+        done[v]=1;
+        for(i=0;i<g[v].size();i++){
+            x=g[v][i].fi;
+            y=g[v][i].se;
+            if(!done[x]&&(dis[v]+y<dis[x])){
+                par[x]=v;
+                dis[x]=dis[v]+y;
+                pq.push(mp(-dis[x],x));
             }
         }
     }
-    if(d[n]==inf) return cout<<-1<<nl,0;
-    vll path;
-    ll nw=n;
-    while(par[nw]!=0) path.eb(nw),nw=par[nw];
-    path.eb(nw);
-    rev(path);
-    for(auto x:path) cout<<x<<' ';
+}
+int print_path(int x)
+{
+    if(x==1){
+        printf("%d ",1);
+    }
+    else if(par[x]==0){
+        printf("-1\n");
+    }
+    else{
+        print_path(par[x]);
+        printf("%d ",x);
+    }
+}
+int main()
+{
+    int i,j,cs,t,e,u,s,v,w;
+        scanf("%d%d",&n,&e);
+        for(j=0;j<e;j++){
+            scanf("%d%d%d",&u,&v,&w);
+            g[u].pb(mp(v,w));
+            g[v].pb(mp(u,w));
+        }
+        solve();
+        print_path(n);
     return 0;
 }
+
