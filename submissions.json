@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33409686": {
+    "contest_id": 899,
+    "language": "GNU C++14",
+    "path": "codeforces\\899\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Shovel Sale",
+    "problem_url": "https://codeforces.com/contest/899/problem/D",
+    "submission_id": "CF33409686",
+    "submission_url": "https://codeforces.com/contest/899/submission/33409686",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Dec/19/2017 19:38"
+  },
   "CF33410501": {
     "contest_id": 898,
     "language": "GNU C++14",
