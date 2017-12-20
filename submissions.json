@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33442098": {
+    "contest_id": 660,
+    "language": "GNU C++14",
+    "path": "codeforces\\660\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Number of Parallelograms",
+    "problem_url": "https://codeforces.com/contest/660/problem/D",
+    "submission_id": "CF33442098",
+    "submission_url": "https://codeforces.com/contest/660/submission/33442098",
+    "tags": [
+      "geometry",
+      "*1900"
+    ],
+    "timestamp": "Dec/20/2017 06:22"
+  },
   "CF33487101": {
     "contest_id": 616,
     "language": "GNU C++14",

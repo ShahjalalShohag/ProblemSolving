@@ -88,7 +88,7 @@ int main()
         srt(yo);
         conti=1;
         ans=0;
-        for(i=1;i<yo.size();i++){
+        for(i=0;i<yo.size();i++){
             if(yo[i]==yo[i-1]) conti++;
             else{
                 ans+=conti*(conti-1)/2;
