@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33519852": {
+    "contest_id": 883,
+    "language": "GNU C++14",
+    "path": "codeforces\\883\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Lost in Transliteration",
+    "problem_url": "https://codeforces.com/contest/883/problem/F",
+    "submission_id": "CF33519852",
+    "submission_url": "https://codeforces.com/contest/883/submission/33519852",
+    "tags": [
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Dec/23/2017 02:08"
+  },
   "CF33520521": {
     "contest_id": 883,
     "language": "GNU C++14",
