@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33507800": {
+    "contest_id": 910,
+    "language": "GNU C++14",
+    "path": "codeforces\\910\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Minimum Sum",
+    "problem_url": "https://codeforces.com/contest/910/problem/C",
+    "submission_id": "CF33507800",
+    "submission_url": "https://codeforces.com/contest/910/submission/33507800",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Dec/22/2017 19:08"
+  },
   "CF33507891": {
     "contest_id": 910,
     "language": "GNU C++14",
