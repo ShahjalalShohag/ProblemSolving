@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33520521": {
+    "contest_id": 883,
+    "language": "GNU C++14",
+    "path": "codeforces\\883\\M.cpp",
+    "problem_index": "M",
+    "problem_name": "Quadcopter Competition",
+    "problem_url": "https://codeforces.com/contest/883/problem/M",
+    "submission_id": "CF33520521",
+    "submission_url": "https://codeforces.com/contest/883/submission/33520521",
+    "tags": [
+      "greedy",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Dec/23/2017 02:52"
+  },
   "CF33699125": {
     "contest_id": 909,
     "language": "GNU C++14",
