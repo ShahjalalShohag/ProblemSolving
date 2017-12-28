@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33721156": {
+    "contest_id": 911,
+    "language": "GNU C++14",
+    "path": "codeforces\\911\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Two Cakes",
+    "problem_url": "https://codeforces.com/contest/911/problem/B",
+    "submission_id": "CF33721156",
+    "submission_url": "https://codeforces.com/contest/911/submission/33721156",
+    "tags": [
+      "binary search",
+      "brute force",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Dec/28/2017 20:28"
+  },
   "CF33739560": {
     "contest_id": 911,
     "language": "GNU C++14",
