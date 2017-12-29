@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33780471": {
+    "contest_id": 908,
+    "language": "GNU C++14",
+    "path": "codeforces\\908\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "New Year and Buggy Bot",
+    "problem_url": "https://codeforces.com/contest/908/problem/B",
+    "submission_id": "CF33780471",
+    "submission_url": "https://codeforces.com/contest/908/submission/33780471",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Dec/29/2017 22:32"
+  },
   "CF33798989": {
     "contest_id": 908,
     "language": "GNU C++14",
