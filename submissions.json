@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33872408": {
+    "contest_id": 507,
+    "language": "GNU C++14",
+    "path": "codeforces\\507\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Amr and Music",
+    "problem_url": "https://codeforces.com/contest/507/problem/A",
+    "submission_id": "CF33872408",
+    "submission_url": "https://codeforces.com/contest/507/submission/33872408",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Jan/03/2018 01:14"
+  },
   "CF33872576": {
     "contest_id": 822,
     "language": "GNU C++14",
