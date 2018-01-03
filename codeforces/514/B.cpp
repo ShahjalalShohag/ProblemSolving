@@ -16,38 +16,44 @@ using namespace std;
 #define sei      set<int>
 #define usei     unordered_set<int>
 #define ses      set<string>
-#define sepii    set< pair<int,int> >
+#define sepii    set<pair<int,int>>
 #define di       deque<int>
 #define li       list<int>
 #define sti      stack<int>
 #define qi       queue<int>
 #define pqi      priority_queue<int>
-#define mpii      map<int,int>
-#define mpll      map<ll,ll>
+#define mii      map<int,int>
+#define mll      map<ll,ll>
 #define umii     unordered_map<int,int>
 #define vit      vector<int>::iterator
 #define mit      map<int,int>::iterator
 #define sit      set<int>:: iterator
-#define umap     unordered_map
 #define uset     unordered_set
 #define PQ       priority_queue
 
 #define rep(i,n)        for(i=0;i<n;i++)
 #define printa(a,L,R)   for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?'\n':' ')
 #define printv(a)       printa(a,0,a.size())
-#define print2d(a,r,c)  for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?'\n':' ')
+#define print2d(a,r,c)  for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(i==j-1?'\n':' ')
 #define pb              push_back
-#define MP              make_pair
-#define SQ(x)           ((x)*(x))
+#define mp              make_pair
+#define sq(x)           ((x)*(x))
 #define F               first
 #define S               second
 #define mem(a,x)        memset(a,x,sizeof(a))
+#define fill2d(a,x,n,m) memset(a,x,n*m*sizeof(a[0][0]))
 #define inf             0x3f3f3f3f
 #define PI              3.14159265358979323846
 #define E               2.71828182845904523536
 #define gamma           0.5772156649
 #define nl              "\n"
 #define lg(r,n)         (int)(log2(n)/log2(r))
+#define sint(a)         sin((PI*a)/180.0)
+#define cost(a)         cos((PI*a)/180.0)
+#define tant(a)         tan((PI*a)/180.0)
+#define asint(a)        (asin(a)*180.0)/PI
+#define acost(a)        (acos(a)*180.0)/PI
+#define atant(a)        (atan(a)*180.0)/PI
 #define sf(a)           scanf("%d",&a)
 #define sfl(a)          scanf("%lld",&a)
 #define sfc(a)          scanf("%c",&a)
@@ -55,7 +61,6 @@ using namespace std;
 #define sffl(a,b)       scanf("%lld %lld",&a,&b)
 #define sfff(a,b,c)     scanf("%d %d %d",&a,&b,&c)
 #define sfffl(a,b,c)    scanf("%lld %lld %lld",&a,&b,&c)
-#define sf              scanf
 #define pf              printf
 #define pfi(a)          pf("%d\n",&a)
 #define pfl(a)          pf("%lld\n",&a)
@@ -73,25 +78,32 @@ using namespace std;
 #define len(s)              s.length()
 #define toint(a)            atoi(a.c_str())
 #define fast                ios_base::sync_with_stdio(false),cin.tie(NULL)
-string  tostr(int n)        {stringstream rr;rr<<n;return rr.str();}
+string  tostr(int n)     {stringstream rr;rr<<n;return rr.str();}
 const int mod=1e9+7;
 const int mxn=1e5+9;
 const int eps=1e-9;
-
-
+struct sj
+{
+    int x,y;
+}a[1100];
+int p,q;
+bool check(int i,int j)
+{
+    return (a[i].y-q)*(a[j].x-p)==(a[i].x-p)*(a[j].y-q);
+}
 int main()
 {
     fast;
-    int n,i,flag=0;
-    ld a,b,x,y;
-    set<ld>se;
-    cin>>n>>a>>b;
-    while(n--){
-        cin>>x>>y;
-        if(y!=b) se.insert((x-a)/(y-b));
-        else flag=1;
+    int n,i,j,ans=0,vis[1100]={0};
+    cin>>n>>p>>q;
+    for(i=0;i<n;i++)  cin>>a[i].x>>a[i].y;
+    for(i=0;i<n;i++){
+        if(vis[i]) continue;
+        for(j=i+1;j<n;j++) if(check(i,j)) vis[j]=1;
+        vis[i]=1;
+        ans++;
     }
-    cout<<se.size()+flag<<nl;
+    cout<<ans<<nl;
     return 0;
 }
 
