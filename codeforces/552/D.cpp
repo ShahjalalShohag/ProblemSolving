@@ -82,34 +82,27 @@ string  inttostr(int n)     {stringstream rr;rr<<n;return rr.str();}
 const int mod=1e9+7;
 const int mxn=1e5+9;
 const int eps=1e-9;
-map<pll,ll>slope;
-pll flag[2010];
 int main()
 {
-    fast;
-    ll i,j,k,n,dx,p,dy,cnt,x[2010],y[2010],ans=0;
+ int i,j,k,n,x[2100],y[2100],ans=0;
 	cin>>n;
-	for(i=0;i<n;i++) cin>>x[i]>>y[i];
-    ans=n*(n-1)*(n-2)/6;
-    for(i=0;i<n;i++){
-        cnt=0;
-        for(j=i+1;j<n;j++){
-            dx=x[j]-x[i];
-            dy=y[j]-y[i];
-            k=__gcd(dx,dy);
-            if(k!=0) dx/=k;
-            if(k!=0) dy/=k;
-            if(slope[mp(dx,dy)]){
-                ans-=slope[mp(dx,dy)];
-                slope[mp(dx,dy)]++;
-            }
-            else{
-                slope[mp(dx,dy)]++;
-                flag[cnt++]=mp(dx,dy);
-            }
-        }
-        for(p=0;p<cnt;p++) slope[mp(flag[p].F,flag[p].S)]=0;
-    }
+	for(i=0;i<n;i++)
+	{
+		cin>>x[i]>>y[i];
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			for(k=j+1;k<n;k++)
+			{
+				if(x[i]*(y[j]-y[k])+x[j]*(y[k]-y[i])+x[k]*(y[i]-y[j])!=0)
+				{
+					ans++;
+				}
+			}
+		}
+	}
 	cout<<ans<<nl;
     return 0;
 }
