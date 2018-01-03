@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33890564": {
+    "contest_id": 498,
+    "language": "GNU C++14",
+    "path": "codeforces\\498\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Crazy Town",
+    "problem_url": "https://codeforces.com/contest/498/problem/A",
+    "submission_id": "CF33890564",
+    "submission_url": "https://codeforces.com/contest/498/submission/33890564",
+    "tags": [
+      "geometry",
+      "*1700"
+    ],
+    "timestamp": "Jan/04/2018 00:01"
+  },
   "CF33898432": {
     "contest_id": 796,
     "language": "GNU C++14",
