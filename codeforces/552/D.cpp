@@ -83,6 +83,7 @@ const int mod=1e9+7;
 const int mxn=1e5+9;
 const int eps=1e-9;
 map<pll,ll>slope;
+pll flag[2010];
 int main()
 {
     fast;
@@ -104,9 +105,10 @@ int main()
             }
             else{
                 slope[mp(dx,dy)]++;
+                flag[cnt++]=mp(dx,dy);
             }
         }
-        slope.clear();
+        for(p=0;p<cnt;p++) slope[mp(flag[p].F,flag[p].S)]=0;
     }
 	cout<<ans<<nl;
     return 0;
