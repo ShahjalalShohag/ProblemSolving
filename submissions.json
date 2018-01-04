@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33900235": {
+    "contest_id": 501,
+    "language": "GNU C++14",
+    "path": "codeforces\\501\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Misha and Changing Handles",
+    "problem_url": "https://codeforces.com/contest/501/problem/B",
+    "submission_id": "CF33900235",
+    "submission_url": "https://codeforces.com/contest/501/submission/33900235",
+    "tags": [
+      "data structures",
+      "dsu",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Jan/04/2018 16:00"
+  },
   "CF33900606": {
     "contest_id": 767,
     "language": "GNU C++14",
