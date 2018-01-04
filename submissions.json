@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33905818": {
+    "contest_id": 570,
+    "language": "GNU C++14",
+    "path": "codeforces\\570\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Replacement",
+    "problem_url": "https://codeforces.com/contest/570/problem/C",
+    "submission_id": "CF33905818",
+    "submission_url": "https://codeforces.com/contest/570/submission/33905818",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Jan/04/2018 21:15"
+  },
   "CF33918768": {
     "contest_id": 236,
     "language": "GNU C++14",
