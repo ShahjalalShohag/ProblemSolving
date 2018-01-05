@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33920932": {
+    "contest_id": 2,
+    "language": "GNU C++14",
+    "path": "codeforces\\2\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Winner",
+    "problem_url": "https://codeforces.com/contest/2/problem/A",
+    "submission_id": "CF33920932",
+    "submission_url": "https://codeforces.com/contest/2/submission/33920932",
+    "tags": [
+      "hashing",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jan/05/2018 17:47"
+  },
   "CF33921205": {
     "contest_id": 525,
     "language": "GNU C++14",
