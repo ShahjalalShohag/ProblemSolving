@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33950414": {
+    "contest_id": 219,
+    "language": "GNU C++14",
+    "path": "codeforces\\219\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "k-String",
+    "problem_url": "https://codeforces.com/contest/219/problem/A",
+    "submission_id": "CF33950414",
+    "submission_url": "https://codeforces.com/contest/219/submission/33950414",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1000"
+    ],
+    "timestamp": "Jan/06/2018 01:52"
+  },
   "CF33950622": {
     "contest_id": 746,
     "language": "GNU C++14",
