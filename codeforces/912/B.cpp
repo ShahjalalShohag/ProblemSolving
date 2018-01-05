@@ -80,12 +80,39 @@ const int mod=1e9+7;
 const int mxn=1e5+9;
 const int eps=1e-9;
 
-ll n,k;
+
 int main()
 {
     fast;
-    cin>>n>>k;
-    k==1?cout<<n:cout<<(1LL<<((ll)log2l(n)+1))-1;
+    ull i,j,k,m,n,d,ans;
+    cin>>m>>k;
+    if(k==1) cout<<m<<nl;
+    else{
+        n=log2l(m)+1;
+        ull d[10010];
+
+        for( i=0;i<10010;i++)
+           d[i]=0;
+
+        d[0]=1;
+
+        ull carry=0;
+        ull temp=0;
+        for( j=0;j<n;j++)
+        {
+           carry=0;
+           temp=0;
+           for(i=0;i<10010;i++)
+           {
+              temp=d[i]*2+carry;
+              d[i]= temp%10;
+              carry = temp/10;
+           }
+        }
+        for(i=10009;i>=0;i--) if(d[i]!=0) break;
+        for(;i>0;i--) cout<<d[i];
+        cout<<d[0]-1<<nl;
+    }
     return 0;
 }
 
