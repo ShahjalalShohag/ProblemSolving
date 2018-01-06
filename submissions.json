@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33959850": {
+    "contest_id": 99,
+    "language": "GNU C++14",
+    "path": "codeforces\\99\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Help Far Away Kingdom",
+    "problem_url": "https://codeforces.com/contest/99/problem/A",
+    "submission_id": "CF33959850",
+    "submission_url": "https://codeforces.com/contest/99/submission/33959850",
+    "tags": [
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Jan/06/2018 15:25"
+  },
   "CF33960613": {
     "contest_id": 182,
     "language": "GNU C++14",
