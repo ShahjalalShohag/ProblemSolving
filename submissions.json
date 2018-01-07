@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33989229": {
+    "contest_id": 50,
+    "language": "GNU C++14",
+    "path": "codeforces\\50\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Choosing Symbol Pairs",
+    "problem_url": "https://codeforces.com/contest/50/problem/B",
+    "submission_id": "CF33989229",
+    "submission_url": "https://codeforces.com/contest/50/submission/33989229",
+    "tags": [
+      "strings",
+      "*1500"
+    ],
+    "timestamp": "Jan/08/2018 00:45"
+  },
   "CF33990021": {
     "contest_id": 271,
     "language": "GNU C++14",
