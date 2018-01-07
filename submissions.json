@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF33981594": {
+    "contest_id": 653,
+    "language": "GNU C++14",
+    "path": "codeforces\\653\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Bear and Compressing",
+    "problem_url": "https://codeforces.com/contest/653/problem/B",
+    "submission_id": "CF33981594",
+    "submission_url": "https://codeforces.com/contest/653/submission/33981594",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "dp",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Jan/07/2018 17:21"
+  },
   "CF33981863": {
     "contest_id": 653,
     "language": "GNU C++14",

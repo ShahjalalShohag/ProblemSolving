@@ -79,21 +79,39 @@ ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=ans*n;n=n*n;k>>=1;}re
 const int mod=1e9+7;
 const int mxn=1e5+9;
 const int eps=1e-9;
-int ans,n,q;
-string a[100];
-char b[100];
-void dfs(int op,char ch)
-{
-    if(op==n-1) ans++;
-    else for(int i=0;i<q;i++) if(b[i]==ch) dfs(op+1,a[i][0]);
-}
+
+vs v,nex;
+map<string,vs>mp;
 int main()
 {
     fast;
-    int i;
+    int n,i,j,k,q,ans=1;
+    string from,to,s;
     cin>>n>>q;
-    rep(i,q) cin>>a[i]>>b[i];
-    dfs(0,'a');
+    while(q--){
+        cin>>from>>to;
+        mp[to].pb(from);
+    }
+    n--;
+    v.pb("a");
+    while(n--){
+        if(v.size()==0){
+            cout<<0<<nl;
+            return 0;
+        }
+        ans=0;
+        for(i=0;i<v.size();i++){
+            ans+=mp[v[i]].size();
+            vs tmp=mp[v[i]];
+            for(auto x:tmp){
+                string p="";
+                p+=x[0];
+                nex.pb(p);
+            }
+        }
+        swap(v,nex);
+        nex.clear();
+    }
     cout<<ans<<nl;
     return 0;
 }
