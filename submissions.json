@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34008574": {
+    "contest_id": 913,
+    "language": "GNU C++14",
+    "path": "codeforces\\913\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Modular Exponentiation",
+    "problem_url": "https://codeforces.com/contest/913/problem/A",
+    "submission_id": "CF34008574",
+    "submission_url": "https://codeforces.com/contest/913/submission/34008574",
+    "tags": [
+      "implementation",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Jan/08/2018 20:50"
+  },
   "CF34013968": {
     "contest_id": 913,
     "language": "GNU C++14",
