@@ -84,13 +84,27 @@ int main()
 {
     fast;
     int i,j,k,n;
-    string s,a="<3";
+    string s;
+    vs v;
     cin>>n;
-    rep(i,n) cin>>s,a+=s+"<3";
+    rep(i,n) cin>>s,v.pb(s+"<3");
     cin>>s;
-    n=0;
-    for(i=0;i<s.size();i++) if(s[i]==a[n]) n++;
-    cout<<((n==a.size())?"yes":"no");
+    for(k=0;k<s.size();k++) if(s[k]=='<')break;
+    for(;k<s.size();k++) if(s[k]=='3') break;
+    for(i=0;i<v.size();i++){
+        int cnt=0;
+        for(j=0;j<v[i].size();j++)
+            for(;k<s.size();k++) if(s[k]==v[i][j]){
+                cnt++;
+                k++;
+                break;
+            }
+        if(cnt!=v[i].size()){
+            cout<<"no\n";
+            return 0;
+        }
+    }
+    cout<<"yes\n";
     return 0;
 }
 
