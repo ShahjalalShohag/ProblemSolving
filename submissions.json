@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34048228": {
+    "contest_id": 144,
+    "language": "GNU C++14",
+    "path": "codeforces\\144\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Anagram Search",
+    "problem_url": "https://codeforces.com/contest/144/problem/C",
+    "submission_id": "CF34048228",
+    "submission_url": "https://codeforces.com/contest/144/submission/34048228",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1500"
+    ],
+    "timestamp": "Jan/09/2018 18:29"
+  },
   "CF34049262": {
     "contest_id": 278,
     "language": "GNU C++14",
