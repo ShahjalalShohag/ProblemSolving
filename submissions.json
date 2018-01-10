@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34077711": {
+    "contest_id": 839,
+    "language": "GNU C++14",
+    "path": "codeforces\\839\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Journey",
+    "problem_url": "https://codeforces.com/contest/839/problem/C",
+    "submission_id": "CF34077711",
+    "submission_url": "https://codeforces.com/contest/839/submission/34077711",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "probabilities",
+      "trees",
+      "*1500"
+    ],
+    "timestamp": "Jan/11/2018 03:37"
+  },
   "CF34086552": {
     "contest_id": 442,
     "language": "GNU C++14",
