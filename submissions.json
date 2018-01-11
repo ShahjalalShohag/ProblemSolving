@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34095522": {
+    "contest_id": 437,
+    "language": "GNU C++14",
+    "path": "codeforces\\437\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "The Child and Toy",
+    "problem_url": "https://codeforces.com/contest/437/problem/C",
+    "submission_id": "CF34095522",
+    "submission_url": "https://codeforces.com/contest/437/submission/34095522",
+    "tags": [
+      "graphs",
+      "greedy",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Jan/12/2018 01:25"
+  },
   "CF34096061": {
     "contest_id": 630,
     "language": "GNU C++14",
