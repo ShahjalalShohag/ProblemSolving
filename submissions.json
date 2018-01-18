@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34284147": {
+    "contest_id": 915,
+    "language": "GNU C++14",
+    "path": "codeforces\\915\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Almost Acyclic Graph",
+    "problem_url": "https://codeforces.com/contest/915/problem/D",
+    "submission_id": "CF34284147",
+    "submission_url": "https://codeforces.com/contest/915/submission/34284147",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "*2200"
+    ],
+    "timestamp": "Jan/19/2018 00:48"
+  },
   "CF34301533": {
     "contest_id": 915,
     "language": "GNU C++14",
