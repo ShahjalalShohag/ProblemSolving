@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34282806": {
+    "contest_id": 915,
+    "language": "GNU C++14",
+    "path": "codeforces\\915\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Permute Digits",
+    "problem_url": "https://codeforces.com/contest/915/problem/C",
+    "submission_id": "CF34282806",
+    "submission_url": "https://codeforces.com/contest/915/submission/34282806",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1700"
+    ],
+    "timestamp": "Jan/18/2018 23:45"
+  },
   "CF34284147": {
     "contest_id": 915,
     "language": "GNU C++14",
