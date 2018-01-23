@@ -72,7 +72,7 @@ using namespace std;
 #define mxv(v)              *max_element(v.begin(),v.end())
 #define countv(v,a)         count(v.begin(),v.end(),a)
 #define toint(a)            atoi(a.c_str())
-#define MOD(a,b)            ((a<b)?a:b+a%b)
+#define MOD(a,b) a<b?a:b+a%b
 #define fast                ios_base::sync_with_stdio(false),cin.tie(NULL)
 string  tostr(int n)        {stringstream rr;rr<<n;return rr.str();}
 //const int mod=1e9+7;
@@ -96,7 +96,7 @@ ll phi(ll n)
 }
 ll yo(ll l,ll r,ll mod)
 {
-    if(l==r) return MOD(a[l],mod);
+    if(l==r) return a[l];
     if(mod==1) return 1;
     else return qpow(a[l],yo(l+1,r,phi(mod)),mod);
 }
