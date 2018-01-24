@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34512929": {
+    "contest_id": 898,
+    "language": "GNU C++14",
+    "path": "codeforces\\898\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Restoring the Expression",
+    "problem_url": "https://codeforces.com/contest/898/problem/F",
+    "submission_id": "CF34512929",
+    "submission_url": "https://codeforces.com/contest/898/submission/34512929",
+    "tags": [
+      "brute force",
+      "hashing",
+      "math",
+      "*2300"
+    ],
+    "timestamp": "Jan/24/2018 16:30"
+  },
   "CF34514540": {
     "contest_id": 670,
     "language": "GNU C++14",
