@@ -124,7 +124,7 @@ int main()
     cin>>s;
     n=s.size();
     create_hash();
-    for(c=n/3;c<=n/2;c++){
+    for(c=1;c<n;c++){
         a=c,b=n-a-c;
         if(yo(a,b,c)) return print(a,b,c),0;
         a=c-1,b=n-a-c;
