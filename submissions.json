@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34514540": {
+    "contest_id": 670,
+    "language": "GNU C++14",
+    "path": "codeforces\\670\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Correct Bracket Sequence Editor",
+    "problem_url": "https://codeforces.com/contest/670/problem/E",
+    "submission_id": "CF34514540",
+    "submission_url": "https://codeforces.com/contest/670/submission/34514540",
+    "tags": [
+      "data structures",
+      "dsu",
+      "strings",
+      "*1700"
+    ],
+    "timestamp": "Jan/24/2018 17:22"
+  },
   "CF34523549": {
     "contest_id": 895,
     "language": "GNU C++14",
