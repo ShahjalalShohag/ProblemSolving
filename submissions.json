@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34549789": {
+    "contest_id": 898,
+    "language": "GNU C++14",
+    "path": "codeforces\\898\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Rounding",
+    "problem_url": "https://codeforces.com/contest/898/problem/A",
+    "submission_id": "CF34549789",
+    "submission_url": "https://codeforces.com/contest/898/submission/34549789",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jan/25/2018 20:49"
+  },
   "CF34553905": {
     "contest_id": 353,
     "language": "GNU C++14",
