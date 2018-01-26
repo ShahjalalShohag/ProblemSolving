@@ -79,7 +79,7 @@ const int mxn=2e6+9;
 const ld eps=1e-9;
 ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
 string s,st,str;
-ll pw[mxn],hs[mxn],k,pr=31,flag[mxn];
+ll pw[mxn],hs[mxn],k,pr=1e7+3,flag[mxn];
 map<ll,vll>mp;
 vll ans;
 bool ck(ll i,ll l)
@@ -94,25 +94,25 @@ int main()
     ll i,j,n,m,len,curhs,q,cnt,h,p,sz,z;
     str="";
     pw[0]=1;
-    for(i=1;i<mxn;i++) pw[i]=(pw[i-1]*pr);
+    for(i=1;i<mxn;i++) pw[i]=(pw[i-1]*pr)%mod;
     cin>>n>>k;
     cin>>s;
     for(i=0;i<k;i++) s+=s[i];
-    for(i=0;i<k+n*k;i++) i?hs[i]=(hs[i-1]+((s[i]-'a'+1)*pw[i])):hs[i]=s[i]-'a'+1;
+    for(i=0;i<k+n*k;i++) i?hs[i]=(hs[i-1]+((s[i]-'a'+1)*pw[i])%mod)%mod:hs[i]=s[i]-'a'+1;
     cin>>q;
     for(i=1;i<=q;i++){
         cin>>st;
         str+=st;
         h=0;
-        for(j=0;j<k;j++) h=(h+((st[j]-'a'+1)*pw[j]));
-        h=(h*pw[mxn-5]);
+        for(j=0;j<k;j++) h=(h+((st[j]-'a'+1)*pw[j])%mod)%mod;
+        h=(h*pw[mxn-5])%mod;
         mp[h].pb(i);
     }
     for(i=0;i<k;i++){
         cnt=0;
         for(j=i;j<k+n*k;j+=k){
-            j==0?curhs=hs[j+k-1]:curhs=(hs[j+k-1]-hs[j-1]);
-            curhs=(curhs*pw[mxn-5-j]);
+            j==0?curhs=hs[j+k-1]:curhs=(mod+hs[j+k-1]-hs[j-1]);
+            curhs=(curhs*pw[mxn-5-j])%mod;
             sz=mp[curhs].size();
             if(sz==0) break;
             else if(sz==1){

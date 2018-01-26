@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34589240": {
+    "contest_id": 727,
+    "language": "GNU C++14",
+    "path": "codeforces\\727\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Games on a CD",
+    "problem_url": "https://codeforces.com/contest/727/problem/E",
+    "submission_id": "CF34589240",
+    "submission_url": "https://codeforces.com/contest/727/submission/34589240",
+    "tags": [
+      "data structures",
+      "hashing",
+      "string suffix structures",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Jan/27/2018 04:14"
+  },
   "CF34589307": {
     "contest_id": 727,
     "language": "GNU C++14",
