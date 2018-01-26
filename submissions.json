@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34589696": {
+    "contest_id": 752,
+    "language": "GNU C++14",
+    "path": "codeforces\\752\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Santa Claus and a Palindrome",
+    "problem_url": "https://codeforces.com/contest/752/problem/D",
+    "submission_id": "CF34589696",
+    "submission_url": "https://codeforces.com/contest/752/submission/34589696",
+    "tags": [
+      "data structures",
+      "greedy",
+      "hashing",
+      "strings",
+      "*2100"
+    ],
+    "timestamp": "Jan/27/2018 05:06"
+  },
   "CF34604509": {
     "contest_id": 825,
     "language": "GNU C++14",
