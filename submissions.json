@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34584833": {
+    "contest_id": 154,
+    "language": "GNU C++14",
+    "path": "codeforces\\154\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Double Profiles",
+    "problem_url": "https://codeforces.com/contest/154/problem/C",
+    "submission_id": "CF34584833",
+    "submission_url": "https://codeforces.com/contest/154/submission/34584833",
+    "tags": [
+      "graphs",
+      "hashing",
+      "sortings",
+      "*2300"
+    ],
+    "timestamp": "Jan/27/2018 00:23"
+  },
   "CF34586845": {
     "contest_id": 126,
     "language": "GNU C++14",
