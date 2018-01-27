@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34604509": {
+    "contest_id": 825,
+    "language": "GNU C++14",
+    "path": "codeforces\\825\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "String Compression",
+    "problem_url": "https://codeforces.com/contest/825/problem/F",
+    "submission_id": "CF34604509",
+    "submission_url": "https://codeforces.com/contest/825/submission/34604509",
+    "tags": [
+      "dp",
+      "hashing",
+      "string suffix structures",
+      "strings",
+      "*2400"
+    ],
+    "timestamp": "Jan/27/2018 17:57"
+  },
   "CF34606366": {
     "contest_id": 835,
     "language": "GNU C++14",
