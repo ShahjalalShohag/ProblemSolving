@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34606366": {
+    "contest_id": 835,
+    "language": "GNU C++14",
+    "path": "codeforces\\835\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Palindromic characteristics",
+    "problem_url": "https://codeforces.com/contest/835/problem/D",
+    "submission_id": "CF34606366",
+    "submission_url": "https://codeforces.com/contest/835/submission/34606366",
+    "tags": [
+      "brute force",
+      "dp",
+      "hashing",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Jan/27/2018 19:07"
+  },
   "CF34665963": {
     "contest_id": 918,
     "language": "GNU C++14",
