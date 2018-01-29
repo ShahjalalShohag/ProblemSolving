@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34686439": {
+    "contest_id": 917,
+    "language": "GNU C++14",
+    "path": "codeforces\\917\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "The Monster",
+    "problem_url": "https://codeforces.com/contest/917/problem/A",
+    "submission_id": "CF34686439",
+    "submission_url": "https://codeforces.com/contest/917/submission/34686439",
+    "tags": [
+      "dp",
+      "greedy",
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Jan/29/2018 23:55"
+  },
   "CF34686449": {
     "contest_id": 917,
     "language": "GNU C++14",
