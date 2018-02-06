@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF34973532": {
+    "contest_id": 912,
+    "language": "GNU C++14",
+    "path": "codeforces\\912\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Prime Gift",
+    "problem_url": "https://codeforces.com/contest/912/problem/E",
+    "submission_id": "CF34973532",
+    "submission_url": "https://codeforces.com/contest/912/submission/34973532",
+    "tags": [
+      "binary search",
+      "dfs and similar",
+      "math",
+      "meet-in-the-middle",
+      "number theory",
+      "two pointers",
+      "*2400"
+    ],
+    "timestamp": "Feb/06/2018 20:23"
+  },
   "CF34973574": {
     "contest_id": 912,
     "language": "GNU C++14",

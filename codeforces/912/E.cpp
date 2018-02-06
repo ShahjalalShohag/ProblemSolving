@@ -118,9 +118,8 @@ int main()
     srt(v);
     s=1LL,e=mx;
     while(s<e){
-        m=s+(e-s)/2;
-        t=cnt(m,u,v);
-        if(t<k) s=m+1;
+        m=s+(e-s)/2;;
+        if(cnt(m,u,v)<k) s=m+1;
         else e=m;
     }
     cout<<e<<nl;
