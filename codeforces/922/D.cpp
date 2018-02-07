@@ -115,7 +115,7 @@ int main()
     }
     sort(all(v),cmp);
     s="";
-    for(i=0;i<n;i++) s+=v[i];
+    for(auto x:v) s+=x;
     cout<<yo(s)<<nl;
     return 0;
 }
