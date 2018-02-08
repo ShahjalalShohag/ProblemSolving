@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35060373": {
+    "contest_id": 548,
+    "language": "GNU C++14",
+    "path": "codeforces\\548\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Mike and Fax",
+    "problem_url": "https://codeforces.com/contest/548/problem/A",
+    "submission_id": "CF35060373",
+    "submission_url": "https://codeforces.com/contest/548/submission/35060373",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Feb/08/2018 19:42"
+  },
   "CF35084572": {
     "contest_id": 244,
     "language": "GNU C++14",
