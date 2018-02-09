@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35084598": {
+    "contest_id": 244,
+    "language": "GNU C++14",
+    "path": "codeforces\\244\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Undoubtedly Lucky Numbers",
+    "problem_url": "https://codeforces.com/contest/244/problem/B",
+    "submission_id": "CF35084598",
+    "submission_url": "https://codeforces.com/contest/244/submission/35084598",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dfs and similar",
+      "*1600"
+    ],
+    "timestamp": "Feb/09/2018 15:30"
+  },
   "CF35104701": {
     "contest_id": 244,
     "language": "GNU C++14",
