@@ -98,7 +98,9 @@ int main()
     ll i,j,k,n,m,x,y;
     cin>>n;
     for(i=0;i<n;i++) cin>>k,v.pb(k);
-    for(i=0;i<n;i++){
+    //srt(v);
+    //v.erase(unique(all(v)),v.end());
+    for(i=0;i<v.size();i++){
         x=v[i],y=0;
         se.insert(v[i]);
         for(j=i-1;j>=0;j--){
