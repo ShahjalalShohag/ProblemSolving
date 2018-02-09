@@ -108,7 +108,7 @@ ll ans,n;
 void dfs(ll a)
 {
     if(a>n) return;
-    ans++;
+    if(a!=0) ans++;
     for(ll k,i=0;i<10;i++){
         k=a*10+i;
         if(k!=0&&cnt(k)<=2) dfs(k);
@@ -120,7 +120,7 @@ int main()
     ll i,j,k,m;
     cin>>n;
     dfs(0);
-    cout<<ans-1<<nl;
+    cout<<ans<<nl;
     return 0;
 }
 
