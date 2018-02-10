@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35133765": {
+    "contest_id": 356,
+    "language": "GNU C++14",
+    "path": "codeforces\\356\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Knight Tournament",
+    "problem_url": "https://codeforces.com/contest/356/problem/A",
+    "submission_id": "CF35133765",
+    "submission_url": "https://codeforces.com/contest/356/submission/35133765",
+    "tags": [
+      "data structures",
+      "dsu",
+      "*1500"
+    ],
+    "timestamp": "Feb/11/2018 00:13"
+  },
   "CF35134844": {
     "contest_id": 61,
     "language": "GNU C++14",
