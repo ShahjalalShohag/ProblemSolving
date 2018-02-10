@@ -87,19 +87,16 @@ string  tostr(int n)        {stringstream rr;rr<<n;return rr.str();}
 template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 const int mod=1e9+7;
-const int N=2e5+9;
+const int mxn=2e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-ll t[N*4],a[N],lazy[N*4];
+ll t[mxn*4],a[mxn],lazy[mxn*4];
 char ch;
 void shift(ll n)
 {
-    if(lazy[n]){
-        ll l=2*n,r=l+1;
-        lazy[l]+=lazy[n],t[l]+=lazy[n];
-        lazy[r]+=lazy[n],t[r]+=lazy[n];
-        lazy[n]=0;
-    }
+    lazy[2*n]+=lazy[n],t[2*n]+=lazy[n];
+    lazy[2*n+1]+=lazy[n],t[2*n+1]+=lazy[n];
+    lazy[n]=0;
 }
 void build(ll n,ll b,ll e)
 {
@@ -156,3 +153,4 @@ int main()
     }
     return 0;
 }
+
