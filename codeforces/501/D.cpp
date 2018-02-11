@@ -90,12 +90,12 @@ const int mod=1e9+7;
 const int mxn=2e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-ordered_set<int> se;
-int a[mxn],b[mxn],fac[mxn];
+ordered_set<ll> se;
+ll a[mxn],b[mxn],fac[mxn];
 int main()
 {
     fast;
-    int i,j,k,n,m;
+    ll i,j,k,n,m;
     cin>>n;
     for(i=0;i<n;i++) cin>>a[i],se.insert(a[i]);
     for(i=0;i<n;i++){
