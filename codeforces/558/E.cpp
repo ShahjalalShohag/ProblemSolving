@@ -145,7 +145,7 @@ int query(int n,int b,int e,int i,int j,int ch)
 void print(int n,int b,int e)
 {
     if(b==e){
-        for(int i=0;i<26;i++) if(t[n][i]==1) printf("%c",char('a'+i));
+        for(int i=0;i<26;i++) if(t[n][i]==1) cout<<char('a'+i);
         return;
     }
     shift(n);
@@ -155,16 +155,14 @@ void print(int n,int b,int e)
 }
 int main()
 {
-    //fast;
+    fast;
     int i,j,k,n,m,q,l,r,type,cur;
     mem(lazy,-1);
-   // cin>>n>>q;
-    sff(n,q);
+    cin>>n>>q;
     cin>>s;
     build(1,0,n-1);
     while(q--){
-        //cin>>l>>r>>type;
-        sfff(l,r,type);
+        cin>>l>>r>>type;
         --l,--r;
         for(i=0;i<26;i++) cnt[i]=query(1,0,n-1,l,r,i);
         if(type==1){
@@ -183,7 +181,6 @@ int main()
         }
     }
     print(1,0,n-1);
-    //cout<<s<<nl;
     return 0;
 }
 
