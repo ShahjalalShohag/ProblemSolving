@@ -145,7 +145,7 @@ int query(int n,int b,int e,int i,int j,int ch)
 void print(int n,int b,int e)
 {
     if(b==e){
-        for(int i=0;i<26;i++) if(t[n][i]==1) cout<<char('a'+i);
+        for(int i=0;i<26;i++) if(t[n][i]==1) s[b]=char('a'+i);
         return;
     }
     shift(n);
@@ -181,6 +181,7 @@ int main()
         }
     }
     print(1,0,n-1);
+    cout<<s<<nl;
     return 0;
 }
 
