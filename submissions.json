@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35160561": {
+    "contest_id": 558,
+    "language": "GNU C++14",
+    "path": "codeforces\\558\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "A Simple Task",
+    "problem_url": "https://codeforces.com/contest/558/problem/E",
+    "submission_id": "CF35160561",
+    "submission_url": "https://codeforces.com/contest/558/submission/35160561",
+    "tags": [
+      "data structures",
+      "sortings",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Feb/12/2018 00:09"
+  },
   "CF35160594": {
     "contest_id": 558,
     "language": "GNU C++14",

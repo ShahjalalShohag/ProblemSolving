@@ -104,21 +104,21 @@ int main()
         --l,--r;
         beg=l;
         if(t==1){
-            for(i=0;i<26;++i){
+            for(i=0;i<27;++i){
                 auto up=upper_bound(all(v[i]),r)-v[i].begin();
                 auto low=lower_bound(all(v[i]),l)-v[i].begin();
                 for(j=low;j<up;j++) v[i][j]=beg++;
             }
         }
         else{
-              for(i=25;i>=0;--i){
+              for(i=26;i>=0;--i){
                 auto up=upper_bound(all(v[i]),r)-v[i].begin();
                 auto low=lower_bound(all(v[i]),l)-v[i].begin();
                 for(j=low;j<up;j++) v[i][j]=beg++;
             }
         }
     }
-    for(i=0;i<26;i++){
+    for(i=0;i<27;i++){
         for(auto x:v[i]) s[x]=char('a'+i);
     }
     cout<<s<<nl;
