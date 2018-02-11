@@ -91,11 +91,11 @@ const int mxn=1e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
 string s;
-int t[mxn*4][27],lazy[mxn*4],p[mxn*4],cnt[30];
-void shift(int n)
+ll t[mxn*4][27],lazy[mxn*4],p[mxn*4],cnt[30];
+void shift(ll n)
 {
     if(lazy[n]!=-1){
-        int l=2*n,r=2*n+1,k;
+        ll l=2*n,r=2*n+1,k;
         lazy[l]=lazy[n],lazy[r]=lazy[n];
         for(k=0;k<26;k++){
             if(k==lazy[n]) t[l][k]=p[l],t[r][k]=p[r];
@@ -104,22 +104,22 @@ void shift(int n)
     }
     lazy[n]=-1;
 }
-void build(int n,int b,int e)
+void build(ll n,ll b,ll e)
 {
     p[n]=e-b+1;
     if(b==e){
         t[n][s[b]-'a']=1;
         return;
     }
-    int mid=b+(e-b)/2,l=2*n,r=l+1,k;
+    ll mid=(b+e)>>1,l=2*n,r=l+1,k;
     build(l,b,mid);
     build(r,mid+1,e);
     for(k=0;k<26;k++) t[n][k]=(t[l][k]+t[r][k]);
 }
-void upd(int n,int b,int e,int i,int j,int ch)
+void upd(ll n,ll b,ll e,ll i,ll j,ll ch)
 {
     if(b>j||e<i) return;
-    int k;
+    ll k;
     if(b>=i&&e<=j){
         lazy[n]=ch;
         for(k=0;k<26;k++){
@@ -129,34 +129,34 @@ void upd(int n,int b,int e,int i,int j,int ch)
         return;
     }
     shift(n);
-    int mid=b+(e-b)/2,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     upd(l,b,mid,i,j,ch);
     upd(r,mid+1,e,i,j,ch);
     for(k=0;k<26;k++) t[n][k]=(t[l][k]+t[r][k]);
 }
-int query(int n,int b,int e,int i,int j,int ch)
+ll query(ll n,ll b,ll e,ll i,ll j,ll ch)
 {
     if(b>j||e<i) return 0;
     if(b>=i&&e<=j) return t[n][ch];
     shift(n);
-    int mid=b+(e-b)/2,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     return query(l,b,mid,i,j,ch)+query(r,mid+1,e,i,j,ch);
 }
-void print(int n,int b,int e)
+void print(ll n,ll b,ll e)
 {
     if(b==e){
-        for(int i=0;i<26;i++) if(t[n][i]==1) s[b]=char('a'+i);
+        for(ll i=0;i<26;i++) if(t[n][i]==1) s[b]=char('a'+i);
         return;
     }
     shift(n);
-    int mid=b+(e-b)/2,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     print(l,b,mid);
     print(r,mid+1,e);
 }
 int main()
 {
     fast;
-    int i,j,k,n,m,q,l,r,type,cur;
+    ll i,j,k,n,m,q,l,r,type,cur;
     mem(lazy,-1);
     cin>>n>>q;
     cin>>s;
