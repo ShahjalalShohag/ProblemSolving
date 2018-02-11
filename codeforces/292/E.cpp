@@ -90,11 +90,11 @@ const int mod=1e9+7;
 const int mxn=1e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-int t[mxn*4][2],lazy[mxn*4][2],a[mxn],b[mxn],ans,flag;
-void shift(int n)
+ll t[mxn*4][2],lazy[mxn*4][2],a[mxn],b[mxn],ans,flag;
+void shift(ll n)
 {
     if(lazy[n][1]){
-        int l=2*n,r=l+1;
+        ll l=2*n,r=l+1;
         lazy[l][0]=lazy[r][0]=lazy[n][0];
         lazy[l][1]=lazy[r][1]=lazy[n][1];
         t[l][0]=t[r][0]=lazy[n][0];
@@ -102,17 +102,17 @@ void shift(int n)
     }
     lazy[n][1]=0;
 }
-void build(int n,int b,int e)
+void build(ll n,ll b,ll e)
 {
     if(b==e){
         t[n][0]=b;
         return;
     }
-    int mid=(b+e)>>1,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     build(l,b,mid);
     build(r,mid+1,e);
 }
-void upd(int n,int b,int e,int i,int j,int val)
+void upd(ll n,ll b,ll e,ll i,ll j,ll val)
 {
     if(b>j||e<i) return;
     if(b>=i&&e<=j){
@@ -121,11 +121,11 @@ void upd(int n,int b,int e,int i,int j,int val)
         return;
     }
     shift(n);
-    int mid=(b+e)>>1,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     upd(l,b,mid,i,j,val);
     upd(r,mid+1,e,i,j,val);
 }
-void query(int n,int b,int e,int x)
+void query(ll n,ll b,ll e,ll x)
 {
     if(x<b||x>e) return;
     if(b==e&&b==x){
@@ -134,14 +134,14 @@ void query(int n,int b,int e,int x)
         return;
     }
     shift(n);
-    int mid=(b+e)>>1,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     query(l,b,mid,x);
     query(r,mid+1,e,x);
 }
 int main()
 {
     fast;
-    int i,j,n,m,x,y,k,type,q;
+    ll i,j,n,m,x,y,k,type,q;
     cin>>n>>q;
     for(i=1;i<=n;i++) cin>>a[i];
     for(i=1;i<=n;i++) cin>>b[i];
