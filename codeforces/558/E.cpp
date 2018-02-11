@@ -90,99 +90,38 @@ const int mod=1e9+7;
 const int mxn=1e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-string s;
-ll t[mxn*4][27],lazy[mxn*4],p[mxn*4],cnt[30];
-void shift(ll n)
-{
-    if(lazy[n]!=-1){
-        ll l=2*n,r=2*n+1,k;
-        lazy[l]=lazy[n],lazy[r]=lazy[n];
-        for(k=0;k<26;k++){
-            if(k==lazy[n]) t[l][k]=p[l],t[r][k]=p[r];
-            else t[l][k]=0,t[r][k]=0;
-        }
-    }
-    lazy[n]=-1;
-}
-void build(ll n,ll b,ll e)
-{
-    p[n]=e-b+1;
-    if(b==e){
-        t[n][s[b]-'a']=1;
-        return;
-    }
-    ll mid=(b+e)>>1,l=2*n,r=l+1,k;
-    build(l,b,mid);
-    build(r,mid+1,e);
-    for(k=0;k<26;k++) t[n][k]=(t[l][k]+t[r][k]);
-}
-void upd(ll n,ll b,ll e,ll i,ll j,ll ch)
-{
-    if(b>j||e<i) return;
-    ll k;
-    if(b>=i&&e<=j){
-        lazy[n]=ch;
-        for(k=0;k<26;k++){
-            if(k==ch) t[n][k]=(e-b+1);
-            else t[n][k]=0;
-        }
-        return;
-    }
-    shift(n);
-    ll mid=(b+e)>>1,l=2*n,r=l+1;
-    upd(l,b,mid,i,j,ch);
-    upd(r,mid+1,e,i,j,ch);
-    for(k=0;k<26;k++) t[n][k]=(t[l][k]+t[r][k]);
-}
-ll query(ll n,ll b,ll e,ll i,ll j,ll ch)
-{
-    if(b>j||e<i) return 0;
-    if(b>=i&&e<=j) return t[n][ch];
-    shift(n);
-    ll mid=(b+e)>>1,l=2*n,r=l+1;
-    return query(l,b,mid,i,j,ch)+query(r,mid+1,e,i,j,ch);
-}
-void print(ll n,ll b,ll e)
-{
-    if(b==e){
-        for(ll i=0;i<26;i++) if(t[n][i]==1) s[b]=char('a'+i);
-        return;
-    }
-    shift(n);
-    ll mid=(b+e)>>1,l=2*n,r=l+1;
-    print(l,b,mid);
-    print(r,mid+1,e);
-}
+vi v[30];
+string s,p;
 int main()
 {
     fast;
-    ll i,j,k,n,m,q,l,r,type,cur;
-    mem(lazy,-1);
+    int i,j,k,n,m,q,l,r,t,beg;
     cin>>n>>q;
     cin>>s;
-    build(1,0,n-1);
+    for(i=0;s[i];i++) v[s[i]-'a'].pb(i);
     while(q--){
-        cin>>l>>r>>type;
+        cin>>l>>r>>t;
         --l,--r;
-        for(i=0;i<26;i++) cnt[i]=query(1,0,n-1,l,r,i);
-        if(type==1){
-            cur=l;
-            for(i=0;i<26;i++){
-                upd(1,0,n-1,cur,cur+cnt[i]-1,i);
-                cur+=cnt[i];
+        beg=l;
+        if(t==1){
+            for(i=0;i<26;++i){
+                auto up=upper_bound(all(v[i]),r)-v[i].begin();
+                auto low=lower_bound(all(v[i]),l)-v[i].begin();
+                for(j=low;j<up;j++) v[i][j]=beg++;
             }
         }
         else{
-            cur=r;
-            for(i=0;i<26;i++){
-                upd(1,0,n-1,cur-cnt[i]+1,cur,i);
-                cur-=cnt[i];
+              for(i=25;i>=0;--i){
+                auto up=upper_bound(all(v[i]),r)-v[i].begin();
+                auto low=lower_bound(all(v[i]),l)-v[i].begin();
+                for(j=low;j<up;j++) v[i][j]=beg++;
             }
         }
     }
-    print(1,0,n-1);
+    for(i=0;i<26;i++){
+        for(auto x:v[i]) s[x]=char('a'+i);
+    }
     cout<<s<<nl;
     return 0;
 }
-
 
