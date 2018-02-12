@@ -90,59 +90,59 @@ const int mod=1e9+7;
 const int mxn=1e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k)          {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-int t[mxn*4][25],lazy[mxn*4],a[mxn];
-void shift(int n,int b,int e)
+ll t[mxn*4][25],lazy[mxn*4],a[mxn];
+void shift(ll n,ll b,ll e)
 {
     if(lazy[n]){
-        int l=2*n,r=l+1,mid=b+(e-b)/2;
+        ll l=2*n,r=l+1,mid=(b+e)>>1;
         lazy[l]^=lazy[n],lazy[r]^=lazy[n];
-        for(int k=0;k<25;k++){
+        for(ll k=0;k<25;k++){
             if(lazy[n]&(1<<k)) t[l][k]=(mid-b+1)-t[l][k],t[r][k]=(e-mid)-t[r][k];
         }
     }
     lazy[n]=0;
 }
-void build(int n,int b,int e)
+void build(ll n,ll b,ll e)
 {
     if(b==e){
-        for(int k=0;k<25;k++) if(a[b]&(1<<k)) t[n][k]++;
+        for(ll k=0;k<25;k++) if(a[b]&(1<<k)) t[n][k]++;
         return;
     }
-    int mid=b+(e-b)/2,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     build(l,b,mid);
     build(r,mid+1,e);
-    for(int i=0;i<25;i++) t[n][i]=t[l][i]+t[r][i];
+    for(ll i=0;i<25;i++) t[n][i]=t[l][i]+t[r][i];
 }
-void upd(int n,int b,int e,int i,int j,int x)
+void upd(ll n,ll b,ll e,ll i,ll j,ll x)
 {
     if(b>j||e<i) return;
     if(b>=i&&e<=j){
         lazy[n]=lazy[n]^x;
-        for(int k=0;k<25;k++) if(x&(1<<k)) t[n][k]=(e-b+1)-t[n][k];
+        for(ll k=0;k<25;k++) if(x&(1<<k)) t[n][k]=(e-b+1)-t[n][k];
         return;
     }
     shift(n,b,e);
-    int mid=b+(e-b)/2,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     upd(l,b,mid,i,j,x);
     upd(r,mid+1,e,i,j,x);
-    for(int k=0;k<25;k++) t[n][k]=t[l][k]+t[r][k];
+    for(ll k=0;k<25;k++) t[n][k]=t[l][k]+t[r][k];
 }
-ll query(int n,int b,int e,int i,int j)
+ll query(ll n,ll b,ll e,ll i,ll j)
 {
     if(b>j||e<i) return 0;
     if(b>=i&&e<=j){
         ll ans=0;
-        for(int k=0;k<25;k++) ans+=(ll)t[n][k]*(1LL<<k);
+        for(ll k=0;k<25;k++) ans+=t[n][k]*(1LL<<k);
         return ans;
     }
     shift(n,b,e);
-    int mid=b+(e-b)/2,l=2*n,r=l+1;
+    ll mid=(b+e)>>1,l=2*n,r=l+1;
     return query(l,b,mid,i,j)+query(r,mid+1,e,i,j);
 }
 int main()
 {
     fast;
-    int i,j,k,n,m,q,type,l,r,x;
+    ll i,j,k,n,m,q,type,l,r,x;
     cin>>n;
     for(i=1;i<=n;i++) cin>>a[i];
     build(1,1,n);
