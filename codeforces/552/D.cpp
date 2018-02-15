@@ -82,12 +82,11 @@ string  inttostr(int n)     {stringstream rr;rr<<n;return rr.str();}
 const int mod=1e9+7;
 const int mxn=1e5+9;
 const int eps=1e-9;
-map<pii,int>slope;
+map<pll,ll>slope;
 int main()
 {
     fast;
-    int i,j,k,dx,p,dy,cnt,x[2010],y[2010];
-    ll ans=0,n;
+    ll i,j,k,n,dx,p,dy,cnt,x[2010],y[2010],ans=0;
 	cin>>n;
 	for(i=0;i<n;i++) cin>>x[i]>>y[i];
     ans=n*(n-1)*(n-2)/6;
