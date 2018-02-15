@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35288195": {
+    "contest_id": 817,
+    "language": "GNU C++14",
+    "path": "codeforces\\817\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Really Big Numbers",
+    "problem_url": "https://codeforces.com/contest/817/problem/C",
+    "submission_id": "CF35288195",
+    "submission_url": "https://codeforces.com/contest/817/submission/35288195",
+    "tags": [
+      "binary search",
+      "brute force",
+      "dp",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Feb/15/2018 15:41"
+  },
   "CF35289366": {
     "contest_id": 817,
     "language": "GNU C++14",
