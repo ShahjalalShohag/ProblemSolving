@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35521469": {
+    "contest_id": 922,
+    "language": "GNU C++14",
+    "path": "codeforces\\922\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Divisibility",
+    "problem_url": "https://codeforces.com/contest/922/problem/F",
+    "submission_id": "CF35521469",
+    "submission_url": "https://codeforces.com/contest/922/submission/35521469",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "number theory",
+      "*2400"
+    ],
+    "timestamp": "Feb/20/2018 18:52"
+  },
   "CF35545050": {
     "contest_id": 572,
     "language": "GNU C++14",
