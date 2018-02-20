@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35517037": {
+    "contest_id": 935,
+    "language": "GNU C++14",
+    "path": "codeforces\\935\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Fifa and Fafa",
+    "problem_url": "https://codeforces.com/contest/935/problem/C",
+    "submission_id": "CF35517037",
+    "submission_url": "https://codeforces.com/contest/935/submission/35517037",
+    "tags": [
+      "geometry",
+      "*1600"
+    ],
+    "timestamp": "Feb/20/2018 15:34"
+  },
   "CF35518528": {
     "contest_id": 935,
     "language": "GNU C++14",
