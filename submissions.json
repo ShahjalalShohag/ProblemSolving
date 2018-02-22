@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35573026": {
+    "contest_id": 890,
+    "language": "GNU C++14",
+    "path": "codeforces\\890\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Restoration of string",
+    "problem_url": "https://codeforces.com/contest/890/problem/D",
+    "submission_id": "CF35573026",
+    "submission_url": "https://codeforces.com/contest/890/submission/35573026",
+    "tags": [
+      "graphs",
+      "greedy",
+      "strings",
+      "*2000"
+    ],
+    "timestamp": "Feb/22/2018 18:38"
+  },
   "CF35579747": {
     "contest_id": 20,
     "language": "GNU C++14",
