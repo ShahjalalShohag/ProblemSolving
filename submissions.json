@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35580246": {
+    "contest_id": 812,
+    "language": "GNU C++14",
+    "path": "codeforces\\812\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Sagheer and Crossroads",
+    "problem_url": "https://codeforces.com/contest/812/problem/A",
+    "submission_id": "CF35580246",
+    "submission_url": "https://codeforces.com/contest/812/submission/35580246",
+    "tags": [
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Feb/22/2018 23:59"
+  },
   "CF35580823": {
     "contest_id": 812,
     "language": "GNU C++14",
