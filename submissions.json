@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35728418": {
+    "contest_id": 937,
+    "language": "GNU C++14",
+    "path": "codeforces\\937\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Save Energy!",
+    "problem_url": "https://codeforces.com/contest/937/problem/C",
+    "submission_id": "CF35728418",
+    "submission_url": "https://codeforces.com/contest/937/submission/35728418",
+    "tags": [
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Feb/26/2018 16:43"
+  },
   "CF35741932": {
     "contest_id": 936,
     "language": "GNU C++14",
