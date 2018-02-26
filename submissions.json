@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35741932": {
+    "contest_id": 936,
+    "language": "GNU C++14",
+    "path": "codeforces\\936\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Sleepy Game",
+    "problem_url": "https://codeforces.com/contest/936/problem/B",
+    "submission_id": "CF35741932",
+    "submission_url": "https://codeforces.com/contest/936/submission/35741932",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "games",
+      "graphs",
+      "*2100"
+    ],
+    "timestamp": "Feb/27/2018 00:32"
+  },
   "CF35752970": {
     "contest_id": 940,
     "language": "GNU C++14",
