@@ -107,7 +107,7 @@ int main()
     for(ll i=0;i<n;i++) cin>>pos[i];
     for(ll i=0;i<n;i++) cin>>v[i];
     l=0,r=10000000000;
-    ll t=100;
+    ll t=1000;
     while(t--){
         mid=(l+r)/2;
         time=cnt(mid);
