@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35761392": {
+    "contest_id": 782,
+    "language": "GNU C++14",
+    "path": "codeforces\\782\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Innokenty and a Football League",
+    "problem_url": "https://codeforces.com/contest/782/problem/D",
+    "submission_id": "CF35761392",
+    "submission_url": "https://codeforces.com/contest/782/submission/35761392",
+    "tags": [
+      "graphs",
+      "greedy",
+      "shortest paths",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Feb/27/2018 18:22"
+  },
   "CF35777356": {
     "contest_id": 876,
     "language": "GNU C++14",
