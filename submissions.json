@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35753811": {
+    "contest_id": 940,
+    "language": "GNU C++14",
+    "path": "codeforces\\940\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Alena And The Heater",
+    "problem_url": "https://codeforces.com/contest/940/problem/D",
+    "submission_id": "CF35753811",
+    "submission_url": "https://codeforces.com/contest/940/submission/35753811",
+    "tags": [
+      "binary search",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Feb/27/2018 13:03"
+  },
   "CF35754239": {
     "contest_id": 940,
     "language": "GNU C++14",
