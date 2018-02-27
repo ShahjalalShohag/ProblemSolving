@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35757165": {
+    "contest_id": 872,
+    "language": "GNU C++14",
+    "path": "codeforces\\872\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Search for Pretty Integers",
+    "problem_url": "https://codeforces.com/contest/872/problem/A",
+    "submission_id": "CF35757165",
+    "submission_url": "https://codeforces.com/contest/872/submission/35757165",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Feb/27/2018 15:39"
+  },
   "CF35757444": {
     "contest_id": 872,
     "language": "GNU C++14",
