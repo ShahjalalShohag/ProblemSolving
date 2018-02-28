@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35797412": {
+    "contest_id": 864,
+    "language": "GNU C++14",
+    "path": "codeforces\\864\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Fire",
+    "problem_url": "https://codeforces.com/contest/864/problem/E",
+    "submission_id": "CF35797412",
+    "submission_url": "https://codeforces.com/contest/864/submission/35797412",
+    "tags": [
+      "dp",
+      "sortings",
+      "*2000"
+    ],
+    "timestamp": "Mar/01/2018 03:54"
+  },
   "CF35805267": {
     "contest_id": 855,
     "language": "GNU C++14",
