@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35796413": {
+    "contest_id": 864,
+    "language": "GNU C++14",
+    "path": "codeforces\\864\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Polycarp and Letters",
+    "problem_url": "https://codeforces.com/contest/864/problem/B",
+    "submission_id": "CF35796413",
+    "submission_url": "https://codeforces.com/contest/864/submission/35796413",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings",
+      "*1000"
+    ],
+    "timestamp": "Mar/01/2018 02:47"
+  },
   "CF35796695": {
     "contest_id": 864,
     "language": "GNU C++14",
