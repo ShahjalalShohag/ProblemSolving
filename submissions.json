@@ -624,6 +624,20 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35808135": {
+    "contest_id": 854,
+    "language": "GNU C++14",
+    "path": "codeforces\\854\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Planning",
+    "problem_url": "https://codeforces.com/contest/854/problem/C",
+    "submission_id": "CF35808135",
+    "submission_url": "https://codeforces.com/contest/854/submission/35808135",
+    "tags": [
+      "*1500"
+    ],
+    "timestamp": "Mar/01/2018 16:11"
+  },
   "CF35817410": {
     "contest_id": 712,
     "language": "GNU C++14",
