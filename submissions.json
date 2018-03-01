@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35805448": {
+    "contest_id": 855,
+    "language": "GNU C++14",
+    "path": "codeforces\\855\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Marvolo Gaunt's Ring",
+    "problem_url": "https://codeforces.com/contest/855/problem/B",
+    "submission_id": "CF35805448",
+    "submission_url": "https://codeforces.com/contest/855/submission/35805448",
+    "tags": [
+      "brute force",
+      "data structures",
+      "dp",
+      "*1500"
+    ],
+    "timestamp": "Mar/01/2018 14:01"
+  },
   "CF35806295": {
     "contest_id": 862,
     "language": "GNU C++14",
