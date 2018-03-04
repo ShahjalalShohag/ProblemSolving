@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF35949326": {
+    "contest_id": 931,
+    "language": "GNU C++14",
+    "path": "codeforces\\931\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Laboratory Work",
+    "problem_url": "https://codeforces.com/contest/931/problem/C",
+    "submission_id": "CF35949326",
+    "submission_url": "https://codeforces.com/contest/931/submission/35949326",
+    "tags": [
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Mar/05/2018 02:09"
+  },
   "CF36025078": {
     "contest_id": 946,
     "language": "GNU C++14",
