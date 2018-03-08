@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36081957": {
+    "contest_id": 906,
+    "language": "GNU C++14",
+    "path": "codeforces\\906\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Power Tower",
+    "problem_url": "https://codeforces.com/contest/906/problem/D",
+    "submission_id": "CF36081957",
+    "submission_url": "https://codeforces.com/contest/906/submission/36081957",
+    "tags": [
+      "chinese remainder theorem",
+      "math",
+      "number theory",
+      "*2700"
+    ],
+    "timestamp": "Mar/09/2018 02:56"
+  },
   "CF36091592": {
     "contest_id": 950,
     "language": "GNU C++14",
