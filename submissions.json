@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36209375": {
+    "contest_id": 841,
+    "language": "GNU C++14",
+    "path": "codeforces\\841\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Leha and another game about graph",
+    "problem_url": "https://codeforces.com/contest/841/problem/D",
+    "submission_id": "CF36209375",
+    "submission_url": "https://codeforces.com/contest/841/submission/36209375",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "*2100"
+    ],
+    "timestamp": "Mar/12/2018 01:43"
+  },
   "CF36248170": {
     "contest_id": 849,
     "language": "GNU C++14",
