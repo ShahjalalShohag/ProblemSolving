@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36208546": {
+    "contest_id": 841,
+    "language": "GNU C++14",
+    "path": "codeforces\\841\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Godsend",
+    "problem_url": "https://codeforces.com/contest/841/problem/B",
+    "submission_id": "CF36208546",
+    "submission_url": "https://codeforces.com/contest/841/submission/36208546",
+    "tags": [
+      "games",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Mar/12/2018 00:57"
+  },
   "CF36208854": {
     "contest_id": 841,
     "language": "GNU C++14",
