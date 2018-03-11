@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36208342": {
+    "contest_id": 841,
+    "language": "GNU C++14",
+    "path": "codeforces\\841\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Generous Kefa",
+    "problem_url": "https://codeforces.com/contest/841/problem/A",
+    "submission_id": "CF36208342",
+    "submission_url": "https://codeforces.com/contest/841/submission/36208342",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Mar/12/2018 00:45"
+  },
   "CF36208546": {
     "contest_id": 841,
     "language": "GNU C++14",
