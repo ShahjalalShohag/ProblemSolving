@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36259442": {
+    "contest_id": 627,
+    "language": "GNU C++14",
+    "path": "codeforces\\627\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "XOR Equation",
+    "problem_url": "https://codeforces.com/contest/627/problem/A",
+    "submission_id": "CF36259442",
+    "submission_url": "https://codeforces.com/contest/627/submission/36259442",
+    "tags": [
+      "dp",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Mar/14/2018 01:20"
+  },
   "CF36297011": {
     "contest_id": 319,
     "language": "GNU C++14",
