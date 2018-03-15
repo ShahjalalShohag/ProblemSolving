@@ -18,20 +18,34 @@ using namespace std;
 #define vll vector<ll>
 #define vc vector<char>
 #define vs vector<string>
-#define vpll vector<pll>
-#define vpii vector<pii>
+#define vpii vector< pair<int,int> >
+#define vpll vector< pair<ll,ll> >
+#define ppll pair< ll,pll >
+#define pllp pair< pll,ll >
+#define stll stack<ll>
+#define qll queue<ll>
+#define pqll priority_queue<ll>
+#define mppll map<pll,ll>
+#define mpii map<int,int>
+#define mpll map<ll,ll>
+#define mpss map<string,string>
+#define mpsll map<string,ll>
+#define mplls map<ll,string>
+#define umpii unordered_map<int,int>
+#define umll unordered_map<ll,ll>
+#define umpss unordered_map<string,string>
+#define umpsll unordered_map<string,ll>
+#define umplls unordered_map<ll,string>
 #define umap unordered_map
 #define uset unordered_set
 #define PQ priority_queue
 
+#define rep(i,n) for(i=0;i<n;i++)
+#define itfor(i, c) for (typeof((c).begin()) i = (c).begin(); i != (c).end(); i++)
 #define printa(a,L,R) for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?'\n':' ')
 #define printv(a) printa(a,0,a.size())
 #define print2d(a,r,c) for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?'\n':' ')
 #define pb push_back
-#define eb emplace_back
-#define mt make_tuple
-#define fbo find_by_order
-#define ook order_of_key
 #define MP make_pair
 #define UB upper_bound
 #define LB lower_bound
@@ -40,106 +54,67 @@ using namespace std;
 #define F first
 #define S second
 #define mem(a,x) memset(a,x,sizeof(a))
-#define inf 1e18
+#define inf 0x3f3f3f3f
+#define PI 3.14159265358979323846
 #define E 2.71828182845904523536
 #define gamma 0.5772156649
 #define nl "\n"
 #define lg(r,n) (int)(log2(n)/log2(r))
+#define sf(a) scanf("%d",&a)
+#define sfl(a) scanf("%lld",&a)
+#define sfc(a) scanf("%c",&a)
+#define sff(a,b) scanf("%d %d",&a,&b)
+#define sffl(a,b) scanf("%lld %lld",&a,&b)
+#define sfff(a,b,c) scanf("%d %d %d",&a,&b,&c)
+#define sfffl(a,b,c) scanf("%lld %lld %lld",&a,&b,&c)
 #define pf printf
-#define sf scanf
-#define sf1(a)                scanf("%d",&a)
-#define sf2(a,b)              scanf("%d %d",&a,&b)
-#define sf3(a,b,c)            scanf("%d %d %d",&a,&b,&c)
-#define pf1(a)                printf("%d\n",a);
-#define pf2(a,b)              printf("%d %d\n",a,b)
-#define pf3(a,b,c)            printf("%d %d %d\n",a,b,c)
-#define sf1ll(a)              scanf("%lld",&a)
-#define sf2ll(a,b)            scanf("%I64d %I64d",&a,&b)
-#define sf3ll(a,b,c)          scanf("%I64d %I64d %I64d",&a,&b,&c)
-#define pf1ll(a)              printf("%lld\n",a);
-#define pf2ll(a,b)            printf("%I64d %I64d\n",a,b)
-#define pf3ll(a,b,c)          printf("%I64d %I64d %I64d\n",a,b,c)
-#define _ccase printf("Case %lld: ",++cs)
+#define pfi(a) pf("%d\n",&a)
+#define pfl(a) pf("%lld\n",&a)
+#define _ccase printf("Case %d: ",++cs)
 #define _case cout<<"Case "<<++cs<<": "
-#define by(x) [](const auto& a, const auto& b) { return a.x < b.x; }
+#define debug(x) cout<<#x"="<<(x)<<nl
 
-#define asche cerr<<"Ekhane asche\n";
 #define rev(v) reverse(v.begin(),v.end())
 #define srt(v) sort(v.begin(),v.end())
-#define grtsrt(v) sort(v.begin(),v.end(),greater<ll>())
+#define grtsrt(v) sort(v.begin(),v.end(),greater<int>())
 #define all(v) v.begin(),v.end()
 #define mnv(v) *min_element(v.begin(),v.end())
 #define mxv(v) *max_element(v.begin(),v.end())
+#define countv(v,a) count(v.begin(),v.end(),a)
 #define toint(a) atoi(a.c_str())
-#define fast ios_base::sync_with_stdio(false)
-#define valid(tx,ty) (tx>=0&&tx<n&&ty>=0&&ty<m)
-#define one(x) __builtin_popcount(x)
-#define Unique(v) v.erase(unique(all(v)),v.end())
-#define stree ll l=(n<<1),r=l+1,mid=b+(e-b)/2
-#define fout(x) fixed<<setprecision(x)
+#define fast ios_base::sync_with_stdio(false),cin.tie(NULL)
 string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
-inline void yes(){cout<<"YES\n";exit(0);}
-inline void no(){cout<<"NO\n";exit(0);}
-template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-//ll dx[]={1,0,-1,0,1,-1,-1,1};
-//ll dy[]={0,1,0,-1,1,1,-1,-1};
-
-#define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
-void deb(istream_iterator<string> it) {}
-template<typename T, typename... Args>
-void deb(istream_iterator<string> it, T a, Args... args) {
-    cerr << *it << " = " << a << endl;
-    deb(++it, args...);
-}
+template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 const int mod=1e9+7;
-const int N=1e5+9;
+const int mxn=1e5+9;
 const ld eps=1e-9;
-const ld PI=acos(-1.0);
-//ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
-//ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
-//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-// Keeps upper hull for maximums.
-// add lines with -m and -b and return -ans to
-// make this code working for minimums.
-const ll is_query = -(1LL<<62);
-struct line {
-    ll m, b;
-    mutable function<const line*()> succ;
-    bool operator<(const line& rhs) const {
-        if (rhs.b != is_query) return m < rhs.m;
-        const line* s = succ();
-        if (!s) return 0;
-        ll x = rhs.m;
-        return b - s->b < (s->m - m) * x;
-    }
+//ll qpow(ll n,ll k) {ll ans=1;while(k){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
+struct yo
+{
+    ll m,c;
 };
-//Dynamic Convex Hull Trick
-struct CHT : public multiset<line> { // will maintain upper hull for maximum
-    bool bad(iterator y) {
-        auto z = next(y);
-        if (y == begin()) {
-            if (z == end()) return 0;
-            return y->m == z->m && y->b <= z->b;
-        }
-        auto x = prev(y);
-        if (z == end()) return y->m == x->m && y->b <= x->b;
-        return 1.0*(x->b - y->b)*(z->m - y->m) >= 1.0*(y->b - z->b)*(y->m - x->m);
-    }
-    void add(ll m, ll b) {
-        auto y = insert({ m, b });
-        y->succ = [=] { return next(y) == end() ? 0 : &*next(y); };
-        if (bad(y)) { erase(y); return; }
-        while (next(y) != end() && bad(next(y))) erase(next(y));
-        while (y != begin() && bad(prev(y))) erase(prev(y));
-    }
-    ll query(ll x) {
-        auto l = *lower_bound((line) { x, is_query });
-        return l.m * x + l.b;
-    }
-};
-ll a[N],b[N];
-CHT* x;
+ll last=0,pointer=0,a[mxn],b[mxn];
+yo line[mxn];
+ll val(yo l,ll x)
+{
+    return l.m*x+l.c;
+}
+bool bad(yo l1,yo l2,yo l3)
+{
+    return (ld)(l2.c-l1.c)*(ld)(l1.m-l3.m)>=(ld)(l3.c-l1.c)*(ld)(l1.m-l2.m);
+}
+void add(yo l)
+{
+    line[last++]=l;
+    while(last>=3&&bad(line[last-3],line[last-2],line[last-1])) line[last-2]=line[last-1],last--;
+}
+ll query(ll x)
+{
+    if(pointer>=last) pointer=last-1;
+    while(pointer<last-1&&val(line[pointer+1],x)<=val(line[pointer],x)) pointer++;
+    return val(line[pointer],x);
+}
 int main()
 {
     fast;
@@ -147,11 +122,10 @@ int main()
     cin>>n;
     for(i=0;i<n;i++) cin>>a[i];
     for(i=0;i<n;i++) cin>>b[i];
-    x=new CHT();
-    x->add(-b[0],0);
+    add({b[0],0});
     for(i=1;i<n;i++){
-        ans=-x->query(a[i]);
-        x->add(-b[i],-ans);
+        ans=query(a[i]);
+        add({b[i],ans});
     }
     cout<<ans<<nl;
     return 0;
