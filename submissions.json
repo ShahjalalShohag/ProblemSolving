@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36310733": {
+    "contest_id": 660,
+    "language": "GNU C++14",
+    "path": "codeforces\\660\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Bear and Bowling 4",
+    "problem_url": "https://codeforces.com/contest/660/problem/F",
+    "submission_id": "CF36310733",
+    "submission_url": "https://codeforces.com/contest/660/submission/36310733",
+    "tags": [
+      "binary search",
+      "data structures",
+      "geometry",
+      "ternary search",
+      "*2500"
+    ],
+    "timestamp": "Mar/16/2018 01:09"
+  },
   "CF36310833": {
     "contest_id": 607,
     "language": "GNU C++14",
