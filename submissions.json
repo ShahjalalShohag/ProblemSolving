@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36369609": {
+    "contest_id": 289,
+    "language": "GNU C++17",
+    "path": "codeforces\\289\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Polo the Penguin and Strings",
+    "problem_url": "https://codeforces.com/contest/289/problem/C",
+    "submission_id": "CF36369609",
+    "submission_url": "https://codeforces.com/contest/289/submission/36369609",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Mar/18/2018 01:01"
+  },
   "CF36370626": {
     "contest_id": 289,
     "language": "GNU C++17",
