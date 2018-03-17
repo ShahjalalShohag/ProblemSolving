@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36370757": {
+    "contest_id": 289,
+    "language": "GNU C++17",
+    "path": "codeforces\\289\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Polo the Penguin and Houses ",
+    "problem_url": "https://codeforces.com/contest/289/problem/D",
+    "submission_id": "CF36370757",
+    "submission_url": "https://codeforces.com/contest/289/submission/36370757",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "dfs and similar",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Mar/18/2018 02:09"
+  },
   "CF36428828": {
     "contest_id": 926,
     "language": "Java 8",
