@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36370626": {
+    "contest_id": 289,
+    "language": "GNU C++17",
+    "path": "codeforces\\289\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Polo the Penguin and XOR operation",
+    "problem_url": "https://codeforces.com/contest/289/problem/E",
+    "submission_id": "CF36370626",
+    "submission_url": "https://codeforces.com/contest/289/submission/36370626",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Mar/18/2018 02:00"
+  },
   "CF36370757": {
     "contest_id": 289,
     "language": "GNU C++17",
