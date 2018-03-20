@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36428828": {
+    "contest_id": 926,
+    "language": "Java 8",
+    "path": "codeforces\\926\\A.java",
+    "problem_index": "A",
+    "problem_name": "2-3-numbers",
+    "problem_url": "https://codeforces.com/contest/926/problem/A",
+    "submission_id": "CF36428828",
+    "submission_url": "https://codeforces.com/contest/926/submission/36428828",
+    "tags": [
+      "implementation",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Mar/20/2018 15:25"
+  },
   "CF36452806": {
     "contest_id": 787,
     "language": "Java 8",
