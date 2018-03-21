@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36452806": {
+    "contest_id": 787,
+    "language": "Java 8",
+    "path": "codeforces\\787\\A.java",
+    "problem_index": "A",
+    "problem_name": "The Monster",
+    "problem_url": "https://codeforces.com/contest/787/problem/A",
+    "submission_id": "CF36452806",
+    "submission_url": "https://codeforces.com/contest/787/submission/36452806",
+    "tags": [
+      "brute force",
+      "math",
+      "number theory",
+      "*1200"
+    ],
+    "timestamp": "Mar/21/2018 17:53"
+  },
   "CF36453785": {
     "contest_id": 716,
     "language": "GNU C++17",
