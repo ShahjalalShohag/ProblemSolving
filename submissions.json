@@ -624,6 +624,20 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36613521": {
+    "contest_id": 926,
+    "language": "GNU C++17",
+    "path": "codeforces\\926\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Is This a Zebra?",
+    "problem_url": "https://codeforces.com/contest/926/problem/C",
+    "submission_id": "CF36613521",
+    "submission_url": "https://codeforces.com/contest/926/submission/36613521",
+    "tags": [
+      "*1700"
+    ],
+    "timestamp": "Mar/25/2018 16:50"
+  },
   "CF36622126": {
     "contest_id": 954,
     "language": "GNU C++17",
