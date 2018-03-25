@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36613354": {
+    "contest_id": 957,
+    "language": "GNU C++17",
+    "path": "codeforces\\957\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Riverside Curio",
+    "problem_url": "https://codeforces.com/contest/957/problem/D",
+    "submission_id": "CF36613354",
+    "submission_url": "https://codeforces.com/contest/957/submission/36613354",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1700"
+    ],
+    "timestamp": "Mar/25/2018 16:43"
+  },
   "CF36613376": {
     "contest_id": 957,
     "language": "GNU C++17",
