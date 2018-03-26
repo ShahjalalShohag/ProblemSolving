@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF36647575": {
+    "contest_id": 724,
+    "language": "GNU C++17",
+    "path": "codeforces\\724\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Dense Subsequence",
+    "problem_url": "https://codeforces.com/contest/724/problem/D",
+    "submission_id": "CF36647575",
+    "submission_url": "https://codeforces.com/contest/724/submission/36647575",
+    "tags": [
+      "data structures",
+      "greedy",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Mar/26/2018 21:55"
+  },
   "CF36666358": {
     "contest_id": 954,
     "language": "GNU C++14",
