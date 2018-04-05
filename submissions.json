@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37005418": {
+    "contest_id": 961,
+    "language": "GNU C++17",
+    "path": "codeforces\\961\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Tufurama",
+    "problem_url": "https://codeforces.com/contest/961/problem/E",
+    "submission_id": "CF37005418",
+    "submission_url": "https://codeforces.com/contest/961/submission/37005418",
+    "tags": [
+      "data structures",
+      "*1900"
+    ],
+    "timestamp": "Apr/06/2018 00:31"
+  },
   "CF37045961": {
     "contest_id": 768,
     "language": "GNU C++17",
