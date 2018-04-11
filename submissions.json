@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37232172": {
+    "contest_id": 962,
+    "language": "GNU C++17",
+    "path": "codeforces\\962\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Byteland, Berland and Disputed Cities",
+    "problem_url": "https://codeforces.com/contest/962/problem/E",
+    "submission_id": "CF37232172",
+    "submission_url": "https://codeforces.com/contest/962/submission/37232172",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "Apr/12/2018 00:10"
+  },
   "CF37249446": {
     "contest_id": 954,
     "language": "GNU C++17",
