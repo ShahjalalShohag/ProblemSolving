@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37415443": {
+    "contest_id": 964,
+    "language": "GNU C++17",
+    "path": "codeforces\\964\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Alternating Sum",
+    "problem_url": "https://codeforces.com/contest/964/problem/C",
+    "submission_id": "CF37415443",
+    "submission_url": "https://codeforces.com/contest/964/submission/37415443",
+    "tags": [
+      "math",
+      "matrices",
+      "number theory",
+      "*1800"
+    ],
+    "timestamp": "Apr/17/2018 23:35"
+  },
   "CF37415871": {
     "contest_id": 964,
     "language": "GNU C++17",
