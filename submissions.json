@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37416858": {
+    "contest_id": 963,
+    "language": "GNU C++17",
+    "path": "codeforces\\963\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Frequency of String",
+    "problem_url": "https://codeforces.com/contest/963/problem/D",
+    "submission_id": "CF37416858",
+    "submission_url": "https://codeforces.com/contest/963/submission/37416858",
+    "tags": [
+      "hashing",
+      "string suffix structures",
+      "strings",
+      "*2500"
+    ],
+    "timestamp": "Apr/18/2018 00:24"
+  },
   "CF37460456": {
     "contest_id": 958,
     "language": "GNU C++17",
