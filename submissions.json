@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37460865": {
+    "contest_id": 958,
+    "language": "GNU C++17",
+    "path": "codeforces\\958\\C1.cpp",
+    "problem_index": "C1",
+    "problem_name": "Encryption (easy)",
+    "problem_url": "https://codeforces.com/contest/958/problem/C1",
+    "submission_id": "CF37460865",
+    "submission_url": "https://codeforces.com/contest/958/submission/37460865",
+    "tags": [
+      "brute force",
+      "*1200"
+    ],
+    "timestamp": "Apr/19/2018 18:19"
+  },
   "CF37461505": {
     "contest_id": 958,
     "language": "GNU C++17",
