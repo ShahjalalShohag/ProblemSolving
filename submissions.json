@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37460690": {
+    "contest_id": 958,
+    "language": "GNU C++17",
+    "path": "codeforces\\958\\B1.cpp",
+    "problem_index": "B1",
+    "problem_name": "Maximum Control (easy)",
+    "problem_url": "https://codeforces.com/contest/958/problem/B1",
+    "submission_id": "CF37460690",
+    "submission_url": "https://codeforces.com/contest/958/submission/37460690",
+    "tags": [
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Apr/19/2018 18:13"
+  },
   "CF37460865": {
     "contest_id": 958,
     "language": "GNU C++17",
