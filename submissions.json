@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37460456": {
+    "contest_id": 958,
+    "language": "GNU C++17",
+    "path": "codeforces\\958\\F1.cpp",
+    "problem_index": "F1",
+    "problem_name": "Lightsabers (easy)",
+    "problem_url": "https://codeforces.com/contest/958/problem/F1",
+    "submission_id": "CF37460456",
+    "submission_url": "https://codeforces.com/contest/958/submission/37460456",
+    "tags": [
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Apr/19/2018 18:05"
+  },
   "CF37460690": {
     "contest_id": 958,
     "language": "GNU C++17",
