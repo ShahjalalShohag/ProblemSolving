@@ -118,7 +118,6 @@ int main()
     for(i=1;i<=n;i++) cin>>a[i],a[i]^=a[i-1];
     for(i=0;i<m;i++){
         cin>>q[i].l>>q[i].r;
-        q[i].l--;
         q[i].idx=i;
     }
     block=(ll)sqrt(n);
@@ -126,8 +125,8 @@ int main()
     cnt[0]++;
     for(i=0;i<m;i++){
         while(curl<q[i].l) remov(curl++);
-        while(curl>q[i].l) add(--curl);
-        while(curr<q[i].r) add(++curr);
+        while(curl>=q[i].l) add(--curl);
+        while(curr<=q[i].r) add(++curr);
         while(curr>q[i].r) remov(curr--);
         sol[q[i].idx]=ans;
     }
