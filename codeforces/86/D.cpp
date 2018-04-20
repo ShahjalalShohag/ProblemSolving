@@ -42,9 +42,9 @@ using namespace std;
 
 #define rep(i,n) for(i=0;i<n;i++)
 #define itfor(i, c) for (typeof((c).begin()) i = (c).begin(); i != (c).end(); i++)
-#define printa(a,L,R) for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?�\n�:� �)
+#define printa(a,L,R) for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?’\n’:’ ‘)
 #define printv(a) printa(a,0,a.size())
-#define print2d(a,r,c) for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?�\n�:� �)
+#define print2d(a,r,c) for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?’\n’:’ ‘)
 #define pb push_back
 #define MP make_pair
 #define UB upper_bound
@@ -82,7 +82,7 @@ using namespace std;
 #define mxv(v) *max_element(v.begin(),v.end())
 #define countv(v,a) count(v.begin(),v.end(),a)
 #define toint(a) atoi(a.c_str())
-#define fast ios_base::sync_with_stdio(false)
+#define fast ios_base::sync_with_stdio(false),cin.tie(NULL)
 string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
 //template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
@@ -93,45 +93,23 @@ const ld eps=1e-9;
 struct sj
 {
     int l,r,idx;
-    int64_t ord;
 }q[mxn];
-int a[mxn],curl,curr,cnt[mxn*5];
+int block,a[mxn],curl,curr,cnt[mxn*5];
 ll ans,sol[mxn];
-inline int64_t gilbertOrder(int x, int y, int pow, int rotate) {
-	if (pow == 0) {
-		return 0;
-	}
-	int hpow = 1 << (pow-1);
-	int seg = (x < hpow) ? (
-		(y < hpow) ? 0 : 3
-	) : (
-		(y < hpow) ? 1 : 2
-	);
-	seg = (seg + rotate) & 3;
-	const int rotateDelta[4] = {3, 0, 0, 1};
-	int nx = x & (x ^ hpow), ny = y & (y ^ hpow);
-	int nrot = (rotate + rotateDelta[seg]) & 3;
-	int64_t subSquareSize = int64_t(1) << (2*pow - 2);
-	int64_t ans = seg * subSquareSize;
-	int64_t add = gilbertOrder(nx, ny, pow-1, nrot);
-	ans += (seg == 1 || seg == 2) ? add : (subSquareSize - add - 1);
-	return ans;
-}
 bool cmp(sj a,sj b)
 {
-    return a.ord<b.ord;
+    if(a.l/block==b.l/block) return a.r<b.r;
+    else return a.l/block<b.l/block;
 }
-inline void add(ll i)
+void add(ll i)
 {
-    ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
+    ans+=(ll)(2*cnt[a[i]]+1)*a[i];
     cnt[a[i]]++;
-    ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
-inline void remov(ll i)
+void remov(ll i)
 {
-    ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
+    ans-=(ll)(2*cnt[a[i]]-1)*a[i];
     cnt[a[i]]--;
-    ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
 int main()
 {
@@ -143,7 +121,7 @@ int main()
         cin>>q[i].l>>q[i].r;
         q[i].idx=i;
     }
-    for(i=0;i<t;i++) q[i].ord=gilbertOrder(q[i].l,q[i].r,21,0);
+    block=(int)sqrt(n);
     sort(q,q+t,cmp);
     for(i=0;i<t;i++){
         while(curl<q[i].l) remov(curl++);
@@ -155,3 +133,4 @@ int main()
     for(i=0;i<t;i++) cout<<sol[i]<<nl;
     return 0;
 }
+
