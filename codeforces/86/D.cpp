@@ -101,15 +101,17 @@ bool cmp(sj a,sj b)
     if(a.l/block==b.l/block) return a.r<b.r;
     else return a.l/block<b.l/block;
 }
-void add(ll i)
+inline void add(ll i)
 {
-    ans+=(ll)(2*cnt[a[i]]+1)*a[i];
+    ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
     cnt[a[i]]++;
+    ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
-void remov(ll i)
+inline void remov(ll i)
 {
-    ans-=(ll)(2*cnt[a[i]]-1)*a[i];
+    ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
     cnt[a[i]]--;
+    ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
 int main()
 {
@@ -121,7 +123,7 @@ int main()
         cin>>q[i].l>>q[i].r;
         q[i].idx=i;
     }
-    block=(int)sqrt(n);
+    block=(ll)sqrt(n);
     sort(q,q+t,cmp);
     for(i=0;i<t;i++){
         while(curl<q[i].l) remov(curl++);
