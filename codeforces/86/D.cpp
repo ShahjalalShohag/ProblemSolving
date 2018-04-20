@@ -101,13 +101,13 @@ bool cmp(sj a,sj b)
     if(a.l/block==b.l/block) return a.r<b.r;
     else return a.l/block<b.l/block;
 }
-inline void add(ll i)
+void add(ll i)
 {
     ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
     cnt[a[i]]++;
     ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
-inline void remov(ll i)
+void remov(ll i)
 {
     ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
     cnt[a[i]]--;
