@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37552346": {
+    "contest_id": 816,
+    "language": "GNU C++17",
+    "path": "codeforces\\816\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Karen and Game",
+    "problem_url": "https://codeforces.com/contest/816/problem/C",
+    "submission_id": "CF37552346",
+    "submission_url": "https://codeforces.com/contest/816/submission/37552346",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Apr/23/2018 19:56"
+  },
   "CF37619051": {
     "contest_id": 965,
     "language": "GNU C++17",
