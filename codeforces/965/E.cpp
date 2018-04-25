@@ -115,7 +115,10 @@ void dfs(node *cur,PQ<int>&q)
             PQ<int>p;
             dfs(cur->t[i],p);
             if(q.size()<p.size()) p.swap(q);
-            while(!p.empty()) q.push(p.top()), p.pop();
+            while(!p.empty()){
+                q.push(p.top());
+                p.pop();
+            }
         }
     }
     if(cur->en==0){
