@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37732207": {
+    "contest_id": 967,
+    "language": "GNU C++17",
+    "path": "codeforces\\967\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Resource Distribution",
+    "problem_url": "https://codeforces.com/contest/967/problem/D",
+    "submission_id": "CF37732207",
+    "submission_url": "https://codeforces.com/contest/967/submission/37732207",
+    "tags": [
+      "binary search",
+      "sortings",
+      "*1700"
+    ],
+    "timestamp": "Apr/30/2018 01:01"
+  },
   "CF37732490": {
     "contest_id": 967,
     "language": "GNU C++17",
