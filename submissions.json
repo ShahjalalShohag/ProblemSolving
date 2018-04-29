@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37732490": {
+    "contest_id": 967,
+    "language": "GNU C++17",
+    "path": "codeforces\\967\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Big Secret",
+    "problem_url": "https://codeforces.com/contest/967/problem/E",
+    "submission_id": "CF37732490",
+    "submission_url": "https://codeforces.com/contest/967/submission/37732490",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "Apr/30/2018 01:17"
+  },
   "CF37746133": {
     "contest_id": 960,
     "language": "GNU C++17",
