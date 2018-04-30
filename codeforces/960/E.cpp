@@ -92,8 +92,6 @@ const ld eps=1e-9;
 //ll qpow(ll n,ll k) {ll ans=1;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
 ll ans,odd[mxn],even[mxn],dep[mxn],a[mxn];
 vll g[mxn];
-//oddi=the number of paths in the subtree of i with odd number of nodes(not edges)  ending at node i.
-//eveni=the number of paths in the subtree of i with even number of nodes(not edges) ending at node i.
 void dfs(ll u,ll pre)
 {
     ll childcnt=0;

@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37746133": {
+    "contest_id": 960,
+    "language": "GNU C++17",
+    "path": "codeforces\\960\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Alternating Tree",
+    "problem_url": "https://codeforces.com/contest/960/problem/E",
+    "submission_id": "CF37746133",
+    "submission_url": "https://codeforces.com/contest/960/submission/37746133",
+    "tags": [
+      "combinatorics",
+      "dfs and similar",
+      "divide and conquer",
+      "dp",
+      "probabilities",
+      "trees",
+      "*2300"
+    ],
+    "timestamp": "Apr/30/2018 16:47"
+  },
   "CF37746307": {
     "contest_id": 960,
     "language": "GNU C++17",
