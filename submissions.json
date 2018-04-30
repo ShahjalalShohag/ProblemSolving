@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37779022": {
+    "contest_id": 976,
+    "language": "GNU C++17",
+    "path": "codeforces\\976\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Lara Croft and the New Game",
+    "problem_url": "https://codeforces.com/contest/976/problem/B",
+    "submission_id": "CF37779022",
+    "submission_url": "https://codeforces.com/contest/976/submission/37779022",
+    "tags": [
+      "implementation",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "May/01/2018 00:10"
+  },
   "CF37779090": {
     "contest_id": 976,
     "language": "GNU C++17",
