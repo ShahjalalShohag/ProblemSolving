@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37779090": {
+    "contest_id": 976,
+    "language": "GNU C++17",
+    "path": "codeforces\\976\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Nested Segments",
+    "problem_url": "https://codeforces.com/contest/976/problem/C",
+    "submission_id": "CF37779090",
+    "submission_url": "https://codeforces.com/contest/976/submission/37779090",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "May/01/2018 00:13"
+  },
   "CF37779193": {
     "contest_id": 976,
     "language": "GNU C++17",
