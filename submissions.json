@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF37825979": {
+    "contest_id": 975,
+    "language": "GNU C++17",
+    "path": "codeforces\\975\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Mancala",
+    "problem_url": "https://codeforces.com/contest/975/problem/B",
+    "submission_id": "CF37825979",
+    "submission_url": "https://codeforces.com/contest/975/submission/37825979",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "May/02/2018 03:28"
+  },
   "CF37825998": {
     "contest_id": 975,
     "language": "GNU C++17",
