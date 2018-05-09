@@ -72,7 +72,7 @@ using namespace std;
 #define pfl(a) pf("%lld\n",a)
 #define _ccase printf("Case %lld: ",++cs)
 #define _case cout<<"Case "<<++cs<<": "
-#define debug(x) cerr<<#x"="<<(x)<<nl
+#define debug(x) cout<<#x"="<<(x)<<nl
 
 #define rev(v) reverse(v.begin(),v.end())
 #define srt(v) sort(v.begin(),v.end())
@@ -98,9 +98,9 @@ int main()
     string s;
     cin>>s;
     for(auto x:s) cnt[x]++;
-    debug(cnt[0]);
     if(cnt['o']==0) return cout<<"YES\n",0;
     if(cnt['-']%cnt['o']==0) cout<<"YES\n";
     else cout<<"NO\n";
     return 0;
 }
+
