@@ -82,7 +82,7 @@ using namespace std;
 #define mxv(v) *max_element(v.begin(),v.end())
 #define countv(v,a) count(v.begin(),v.end(),a)
 #define toint(a) atoi(a.c_str())
-#define fast ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
+#define fast ios_base::sync_with_stdio(false),cin.tie(NULL)
 string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
 //template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
@@ -92,7 +92,7 @@ const ld eps=1e-9;
 //ll qpow(ll n,ll k) {ll ans=1;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
 vector<int> g[mxn];
 bool fl[mxn];
-int par[mxn][22],n;
+int par[mxn][25],n;
 void dfs(int u,int prev)
 {
     for(auto v:g[u]){
@@ -103,12 +103,12 @@ void dfs(int u,int prev)
 }
 void build()
 {
-    for(int i=1;i<22;i++) for(int j=1;j<=n;j++) par[j][i]=par[par[j][i-1]][i-1];
+    for(int i=1;i<25;i++) for(int j=1;j<=n;j++) par[j][i]=par[par[j][i-1]][i-1];
 }
 int kth_par(int n,int k)
 {
     int ans=n;
-    for(int i=0;i<22;i++) if(k&(1<<i)) ans=par[ans][i];
+    for(int i=0;i<25;i++) if(k&(1LL<<i)) ans=par[ans][i];
     return ans;
 }
 int main()
@@ -122,8 +122,8 @@ int main()
     fl[n]=1;
     fl[0]=1;
     k=n-k-1;
-    for(i=n;i>=1;i--) if(fl[kth_par(i,k)]) for(j=i;!fl[j];j=par[j][0]) k--,fl[j]=1;
-    for(i=1;i<=n;i++) if(!fl[i]) cout<<i<<' ';
+    for(i=n;i>=1;i--) if(fl[kth_par(i,k)]==1) for(j=i;fl[j]==0;j=par[j][0]) k--,fl[j]=1;
+    for(i=1;i<=n;i++) if(fl[i]==0) cout<<i<<' ';
     return 0;
 }
 
