@@ -90,10 +90,10 @@ const int mod=1e9+7;
 const int mxn=1e6+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k) {ll ans=1;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-vector<int> g[mxn];
+vll g[mxn];
 bool fl[mxn];
-int par[mxn][25],n;
-void dfs(int u,int prev)
+ll par[mxn][25],n;
+void dfs(ll u,ll prev)
 {
     for(auto v:g[u]){
         if(v==prev) continue;
@@ -103,18 +103,18 @@ void dfs(int u,int prev)
 }
 void build()
 {
-    for(int i=1;i<25;i++) for(int j=1;j<=n;j++) par[j][i]=par[par[j][i-1]][i-1];
+    for(ll i=1;i<25;i++) for(ll j=1;j<=n;j++) par[j][i]=par[par[j][i-1]][i-1];
 }
-int kth_par(int n,int k)
+ll kth_par(ll n,ll k)
 {
-    int ans=n;
-    for(int i=0;i<25;i++) if(k&(1LL<<i)) ans=par[ans][i];
+    ll ans=n;
+    for(ll i=0;i<25;i++) if(k&(1LL<<i)) ans=par[ans][i];
     return ans;
 }
 int main()
 {
     fast;
-    int i,j,k,m,u,v;
+    ll i,j,k,m,u,v;
     cin>>n>>k;
     for(i=1;i<n;i++) cin>>u>>v,g[u].pb(v),g[v].pb(u);
     dfs(n,0);
