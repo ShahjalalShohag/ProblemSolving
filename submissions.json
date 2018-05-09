@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38081692": {
+    "contest_id": 980,
+    "language": "GNU C++17",
+    "path": "codeforces\\980\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Perfect Groups",
+    "problem_url": "https://codeforces.com/contest/980/problem/D",
+    "submission_id": "CF38081692",
+    "submission_url": "https://codeforces.com/contest/980/submission/38081692",
+    "tags": [
+      "dp",
+      "math",
+      "number theory",
+      "*2100"
+    ],
+    "timestamp": "May/10/2018 04:09"
+  },
   "CF38081951": {
     "contest_id": 980,
     "language": "GNU C++17",
