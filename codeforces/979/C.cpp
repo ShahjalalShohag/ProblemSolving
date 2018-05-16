@@ -91,15 +91,23 @@ const int mxn=3e5+9;
 const ld eps=1e-9;
 //ll qpow(ll n,ll k) {ll ans=1;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
 vll g[mxn];
-ll x,y,dp[mxn],par[mxn];
-void dfs(ll u,ll prev)
+ll x,y,dpx[mxn],dpy[mxn];
+void dfsx(ll u,ll prev)
 {
-    dp[u]=1;
-    par[u]=prev;
+    dpx[u]=1;
     for(auto v:g[u]){
         if(v==prev) continue;
-        dfs(v,u);
-        dp[u]+=dp[v];
+        dfsx(v,u);
+        dpx[u]+=dpx[v];
+    }
+}
+void dfsy(ll u,ll prev)
+{
+    dpy[u]=1;
+    for(auto v:g[u]){
+        if(v==prev) continue;
+        dfsy(v,u);
+        dpy[u]+=dpy[v];
     }
 }
 int main()
@@ -108,10 +116,9 @@ int main()
     ll i,j,k,n,m,u,v;
     cin>>n>>x>>y;
     for(i=1;i<n;i++) cin>>u>>v,g[u].pb(v),g[v].pb(u);
-    dfs(x,-1);
-    ll z=y;
-    while(par[z]!=x) z=par[z];
-    cout<<n*(n-1)-(dp[x]-dp[z])*dp[y]<<nl;
+    dfsx(x,-1);
+    dfsy(y,-1);
+    cout<<n*n-n-dpx[y]*dpy[x]<<nl;
     return 0;
 }
 
