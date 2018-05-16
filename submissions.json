@@ -624,6 +624,31 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38317511": {
+    "contest_id": 979,
+    "language": "GNU C++17",
+    "path": "codeforces\\979\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Kuro and GCD and XOR and SUM",
+    "problem_url": "https://codeforces.com/contest/979/problem/D",
+    "submission_id": "CF38317511",
+    "submission_url": "https://codeforces.com/contest/979/submission/38317511",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "brute force",
+      "data structures",
+      "dp",
+      "dsu",
+      "greedy",
+      "math",
+      "number theory",
+      "strings",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "May/16/2018 16:45"
+  },
   "CF38382657": {
     "contest_id": 982,
     "language": "GNU C++17",
