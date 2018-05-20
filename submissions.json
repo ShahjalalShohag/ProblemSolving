@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38469963": {
+    "contest_id": 757,
+    "language": "GNU C++17",
+    "path": "codeforces\\757\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Bash Plays with Functions",
+    "problem_url": "https://codeforces.com/contest/757/problem/E",
+    "submission_id": "CF38469963",
+    "submission_url": "https://codeforces.com/contest/757/submission/38469963",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "dp",
+      "number theory",
+      "*2500"
+    ],
+    "timestamp": "May/21/2018 03:36"
+  },
   "CF38480116": {
     "contest_id": 675,
     "language": "GNU C++17",
