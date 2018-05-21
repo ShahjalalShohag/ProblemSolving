@@ -83,7 +83,7 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-ll p= 137,pos[26][mxn],hs[26][mxn],pw[mxn],n;
+ll p=200009,pos[26][mxn],hs[26][mxn],pw[mxn],n;
 string s;
 ll gethash(ll i,ll l,ll r)
 {
