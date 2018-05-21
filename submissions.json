@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38515422": {
+    "contest_id": 985,
+    "language": "GNU C++17",
+    "path": "codeforces\\985\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Sand Fortress",
+    "problem_url": "https://codeforces.com/contest/985/problem/D",
+    "submission_id": "CF38515422",
+    "submission_url": "https://codeforces.com/contest/985/submission/38515422",
+    "tags": [
+      "binary search",
+      "constructive algorithms",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "May/22/2018 00:14"
+  },
   "CF38515463": {
     "contest_id": 985,
     "language": "GNU C++17",
