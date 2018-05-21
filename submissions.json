@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38515737": {
+    "contest_id": 985,
+    "language": "GNU C++17",
+    "path": "codeforces\\985\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Pencils and Boxes",
+    "problem_url": "https://codeforces.com/contest/985/problem/E",
+    "submission_id": "CF38515737",
+    "submission_url": "https://codeforces.com/contest/985/submission/38515737",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dp",
+      "greedy",
+      "two pointers",
+      "*2100"
+    ],
+    "timestamp": "May/22/2018 00:25"
+  },
   "CF38516919": {
     "contest_id": 985,
     "language": "GNU C++17",
