@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38596961": {
+    "contest_id": 375,
+    "language": "GNU C++17",
+    "path": "codeforces\\375\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Tree and Queries",
+    "problem_url": "https://codeforces.com/contest/375/problem/D",
+    "submission_id": "CF38596961",
+    "submission_url": "https://codeforces.com/contest/375/submission/38596961",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "trees",
+      "*2400"
+    ],
+    "timestamp": "May/25/2018 03:29"
+  },
   "CF38607191": {
     "contest_id": 615,
     "language": "GNU C++17",
