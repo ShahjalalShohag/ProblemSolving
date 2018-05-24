@@ -18,7 +18,7 @@ using namespace std;
 #define vll vector<ll>
 #define vc vector<char>
 #define vs vector<string>
-#define vpii vector< pair<int,int> >
+#define vpll vector< pair<ll,ll> >
 #define umap unordered_map
 #define uset unordered_set
 #define PQ priority_queue
@@ -83,12 +83,12 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-vi g[mxn];
-int ans[mxn],col[mxn],sz[mxn],freq[mxn],level[mxn],cnt[30];
-vpii que[mxn];
+vll g[mxn];
+ll ans[mxn],col[mxn],sz[mxn],freq[mxn],level[mxn],cnt[30];
+vpll que[mxn];
 bool big[mxn];
 string s;
-void dfs(int u,int pre)
+void dfs(ll u,ll pre)
 {
     sz[u]=1;
     level[u]=level[pre]+1;
@@ -98,7 +98,7 @@ void dfs(int u,int pre)
         sz[u]+=sz[v];
     }
 }
-void add(int u,int pre,int x)
+void add(ll u,ll pre,ll x)
 {
     freq[level[u]]=freq[level[u]]^(1<<(s[u-1]-'a'));
     for(auto v:g[u]){
@@ -106,9 +106,9 @@ void add(int u,int pre,int x)
         add(v,u,x);
     }
 }
-void dsu(int u,int pre,bool keep)
+void dsu(ll u,ll pre,bool keep)
 {
-    int bigchild=-1,mx=-1;
+    ll bigchild=-1,mx=-1;
     for(auto v:g[u]){
         if(v==pre) continue;
         if(sz[v]>mx) mx=sz[v],bigchild=v;
@@ -126,7 +126,7 @@ void dsu(int u,int pre,bool keep)
 int main()
 {
     fast;
-    int i,j,k,n,m,u,v,q,h;
+    ll i,j,k,n,m,u,v,q,h;
     cin>>n>>q;
     for(i=2;i<=n;i++) cin>>k,g[i].pb(k),g[k].pb(i);
     cin>>s;
