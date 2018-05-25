@@ -85,11 +85,11 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-int par[mxn],tim,st[mxn],en[mxn];
-vi g[mxn];
+ll par[mxn],tim,st[mxn],en[mxn];
+vll g[mxn];
 bool t[mxn*4];
-//empty=1,fiint=0;
-void build(int n,int b,int e)
+//empty=1,fill=0;
+void build(ll n,ll b,ll e)
 {
     if(b==e){
         t[n]=1;
@@ -100,7 +100,7 @@ void build(int n,int b,int e)
     build(r,mid+1,e);
     t[n]=t[l]|t[r];
 }
-void fiint_them(int n,int b,int e,int i,int j)
+void fill_them(ll n,ll b,ll e,ll i,ll j)
 {
     if(b>j||e<i) return;
     if(b==e){
@@ -108,11 +108,11 @@ void fiint_them(int n,int b,int e,int i,int j)
         return;
     }
     stree;
-    if(t[l]) fiint_them(l,b,mid,i,j);
-    if(t[r]) fiint_them(r,mid+1,e,i,j);
+    if(t[l]) fill_them(l,b,mid,i,j);
+    if(t[r]) fill_them(r,mid+1,e,i,j);
     t[n]=t[l]|t[r];
 }
-void make_empty(int n,int b,int e,int i)
+void make_empty(ll n,ll b,ll e,ll i)
 {
     if(i<b||i>e) return;
     if(b==e&&b==i){
@@ -124,14 +124,14 @@ void make_empty(int n,int b,int e,int i)
     make_empty(r,mid+1,e,i);
     t[n]=t[l]|t[r];
 }
-bool query(int n,int b,int e,int i,int j)
+bool query(ll n,ll b,ll e,ll i,ll j)
 {
     if(b>j||e<i) return 0;
     if(b>=i&&e<=j) return t[n];
     stree;
     return query(l,b,mid,i,j)|query(r,mid+1,e,i,j);
 }
-void dfs(int u,int pre)
+void dfs(ll u,ll pre)
 {
     par[u]=pre;
     st[u]=++tim;
@@ -141,7 +141,7 @@ void dfs(int u,int pre)
 int main()
 {
     fast;
-    int i,j,k,n,m,u,v,type,q;
+    ll i,j,k,n,m,u,v,type,q;
     cin>>n;
     for(i=1;i<n;i++) cin>>u>>v,g[u].pb(v),g[v].pb(u);
     dfs(1,0);
@@ -151,7 +151,7 @@ int main()
         cin>>type>>u;
         if(type==1){
             bool chk=query(1,1,tim,st[u],en[u]);
-            fiint_them(1,1,tim,st[u],en[u]);
+            fill_them(1,1,tim,st[u],en[u]);
             if(chk&&par[u]) make_empty(1,1,tim,st[par[u]]);
         }
         else if(type==2) make_empty(1,1,tim,st[u]);
