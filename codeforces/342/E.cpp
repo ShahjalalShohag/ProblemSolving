@@ -85,11 +85,11 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-vi g[mxn];
-int cenpar[mxn],sz[mxn],subtree_sz,dep[mxn],par[mxn][20],ans[mxn];
+vll g[mxn];
+ll cenpar[mxn],sz[mxn],subtree_sz,dep[mxn],par[mxn][20],ans[mxn];
 bool done[mxn];
 //preprocessing part
-void dfs(int u,int pre)
+void dfs(ll u,ll pre)
 {
     dep[u]=dep[pre]+1;
     par[u][0]=pre;
@@ -98,20 +98,20 @@ void dfs(int u,int pre)
         dfs(v,u);
     }
 }
-int lca(int u,int v)
+ll lca(ll u,ll v)
 {
     if(dep[u]<dep[v]) swap(u,v);
-    for(int k=19;k>=0;k--) if(dep[par[u][k]]>=dep[v])  u=par[u][k];
+    for(ll k=19;k>=0;k--) if(dep[par[u][k]]>=dep[v])  u=par[u][k];
     if(u==v) return u;
-    for(int k=19;k>=0;k--) if(par[u][k]!=par[v][k]) u=par[u][k],v=par[v][k];
+    for(ll k=19;k>=0;k--) if(par[u][k]!=par[v][k]) u=par[u][k],v=par[v][k];
     return par[u][0];
 }
-int dist(int u,int v)
+ll dist(ll u,ll v)
 {
     return dep[u]+dep[v]-2*dep[lca(u,v)];
 }
 //Decomposition part
-void set_subtree_size(int u,int pre)
+void set_subtree_size(ll u,ll pre)
 {
     subtree_sz++;
     sz[u]=1;
@@ -121,7 +121,7 @@ void set_subtree_size(int u,int pre)
         sz[u]+=sz[v];
     }
 }
-int get_centroid(int u,int pre)
+ll get_centroid(ll u,ll pre)
 {
     for(auto v:g[u]){
         if(v==pre||done[v]) continue;
@@ -129,11 +129,11 @@ int get_centroid(int u,int pre)
     }
     return u;
 }
-void decompose(int u,int pre)
+void decompose(ll u,ll pre)
 {
     subtree_sz=0;
     set_subtree_size(u,pre);
-    int centroid=get_centroid(u,pre);
+    ll centroid=get_centroid(u,pre);
     cenpar[centroid]=pre;
     done[centroid]=1;
     for(auto v:g[centroid]){
@@ -142,35 +142,35 @@ void decompose(int u,int pre)
     }
 }
 //query part
-void upd(int x)
+void upd(ll x)
 {
-    int u=x;
+    ll u=x;
     while(x){
         ans[x]=min(ans[x],dist(u,x));
         x=cenpar[x];
     }
 }
-int query(int x)
+ll query(ll x)
 {
-    int ret=1e9,u=x;
+    ll ret=1e9,u=x;
     while(x){
         ret=min(ret,ans[x]+dist(u,x));
         x=cenpar[x];
     }
     return ret;
 }
-//closest red node from a node,aint nodes can be blue or red
+//closest red node from a node,all nodes can be blue or red
 int main()
 {
     fast;
-    int i,j,k,n,m,q,x,u,v,typ;
+    ll i,j,k,n,m,q,x,u,v,typ;
     cin>>n>>q;
     for(i=1;i<n;i++) cin>>u>>v,g[u].pb(v),g[v].pb(u);
     dfs(1,0);
     for(k=1;k<20;k++) for(i=1;i<=n;i++) par[i][k]=par[par[i][k-1]][k-1];
     decompose(1,0);
     //make sure to set ans as INF
-    for(i=0;i<=n;i++) ans[i]=1e6;
+    for(i=0;i<=n;i++) ans[i]=1e9;
     upd(1);
     while(q--){
         cin>>typ>>x;
@@ -179,4 +179,3 @@ int main()
     }
     return 0;
 }
-

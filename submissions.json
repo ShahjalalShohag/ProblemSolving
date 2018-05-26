@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38644235": {
+    "contest_id": 342,
+    "language": "GNU C++17",
+    "path": "codeforces\\342\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Xenia and Tree",
+    "problem_url": "https://codeforces.com/contest/342/problem/E",
+    "submission_id": "CF38644235",
+    "submission_url": "https://codeforces.com/contest/342/submission/38644235",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "trees",
+      "*2400"
+    ],
+    "timestamp": "May/27/2018 04:43"
+  },
   "CF38644256": {
     "contest_id": 342,
     "language": "GNU C++17",
