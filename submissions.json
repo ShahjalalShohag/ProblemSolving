@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38679264": {
+    "contest_id": 981,
+    "language": "GNU C++17",
+    "path": "codeforces\\981\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Businessmen Problems",
+    "problem_url": "https://codeforces.com/contest/981/problem/B",
+    "submission_id": "CF38679264",
+    "submission_url": "https://codeforces.com/contest/981/submission/38679264",
+    "tags": [
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "May/28/2018 02:15"
+  },
   "CF38679315": {
     "contest_id": 981,
     "language": "GNU C++17",
