@@ -80,54 +80,45 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=1010;
+const int mxn=1010;
 const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-ll multree[N][N][2],addtree[N][N][2];
+ll multree[mxn][mxn][2],addtree[mxn][mxn][2];
 ll yo(ll x)
 {
-    ///for range sum
-    ///return x;
-    ///for range xor
+    //for range sum
+    //return x;
+    //for range xor
     return (x%2);
 }
-ll query2(ll tree[N][N][2],ll x,ll y)
+ll query2(ll tree[mxn][mxn][2],ll x,ll y)
 {
     ll mul=0,add=0;
     for(ll i=y;i>0;i-=i&-i){
-        ///mul+=tree[x][i][0];
-        ///add+=tree[x][i][1];
         mul^=tree[x][i][0];
         add^=tree[x][i][1];
     }
-    ///return (mul*yo(y))+add;
     return (mul*yo(y))^add;
 }
 ll query1(ll x,ll y)
 {
     ll mul=0,add=0;
     for(ll i=x;i>0;i-=i&-i){
-        ///mul+=query2(multree,i,y);
-        ///add+=query2(addtree,i,y);
         mul^=query2(multree,i,y);
         add^=query2(addtree,i,y);
     }
-    ///return (mul*yo(x))+add;
     return (mul*yo(x))^add;
 }
 ll query(ll x1,ll y1,ll x2,ll y2)
 {
-    ///return (query1(x2,y2)-query1(x1-1,y2)-query1(x2,y1-1)+query1(x1-1,y1-1));
     return (query1(x2,y2)^query1(x1-1,y2)^query1(x2,y1-1)^query1(x1-1,y1-1));
 }
-void upd2(ll tree[N][N][2],ll x,ll y,ll mul,ll add)
+void upd2(ll tree[mxn][mxn][2],ll x,ll y,ll mul,ll add)
 {
-    for(ll i=x;i<N;i+=i&-i){
-        for(ll j=y;j<N;j+=j&-j){
-            ///tree[i][j][0]+=mul;
-            ///tree[i][j][1]+=add;
+    for(ll i=x;i<mxn;i+=i&-i){
+        for(ll j=y;j<mxn;j+=j&-j){
             tree[i][j][0]^=mul;
             tree[i][j][1]^=add;
         }
@@ -135,12 +126,6 @@ void upd2(ll tree[N][N][2],ll x,ll y,ll mul,ll add)
 }
 void upd1(ll x,ll y1,ll y2,ll mul,ll add)
 {
-    ///for range sum
-    ///upd2(multree,x,y1,mul,-mul*yo(y1-1));
-    ///upd2(multree,x,y2,-mul,mul*yo(y2));
-    ///upd2(addtree,x,y1,add,-add*yo(y1-1));
-    ///upd2(addtree,x,y2,-add,add*yo(y2));
-    ///for range xor
     upd2(multree,x,y1,mul,mul*yo(y1-1));
     upd2(multree,x,y2,mul,mul*yo(y2));
     upd2(addtree,x,y1,add,add*yo(y1-1));
@@ -148,10 +133,6 @@ void upd1(ll x,ll y1,ll y2,ll mul,ll add)
 }
 void upd(ll x1,ll y1,ll x2,ll y2,ll val)
 {
-    ///for range sum
-    ///upd1(x1,y1,y2,val,-val*yo(x1-1));
-    ///upd1(x2,y1,y2,-val,val*yo(x2));
-    ///for range xor
     upd1(x1,y1,y2,val,val*yo(x1-1));
     upd1(x2,y1,y2,val,val*yo(x2));
 }
@@ -171,14 +152,15 @@ int main()
         cin>>tt;
         if(tt==2){
             cin>>x1>>y1>>x2>>y2>>val;
-            /// add val from top-left(x1,y1) to bottom-right (x2,y2);
+            // add val from top-left(x1,y1) to bottom-right (x2,y2);
             upd(x1,y1,x2,y2,val);
         }
         else{
             cin>>x1>>y1>>x2>>y2;
-            /// output sum from top-left(x1,y1) to bottom-right (x2,y2);
+            //output sum from top-left(x1,y1) to bottom-right (x2,y2);
             cout<<query(x1,y1,x2,y2)<<nl;
         }
     }
     return 0;
 }
+
