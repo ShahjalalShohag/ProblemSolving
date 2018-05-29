@@ -84,20 +84,36 @@ const int mxn=1e6+9;
 const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
-//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-ll a[mxn];
-o_set<ll>se;
+//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
+ll a[mxn],b[mxn];
 int main()
 {
     fast;
-    ll i,j,k,n,m,ans=0;
+    ll i,j,k,n,m,cnt1=0,cnt2=0,cnt=0;
+    random_device rd;
+    mt19937 gen(rd());
     cin>>n;
-    for(i=1;i<=n;i++) cin>>a[i];
-    for(i=n;i>=1;i--){
-        ans+=se.ook(a[i]);
-        se.insert(a[i]);
+    uniform_real_distribution<>random(1,n);
+    for(i=1;i<=n;i++) a[i]=i,cin>>b[i];
+    if(n<1000) return cout<<"Petr\n",0;
+    for(i=1;i<=n;i++) cnt+=(b[i]!=i);
+    for(i=1;i<=3*n;i++){
+        ll p=random(gen);
+        ll q=random(gen);
+        //debug(p,q);
+        swap(a[p],a[q]);
     }
-    if(ans%2==(3*n)%2) cout<<"Petr\n";
+    for(i=1;i<=n;i++) cnt1+=(i!=a[i]);
+    for(i=1;i<=4*n+1;i++){
+        ll p=random(gen);
+        ll q=random(gen);
+        //debug(p,q);
+        swap(a[p],a[q]);
+    }
+    for(i=1;i<=n;i++) cnt2+=(i!=a[i]);
+    //debug(cnt1);
+    //debug(cnt2);
+    if(cnt<=(cnt1+cnt2)/2) cout<<"Petr\n";
     else cout<<"Um_nik\n";
     return 0;
 }
