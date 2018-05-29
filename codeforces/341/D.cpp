@@ -1,7 +1,7 @@
-#pragma comment(linker, "/stack:200000000")
-#pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-#pragma GCC optimize("unroll-loops")
+//#pragma comment(linker, "/stack:200000000")
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+//#pragma GCC optimize("unroll-loops")
 
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
@@ -85,80 +85,44 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
-ll multree[mxn][mxn][2],addtree[mxn][mxn][2];
-ll yo(ll x)
+ll t[4][mxn][mxn];
+ll parity(ll x,ll y)
 {
-    //for range sum
-    //return x;
-    //for range xor
-    return (x%2);
+    ll ret=0;
+    if(x%2) ret+=1;
+    if(y%2) ret+=2;
+    return ret;
 }
-ll query2(ll tree[mxn][mxn][2],ll x,ll y)
+void upd(ll r,ll c,ll val)
 {
-    ll mul=0,add=0;
-    for(ll i=y;i>0;i-=i&-i){
-        mul^=tree[x][i][0];
-        add^=tree[x][i][1];
-    }
-    return (mul*yo(y))^add;
+    ll which=parity(r,c);
+    for(ll i=r;i<mxn;i+=i&-i) for(ll j=c;j<mxn;j+=j&-j) t[which][i][j]^=val;
 }
-ll query1(ll x,ll y)
+ll query(ll r,ll c)
 {
-    ll mul=0,add=0;
-    for(ll i=x;i>0;i-=i&-i){
-        mul^=query2(multree,i,y);
-        add^=query2(addtree,i,y);
-    }
-    return (mul*yo(x))^add;
-}
-ll query(ll x1,ll y1,ll x2,ll y2)
-{
-    return (query1(x2,y2)^query1(x1-1,y2)^query1(x2,y1-1)^query1(x1-1,y1-1));
-}
-void upd2(ll tree[mxn][mxn][2],ll x,ll y,ll mul,ll add)
-{
-    for(ll i=x;i<mxn;i+=i&-i){
-        for(ll j=y;j<mxn;j+=j&-j){
-            tree[i][j][0]^=mul;
-            tree[i][j][1]^=add;
-        }
-    }
-}
-void upd1(ll x,ll y1,ll y2,ll mul,ll add)
-{
-    upd2(multree,x,y1,mul,mul*yo(y1-1));
-    upd2(multree,x,y2,mul,mul*yo(y2));
-    upd2(addtree,x,y1,add,add*yo(y1-1));
-    upd2(addtree,x,y2,add,add*yo(y2));
-}
-void upd(ll x1,ll y1,ll x2,ll y2,ll val)
-{
-    upd1(x1,y1,y2,val,val*yo(x1-1));
-    upd1(x2,y1,y2,val,val*yo(x2));
+    ll ans=0;
+    ll which=parity(r,c);
+    for(ll i=r;i>0;i-=i&-i) for(ll j=c;j>0;j-=j&-j) ans^=t[which][i][j];
+    return ans;
 }
 int main()
 {
     fast;
-    ll i,j,k,n,m,tt,x1,y1,x2,y2,q,val;
+    ll i,j,k,n,m,q,x1,y1,x2,y2,typ;
     cin>>n;
-//    for(i=1;i<=n;i++){
-//        for(j=1;j<=m;j++){
-//            cin>>k;
-//            upd(i,j,i,j,k);
-//        }
-//    }
     cin>>q;
     while(q--){
-        cin>>tt;
-        if(tt==2){
-            cin>>x1>>y1>>x2>>y2>>val;
-            // add val from top-left(x1,y1) to bottom-right (x2,y2);
-            upd(x1,y1,x2,y2,val);
+        cin>>typ;
+        if(typ==2){
+            cin>>x1>>y1>>x2>>y2>>k;
+            upd(x1,y1,k);
+            upd(x1,y2+1,k);
+            upd(x2+1,y1,k);
+            upd(x2+1,y2+1,k);
         }
         else{
             cin>>x1>>y1>>x2>>y2;
-            //output sum from top-left(x1,y1) to bottom-right (x2,y2);
-            cout<<query(x1,y1,x2,y2)<<nl;
+            cout<<(query(x2,y2)^query(x2,y1-1)^query(x1-1,y2)^query(x1-1,y1-1))<<nl;
         }
     }
     return 0;
