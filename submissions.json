@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38785232": {
+    "contest_id": 986,
+    "language": "GNU C++17",
+    "path": "codeforces\\986\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Prince's Problem",
+    "problem_url": "https://codeforces.com/contest/986/problem/E",
+    "submission_id": "CF38785232",
+    "submission_url": "https://codeforces.com/contest/986/submission/38785232",
+    "tags": [
+      "brute force",
+      "data structures",
+      "math",
+      "number theory",
+      "trees",
+      "*2800"
+    ],
+    "timestamp": "May/31/2018 02:53"
+  },
   "CF38785510": {
     "contest_id": 340,
     "language": "GNU C++17",
