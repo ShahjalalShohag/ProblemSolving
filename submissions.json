@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38781753": {
+    "contest_id": 986,
+    "language": "GNU C++17",
+    "path": "codeforces\\986\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Perfect Encoding",
+    "problem_url": "https://codeforces.com/contest/986/problem/D",
+    "submission_id": "CF38781753",
+    "submission_url": "https://codeforces.com/contest/986/submission/38781753",
+    "tags": [
+      "fft",
+      "math",
+      "*3100"
+    ],
+    "timestamp": "May/30/2018 23:58"
+  },
   "CF38785232": {
     "contest_id": 986,
     "language": "GNU C++17",
