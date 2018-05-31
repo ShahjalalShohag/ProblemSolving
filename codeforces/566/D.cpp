@@ -85,7 +85,7 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-int par[mxn],sz[mxn];
+int par[mxn];
 set<int>se;
 int find_par(int x)
 {
@@ -96,8 +96,8 @@ void join(int x,int y)
     int u=find_par(x);
     int v=find_par(y);
     if(u!=v){
-        if(sz[v]>sz[u]) par[u]=v,sz[v]+=sz[u];
-        else par[v]=u,sz[u]+=sz[v];
+        if(rand()%2) par[u]=v;
+        else par[v]=u;
     }
 }
 int main()
@@ -105,7 +105,7 @@ int main()
     fast;
     int i,j,k,n,m,q,t,x,y;
     cin>>n>>q;
-    for(i=1;i<=n;i++) par[i]=i,sz[i]=1,se.insert(i);
+    for(i=1;i<=n;i++) par[i]=i,se.insert(i);
     while(q--){
         cin>>t>>x>>y;
         if(t==1) join(x,y);

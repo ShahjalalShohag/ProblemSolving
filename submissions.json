@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38807147": {
+    "contest_id": 566,
+    "language": "GNU C++17",
+    "path": "codeforces\\566\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Restructuring Company",
+    "problem_url": "https://codeforces.com/contest/566/problem/D",
+    "submission_id": "CF38807147",
+    "submission_url": "https://codeforces.com/contest/566/submission/38807147",
+    "tags": [
+      "data structures",
+      "dsu",
+      "*1900"
+    ],
+    "timestamp": "May/31/2018 21:50"
+  },
   "CF38807209": {
     "contest_id": 566,
     "language": "GNU C++17",
