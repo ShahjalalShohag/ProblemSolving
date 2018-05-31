@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38805429": {
+    "contest_id": 986,
+    "language": "GNU C++17",
+    "path": "codeforces\\986\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Petr and Permutations",
+    "problem_url": "https://codeforces.com/contest/986/problem/B",
+    "submission_id": "CF38805429",
+    "submission_url": "https://codeforces.com/contest/986/submission/38805429",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "May/31/2018 20:45"
+  },
   "CF38807147": {
     "contest_id": 566,
     "language": "GNU C++17",
