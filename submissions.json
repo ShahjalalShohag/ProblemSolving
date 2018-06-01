@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38868198": {
+    "contest_id": 988,
+    "language": "GNU C++17",
+    "path": "codeforces\\988\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Rain and Umbrellas",
+    "problem_url": "https://codeforces.com/contest/988/problem/F",
+    "submission_id": "CF38868198",
+    "submission_url": "https://codeforces.com/contest/988/submission/38868198",
+    "tags": [
+      "dp",
+      "*2100"
+    ],
+    "timestamp": "Jun/02/2018 04:53"
+  },
   "CF38868226": {
     "contest_id": 988,
     "language": "GNU C++17",
