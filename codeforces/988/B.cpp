@@ -88,12 +88,7 @@ const ld eps=1e-9;
 vs v;
 bool cmp(string a,string b)
 {
-    if(a.find(b)!=-1) return 0;
-    else if(b.find(a)!=-1) return 1;
-    else{
-        cout<<"NO\n";
-        exit(0);
-    }
+    return (ll)a.size()<(ll)b.size()||(ll)a.size()==(ll)b.size()&&a<b;
 }
 int main()
 {
@@ -106,6 +101,7 @@ int main()
         v.pb(s);
     }
     sort(all(v),cmp);
+    for(i=1;i<n;i++) if(v[i].find(v[i-1])==string::npos) return cout<<"NO\n",0;
     cout<<"YES\n";
     for(auto x:v) cout<<x<<nl;
     return 0;
