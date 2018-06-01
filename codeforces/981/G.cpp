@@ -79,7 +79,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
     deb(++it, args...);
 }
 
-const int mod=998244353;
+const ll mod=998244353;
 const int mxn=2e5+9;
 const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
@@ -87,21 +87,16 @@ const ld eps=1e-9;
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans;}
 struct seg
 {
-    ll sz,mul,add;
-    seg()
-    {
-        sz=0;
-        mul=1;
-        add=0;
-    }
-}t[mxn*4];
+    ll sz=0,mul=1,add=0;
+};
+seg t[mxn*4];
 map<ll,ll>oc[mxn];
 void propagate(ll n,ll l,ll r)
 {
     if(t[n].add==0&&t[n].mul==1) return;
 
     t[n].sz=(t[n].sz*t[n].mul)%mod;
-    t[n].sz=(t[n].sz+(r-l+1)*t[n].add%mod)%mod;
+    t[n].sz=(t[n].sz+((r-l+1)*t[n].add)%mod)%mod;
 
     if(l!=r){
         t[2*n].mul=(t[2*n].mul*t[n].mul)%mod;
@@ -156,7 +151,7 @@ ll query(ll n,ll b,ll e,ll i,ll j)
 int main()
 {
     fast;
-    ll i,j,k,n,m,q,tt,l,r,x,_l,_r;
+    ll i,j,k,n,m,q,tt,l,r,x;
     cin>>n>>q;
     while(q--){
         cin>>tt;
@@ -166,24 +161,30 @@ int main()
             while(1){
                 auto it=oc[x].LB(l);
                 if(it==oc[x].end()) break;
-                tie(_r,_l)=*it;
-                if(_l>r) break;
+                ll _l=it->S;
+                ll _r=it->F;
+                if(r<_l) break;
                 rmv.eb(_l,_r);
                 oc[x].erase(it);
             }
             if((ll)rmv.size()){
                 ll sz=rmv.size();
                 for(i=0;i<sz;i++){
-                    tie(_l,_r)=rmv[i];
-                    mulupd(1,1,n,max(l,_l),min(r,_r));
+                    mulupd(1,1,n,max(l,rmv[i].F),min(r,rmv[i].S));
                     if(i==0){
-                        if(_l>l) sumupd(1,1,n,l,_l-1);
+                        if(rmv[0].F>l){
+                            sumupd(1,1,n,l,rmv[0].F-1);
+                        }
                     }
                     else{
-                        if(_l-rmv[i-1].S>1) sumupd(1,1,n,rmv[i-1].S+1,_l-1);
+                        if(rmv[i].F-rmv[i-1].S>1){
+                            sumupd(1,1,n,rmv[i-1].S+1,rmv[i].F-1);
+                        }
                     }
                     if(i==sz-1){
-                        if(_r<r) sumupd(1,1,n,_r+1,r);
+                        if(rmv[i].S<r){
+                            sumupd(1,1,n,rmv[i].S+1,r);
+                        }
                     }
                 }
                 r=max(rmv.back().S,r);
