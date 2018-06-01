@@ -85,54 +85,39 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-string str;
-int yo(string st)
+const int  M=(1<<19)+10;
+int dp[M];
+int32_t main()
 {
-    string s=str;
-    int n = s.size();
-    int fl = 0, ans = 0;
-    for(int i = n-1; i>=0; i--)
-    {
-        if(s[i]==st[1]){
-            for(int j = i; j<=n-2; j++)
-                swap(s[j], s[j+1]), ans++;
-            fl  = 1;
-            break;
-        }
-    }
-    if(fl==0) return inf;
-    if(s[0]=='0'){
-        int extra = 0;
-        for(int i = 0; i<n-1; i++)
-            if(s[i]!='0') {extra = i; swap(s[i], s[0]); break;}
-        if(extra) ans += extra;
-        else return  inf;
-    }
-    fl = 0;
-    for(int i = n-2; i>=0; i--)
-    {
-        if(s[i]==st[0]){
-            for(int j = i; j<=n-3; j++)
-                swap(s[j], s[j+1]), ans++;
-            fl  = 1;
-            break;
-        }
-    }
-    if(fl==0) return inf;
-    if(s[0]=='0'){
-        int extra = 0;
-        for(int i = 0; i<n-2; i++)
-            if(s[i]!='0') {extra = i; break;}
-        if(extra) ans += extra;
-        else return inf;
-    }
-    return ans;
-}
-int main()
-{
-    cin >> str;
-    int ans = min({yo("00"),yo("25"),yo("50"), yo("75")});
-    if(ans==inf) ans = -1;
-    cout<<ans<<nl;
-    return 0;
+	string s;
+	cin>>s;
+	int n=s.size();
+	for(int i=0;i<(1<<n);i++)
+	{
+		dp[i]=inf;
+		int onee=__builtin_popcount(i);
+		if(onee<2)continue;
+		vector<pii>tmp;
+		for(int j=0;j<s.size();j++)
+		{
+			if((i & (1<<j)))
+				tmp.pb(MP(s[j]-'0',j));
+		}
+		if(onee==2)
+		{
+			if((tmp[0].F*10+tmp[1].F)%25==0)
+			{
+				dp[i]=0;
+			}
+			else if((tmp[1].F*10+tmp[0].F)%25==0)dp[i]=1;
+			continue;
+		}
+		for(int j=0;j<tmp.size();j++)
+		{
+			if(tmp[j].F==0 && onee==n)continue;
+			dp[i]=min(dp[i],j+dp[i xor (1<<tmp[j].S)]);
+		}
+	}
+	if(dp[(1<<n)-1]==inf)cout<<-1;
+	else cout<<dp[(1<<n)-1];
 }
