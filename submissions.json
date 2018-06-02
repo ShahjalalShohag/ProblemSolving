@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF38891991": {
+    "contest_id": 988,
+    "language": "GNU C++17",
+    "path": "codeforces\\988\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Points and Powers of Two",
+    "problem_url": "https://codeforces.com/contest/988/problem/D",
+    "submission_id": "CF38891991",
+    "submission_url": "https://codeforces.com/contest/988/submission/38891991",
+    "tags": [
+      "brute force",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Jun/02/2018 19:20"
+  },
   "CF38896344": {
     "contest_id": 988,
     "language": "GNU C++17",

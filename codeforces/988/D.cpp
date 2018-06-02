@@ -85,28 +85,33 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-umap<ll,ll>mp;
-ll a[mxn];
+int a[mxn],par[mxn];
+vi ans;
 int main()
 {
     fast;
-    ll i,j,k,n,m,mx=0,ans=1,x=0,y=0;
-    mp.reserve((1<<20));
+    int i,j,k=0,n,m;
     cin>>n;
-    for(i=0;i<n;i++) cin>>a[i],mp[a[i]]=1;
-    for(k=1;k<30000000000;k*=2){
-        for(i=0;i<n;i++){
-            if(mp.count(a[i]+k)&&mp.count(a[i]+2*k)){
-                cout<<3<<nl;
-                cout<<a[i]<<' '<<a[i]+k<<' '<<a[i]+2*k<<nl;
-                return 0;
-            }
-            else if(mp.count(a[i]+k)) ans=2,x=a[i],y=a[i]+k;
+    for(i=1;i<=n;i++) cin>>a[i];
+    sort(a+1,a+n+1);
+    ans={a[1]};
+    for(int pw=1;k<31;pw*=2,k++){
+        int cur=1;
+        for(i=1;i<=n;i++){
+            while(a[cur]+pw<a[i]) cur++;
+            par[i]=0;
+            if(a[cur]+pw==a[i]) par[i]=cur;
         }
+        for(i=1;i<=n;i++){
+            if(par[i]&&par[par[i]]){
+                ans={a[i],a[par[i]],a[par[par[i]]]};
+                break;
+            }
+            if(par[i]) ans={a[i],a[par[i]]};
+        }
+        if(ans.size()==3) break;
     }
-    if(ans==2){
-        cout<<2<<nl<<x<<' '<<y<<nl;
-    }
-    else cout<<1<<nl<<a[0]<<nl;
+    cout<<ans.size()<<nl;
+    for(auto x:ans) cout<<x<<' ';
     return 0;
 }
