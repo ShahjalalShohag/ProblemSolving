@@ -92,7 +92,6 @@ int main()
     fast;
     ll i,j,k,n,m,mx=0,ans=1,x=0,y=0;
     mp.reserve((1<<20));
-    mp.max_load_factor(0.25);
     cin>>n;
     for(i=0;i<n;i++) cin>>a[i],mp[a[i]]=1;
     for(k=1;k<30000000000;k*=2){
