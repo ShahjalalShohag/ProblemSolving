@@ -86,7 +86,7 @@ const ld eps=1e-9;
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
 struct base {
-	double  real, imag;
+	ld real, imag;
 	base(ld real = 0, ld imag = 0) : real(real), imag(imag) {}
 	const base operator + (const base &c) const
 		{ return base(real + c.real, imag + c.imag); }
