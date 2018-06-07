@@ -87,7 +87,7 @@ const ld eps=1e-9;
 
 struct base {
 	double  real, imag;
-	base(double real = 0, double imag = 0) : real(real), imag(imag) {}
+	base(ld real = 0, ld imag = 0) : real(real), imag(imag) {}
 	const base operator + (const base &c) const
 		{ return base(real + c.real, imag + c.imag); }
 	const base operator - (const base &c) const
@@ -108,7 +108,7 @@ void fft(vector<base> &a,bool inv)
         if(i<j) swap(a[i],a[j]);
     }
     for(int len=2;len<=n;len*=2){
-        double ang=2*PI/len*(inv?-1:1);
+        ld ang=2*PI/len*(inv?-1:1);
         base wlen(cos(ang),sin(ang));
         //wlen=e^(2*PI*i/n)=cos(2*PI/n)+i*sin(2*PI/n)
         //bcz e^(i*theta)=cos(theta)+i*sin(theta)
