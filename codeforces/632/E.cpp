@@ -79,7 +79,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int mxn=1001;
+const int mxn=1100;
 const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
