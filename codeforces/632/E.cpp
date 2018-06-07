@@ -85,16 +85,8 @@ const ld eps=1e-9;
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-struct base {
-	ld real, imag;
-	base(ld real = 0, ld imag = 0) : real(real), imag(imag) {}
-	const base operator + (const base &c) const
-		{ return base(real + c.real, imag + c.imag); }
-	const base operator - (const base &c) const
-		{ return base(real - c.real, imag - c.imag); }
-	const base operator * (const base &c) const
-		{ return base(real * c.real - imag * c.imag, real * c.imag + imag * c.real); }
-};
+#define base complex<double> //to store complex numbers
+
 //inv=0 means Converting from coefficient form to point value form
 //inv=1 means Converting from point value  form to coefficient form i.e. inverse fft
 void fft(vector<base> &a,bool inv)
@@ -118,11 +110,11 @@ void fft(vector<base> &a,bool inv)
                 base even=a[i+j],odd=a[i+j+len/2];
                 a[i+j]=even+w*odd;
                 a[i+j+len/2]=even-w*odd;
-                w=w*wlen;
+                w*=wlen;
             }
         }
     }
-    if(inv) for(int i=0;i<n;i++) a[i].real=a[i].real/n,a[i].imag=a[i].imag/n;
+    if(inv) for(int i=0;i<n;i++) a[i]/=n;
 }
 void multiply(vi& a,vi& b,vi& res)
 {
@@ -136,12 +128,12 @@ void multiply(vi& a,vi& b,vi& res)
     //convolution
     fft(fa,0);
     fft(fb,0);
-    for(int i=0;i<n;i++) fa[i]=fa[i]*fb[i];
+    for(int i=0;i<n;i++) fa[i]*=fb[i];
     fft(fa,1);//inverse fft
     res.resize(n);
-    for(int i=0;i<n;i++) res[i]=int(fa[i].real+0.5);
+    for(int i=0;i<n;i++) res[i]=int(fa[i].real()+0.5);
     for(int i=0;i<n;i++) if(res[i]>1) res[i]=1;
-    while((int)res.size()&&res.back()==0) res.pop_back();
+    while(res.size()>1&&res.back()==0) res.pop_back();
     return;
 }
 void getpow(vi &v,int k,vi &res)
