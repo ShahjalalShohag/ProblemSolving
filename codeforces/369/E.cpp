@@ -98,11 +98,11 @@ void build(int n,int b,int e)
     build(r,mid+1,e);
     int i=0,j=0,szl=t[l].size(),szr=t[r].size();
     while(i<szl&&j<szr){
-        if(t[l][i]<t[r][j]) t[n].pb(t[l][i++]);
-        else t[n].pb(t[r][j++]);
+        if(t[l][i]<t[r][j]) t[n].eb(t[l][i++]);
+        else t[n].eb(t[r][j++]);
     }
-    while(i<szl) t[n].pb(t[l][i++]);
-    while(j<szr) t[n].pb(t[r][j++]);
+    while(i<szl) t[n].eb(t[l][i++]);
+    while(j<szr) t[n].eb(t[r][j++]);
 }
 int query(int n,int b,int e,int i,int j,ll x)
 {
@@ -116,7 +116,7 @@ int main()
     fast;
     int i,j,k,n,m,l,r,x;
     cin>>n>>m;
-    for(i=1;i<=n;i++) cin>>l>>r,v.pb({l,r});
+    for(i=1;i<=n;i++) cin>>l>>r,v.eb(l,r);
     srt(v);
     for(i=0;i<n;i++) pos[v[i].F]=i+1;
     for(i=1;i<mxn;i++) if(pos[i]==0) pos[i]=pos[i-1];
