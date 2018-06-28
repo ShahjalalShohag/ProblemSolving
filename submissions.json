@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF39742501": {
+    "contest_id": 1000,
+    "language": "GNU C++17",
+    "path": "codeforces\\1000\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Yet Another Problem On a Subsequence",
+    "problem_url": "https://codeforces.com/contest/1000/problem/D",
+    "submission_id": "CF39742501",
+    "submission_url": "https://codeforces.com/contest/1000/submission/39742501",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "*1900"
+    ],
+    "timestamp": "Jun/28/2018 18:19"
+  },
   "CF39744939": {
     "contest_id": 1000,
     "language": "GNU C++17",
