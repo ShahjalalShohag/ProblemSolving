@@ -80,29 +80,27 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=3e5+9;
+const int mxn=3e5+9;
 const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-
-///diameter of the Articulation Bridge Tree
-vi g[N],gr[N];
-bool vis[N];
-int T,low[N],dis[N],d[N],par[N];
-set<pii>bridge;
+vi g[mxn],gr[mxn];
+bool vis[mxn];
+int tim,low[mxn],disc[mxn],dis[mxn],par[mxn];
+map<pii,bool>bridge;
 void dfs(int u,int pre)
 {
-    low[u]=dis[u]=++T;
+    low[u]=disc[u]=++tim;
     vis[u]=1;
     for(auto v:g[u]){
-        if(!vis[v]){
-            dfs(v,u);
-            low[u]=min(low[u],low[v]);
-            if(low[v]>dis[u]) bridge.insert({min(u,v),max(u,v)});
+        if(vis[v]){
+            if(v!=pre) low[u]=min(low[u],disc[v]);
         }
         else{
-            if(v!=pre) low[u]=min(low[u],dis[v]);
+            dfs(v,u);
+            low[u]=min(low[u],low[v]);
+            if(low[v]>disc[u]) bridge[{u,v}]=1,bridge[{v,u}]=1;
         }
     }
 }
@@ -120,20 +118,20 @@ void merge_(int x,int y)
         else par[v]=u;
     }
 }
-int bfs(int s)
+ll bfs(ll s)
 {
-    mem(d,-1);
+    mem(dis,-1);
     queue<int>q;
     q.push(s);
-    d[s]=0;
+    dis[s]=0;
     int u=s;
     while(!q.empty()){
         u=q.front();
         q.pop();
         for(auto v:gr[u]){
-            if(d[v]==-1){
+            if(dis[v]==-1){
                 q.push(v);
-                d[v]=d[u]+1;
+                dis[v]=dis[u]+1;
             }
         }
     }
@@ -144,26 +142,26 @@ int main()
     fast;
     int i,j,k,n,m,u,v,ans=0;
     cin>>n>>m;
-    for(i=1;i<=m;i++) cin>>u>>v,g[u].eb(v),g[v].eb(u);
+    for(i=1;i<=m;i++) cin>>u>>v,g[u].pb(v),g[v].pb(u);
     dfs(1,0);
     for(i=1;i<=n;i++) par[i]=i;
     for(u=1;u<=n;u++){
         for(auto v:g[u]){
-            if(bridge.find({min(u,v),max(u,v)})==bridge.end()) merge_(u,v);
+            if(bridge.find({u,v})==bridge.end()) merge_(u,v);
         }
     }
     for(u=1;u<=n;u++){
         for(auto v:g[u]){
-            if(bridge.find({min(u,v),max(u,v)})!=bridge.end()){
+            if(bridge.find({u,v})!=bridge.end()){
                 int x=find_(u);
                 int y=find_(v);
-                gr[x].eb(y);
-                gr[y].eb(x);
+                gr[x].pb(y);
+                gr[y].pb(x);
             }
         }
     }
     u=bfs(find_(1));
     v=bfs(find_(u));
-    cout<<d[v]<<nl;
+    cout<<dis[v]<<nl;
     return 0;
 }
