@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF39952557": {
+    "contest_id": 999,
+    "language": "GNU C++17",
+    "path": "codeforces\\999\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Mishka and Contest",
+    "problem_url": "https://codeforces.com/contest/999/problem/A",
+    "submission_id": "CF39952557",
+    "submission_url": "https://codeforces.com/contest/999/submission/39952557",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jul/04/2018 17:11"
+  },
   "CF39991096": {
     "contest_id": 1004,
     "language": "GNU C++17",
