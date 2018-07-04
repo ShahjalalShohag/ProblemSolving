@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF39951544": {
+    "contest_id": 1003,
+    "language": "GNU C++17",
+    "path": "codeforces\\1003\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Abbreviation",
+    "problem_url": "https://codeforces.com/contest/1003/problem/F",
+    "submission_id": "CF39951544",
+    "submission_url": "https://codeforces.com/contest/1003/submission/39951544",
+    "tags": [
+      "dp",
+      "hashing",
+      "strings",
+      "*2200"
+    ],
+    "timestamp": "Jul/04/2018 16:37"
+  },
   "CF39951645": {
     "contest_id": 1003,
     "language": "GNU C++17",
