@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40297683": {
+    "contest_id": 1008,
+    "language": "GNU C++17",
+    "path": "codeforces\\1008\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Turn the Rectangles",
+    "problem_url": "https://codeforces.com/contest/1008/problem/B",
+    "submission_id": "CF40297683",
+    "submission_url": "https://codeforces.com/contest/1008/submission/40297683",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Jul/14/2018 03:59"
+  },
   "CF40297713": {
     "contest_id": 1008,
     "language": "GNU C++17",
