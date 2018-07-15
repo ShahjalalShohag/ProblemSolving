@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40375059": {
+    "contest_id": 1009,
+    "language": "Python 2",
+    "path": "codeforces\\1009\\A.py",
+    "problem_index": "A",
+    "problem_name": "Game Shopping",
+    "problem_url": "https://codeforces.com/contest/1009/problem/A",
+    "submission_id": "CF40375059",
+    "submission_url": "https://codeforces.com/contest/1009/submission/40375059",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jul/15/2018 16:32"
+  },
   "CF40414959": {
     "contest_id": 1009,
     "language": "Python 3",
