@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40481987": {
+    "contest_id": 682,
+    "language": "GNU C++17",
+    "path": "codeforces\\682\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Alyona and Strings",
+    "problem_url": "https://codeforces.com/contest/682/problem/D",
+    "submission_id": "CF40481987",
+    "submission_url": "https://codeforces.com/contest/682/submission/40481987",
+    "tags": [
+      "dp",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Jul/17/2018 20:33"
+  },
   "CF40484156": {
     "contest_id": 730,
     "language": "GNU C++17",
