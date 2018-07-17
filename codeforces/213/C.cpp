@@ -85,17 +85,17 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-int a[310][310],dp[310][310][310],n;
-int yo(int r,int c,int x)
+ll a[310][310],dp[310][310][310],n;
+ll yo(ll r,ll c,ll x)
 {
-    int y=r+c-x;//x+y=r+c
-    if(x>n||y>n||r>n||c>n) return -(1<<28);
+    ll y=r+c-x;//x+y=r+c
+    if(x>n||y>n||r>n||c>n) return -1e12;
     if(x==n&&y==n) return a[n][n];
-    int &ret=dp[r][c][x];
+    ll &ret=dp[r][c][x];
     if(ret!=-1) return ret;
     if(x==r&&y==c) ret=a[x][y];
     else ret=a[x][y]+a[r][c];
-    int ans=yo(r+1,c,x);
+    ll ans=yo(r+1,c,x);
     ans=max(ans,yo(r,c+1,x));
     ans=max(ans,yo(r+1,c,x+1));
     ans=max(ans,yo(r,c+1,x+1));
@@ -104,7 +104,7 @@ int yo(int r,int c,int x)
 int main()
 {
     fast;
-    int i,j,k;
+    ll i,j,k;
     cin>>n;
     for(i=1;i<=n;i++) for(j=1;j<=n;j++) cin>>a[i][j];
     mem(dp,-1);
