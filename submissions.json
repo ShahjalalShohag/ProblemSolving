@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40540829": {
+    "contest_id": 989,
+    "language": "Python 3",
+    "path": "codeforces\\989\\A.py",
+    "problem_index": "A",
+    "problem_name": "A Blend of Springtime",
+    "problem_url": "https://codeforces.com/contest/989/problem/A",
+    "submission_id": "CF40540829",
+    "submission_url": "https://codeforces.com/contest/989/submission/40540829",
+    "tags": [
+      "implementation",
+      "strings",
+      "*900"
+    ],
+    "timestamp": "Jul/19/2018 14:33"
+  },
   "CF40601743": {
     "contest_id": 1009,
     "language": "GNU C++17",
