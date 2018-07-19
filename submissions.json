@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40539180": {
+    "contest_id": 1009,
+    "language": "Python 3",
+    "path": "codeforces\\1009\\C.py",
+    "problem_index": "C",
+    "problem_name": "Annoying Present",
+    "problem_url": "https://codeforces.com/contest/1009/problem/C",
+    "submission_id": "CF40539180",
+    "submission_url": "https://codeforces.com/contest/1009/submission/40539180",
+    "tags": [
+      "greedy",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Jul/19/2018 13:43"
+  },
   "CF40539630": {
     "contest_id": 1009,
     "language": "Python 3",
