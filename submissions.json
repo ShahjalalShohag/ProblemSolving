@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40601743": {
+    "contest_id": 1009,
+    "language": "GNU C++17",
+    "path": "codeforces\\1009\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Intercity Travelling",
+    "problem_url": "https://codeforces.com/contest/1009/problem/E",
+    "submission_id": "CF40601743",
+    "submission_url": "https://codeforces.com/contest/1009/submission/40601743",
+    "tags": [
+      "combinatorics",
+      "math",
+      "probabilities",
+      "*2000"
+    ],
+    "timestamp": "Jul/21/2018 14:59"
+  },
   "CF40716945": {
     "contest_id": 731,
     "language": "GNU C++17",
