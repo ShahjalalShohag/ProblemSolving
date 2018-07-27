@@ -85,9 +85,8 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-int type[mxn],a[mxn],b[mxn];
-bool ret[mxn],ans[mxn];
-bool dfs(int i)
+int type[mxn],ret[mxn],a[mxn],b[mxn],ans[mxn];
+int dfs(int i)
 {
     int k=type[i];
     if(k==1) return ret[i]=a[i];
@@ -96,7 +95,6 @@ bool dfs(int i)
     if(k==4) return ret[i]=dfs(a[i])|dfs(b[i]);
     if(k==5) return ret[i]=dfs(a[i])^dfs(b[i]);
 }
-//return change hobe jodi ith node er value change hoy
 void yo(int i)
 {
     int k=type[i];
@@ -104,19 +102,18 @@ void yo(int i)
         ans[i]=1;
         return;
     }
-    if(k==2) yo(a[i]);//1,0
+    if(k==2) yo(a[i]);
     if(k==3){
-        if(ret[a[i]]&&ret[b[i]]) yo(a[i]),yo(b[i]);//1 1
-        else if(ret[a[i]]&&!ret[b[i]]) yo(b[i]);//1 0
-        else if(!ret[a[i]]&&ret[b[i]]) yo(a[i]);//0 1
+        if(ret[a[i]]&&ret[b[i]]) yo(a[i]),yo(b[i]);
+        else if(ret[a[i]]&&!ret[b[i]]) yo(b[i]);
+        else if(!ret[a[i]]&&ret[b[i]]) yo(a[i]);
     }
     if(k==4){
-        if(!ret[a[i]]&&!ret[b[i]]) yo(a[i]),yo(b[i]);//0 0
-        else if(ret[a[i]]&&!ret[b[i]]) yo(a[i]);//1 0
-        else if(!ret[a[i]]&&ret[b[i]]) yo(b[i]);//0 1
+        if(!ret[a[i]]&&!ret[b[i]]) yo(a[i]),yo(b[i]);
+        else if(ret[a[i]]&&!ret[b[i]]) yo(a[i]);
+        else if(!ret[a[i]]&&ret[b[i]]) yo(b[i]);
     }
     if(k==5){
-        //1 1,1 0,0 1,0 0 in all way
         yo(a[i]);
         yo(b[i]);
     }
