@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40987564": {
+    "contest_id": 280,
+    "language": "GNU C++17",
+    "path": "codeforces\\280\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Maximum Xor Secondary",
+    "problem_url": "https://codeforces.com/contest/280/problem/B",
+    "submission_id": "CF40987564",
+    "submission_url": "https://codeforces.com/contest/280/submission/40987564",
+    "tags": [
+      "data structures",
+      "implementation",
+      "two pointers",
+      "*1800"
+    ],
+    "timestamp": "Jul/31/2018 03:20"
+  },
   "CF41007408": {
     "contest_id": 991,
     "language": "GNU C++17",
