@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF40979198": {
+    "contest_id": 190,
+    "language": "GNU C++17",
+    "path": "codeforces\\190\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "STL",
+    "problem_url": "https://codeforces.com/contest/190/problem/C",
+    "submission_id": "CF40979198",
+    "submission_url": "https://codeforces.com/contest/190/submission/40979198",
+    "tags": [
+      "dfs and similar",
+      "*1500"
+    ],
+    "timestamp": "Jul/30/2018 22:58"
+  },
   "CF40987564": {
     "contest_id": 280,
     "language": "GNU C++17",
