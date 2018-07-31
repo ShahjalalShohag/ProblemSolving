@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF41009115": {
+    "contest_id": 991,
+    "language": "GNU C++17",
+    "path": "codeforces\\991\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Bishwock",
+    "problem_url": "https://codeforces.com/contest/991/problem/D",
+    "submission_id": "CF41009115",
+    "submission_url": "https://codeforces.com/contest/991/submission/41009115",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1500"
+    ],
+    "timestamp": "Jul/31/2018 17:38"
+  },
   "CF41011387": {
     "contest_id": 478,
     "language": "GNU C++17",
