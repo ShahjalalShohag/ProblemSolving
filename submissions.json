@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF41187821": {
+    "contest_id": 1016,
+    "language": "GNU C++17",
+    "path": "codeforces\\1016\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Vasya And The Mushrooms",
+    "problem_url": "https://codeforces.com/contest/1016/problem/C",
+    "submission_id": "CF41187821",
+    "submission_url": "https://codeforces.com/contest/1016/submission/41187821",
+    "tags": [
+      "dp",
+      "implementation",
+      "*1800"
+    ],
+    "timestamp": "Aug/03/2018 23:28"
+  },
   "CF41188019": {
     "contest_id": 1016,
     "language": "GNU C++17",
