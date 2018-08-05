@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF41254808": {
+    "contest_id": 992,
+    "language": "GNU C++17",
+    "path": "codeforces\\992\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Nastya and a Game",
+    "problem_url": "https://codeforces.com/contest/992/problem/D",
+    "submission_id": "CF41254808",
+    "submission_url": "https://codeforces.com/contest/992/submission/41254808",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Aug/06/2018 01:05"
+  },
   "CF41255863": {
     "contest_id": 992,
     "language": "GNU C++17",
