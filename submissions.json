@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF41371394": {
+    "contest_id": 1017,
+    "language": "GNU C++17",
+    "path": "codeforces\\1017\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "The Wu",
+    "problem_url": "https://codeforces.com/contest/1017/problem/D",
+    "submission_id": "CF41371394",
+    "submission_url": "https://codeforces.com/contest/1017/submission/41371394",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "data structures",
+      "*1900"
+    ],
+    "timestamp": "Aug/08/2018 23:48"
+  },
   "CF41371630": {
     "contest_id": 1017,
     "language": "GNU C++17",
