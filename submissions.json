@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF41371630": {
+    "contest_id": 1017,
+    "language": "GNU C++17",
+    "path": "codeforces\\1017\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "The Bits",
+    "problem_url": "https://codeforces.com/contest/1017/problem/B",
+    "submission_id": "CF41371630",
+    "submission_url": "https://codeforces.com/contest/1017/submission/41371630",
+    "tags": [
+      "implementation",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Aug/08/2018 23:55"
+  },
   "CF41371868": {
     "contest_id": 1017,
     "language": "GNU C++17",
