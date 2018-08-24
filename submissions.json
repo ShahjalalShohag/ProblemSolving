@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF42028198": {
+    "contest_id": 1027,
+    "language": "GNU C++17",
+    "path": "codeforces\\1027\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Numbers on the Chessboard",
+    "problem_url": "https://codeforces.com/contest/1027/problem/B",
+    "submission_id": "CF42028198",
+    "submission_url": "https://codeforces.com/contest/1027/submission/42028198",
+    "tags": [
+      "implementation",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Aug/24/2018 19:49"
+  },
   "CF42028973": {
     "contest_id": 1027,
     "language": "GNU C++17",
