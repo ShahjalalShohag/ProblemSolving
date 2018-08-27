@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF42183926": {
+    "contest_id": 1028,
+    "language": "GNU C++17",
+    "path": "codeforces\\1028\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Rectangles",
+    "problem_url": "https://codeforces.com/contest/1028/problem/C",
+    "submission_id": "CF42183926",
+    "submission_url": "https://codeforces.com/contest/1028/submission/42183926",
+    "tags": [
+      "geometry",
+      "implementation",
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Aug/28/2018 02:19"
+  },
   "CF42290120": {
     "contest_id": 631,
     "language": "GNU C++17",
