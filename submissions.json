@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF42406922": {
+    "contest_id": 1037,
+    "language": "GNU C++17",
+    "path": "codeforces\\1037\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Trips",
+    "problem_url": "https://codeforces.com/contest/1037/problem/E",
+    "submission_id": "CF42406922",
+    "submission_url": "https://codeforces.com/contest/1037/submission/42406922",
+    "tags": [
+      "graphs",
+      "*2200"
+    ],
+    "timestamp": "Sep/03/2018 02:15"
+  },
   "CF42469153": {
     "contest_id": 459,
     "language": "GNU C++17",
