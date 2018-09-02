@@ -2,6 +2,8 @@
 #pragma GCC optimize("Ofast")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #pragma GCC optimize("unroll-loops")
+#pragma warning(disable:4786)
+#pragma warning(disable:4996)
 
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
@@ -98,16 +100,12 @@ const ld PI=acos(-1.0);
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-
-
-//memory consumption test
-int a[(int)1e7];
 int main()
 {
     fast;
-    int i,j,k,n,m,t;
+    ll i,j,k,n,m,t;
     cin>>n;
-    int ans=0;
+    ll ans=0;
     while(n) ans++,n/=2;
     cout<<ans<<nl;
     return 0;
