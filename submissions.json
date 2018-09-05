@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF42529481": {
+    "contest_id": 1040,
+    "language": "GNU C++17",
+    "path": "codeforces\\1040\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Subway Pursuit",
+    "problem_url": "https://codeforces.com/contest/1040/problem/D",
+    "submission_id": "CF42529481",
+    "submission_url": "https://codeforces.com/contest/1040/submission/42529481",
+    "tags": [
+      "interactive",
+      "*2100"
+    ],
+    "timestamp": "Sep/06/2018 02:11"
+  },
   "CF42529604": {
     "contest_id": 1040,
     "language": "GNU C++17",
