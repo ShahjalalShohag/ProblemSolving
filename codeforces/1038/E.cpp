@@ -92,6 +92,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
     deb(++it, args...);
 }
 
+const int mod=1e9+7;
 const int mxn=3e5+9;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
@@ -100,9 +101,6 @@ const ld PI=acos(-1.0);
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 vpll g[10];
 bool vis[10];
-map<pll,ll>e;
-map<pll,multiset<ll>>we;
-ll par[10];
 ll dfs(ll u)
 {
     vis[u]=1;
@@ -114,19 +112,6 @@ ll dfs(ll u)
     }
     return ans;
 }
-ll find_(ll x)
-{
-    return par[x]=(par[x]==x?x:find_(par[x]));
-}
-void merge_(ll u,ll v)
-{
-    u=find_(u);
-    v=find_(v);
-    if(u!=v){
-        if(rand()%2) par[u]=v;
-        else par[v]=u;
-    }
-}
 int main()
 {
     fast;
@@ -135,8 +120,7 @@ int main()
     for(i=1;i<=n;i++){
         cin>>u>>w>>v;
         g[u].eb(v,w),g[v].eb(u,w);
-        e[{min(u,v),max(u,v)}]++;
-        we[{min(u,v),max(u,v)}].insert(w);
+        if(u!=v) mn=min(mn,w);
     }
     ll comp=0;
     for(i=1;i<=4;i++){
@@ -147,24 +131,7 @@ int main()
     }
     ll odd=0;
     for(i=1;i<=4;i++) odd+=(g[i].size()&1);
-    if(comp==1&&odd==4){
-        for(i=1;i<=4;i++){
-            for(j=i+1;j<=4;j++){
-                if(e[{i,j}]==0) continue;
-                for(k=1;k<=4;k++) par[k]=k;
-                for(ll p=1;p<=4;p++){
-                    for(ll q=p+1;q<=4;q++){
-                        if(e[{p,q}]>=1&&(MP(p,q)!=MP(i,j))) merge_(p,q);
-                    }
-                }
-                if(e[{i,j}]>1) merge_(i,j);
-                ll cnt=0;
-                for(k=1;k<=4;k++) if(find_(k)==k) cnt++;
-                if(cnt==1) mn=min(mn,*we[{i,j}].begin());
-            }
-        }
-        res-=mn;
-    }
+    if(comp==1&&odd==4) res-=mn;
     cout<<res<<nl;
     return 0;
 }
