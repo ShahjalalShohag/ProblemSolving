@@ -101,23 +101,15 @@ const ld PI=acos(-1.0);
 
 
 //memory consumption test
-int a[(int)6.4e7];
+int a[(int)6e7];
 int main()
 {
     fast;
     int i,j,k,n,m,t;
-//    int l=1,r=1e8;
-//    int ans=0;
-//    while(l<=r){
-//        int mid=(l+r)/2;
-//        if(mid*4/1000000<256) ans=mid,l=mid+1;
-//        else r=mid-1;
-//    }
-//    cout<<ans<<nl;
     cin>>n;
-    int an=0;
-    while(n) an++,n/=2;
-    cout<<an<<nl;
+    int ans=0;
+    while(n) ans++,n/=2;
+    cout<<ans<<nl;
     return 0;
 }
 
