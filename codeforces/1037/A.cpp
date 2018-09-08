@@ -101,7 +101,7 @@ const ld PI=acos(-1.0);
 
 
 //memory consumption test
-int a[(int)5e7];
+ll a[(int)1e7];
 int main()
 {
     fast;
