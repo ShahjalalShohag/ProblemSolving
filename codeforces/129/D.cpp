@@ -93,107 +93,30 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int mxn=1e5+9;
+const int mxn=3e5+9;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-
-//number of states or nodes  in a suffix automaton is equal to the
-// number of equivalence classes i.e. endpos-equivalent classes among all substrings
-struct node
-{
-    int len;            //largest string length of the corresponding endpos-equivalent class
-    int link;           //leads to the state that corresponds to the longest suffix of w
-                        //that is another endpos-equivalent class.
-    int firstpos;       //1-indexed end position of the first occurrence of the largest string length of the
-                        //corresponding endpos-equivalent class
-    map<char,int>nxt;
-};
-//all suffix links of the last node are terminal nodes including the last node
-const int MX=mxn*2;
-node t[MX];
-int sz,last;
-void init()
-{
-    sz=last=0;
-    t[0].len=0;
-    t[0].firstpos=0;
-    t[0].link=-1;
-    sz++;
-}
-ll cnt[MX];
-vpii v;
-set<pii>nodes;
-void add_letter(char ch)
-{
-    int cur=sz++;
-    t[cur].len=t[last].len+1;
-    t[cur].firstpos=t[cur].len;
-    cnt[cur]=1;
-    nodes.insert({t[cur].len,cur});
-    int p;
-    for(p=last;p!=-1&&!t[p].nxt.count(ch);p=t[p].link) t[p].nxt[ch]=cur;
-    if(p==-1) t[cur].link=0;
-    else{
-        int q=t[p].nxt[ch];
-        if(t[p].len+1==t[q].len) t[cur].link=q;
-        else{
-            int clone=sz++;
-            t[clone].len=t[p].len+1;
-            t[clone].nxt=t[q].nxt;
-            t[clone].link=t[q].link;
-            t[clone].firstpos=t[q].firstpos;
-            cnt[clone]=0;
-            nodes.insert({t[clone].len,clone});
-            for(;p!=-1&&t[p].nxt[ch]==q;p=t[p].link) t[p].nxt[ch]=clone;
-            t[q].link=t[cur].link=clone;
-        }
-    }
-    last=cur;
-}
-ll dcnt[MX];            //number of distinct substrings in the subtree of node i
-ll dist_sub(int u)      //number of distinct substrings of the string
-{
-    ll ans=1;
-    if(dcnt[u]) return dcnt[u];
-    for(auto x:t[u].nxt){
-        char ch=x.F;
-        ans+=1LL*dist_sub(t[u].nxt[ch]);
-    }
-    return dcnt[u]=ans;
-}
-string ans;
-ll k;
-void kth(int i)
-{
-    if(k<=0) return;
-    for(auto x:t[i].nxt){
-        k-=cnt[x.S];
-        kth(x.S);
-        if(k<=0){
-            ans.pb(x.F);
-            return;
-        }
-    }
-}
+multiset<pair<string,int>>se;
 int main()
 {
     fast;
-    int i,j,n,m,q;
+    int i,j,k,n,m;
     string s;
     cin>>s>>k;
     n=s.size();
-    init();
-    for(i=0;i<n;i++) add_letter(s[i]);
-    for(auto it=nodes.rbegin();it!=nodes.rend();++it) cnt[t[(*it).S].link]+=cnt[(*it).S];
-    if(1LL*n*(1LL*n+1)/2<k) cout<<"No such line.\n";
-    else{
-        ans="";
-        kth(0);
-        rev(ans);
-        cout<<ans<<nl;
+    for(i=0;i<n;i++) se.insert({string(1,s[i]),i});
+    for(i=0;!se.empty()&&i<k-1;i++){
+        auto it=se.begin();
+        auto nw=*it;
+        se.erase(it);
+        nw.S++;
+        nw.F+=s[nw.S];
+        if(nw.S<n) se.insert(nw);
     }
+    if(se.empty()) cout<<"No such line.\n";
+    else cout<<(*se.begin()).F<<nl;
     return 0;
 }
