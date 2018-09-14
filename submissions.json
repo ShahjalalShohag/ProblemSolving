@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF42874004": {
+    "contest_id": 451,
+    "language": "GNU C++17",
+    "path": "codeforces\\451\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Devu and Flowers",
+    "problem_url": "https://codeforces.com/contest/451/problem/E",
+    "submission_id": "CF42874004",
+    "submission_url": "https://codeforces.com/contest/451/submission/42874004",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "number theory",
+      "*2300"
+    ],
+    "timestamp": "Sep/15/2018 03:34"
+  },
   "CF42954337": {
     "contest_id": 1041,
     "language": "GNU C++17",
