@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43066745": {
+    "contest_id": 1041,
+    "language": "GNU C++17",
+    "path": "codeforces\\1041\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Ray in the tube",
+    "problem_url": "https://codeforces.com/contest/1041/problem/F",
+    "submission_id": "CF43066745",
+    "submission_url": "https://codeforces.com/contest/1041/submission/43066745",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "dp",
+      "math",
+      "*2500"
+    ],
+    "timestamp": "Sep/19/2018 12:07"
+  },
   "CF43219647": {
     "contest_id": 1047,
     "language": "GNU C++17",
