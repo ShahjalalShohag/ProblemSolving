@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43227118": {
+    "contest_id": 57,
+    "language": "GNU C++17",
+    "path": "codeforces\\57\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Array",
+    "problem_url": "https://codeforces.com/contest/57/problem/C",
+    "submission_id": "CF43227118",
+    "submission_url": "https://codeforces.com/contest/57/submission/43227118",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*1900"
+    ],
+    "timestamp": "Sep/22/2018 03:51"
+  },
   "CF43241407": {
     "contest_id": 785,
     "language": "GNU C++17",
