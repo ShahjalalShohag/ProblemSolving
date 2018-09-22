@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43243659": {
+    "contest_id": 1046,
+    "language": "GNU C++17",
+    "path": "codeforces\\1046\\H.cpp",
+    "problem_index": "H",
+    "problem_name": "Palindrome Pairs",
+    "problem_url": "https://codeforces.com/contest/1046/problem/H",
+    "submission_id": "CF43243659",
+    "submission_url": "https://codeforces.com/contest/1046/submission/43243659",
+    "tags": [
+      "bitmasks",
+      "hashing",
+      "*1600"
+    ],
+    "timestamp": "Sep/22/2018 16:57"
+  },
   "CF43245802": {
     "contest_id": 1046,
     "language": "GNU C++17",
