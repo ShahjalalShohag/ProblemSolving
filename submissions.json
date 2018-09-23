@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43346014": {
+    "contest_id": 1030,
+    "language": "GNU C++17",
+    "path": "codeforces\\1030\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Vasya and Good Sequences",
+    "problem_url": "https://codeforces.com/contest/1030/problem/E",
+    "submission_id": "CF43346014",
+    "submission_url": "https://codeforces.com/contest/1030/submission/43346014",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Sep/24/2018 02:33"
+  },
   "CF43347122": {
     "contest_id": 518,
     "language": "GNU C++17",
