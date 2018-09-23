@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43292168": {
+    "contest_id": 1051,
+    "language": "GNU C++17",
+    "path": "codeforces\\1051\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Vasya and Big Integers",
+    "problem_url": "https://codeforces.com/contest/1051/problem/E",
+    "submission_id": "CF43292168",
+    "submission_url": "https://codeforces.com/contest/1051/submission/43292168",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dp",
+      "hashing",
+      "strings",
+      "*2600"
+    ],
+    "timestamp": "Sep/23/2018 17:26"
+  },
   "CF43296440": {
     "contest_id": 1058,
     "language": "GNU C++17",
