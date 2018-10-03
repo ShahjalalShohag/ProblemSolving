@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43745938": {
+    "contest_id": 950,
+    "language": "GNU C++17",
+    "path": "codeforces\\950\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "A Leapfrog in the Array",
+    "problem_url": "https://codeforces.com/contest/950/problem/D",
+    "submission_id": "CF43745938",
+    "submission_url": "https://codeforces.com/contest/950/submission/43745938",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Oct/04/2018 02:53"
+  },
   "CF43758059": {
     "contest_id": 1060,
     "language": "GNU C++17",
