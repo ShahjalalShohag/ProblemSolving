@@ -123,13 +123,15 @@ bool cmp(sj a,sj b)
 }
 inline void add(ll i)
 {
-    ans+=(ll)(2*cnt[a[i]]+1)*a[i];
+    ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
     cnt[a[i]]++;
+    ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
 inline void remov(ll i)
 {
-    ans-=(ll)(2*cnt[a[i]]-1)*a[i];
+    ans-=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
     cnt[a[i]]--;
+    ans+=(ll)cnt[a[i]]*cnt[a[i]]*a[i];
 }
 int main()
 {
