@@ -117,7 +117,7 @@ inline int64_t gilbertOrder(int x, int y, int pow, int rotate) {
 	ans += (seg == 1 || seg == 2) ? add : (subSquareSize - add - 1);
 	return ans;
 }
-inline bool cmp(sj a,sj b)
+bool cmp(sj a,sj b)
 {
     return a.ord<b.ord;
 }
@@ -141,7 +141,7 @@ int main()
         cin>>q[i].l>>q[i].r;
         q[i].idx=i;
     }
-    for(i=0;i<t;i++) q[i].ord=gilbertOrder(q[i].l,q[i].r,21,0);
+    for(i=0;i<t;i++) q[i].ord=gilbertOrder(q[i].l,q[i].r,25,0);
     sort(q,q+t,cmp);
     for(i=0;i<t;i++){
         while(curl<q[i].l) remov(curl++);
