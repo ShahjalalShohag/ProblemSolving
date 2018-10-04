@@ -141,7 +141,7 @@ int main()
         cin>>q[i].l>>q[i].r;
         q[i].idx=i;
     }
-    for(i=0;i<t;i++) q[i].ord=gilbertOrder(q[i].l,q[i].r,25,0);
+    for(i=0;i<t;i++) q[i].ord=gilbertOrder(q[i].l,q[i].r,19,0);
     sort(q,q+t,cmp);
     for(i=0;i<t;i++){
         while(curl<q[i].l) remov(curl++);
