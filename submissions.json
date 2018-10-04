@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43779959": {
+    "contest_id": 1060,
+    "language": "GNU C++17",
+    "path": "codeforces\\1060\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Sergey and Subway",
+    "problem_url": "https://codeforces.com/contest/1060/problem/E",
+    "submission_id": "CF43779959",
+    "submission_url": "https://codeforces.com/contest/1060/submission/43779959",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*2000"
+    ],
+    "timestamp": "Oct/04/2018 15:32"
+  },
   "CF43789767": {
     "contest_id": 1060,
     "language": "GNU C++17",
