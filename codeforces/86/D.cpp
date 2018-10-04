@@ -117,16 +117,16 @@ inline int64_t gilbertOrder(int x, int y, int pow, int rotate) {
 	ans += (seg == 1 || seg == 2) ? add : (subSquareSize - add - 1);
 	return ans;
 }
-bool cmp(sj a,sj b)
+inline bool cmp(sj a,sj b)
 {
     return a.ord<b.ord;
 }
-void add(ll i)
+inline void add(ll i)
 {
     ans+=(ll)(2*cnt[a[i]]+1)*a[i];
     cnt[a[i]]++;
 }
-void remov(ll i)
+inline void remov(ll i)
 {
     ans-=(ll)(2*cnt[a[i]]-1)*a[i];
     cnt[a[i]]--;
