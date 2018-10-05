@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43866621": {
+    "contest_id": 1059,
+    "language": "GNU C++17",
+    "path": "codeforces\\1059\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Sequence Transformation",
+    "problem_url": "https://codeforces.com/contest/1059/problem/C",
+    "submission_id": "CF43866621",
+    "submission_url": "https://codeforces.com/contest/1059/submission/43866621",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Oct/06/2018 00:20"
+  },
   "CF43866946": {
     "contest_id": 1059,
     "language": "GNU C++17",
