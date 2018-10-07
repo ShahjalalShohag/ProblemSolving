@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF43955312": {
+    "contest_id": 1033,
+    "language": "GNU C++17",
+    "path": "codeforces\\1033\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Square Difference",
+    "problem_url": "https://codeforces.com/contest/1033/problem/B",
+    "submission_id": "CF43955312",
+    "submission_url": "https://codeforces.com/contest/1033/submission/43955312",
+    "tags": [
+      "math",
+      "number theory",
+      "*1100"
+    ],
+    "timestamp": "Oct/07/2018 23:19"
+  },
   "CF43961846": {
     "contest_id": 1033,
     "language": "GNU C++17",
