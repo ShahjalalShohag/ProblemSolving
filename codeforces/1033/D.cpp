@@ -351,14 +351,12 @@ namespace NT{
         return factor;
     }
     uint64_t squfof(uint64_t const&x){
-        for(uint64_t i=2;i<=min((int64_t)5000,(int64_t)x/2-1);i++){
-            uint64_t p=(uint64_t)((1.0*x)/(i*1.0)+eps);
-            if(p*i==x) return i;
-        }
         static array<uint32_t, 16> multipliers{1, 3, 5, 7, 11, 3*5, 3*7, 3*11, 5*7, 5*11, 7*11, 3*5*7, 3*5*11, 3*7*11, 5*7*11, 3*5*7*11};
 
         uint64_t cbrt_x = icbrt(x);
         if(cbrt_x*cbrt_x*cbrt_x == x) return cbrt_x;
+        uint64_t sqrt_x = isqrt(x);
+        if(sqrt_x*sqrt_x == x) return sqrt_x;
 
         //uint32_t iter_lim = isqrt(isqrt(x))+10;
         uint32_t iter_lim = 300;
@@ -434,51 +432,6 @@ namespace NT{
 using ll = int64_t;
 
 unordered_map<ll,ll>mp;
-
-ll sqRoot(ll x)
-{
-    ll st = 1, ed = 2000000000, mid;
-
-    while(st+1 < ed)
-    {
-        mid = (st+ed)>>1;
-
-        if(mid*mid <= x) st = mid;
-        else ed = mid;
-    }
-
-    return st;
-}
-
-ll cbRoot(ll x)
-{
-    ll st = 1, ed = 2000000, mid;
-
-    while(st+1 < ed)
-    {
-        mid = (st+ed)>>1;
-
-        if(mid*mid*mid <= x) st = mid;
-        else ed = mid;
-    }
-
-    return st;
-}
-
-ll qtRoot(ll x)
-{
-    ll st = 1, ed = 50000, mid;
-
-    while(st+1 < ed)
-    {
-        mid = (st+ed)>>1;
-
-        if(mid*mid*mid*mid <= x) st = mid;
-        else ed = mid;
-    }
-
-    return st;
-}
 int main()
 {
     fast;
@@ -487,21 +440,8 @@ int main()
     ll ans=1;
     for(i=1;i<=n;i++){
         cin>>x;
-        ll p=qtRoot(x);
-        if(p*p*p*p==x) mp[p]+=4;
-        else{
-            p=cbRoot(x);
-            if(p*p*p==x) mp[p]+=3;
-            else{
-                p=sqRoot(x);
-                if(p*p==x) mp[p]+=2;
-                else{
-                    p=NT::squfof(x);
-                    mp[p]++;
-                    mp[x/p]++;
-                }
-            }
-        }
+        auto v=NT::factorize(x);
+        for(auto x:v) mp[x]++;
     }
     for(auto x:mp) ans=ans*(x.S+1)%mod;
     cout<<ans<<nl;
