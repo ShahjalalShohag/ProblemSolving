@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44053922": {
+    "contest_id": 319,
+    "language": "GNU C++17",
+    "path": "codeforces\\319\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Kalila and Dimna in the Logging Industry",
+    "problem_url": "https://codeforces.com/contest/319/problem/C",
+    "submission_id": "CF44053922",
+    "submission_url": "https://codeforces.com/contest/319/submission/44053922",
+    "tags": [
+      "dp",
+      "geometry",
+      "*2100"
+    ],
+    "timestamp": "Oct/10/2018 03:18"
+  },
   "CF44220183": {
     "contest_id": 1066,
     "language": "GNU C++17",
