@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44220600": {
+    "contest_id": 1066,
+    "language": "GNU C++17",
+    "path": "codeforces\\1066\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Yet another 2D Walking",
+    "problem_url": "https://codeforces.com/contest/1066/problem/F",
+    "submission_id": "CF44220600",
+    "submission_url": "https://codeforces.com/contest/1066/submission/44220600",
+    "tags": [
+      "dp",
+      "*2100"
+    ],
+    "timestamp": "Oct/12/2018 23:09"
+  },
   "CF44220815": {
     "contest_id": 1066,
     "language": "GNU C++17",
