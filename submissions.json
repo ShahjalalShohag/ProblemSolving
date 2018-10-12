@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44220815": {
+    "contest_id": 1066,
+    "language": "GNU C++17",
+    "path": "codeforces\\1066\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Books Queries",
+    "problem_url": "https://codeforces.com/contest/1066/problem/C",
+    "submission_id": "CF44220815",
+    "submission_url": "https://codeforces.com/contest/1066/submission/44220815",
+    "tags": [
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Oct/12/2018 23:12"
+  },
   "CF44220884": {
     "contest_id": 1066,
     "language": "GNU C++17",
