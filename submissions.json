@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44220884": {
+    "contest_id": 1066,
+    "language": "GNU C++17",
+    "path": "codeforces\\1066\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Heaters",
+    "problem_url": "https://codeforces.com/contest/1066/problem/B",
+    "submission_id": "CF44220884",
+    "submission_url": "https://codeforces.com/contest/1066/submission/44220884",
+    "tags": [
+      "greedy",
+      "two pointers",
+      "*1500"
+    ],
+    "timestamp": "Oct/12/2018 23:14"
+  },
   "CF44221001": {
     "contest_id": 1066,
     "language": "GNU C++17",
