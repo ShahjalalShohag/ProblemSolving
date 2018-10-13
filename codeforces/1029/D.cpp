@@ -124,7 +124,7 @@ int main()
     fast;
     ll i,j,k,n,m,t,ans=0;
     cin>>n>>k;
-   // for(i=0;i<=11;i++) mp[i].reserve(mxn);
+    for(i=0;i<=11;i++) mp[i].reserve(mxn);
     pw[0]=1;
     for(i=1;i<=10;i++) pw[i]=(pw[i-1]*10)%k;
     for(i=1;i<=n;i++){
