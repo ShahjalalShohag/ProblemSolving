@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44265370": {
+    "contest_id": 1065,
+    "language": "GNU C++17",
+    "path": "codeforces\\1065\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Vasya and Isolated Vertices",
+    "problem_url": "https://codeforces.com/contest/1065/problem/B",
+    "submission_id": "CF44265370",
+    "submission_url": "https://codeforces.com/contest/1065/submission/44265370",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "*1300"
+    ],
+    "timestamp": "Oct/13/2018 22:21"
+  },
   "CF44265426": {
     "contest_id": 1065,
     "language": "GNU C++17",
