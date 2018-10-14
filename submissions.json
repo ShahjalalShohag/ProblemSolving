@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44319951": {
+    "contest_id": 1064,
+    "language": "GNU C++17",
+    "path": "codeforces\\1064\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Labyrinth",
+    "problem_url": "https://codeforces.com/contest/1064/problem/D",
+    "submission_id": "CF44319951",
+    "submission_url": "https://codeforces.com/contest/1064/submission/44319951",
+    "tags": [
+      "graphs",
+      "shortest paths",
+      "*1800"
+    ],
+    "timestamp": "Oct/14/2018 19:52"
+  },
   "CF44320216": {
     "contest_id": 1064,
     "language": "GNU C++17",
