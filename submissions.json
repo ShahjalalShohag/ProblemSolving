@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44801409": {
+    "contest_id": 1068,
+    "language": "GNU C++17",
+    "path": "codeforces\\1068\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Colored Rooks",
+    "problem_url": "https://codeforces.com/contest/1068/problem/C",
+    "submission_id": "CF44801409",
+    "submission_url": "https://codeforces.com/contest/1068/submission/44801409",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "*1700"
+    ],
+    "timestamp": "Oct/24/2018 23:44"
+  },
   "CF44833472": {
     "contest_id": 1067,
     "language": "GNU C++17",
