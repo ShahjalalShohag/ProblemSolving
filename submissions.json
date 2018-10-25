@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44877834": {
+    "contest_id": 1073,
+    "language": "GNU C++17",
+    "path": "codeforces\\1073\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Segment Sum",
+    "problem_url": "https://codeforces.com/contest/1073/problem/E",
+    "submission_id": "CF44877834",
+    "submission_url": "https://codeforces.com/contest/1073/submission/44877834",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "dp",
+      "math",
+      "*2300"
+    ],
+    "timestamp": "Oct/25/2018 23:47"
+  },
   "CF44884726": {
     "contest_id": 346,
     "language": "GNU C++17",
