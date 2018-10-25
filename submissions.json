@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44846483": {
+    "contest_id": 1073,
+    "language": "GNU C++17",
+    "path": "codeforces\\1073\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Diverse Substring",
+    "problem_url": "https://codeforces.com/contest/1073/problem/A",
+    "submission_id": "CF44846483",
+    "submission_url": "https://codeforces.com/contest/1073/submission/44846483",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1000"
+    ],
+    "timestamp": "Oct/25/2018 20:37"
+  },
   "CF44849372": {
     "contest_id": 1073,
     "language": "GNU C++17",
