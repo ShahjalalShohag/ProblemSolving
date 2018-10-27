@@ -83,31 +83,31 @@ const ld eps=1e-9;
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 ll qpow(ll n,ll k,ll mod) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-const int MOD1=127657753,MOD2=987654319;
-const int p1=137,p2=277;
-int invp1,invp2;
-pii pw[N],invpw[N];
+const ll MOD1=127657753LL,MOD2=987654319LL;
+const ll p1=137,p2=277;
+ll invp1,invp2;
+pll pw[N],invpw[N];
 void pre()
 {
     pw[0]={1,1};
     for(int i=1;i<N;i++){
-        pw[i].F=1LL*pw[i-1].F*p1%MOD1;
-        pw[i].S=1LL*pw[i-1].S*p2%MOD2;
+        pw[i].F=pw[i-1].F*p1%MOD1;
+        pw[i].S=pw[i-1].S*p2%MOD2;
     }
     invp1=qpow(p1,MOD1-2,MOD1);
     invp2=qpow(p2,MOD2-2,MOD2);
     invpw[0]={1,1};
     for(int i=1;i<N;i++){
-        invpw[i].F=1LL*invpw[i-1].F*invp1%MOD1;
-        invpw[i].S=1LL*invpw[i-1].S*invp2%MOD2;
+        invpw[i].F=invpw[i-1].F*invp1%MOD1;
+        invpw[i].S=invpw[i-1].S*invp2%MOD2;
     }
 
 }
 ///returns hash of string s
-pii get_hash(string s)
+pll get_hash(string s)
 {
     int n=s.size();
-    pii ans={0,0};
+    pll ans={0,0};
     for(int i=0;i<n;i++){
         ans.F=(s[i]+ans.F*p1%MOD1)%MOD1;
         ans.S=(s[i]+ans.S*p2%MOD2)%MOD2;
@@ -117,30 +117,30 @@ pii get_hash(string s)
 struct RollingHash
 {
     int n;
-    vi s;///0-indexed
-    vector<pii>hs;///1-indexed
+    vi s;
+    vector<pll>hs;///1-indexed
     void init(vi _s)
     {
         n=_s.size();
         s=_s;
         hs.eb(0,0);
         for(int i=0;i<n;i++){
-            pii p;
-            p.F=(hs[i].F+1LL*pw[i].F*s[i]%MOD1)%MOD1;
-            p.S=(hs[i].S+1LL*pw[i].S*s[i]%MOD2)%MOD2;
+            pll p;
+            p.F=(hs[i].F+pw[i].F*s[i]%MOD1)%MOD1;
+            p.S=(hs[i].S+pw[i].S*s[i]%MOD2)%MOD2;
             hs.pb(p);
         }
     }
     ///returns hash of substring [l....r],1-indexed
-    pii get_hash(int l,int r)
+    pll get_hash(int l,int r)
     {
-        pii ans;
-        ans.F=(hs[r].F-hs[l-1].F+MOD1)%MOD1*1LL*invpw[l-1].F%MOD1;
-        ans.S=(hs[r].S-hs[l-1].S+MOD2)%MOD2*1LL*invpw[l-1].S%MOD2;
+        pll ans;
+        ans.F=(hs[r].F-hs[l-1].F+MOD1)%MOD1*invpw[l-1].F%MOD1;
+        ans.S=(hs[r].S-hs[l-1].S+MOD2)%MOD2*invpw[l-1].S%MOD2;
         return ans;
     }
     ///returns hash of total string
-    pii get()
+    pll get()
     {
         return get_hash(1,n);
     }
@@ -157,7 +157,7 @@ int main()
     for(i=0;i<26;i++) pos[i]=vi(n,0);
     for(i=0;i<n;i++) pos[s[i]-'a'][i]=1;
     for(i=0;i<26;i++) h[i].init(pos[i]);
-    vector<pii> a,b;
+    vpll a,b;
     while(q--){
         cin>>x>>y>>l;
         for(i=0;i<26;i++){

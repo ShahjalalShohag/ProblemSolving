@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF44965555": {
+    "contest_id": 985,
+    "language": "GNU C++17",
+    "path": "codeforces\\985\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Isomorphic Strings",
+    "problem_url": "https://codeforces.com/contest/985/problem/F",
+    "submission_id": "CF44965555",
+    "submission_url": "https://codeforces.com/contest/985/submission/44965555",
+    "tags": [
+      "hashing",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Oct/28/2018 00:59"
+  },
   "CF44965756": {
     "contest_id": 985,
     "language": "GNU C++17",
