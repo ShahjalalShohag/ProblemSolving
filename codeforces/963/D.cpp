@@ -71,19 +71,20 @@ using namespace std;
 #define mnv(v) *min_element(v.begin(),v.end())
 #define mxv(v) *max_element(v.begin(),v.end())
 #define toint(a) atoi(a.c_str())
-#define fast ios_base::sync_with_stdio(false)
+#define BeatMeScanf ios_base::sync_with_stdio(false)
 #define valid(tx,ty) (tx>=0&&tx<n&&ty>=0&&ty<m)
 #define one(x) __builtin_popcount(x)
 #define Unique(v) v.erase(unique(all(v)),v.end())
-#define stree ll l=(n<<1),r=l+1,mid=b+(e-b)/2
+#define stree l=(n<<1),r=l+1,mid=b+(e-b)/2
 #define fout(x) fixed<<setprecision(x)
 string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
-inline void yes(){cout<<"YES\n";exit(0);}
-inline void no(){cout<<"NO\n";exit(0);}
+inline void nopenot(){cout<<"YES\n";exit(0);}
+inline void nope(){cout<<"NO\n";exit(0);}
 template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 //ll dx[]={1,0,-1,0,1,-1,-1,1};
 //ll dy[]={0,1,0,-1,1,1,-1,-1};
-
+//random_device rd;
+//mt19937 random(rd());
 #define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
 void deb(istream_iterator<string> it) {}
 template<typename T, typename... Args>
@@ -100,162 +101,130 @@ const ld PI=acos(-1.0);
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-const int kinds = 128;///maximum ASCII value of any character of the string
-char str[N];
-int K, buc[N], r[N], sa[N], X[N], Y[N], high[N];
-bool cmp(int *r, int a, int b, int x)
-{
-    return (r[a] == r[b] && r[a+x] == r[b+x]);
-}
 
-void suffix_array_DA(int n, int m)
+///beware! if k distinct patterns are given having sum of length m then size of ending array and oc array will
+///be at most m.sqrt(m) ,But for similar patterns one must act with  them differently
+struct aho_corasick
 {
-    int *x = X, *y = Y, i, j, k = 0, l;
-    memset(buc, 0, sizeof(buc));
-    for(i = 0; i < n; i++) buc[ x[i]=str[i] ]++;
-    for(i = 1; i < m; i++) buc[i] += buc[i-1];
-    for(i = n-1; i >= 0; i--) sa[--buc[x[i]]] = i;
-    for(l = 1, j = 1; j < n; m = j, l <<= 1)
+	bool  is_end[N];
+	int link[N];            ///A suffix link for a vertex p is a edge that points to
+                            ///the longest proper suffix of
+                            ///the string corresponding to the vertex p.
+    int psz;                ///tracks node numbers of the trie
+	map<char, int> to[N];   ///tracks the next node
+	vi ending[N];           ///ending[i] stores the indexes of patterns which ends
+                            ///at node  i(from the trie)
+	vi oc[N];               ///oc[i] stores ending index of all occurrences of pattern[i]
+                            ///so real oc[i][j]=oc[i][j]-pattern[i].size()+1,0-indexed
+	void clear()
+	{
+		for(int i = 0; i < psz; i++)
+			is_end[i] = 0, link[i] = 0, to[i].clear(),ending[i].clear(),oc[i].clear();
+
+		psz = 1;
+		is_end[0] = 1;
+	}
+
+	aho_corasick() { psz = N - 2; clear(); }
+
+	void add_word(string s,int idx)
+	{
+		int u = 0;
+		for(char c: s)
+		{
+			if(!to[u].count(c)) to[u][c] = psz++;
+			u = to[u][c];
+		}
+
+		is_end[u] = 1;
+		ending[u].eb(idx);
+	}
+
+    void populate(int cur)
     {
-        j = 0;
-        for(i = n-l; i < n; i++) y[j++] = i;
-        for(i = 0; i < n; i++) if(sa[i] >= l) y[j++] = sa[i]-l;
-        for(i = 0; i < m; i++) buc[i] = 0;
-        for(i = 0; i < n; i++) buc[ x[y[i]] ]++;
-        for(i = 1; i < m; i++) buc[i] += buc[i-1];
-        for(i = n-1; i >= 0; i--) sa[ --buc[ x[y[i]] ]] = y[i];
-        for(swap(x, y), x[sa[0]] = 0, i = 1, j = 1; i < n; i++)
-            x[sa[i]] = cmp(y, sa[i-1], sa[i], l) ? j-1 : j++;
+        /// merging the occurrences of patterns ending  at cur node in  the trie
+        for(auto occ: ending[link[cur]])
+            ending[cur].eb(occ);
     }
-    for(i = 1; i < n; i++) r[sa[i]] = i;
-    for(i = 0; i < n-1; high[r[i++]] = k)
-        for(k ? k--: 0, j = sa[r[i]-1]; str[i+k] == str[j+k]; k++);
-}
-vector<int> suffix_array_construction(string s)
-{
-    int n=s.size();
-    for(int i=0;i<n;i++) str[i]=s[i];
-    str[n]='\0';
-    suffix_array_DA(n+1,kinds);
-    vector<int>saa;
-    for(int i=1;i<=n;i++) saa.eb(sa[i]);
-    return saa;
-}
-vector<int> lcp_construction(string const& s, vector<int> const& p)
-{
-    int n = s.size();
-    vector<int> rank(n, 0);
 
-    for (int i = 0; i < n; i++) rank[p[i]] = i;
-
-    int k = 0;
-    vector<int> lcp(n-1, 0);
-
-    for (int i = 0; i < n; i++) {
-        if (rank[i] == n - 1) {
-            k = 0;
-            continue;
-        }
-        int j = p[rank[i] + 1];
-        while (i + k < n && j + k < n && s[i+k] == s[j+k])  k++;
-        lcp[rank[i]] = k;
-        if (k)  k--;
-    }
-    return lcp;
-}
-const int MX = 18;
-int st[N][MX];
-int lg[N];
-
-void pre()
-{
-    lg[1] = 0;
-    for (int i=2; i<N; i++)
-        lg[i] = lg[i/2]+1;
-}
-
-void build(vector<int> &lcp)
-{
-    int n = lcp.size();
-    for (int i=0; i<n; i++)
-        st[i][0] = lcp[i];
-
-    for (int k=1; k<MX; k++)
-        for (int i=0; i<n; i++)
+    void populate(vi &en, int cur)
+    {
+        /// occurrences of patterns in the given string
+        for(auto idx: en)
         {
-            st[i][k] = st[i][k-1];
-            int nxt = i + (1<<(k-1));
-            if (nxt >= n)    continue;
-            st[i][k] = min(st[i][k], st[nxt][k-1]);
+            oc[idx].eb(cur);
         }
-}
-///minimum of lcp[l.......r]
-int get(int l, int r)
-{
-    int k = lg[r-l+1];
-    return min(st[l][k], st[r-(1<<k)+1][k]);
-}
-int ra[N],sz;
-///lcp of suffix starting from i and j
-int lcp_(int i,int j)
-{
-    if(i==j) return sz-i;
-    int l=ra[i];
-    int r=ra[j];
-    if(l>r) swap(l,r);
-    return get(l,r-1);
-}
-string ss;
-///lower bound of string t
-int lb(string &t,vi &sa){
-    int l=0,r=sz-1;
-    int k=t.size();
-    int ans=0;
-    while(l<=r){
-        int mid = (l+r)/2;
-        if(ss.substr(sa[mid],min(sz-sa[mid],k)) >= t) ans=mid,r=mid-1;
-        else l = mid+1;
     }
-    return ans;
-}
-///upper bound of string t
-int ub(string &t,vi &sa){
-    int l=0,r=sz-1;
-    int k=t.size();
-    int ans=sz;
-    while(l<=r){
-        int mid = (l+r)/2;
-        if(ss.substr(sa[mid],min(sz-sa[mid],k)) > t) ans=mid,r=mid-1;
-        else l = mid+1;
+	void push_links()
+	{
+		queue<int> q;
+		int u, v, j;
+		char c;
+
+		q.push(0);
+		link[0] = -1;
+
+		while(!q.empty())
+		{
+			u = q.front();
+			q.pop();
+
+			for(auto it: to[u])
+			{
+				v = it.second;
+				c = it.first;
+				j = link[u];
+
+				while(j != -1 && !to[j].count(c)) j = link[j];
+				if(j != -1) link[v] = to[j][c];
+				else link[v] = 0;
+
+				q.push(v);
+				populate(v);
+			}
+		}
+	}
+	void traverse(string s)
+    {
+        int n=s.size();
+        int cur=0;///root
+
+        for(int i=0;i<n;i++){
+            char c=s[i];
+            while(cur!=-1 && !to[cur].count(c)) cur=link[cur];
+            if(cur!=-1) cur=to[cur][c];
+            else cur=0;
+            populate(ending[cur],i);
+        }
     }
-    return ans;
-}
+};
+
+aho_corasick t;
+string p[N];
+int k[N];
 int main()
 {
-    fast;
-    int i,j,k,n,m,q;
-    string s;
-    cin>>s;
-    n = s.size();
-    vector<int> sa = suffix_array_construction(s);
-    //vector<int> lcp = lcp_construction(s, sa);
-    sz=n;
-    ss=s;
-    cin>>q;
-    while(q--){
-        string t;
-        cin>>k>>t;
-        int l=lb(t,sa);
-        int r=ub(t,sa);
-        vi oc;
-        for(i=l;i<r;i++) oc.eb(sa[i]);
-        srt(oc);
-        if(k>oc.size()) cout<<-1<<nl;
+	BeatMeScanf;
+	int i,j,n,m;
+	string s;
+	cin>>s;
+	cin>>m;
+    for(i=0;i<m;i++){
+        cin>>k[i]>>p[i];
+        t.add_word(p[i],i);
+    }
+    t.push_links();
+    t.traverse(s);
+    for(i=0;i<m;i++){
+        int sz=t.oc[i].size();
+        if(sz<k[i]) cout<<-1<<nl;
         else{
-            int ans=n;
-            for(i=0;i+k-1<oc.size();i++) ans=min(ans,oc[i+k-1]-oc[i]+(int)t.size());
+            int ans=1e9;
+            for(j=0;j+k[i]-1<sz;j++){
+                ans=min(ans,t.oc[i][j+k[i]-1]-t.oc[i][j]+(int)p[i].size());
+            }
             cout<<ans<<nl;
         }
     }
-    return 0;
+	return 0;
 }
