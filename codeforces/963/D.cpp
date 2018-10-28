@@ -230,7 +230,6 @@ int ub(string &t,vi &sa){
     }
     return ans;
 }
-//
 int main()
 {
     fast;
