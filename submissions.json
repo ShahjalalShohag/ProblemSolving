@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45019032": {
+    "contest_id": 1043,
+    "language": "GNU C++17",
+    "path": "codeforces\\1043\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Mysterious Crime",
+    "problem_url": "https://codeforces.com/contest/1043/problem/D",
+    "submission_id": "CF45019032",
+    "submission_url": "https://codeforces.com/contest/1043/submission/45019032",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "math",
+      "meet-in-the-middle",
+      "two pointers",
+      "*1700"
+    ],
+    "timestamp": "Oct/28/2018 23:31"
+  },
   "CF45023555": {
     "contest_id": 1043,
     "language": "GNU C++17",
