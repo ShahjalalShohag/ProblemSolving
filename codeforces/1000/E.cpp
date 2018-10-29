@@ -152,13 +152,15 @@ int main()
             if(bridge.find({min(u,v),max(u,v)})==bridge.end()) merge_(u,v);
         }
     }
-    for(auto p:bridge){
-        u=p.F;
-        v=p.S;
-        int x=find_(u);
-        int y=find_(v);
-        gr[x].eb(y);
-        gr[y].eb(x);
+    for(u=1;u<=n;u++){
+        for(auto v:g[u]){
+            if(bridge.find({min(u,v),max(u,v)})!=bridge.end()){
+                int x=find_(u);
+                int y=find_(v);
+                gr[x].eb(y);
+                gr[y].eb(x);
+            }
+        }
     }
     u=bfs(find_(1));
     v=bfs(find_(u));
