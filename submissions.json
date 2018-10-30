@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45116174": {
+    "contest_id": 652,
+    "language": "GNU C++17",
+    "path": "codeforces\\652\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Pursuit For Artifacts",
+    "problem_url": "https://codeforces.com/contest/652/problem/E",
+    "submission_id": "CF45116174",
+    "submission_url": "https://codeforces.com/contest/652/submission/45116174",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "trees",
+      "*2300"
+    ],
+    "timestamp": "Oct/31/2018 03:38"
+  },
   "CF45210403": {
     "contest_id": 20,
     "language": "GNU C++17",
