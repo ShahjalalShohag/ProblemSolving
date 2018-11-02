@@ -102,7 +102,7 @@ const ld PI=acos(-1.0);
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
 
-bool vis[N];
+//bool vis[N];
 ll d[N];
 ll par[N];
 vpll g[N];
@@ -119,10 +119,10 @@ int main()
     while(!q.empty()){
         tie(w,u)=q.top();
         q.pop();
-        vis[u]=1;
+        //vis[u]=1;
         for(auto x:g[u]){
             v=x.F,w=x.S;
-            if(d[u]+w<d[v]&&!vis[v]){
+            if(d[u]+w<d[v]){
                 par[v]=u;
                 d[v]=d[u]+w;
                 q.push({d[v],v});
