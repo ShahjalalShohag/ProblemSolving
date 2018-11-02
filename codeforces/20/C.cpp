@@ -102,6 +102,9 @@ const ld PI=acos(-1.0);
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
 
+bool vis[N];
+ll d[N];
+ll par[N];
 vpll g[N];
 int main()
 {
@@ -110,16 +113,16 @@ int main()
     cin>>n>>m;
     for(i=0;i<m;i++) cin>>u>>v>>w,g[u].eb(v,w),g[v].eb(u,w);
     PQ<pll,vpll,greater<pll>>q;
-    vll d(n+1,inf);
-    vll par(n+1,0);
+    fill(d,d+N,inf);
     q.push({0,1});
     d[1]=0;
     while(!q.empty()){
         tie(w,u)=q.top();
         q.pop();
+        vis[u]=1;
         for(auto x:g[u]){
             v=x.F,w=x.S;
-            if(d[u]+w<d[v]){
+            if(d[u]+w<d[v]&&!vis[v]){
                 par[v]=u;
                 d[v]=d[u]+w;
                 q.push({d[v],v});
@@ -128,7 +131,9 @@ int main()
     }
     if(d[n]==inf) return cout<<-1<<nl,0;
     vll path;
-    for(ll nw=n;nw!=0;nw=par[nw]) path.eb(nw);
+    ll nw=n;
+    while(par[nw]!=0) path.eb(nw),nw=par[nw];
+    path.eb(nw);
     rev(path);
     for(auto x:path) cout<<x<<' ';
     return 0;
