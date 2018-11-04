@@ -133,14 +133,8 @@ void merge_(int a,int b,int d)
 	if(ra==rb && val[a]^val[b]!=d) flaw++;
 	else if(ra!=rb)
 	{
-	    if(rand()%2){
-            val[ra]=d^val[b]^val[a];
-            par[ra]=rb;
-	    }
-	    else{
-            val[rb]=d^val[a]^val[b];
-            par[rb]=ra;
-	    }
+		val[ra]=d^val[b]^val[a];
+		par[ra]=rb;
 	}
 }
 int sz=0;

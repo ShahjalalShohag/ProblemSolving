@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45306942": {
+    "contest_id": 1075,
+    "language": "GNU C++17",
+    "path": "codeforces\\1075\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Deduction Queries",
+    "problem_url": "https://codeforces.com/contest/1075/problem/F",
+    "submission_id": "CF45306942",
+    "submission_url": "https://codeforces.com/contest/1075/submission/45306942",
+    "tags": [
+      "data structures",
+      "dsu",
+      "*2400"
+    ],
+    "timestamp": "Nov/05/2018 04:34"
+  },
   "CF45307017": {
     "contest_id": 1075,
     "language": "GNU C++17",
