@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45286977": {
+    "contest_id": 776,
+    "language": "GNU C++17",
+    "path": "codeforces\\776\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "The Door Problem",
+    "problem_url": "https://codeforces.com/contest/776/problem/D",
+    "submission_id": "CF45286977",
+    "submission_url": "https://codeforces.com/contest/776/submission/45286977",
+    "tags": [
+      "2-sat",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*2000"
+    ],
+    "timestamp": "Nov/04/2018 23:18"
+  },
   "CF45289425": {
     "contest_id": 1075,
     "language": "GNU C++17",
