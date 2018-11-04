@@ -107,7 +107,6 @@ const ld PI=acos(-1.0);
 int flaw;   ///counting numbers of inconsistent assertions
 int val[N]; ///val[i]=a[i]-a[root[i]] where root[i]=root of the corresponding dsu of i
 int par[N]; ///adding a[i]-a[j]=d means setting j=par[i] and updating val[i]
-int rnk[N];
 
 void init(int n)
 {
@@ -134,15 +133,13 @@ void merge_(int a,int b,int d)
 	if(ra==rb && val[a]^val[b]!=d) flaw++;
 	else if(ra!=rb)
 	{
-	    if(rnk[ra]<rnk[rb]){
+	    if(rand()%2){
             val[ra]=d^val[b]^val[a];
             par[ra]=rb;
-            rnk[rb]++;
 	    }
 	    else{
             val[rb]=d^val[a]^val[b];
             par[rb]=ra;
-            rnk[ra]++;
 	    }
 	}
 }
