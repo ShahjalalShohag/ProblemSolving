@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45338403": {
+    "contest_id": 1068,
+    "language": "Python 3",
+    "path": "codeforces\\1068\\B.py",
+    "problem_index": "B",
+    "problem_name": "LCM",
+    "problem_url": "https://codeforces.com/contest/1068/problem/B",
+    "submission_id": "CF45338403",
+    "submission_url": "https://codeforces.com/contest/1068/submission/45338403",
+    "tags": [
+      "math",
+      "number theory",
+      "*1200"
+    ],
+    "timestamp": "Nov/06/2018 01:00"
+  },
   "CF45385359": {
     "contest_id": 321,
     "language": "GNU C++17",
