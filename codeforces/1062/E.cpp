@@ -124,56 +124,61 @@ int lca(int u,int v)
     for(int k=18;k>=0;k--) if(par[u][k]!=par[v][k]) u=par[u][k],v=par[v][k];
     return par[u][0];
 }
-pii t[4*N];
+struct node
+{
+    int mx,mx2,mn,mn2;
+    node()
+    {
+        mx=0,mx2=0,mn=1e9,mn2=1e9;
+    }
+    node(int _mx,int _mx2,int _mn,int _mn2)
+    {
+        mx=_mx,mx2=_mx2,mn=_mn,mn2=_mn2;
+    }
+}t[4*N];
+vi vec;
+node  merge_(node l,node r)
+{
+    node ans;
+    ans.mn=min(l.mn,r.mn);
+    ans.mx=max(l.mx,r.mx);
+    vec.clear();
+    vec.eb(l.mn);
+    if(l.mn!=l.mn2) vec.eb(l.mn2);
+    vec.eb(r.mn);
+    if(r.mn!=r.mn2) vec.eb(r.mn2);
+    srt(vec);
+    ans.mn2=vec[1];
+    vec.clear();
+    vec.eb(l.mx);
+    if(l.mx!=l.mx2) vec.eb(l.mx2);
+    vec.eb(r.mx);
+    if(r.mx!=r.mx2) vec.eb(r.mx2);
+    srt(vec);
+    ans.mx2=vec[(int)vec.size()-2];
+    return ans;
+}
+void out(node x)
+{
+    debug(x.mn,x.mn2,x.mx,x.mx2);
+}
 void build(int n,int b,int e)
 {
     if(b==e){
-        t[n]={st[b],st[b]};
+        t[n]=node(st[b],st[b],st[b],st[b]);
         return;
     }
     int stree;
     build(l,b,mid);
     build(r,mid+1,e);
-    t[n].F=min(t[l].F,t[r].F);
-    t[n].S=max(t[l].S,t[r].S);
+    t[n]=merge_(t[l],t[r]);
 }
-pii query(int n,int b,int e,int i,int j)
+node query(int n,int b,int e,int i,int j)
 {
-    if(b>j||e<i) return {1e9,0};
+    if(b>j||e<i) return node();
     if(b>=i&&e<=j) return t[n];
     int stree;
-    pii x=query(l,b,mid,i,j);
-    pii y=query(r,mid+1,e,i,j);
-    return {min(x.F,y.F),max(x.S,y.S)};
-}
-int lca_(int u,int v)
-{
-    if(u==0) return v;
-    if(v==0) return u;
-    return lca(u,v);
-}
-int t2[4*N];
-void build2(int n,int b,int e)
-{
-    if(b==e){
-        t2[n]=b;
-        return;
-    }
-    int stree;
-    build2(l,b,mid);
-    build2(r,mid+1,e);
-    t2[n]=lca_(t2[l],t2[r]);
-}
-int query2(int n,int b,int e,int i,int j)
-{
-    if(b>j||e<i) return 0;
-    if(b>=i&&e<=j) return t2[n];
-    int stree;
-    return lca_(query2(l,b,mid,i,j),query2(r,mid+1,e,i,j));
-}
-int get(int n,int l,int r)
-{
-    return query2(1,1,n,l,r);
+    return merge_(query(l,b,mid,i,j),query(r,mid+1,e,i,j));
 }
 int main()
 {
@@ -183,7 +188,6 @@ int main()
     for(i=2;i<=n;i++) cin>>k,g[i].eb(k),g[k].eb(i);
     dfs(1);
     build(1,1,n);
-    build2(1,1,n);
     while(q--){
         cin>>l>>r;
         if(l+1==r){
@@ -191,11 +195,12 @@ int main()
             else cout<<l<<' '<<dep[r]-1<<nl;
             continue;
         }
-        pii nw=query(1,1,n,l,r);
-        int lc1=lca_(get(n,l,ver[nw.F]-1),get(n,ver[nw.F]+1,r));
-        int lc2=lca_(get(n,l,ver[nw.S]-1),get(n,ver[nw.S]+1,r));
-        if(dep[lc1]>dep[lc2]) cout<<ver[nw.F]<<' '<<dep[lc1]-1<<nl;
-        else cout<<ver[nw.S]<<' '<<dep[lc2]-1<<nl;
+        node nw=query(1,1,n,l,r);
+        int lc1=lca(ver[nw.mn2],ver[nw.mx]);
+        int lc2=lca(ver[nw.mn],ver[nw.mx2]);
+        if(dep[lc1]>dep[lc2]) cout<<ver[nw.mn]<<' '<<dep[lc1]-1<<nl;
+        else cout<<ver[nw.mx]<<' '<<dep[lc2]-1<<nl;
     }
     return 0;
 }
+
