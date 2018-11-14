@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45741923": {
+    "contest_id": 1062,
+    "language": "GNU C++17",
+    "path": "codeforces\\1062\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Fun with Integers",
+    "problem_url": "https://codeforces.com/contest/1062/problem/D",
+    "submission_id": "CF45741923",
+    "submission_url": "https://codeforces.com/contest/1062/submission/45741923",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Nov/15/2018 00:54"
+  },
   "CF45745271": {
     "contest_id": 1062,
     "language": "GNU C++17",
