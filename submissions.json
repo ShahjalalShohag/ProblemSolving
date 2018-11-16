@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45842145": {
+    "contest_id": 1077,
+    "language": "GNU C++17",
+    "path": "codeforces\\1077\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Disturbed People",
+    "problem_url": "https://codeforces.com/contest/1077/problem/B",
+    "submission_id": "CF45842145",
+    "submission_url": "https://codeforces.com/contest/1077/submission/45842145",
+    "tags": [
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Nov/16/2018 23:52"
+  },
   "CF45842429": {
     "contest_id": 1077,
     "language": "GNU C++17",
