@@ -94,7 +94,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=2e5+9;
+const int N=1e6+9;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
@@ -106,7 +106,7 @@ int st[N],en[N],t[4*N],T,lazy[4*N],node[N],a[N];
 void dfs(int u,int pre=0)
 {
     st[u]=++T;
-    node[T]=u;
+    node[T]=a[u];
     for(auto v:g[u]){
         if(v==pre) continue;
         dfs(v,u);
@@ -118,17 +118,17 @@ void shift(int n,int b,int e)
     if(lazy[n]==0) return;
     t[n]=(e-b+1)-t[n];
     int stree;
-    if(b!=e){
+    //if(b!=e){
         lazy[l]^=1;
         lazy[r]^=1;
-    }
+    //}
     lazy[n]=0;
     return;
 }
 void build(int n,int b,int e)
 {
     if(b==e){
-        t[n]=a[node[b]];
+        t[n]=node[b];
         return;
     }
     int stree;
@@ -139,6 +139,7 @@ void build(int n,int b,int e)
 void upd(int n,int b,int e,int i,int j)
 {
     shift(n,b,e);
+    if(b>e) return;
     if(b>j||e<i) return;
     if(b>=i&&e<=j){
         lazy[n]^=1;
@@ -152,8 +153,9 @@ void upd(int n,int b,int e,int i,int j)
 }
 int query(int n,int b,int e,int i,int j)
 {
-    shift(n,b,e);
+    if(b>e) return 0;
     if(b>j||e<i) return 0;
+    shift(n,b,e);
     if(b>=i&&e<=j) return t[n];
     int stree;
     return query(l,b,mid,i,j)+query(r,mid+1,e,i,j);
