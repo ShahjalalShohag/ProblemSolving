@@ -94,7 +94,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=1e6+9;
+const int N=2e5+9;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
@@ -118,10 +118,10 @@ void shift(int n,int b,int e)
     if(lazy[n]==0) return;
     t[n]=(e-b+1)-t[n];
     int stree;
-    //if(b!=e){
+    if(b!=e){
         lazy[l]^=1;
         lazy[r]^=1;
-    //}
+    }
     lazy[n]=0;
     return;
 }
