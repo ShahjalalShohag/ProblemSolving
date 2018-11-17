@@ -140,38 +140,12 @@ ll get_count(int x,int k)
     return ans;
 }
 int a[N];
-int sc()
-{
-    register int c = getchar();
-    register int x = 0;
-    int neg = 0;
-    for(;((c<48 || c>57) && c != '-');c = getchar());
-    if(c=='-') {neg=1;c=getchar();}
-    for(;c>47 && c<58;c = getchar()) {x = (x<<1) + (x<<3) + c - 48;}
-    if(neg) x=-x;
-    return x;
-}
-inline void out(int n)
-{
-    int N = n<0?-n:n, rev, cnt = 0;
-    rev = N;
-    if (N == 0) { putchar('0'); putchar('\n'); return ;}
-    while ((rev % 10) == 0) { cnt++; rev /= 10;}
-    if(n<0) putchar('-');
-    rev = 0;
-    while (N != 0) { rev = (rev<<3) + (rev<<1) + N % 10; N /= 10;}
-    while (rev != 0) { putchar(rev % 10 + '0'); rev /= 10;}
-    while (cnt--) putchar('0');
-    putchar('\n');
-    return;
-}
 int main()
 {
     BeatMeScanf;
     int i,j,k,n,m;
-    n=sc();
-    k=sc();
-    for(i=1;i<=n;i++) a[i]=sc(),a[i]^=a[i-1];
+    cin>>n>>k;
+    for(i=1;i<=n;i++) cin>>a[i],a[i]^=a[i-1];
     root=new node();
     ll ans=0;
     insert_num(0);
@@ -182,3 +156,4 @@ int main()
     cout<<1LL*n*(n+1)/2-ans<<nl;
     return 0;
 }
+
