@@ -624,6 +624,20 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF45942119": {
+    "contest_id": 1079,
+    "language": "GNU C++17",
+    "path": "codeforces\\1079\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Kitchen Utensils",
+    "problem_url": "https://codeforces.com/contest/1079/problem/A",
+    "submission_id": "CF45942119",
+    "submission_url": "https://codeforces.com/contest/1079/submission/45942119",
+    "tags": [
+      "*900"
+    ],
+    "timestamp": "Nov/19/2018 02:13"
+  },
   "CF45942921": {
     "contest_id": 1079,
     "language": "GNU C++17",
