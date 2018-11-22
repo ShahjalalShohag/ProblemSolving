@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF46091054": {
+    "contest_id": 1061,
+    "language": "GNU C++17",
+    "path": "codeforces\\1061\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Views Matter",
+    "problem_url": "https://codeforces.com/contest/1061/problem/B",
+    "submission_id": "CF46091054",
+    "submission_url": "https://codeforces.com/contest/1061/submission/46091054",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Nov/23/2018 01:32"
+  },
   "CF46117290": {
     "contest_id": 1061,
     "language": "GNU C++17",
