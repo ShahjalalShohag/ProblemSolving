@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF46119656": {
+    "contest_id": 1061,
+    "language": "GNU C++17",
+    "path": "codeforces\\1061\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Lost Root",
+    "problem_url": "https://codeforces.com/contest/1061/problem/F",
+    "submission_id": "CF46119656",
+    "submission_url": "https://codeforces.com/contest/1061/submission/46119656",
+    "tags": [
+      "interactive",
+      "probabilities",
+      "*2400"
+    ],
+    "timestamp": "Nov/23/2018 21:36"
+  },
   "CF46129506": {
     "contest_id": 858,
     "language": "GNU C++17",
