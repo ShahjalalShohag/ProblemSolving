@@ -102,7 +102,7 @@ const ld PI=acos(-1.0);
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
 
-umap<string,int>mp;
+map<string,int>mp;
 vector<string>v[N];
 string s[N];
 int main()
