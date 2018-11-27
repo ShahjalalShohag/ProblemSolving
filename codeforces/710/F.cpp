@@ -119,7 +119,7 @@ struct aho_corasick_static
 
 	aho_corasick_static() { psz = N - 2; clear(); }
 
-	void add_word(string &s)
+	void add_word(string s)
 	{
 		int u = 0;
 		for(char c: s)
@@ -161,7 +161,7 @@ struct aho_corasick_static
 		}
 	}
 
-	int get_count(string &p)
+	int get_count(string p)
 	{
 		int u = 0, ans = 0;
 		for(char c: p)
@@ -192,7 +192,7 @@ struct aho_corasick
 
 	aho_corasick() { clear(); }
 
-	void add_word(string &s)
+	void add_word(string s)
 	{
 		int pos = 0;
 		for(int l = 0; l < 20; l++)
@@ -220,7 +220,7 @@ struct aho_corasick
 		ac[pos].push_links();
 	}
 	///sum of occurrences of all patterns in this string
-	int get_count(string &s)
+	int get_count(string s)
 	{
 		int ans = 0;
 		for(int l = 0; l < 20; l++)
