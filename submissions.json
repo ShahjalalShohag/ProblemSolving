@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF46272141": {
+    "contest_id": 163,
+    "language": "GNU C++17",
+    "path": "codeforces\\163\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "e-Government",
+    "problem_url": "https://codeforces.com/contest/163/problem/E",
+    "submission_id": "CF46272141",
+    "submission_url": "https://codeforces.com/contest/163/submission/46272141",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "strings",
+      "trees",
+      "*2800"
+    ],
+    "timestamp": "Nov/27/2018 14:56"
+  },
   "CF46273778": {
     "contest_id": 710,
     "language": "GNU C++17",
