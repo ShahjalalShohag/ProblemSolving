@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF46324385": {
+    "contest_id": 1082,
+    "language": "GNU C++17",
+    "path": "codeforces\\1082\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Multi-Subject Competition",
+    "problem_url": "https://codeforces.com/contest/1082/problem/C",
+    "submission_id": "CF46324385",
+    "submission_url": "https://codeforces.com/contest/1082/submission/46324385",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Nov/28/2018 21:19"
+  },
   "CF46589872": {
     "contest_id": 1088,
     "language": "GNU C++17",
