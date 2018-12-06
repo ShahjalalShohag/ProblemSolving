@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF46680901": {
+    "contest_id": 842,
+    "language": "GNU C++17",
+    "path": "codeforces\\842\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Vitya and Strange Lesson",
+    "problem_url": "https://codeforces.com/contest/842/problem/D",
+    "submission_id": "CF46680901",
+    "submission_url": "https://codeforces.com/contest/842/submission/46680901",
+    "tags": [
+      "binary search",
+      "data structures",
+      "*2000"
+    ],
+    "timestamp": "Dec/06/2018 18:02"
+  },
   "CF46682866": {
     "contest_id": 1082,
     "language": "GNU C++17",
