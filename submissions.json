@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF46682866": {
+    "contest_id": 1082,
+    "language": "GNU C++17",
+    "path": "codeforces\\1082\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Increasing Frequency",
+    "problem_url": "https://codeforces.com/contest/1082/problem/E",
+    "submission_id": "CF46682866",
+    "submission_url": "https://codeforces.com/contest/1082/submission/46682866",
+    "tags": [
+      "binary search",
+      "dp",
+      "greedy",
+      "*2000"
+    ],
+    "timestamp": "Dec/06/2018 18:48"
+  },
   "CF46684704": {
     "contest_id": 1082,
     "language": "GNU C++17",
