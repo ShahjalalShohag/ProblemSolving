@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF47078681": {
+    "contest_id": 1093,
+    "language": "GNU C++17",
+    "path": "codeforces\\1093\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Intersection of Permutations",
+    "problem_url": "https://codeforces.com/contest/1093/problem/E",
+    "submission_id": "CF47078681",
+    "submission_url": "https://codeforces.com/contest/1093/submission/47078681",
+    "tags": [
+      "data structures",
+      "*2400"
+    ],
+    "timestamp": "Dec/16/2018 00:17"
+  },
   "CF47079498": {
     "contest_id": 1093,
     "language": "GNU C++17",
