@@ -128,44 +128,55 @@ inline void out(int n)
     return;
 }
 
+struct node
+{
+    int mx,mn;
+    node(){}
+    node(int k,int p)
+    {
+        mx=k,mn=p;
+    }
+};
 
 struct segtree
 {
-    int t[4*N];
+    node t[4*N];
     void build(int n,int b,int e)
     {
         if(b==e){
-            t[n]=-1e9;
+            t[n]=node(-1e9,1e9);
             return;
         }
         int stree;
         build(l,b,mid);
         build(r,mid+1,e);
-        t[n]=max(t[l],t[r]);
+        t[n].mx=max(t[l].mx,t[r].mx);
+        t[n].mn=min(t[l].mn,t[r].mn);
     }
     void upd(int n,int b,int e,int i,int x)
     {
         if(b>i||e<i) return;
         if(b==e&&b==i){
-            t[n]=x;
+            t[n]=node(x,x);
             return;
         }
         int stree;
         upd(l,b,mid,i,x);
         upd(r,mid+1,e,i,x);
-        t[n]=max(t[l],t[r]);
+        t[n].mx=max(t[l].mx,t[r].mx);
+        t[n].mn=min(t[l].mn,t[r].mn);
     }
-    int query(int n,int b,int e,int i,int j)
+    node query(int n,int b,int e,int i,int j)
     {
-        if(b>j||e<i) return -1e9;
+        if(b>j||e<i) return node(-1e9,1e9);
         if(b>=i&&e<=j) return t[n];
         int stree;
-        int a=query(l,b,mid,i,j);
-        int p=query(r,mid+1,e,i,j);
-        return max(a,p);
+        node a=query(l,b,mid,i,j);
+        node p=query(r,mid+1,e,i,j);
+        return node(max(a.mx,p.mx),min(a.mn,p.mn));
     }
 }t[1<<5];
-int p[10],re[1<<5];
+int p[10];
 int main()
 {
     BeatMeScanf;
@@ -173,12 +184,6 @@ int main()
     n=sc();
     k=sc();
     for(i=0;i<(1<<k);i++){
-        int nw=0;
-        for(j=0;j<k;j++){
-            if((i>>j)&1) ;
-            else nw|=(1<<j);
-        }
-        re[i]=nw;
         t[i].build(1,1,n);
     }
     for(i=1;i<=n;i++){
@@ -213,7 +218,7 @@ int main()
             r=sc();
             int ans=-1e9;
             for(i=0;i<(1<<k);i++){
-                ans=max(ans,t[i].query(1,1,n,l,r)+t[re[i]].query(1,1,n,l,r));
+                ans=max(ans,t[i].query(1,1,n,l,r).mx-t[i].query(1,1,n,l,r).mn);
             }
             out(ans);
         }
