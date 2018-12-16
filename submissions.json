@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF47140108": {
+    "contest_id": 1081,
+    "language": "GNU C++17",
+    "path": "codeforces\\1081\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Missing Numbers",
+    "problem_url": "https://codeforces.com/contest/1081/problem/E",
+    "submission_id": "CF47140108",
+    "submission_url": "https://codeforces.com/contest/1081/submission/47140108",
+    "tags": [
+      "binary search",
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "number theory",
+      "*1900"
+    ],
+    "timestamp": "Dec/17/2018 01:36"
+  },
   "CF47872900": {
     "contest_id": 1096,
     "language": "GNU C++17",
