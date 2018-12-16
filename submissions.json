@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF47121519": {
+    "contest_id": 1081,
+    "language": "GNU C++17",
+    "path": "codeforces\\1081\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Farewell Party",
+    "problem_url": "https://codeforces.com/contest/1081/problem/B",
+    "submission_id": "CF47121519",
+    "submission_url": "https://codeforces.com/contest/1081/submission/47121519",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Dec/16/2018 21:17"
+  },
   "CF47140092": {
     "contest_id": 1081,
     "language": "GNU C++17",
