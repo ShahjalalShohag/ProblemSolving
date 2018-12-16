@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF47140092": {
+    "contest_id": 1081,
+    "language": "GNU C++17",
+    "path": "codeforces\\1081\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Colorful Bricks",
+    "problem_url": "https://codeforces.com/contest/1081/problem/C",
+    "submission_id": "CF47140092",
+    "submission_url": "https://codeforces.com/contest/1081/submission/47140092",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Dec/17/2018 01:36"
+  },
   "CF47140108": {
     "contest_id": 1081,
     "language": "GNU C++17",
