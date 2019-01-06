@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC3951491": {
+    "contest_id": "dp",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\dp\\T.cpp",
+    "platform": "AtCoder",
+    "problem_index": "T",
+    "problem_name": "Permutation",
+    "problem_url": "https://atcoder.jp/contests/dp/tasks/dp_t",
+    "submission_id": "AC3951491",
+    "submission_url": "https://atcoder.jp/contests/dp/submissions/3951491",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jan/07/2019 00:34"
+  },
   "AC3972386": {
     "contest_id": "dp",
     "language": "C++14 (GCC 5.4.1)",
