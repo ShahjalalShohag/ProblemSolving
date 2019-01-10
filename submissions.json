@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC3972386": {
+    "contest_id": "dp",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\dp\\V.cpp",
+    "platform": "AtCoder",
+    "problem_index": "V",
+    "problem_name": "Subtree",
+    "problem_url": "https://atcoder.jp/contests/dp/tasks/dp_v",
+    "submission_id": "AC3972386",
+    "submission_url": "https://atcoder.jp/contests/dp/submissions/3972386",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jan/10/2019 17:14"
+  },
   "AC3972389": {
     "contest_id": "dp",
     "language": "C++14 (GCC 5.4.1)",

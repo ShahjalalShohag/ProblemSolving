@@ -114,16 +114,19 @@ void yo(int u,int pr)
     vi pre(sz(g[u]),1),suf(sz(g[u]),1);
     for(int i=0;i<sz(g[u]);i++){
         int v=g[u][i];
+        if(v==pr) continue;
         pre[i]=(dp1[v]+1)%mod;
         if(i) pre[i]=1LL*pre[i]*pre[i-1]%mod;
     }
     for(int i=sz(g[u])-1;i>=0;i--){
         int v=g[u][i];
+        if(v==pr) continue;
         suf[i]=(dp1[v]+1)%mod;
         if(i+1<sz(g[u])) suf[i]=1LL*suf[i]*suf[i+1]%mod;
     }
     for(int i=0;i<sz(g[u]);i++){
         int v=g[u][i];
+        if(v==pr) continue;
         dp2[v]=1LL*(dp2[u]+1)%mod*(i-1<0?1:pre[i-1])%mod*(i+1>=sz(g[u])?1:suf[i+1])%mod;
         yo(v,u);
     }
