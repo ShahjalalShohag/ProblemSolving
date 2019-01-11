@@ -102,7 +102,6 @@ const ld PI=acos(-1.0);
 int main()
 {
     BeatMeScanf;
-    cin.tie(NULL);
     int i,j,k,q,n,m,l=0,r=0,x,y;
     string s;
     cin>>q;
