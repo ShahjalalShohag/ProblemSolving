@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF48261982": {
+    "contest_id": 1101,
+    "language": "GNU C++17",
+    "path": "codeforces\\1101\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "(Zero XOR Subset)-less",
+    "problem_url": "https://codeforces.com/contest/1101/problem/G",
+    "submission_id": "CF48261982",
+    "submission_url": "https://codeforces.com/contest/1101/submission/48261982",
+    "tags": [
+      "math",
+      "matrices",
+      "*2300"
+    ],
+    "timestamp": "Jan/12/2019 00:08"
+  },
   "CF48262256": {
     "contest_id": 1101,
     "language": "GNU C++17",
