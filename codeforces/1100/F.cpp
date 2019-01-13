@@ -101,16 +101,16 @@ const ld PI=acos(-1.0);
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-
-///maximum subset xor in range
-///(n+q) logn^2
 struct st{
     vi basis;
     int add(int x)
     {
         for(auto &it:basis) if((x^it)<x) x^=it;
         for(auto &it:basis) if((it^x)<it) it^=x;
-        if(x) basis.eb(x);
+        if(x){
+            basis.eb(x);
+            //srt(basis);
+        }
     }
     int get()
     {
@@ -124,24 +124,21 @@ struct st{
     }
 };
 int a[N];
-int input[N][2]; /// inputs queries
+int input[N][3]; // inputs queries, answer sored in input[i][2]
 st  dp_left[N], dp_right[N];
 int ans[N];
 void solve(int L, int R, vi all)
 {
 	if(L>R || all.empty()) return;
-	/// initialize only this range
+	// initialize only this range
 	for(int i=L;i<=R;i++) dp_left[i].clear(),dp_right[i].clear();
 
 	int mid = (L+R)/2;
-
-	///get answer for [i....mid-1]
 	for(int i=mid-1; i>=L; i--)
 	{
 		if(i+1<mid) dp_left[i]=dp_left[i+1];
 		dp_left[i].add(a[i]);
 	}
-	///get answer for [mid....i]
 	for(int i=mid; i<=R; i++)
 	{
 		if(i-1>=mid) dp_right[i]=dp_right[i-1];
@@ -157,23 +154,23 @@ void solve(int L, int R, vi all)
 		else if(r<mid) ls.pb(idx);
 		else
 		{
-			if(l==r && l==mid) /// query is just on mid, specially handled
+			if(l==r && l==mid) // query is just on mid, specially handled
 			{
 				ans[idx] = a[mid];
 			}
-			else if(l==mid) /// starts from mid
+			else if(l==mid) // starts from mid
 			{
 				ans[idx] = dp_right[r].get();
 			}
-			else if(r==mid) /// ends in mid
+			else if(r==mid) // ends in mid
 			{
 				st nw=dp_left[l];
-				nw.add(a[mid]);///add mid element
+				nw.add(a[mid]);
 				ans[idx]=nw.get();
 			}
 			else
 			{
-				/// merge both sides and calculate answer for current query
+				// merge both sides and calculate answer for current query
 				if(dp_right[r].basis.size()>dp_left[l].basis.size()){
                     st nw=dp_right[r];
                     for(auto x:dp_left[l].basis) nw.add(x);
@@ -187,26 +184,53 @@ void solve(int L, int R, vi all)
 			}
 		}
 	}
-	/// find answer for other queries by divide and conquer
+	// find answer for other queries by divide and conquer
 	solve(L,mid,ls);
 	solve(mid+1,R,rs);
+}
+int in()
+{
+    register int c = getchar();
+    register int x = 0;
+    int neg = 0;
+    for(;((c<48 || c>57) && c != '-');c = getchar());
+    if(c=='-') {neg=1;c=getchar();}
+    for(;c>47 && c<58;c = getchar()) {x = (x<<1) + (x<<3) + c - 48;}
+    if(neg) x=-x;
+    return x;
+}
+inline void out(int n)
+{
+    int N = n<0?-n:n, rev, cnt = 0;
+    rev = N;
+    if (N == 0) { putchar('0'); putchar('\n'); return ;}
+    while ((rev % 10) == 0) { cnt++; rev /= 10;}
+    if(n<0) putchar('-');
+    rev = 0;
+    while (N != 0) { rev = (rev<<3) + (rev<<1) + N % 10; N /= 10;}
+    while (rev != 0) { putchar(rev % 10 + '0'); rev /= 10;}
+    while (cnt--) putchar('0');
+    putchar('\n');
+    return;
 }
 int main()
 {
     BeatMeScanf;
     cin.tie(NULL);
     int i,j,k,n,m,l,r,q;
-    cin>>n;
-    for(i=1;i<=n;i++) cin>>a[i];
-    cin>>q;
+    n=in();
+    for(i=1;i<=n;i++){
+        a[i]=in();
+    }
+    q=in();
     vi v;
     for(i=1;i<=q;i++){
-        cin>>input[i][0];
-        cin>>input[i][1];
+        input[i][0]=in();
+        input[i][1]=in();
         v.eb(i);
     }
     solve(1,n,v);
-    for(i=1;i<=q;i++) cout<<ans[i]<<nl;
+    for(i=1;i<=q;i++) out(ans[i]);
     return 0;
 }
 ///Before submit=>
