@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF48435267": {
+    "contest_id": 301,
+    "language": "GNU C++17",
+    "path": "codeforces\\301\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Yaroslav and Divisors",
+    "problem_url": "https://codeforces.com/contest/301/problem/D",
+    "submission_id": "CF48435267",
+    "submission_url": "https://codeforces.com/contest/301/submission/48435267",
+    "tags": [
+      "data structures",
+      "*2200"
+    ],
+    "timestamp": "Jan/16/2019 01:56"
+  },
   "CF48435709": {
     "contest_id": 597,
     "language": "GNU C++17",
