@@ -1,104 +1,122 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define fastio          std::ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
-#define LL              long long
-#define LD              long double
-//#define MAX             200005
-//#define MOD             1000000007
-#define REP(i,n)        for(__typeof(n) i=0; i<n; ++i)
-#define CREP(i,n)       for(__typeof(n) i=n-1; i>=0; --i)
-#define MYREP(i,a,b)    for(__typeof(a) i=a; i<=b; ++i)
-#define MYCREP(i,a,b)   for(__typeof(a) i=b; i>=a; --i)
-#define SET(a, b)       memset(a, b, sizeof(a))
-#define pb              push_back
-#define mp              make_pair
-#define fi              first
-#define sec             second
-#define aLL(c)          (c).begin(),(c).end()
-#define aLLr(c)         (c).rbegin(),(c).rend()
-#define loop(c,i)       for(typeof(c.begin()) i = c.begin(); i != c.end(); i++)
-#define present(c,x)    ((c).find(x) != (c).end())
-#define cpresent(c,x)   (find(aLL(c),x) != (c).end())
-#define BLOCK 555   // Optimum in Most Cases    Mo's Algo see Anudeep Bookamrks
-
-long mul(long a, long b, long c){long long res=(long long)a*b;return(res>=c?res%c:res);}
-
-template <typename T> T mod(T a, T b) {return (a < b ? a : a % b);}
-//(a - b) % c
-template<typename T> T mod_neg(T a, T b) {a=mod(a, b);if(a<0){a+=b;}return a;}
-//(a * b) % c for very large numbers, to avoid overflows
-//O(1) hack taken from http://codeforces.com/blog/entry/15884
-LL mulmod(LL a,LL b, LL m){LL q=(LL)(((LD)a*(LD)b)/(LD)m);LL r=a*b-q*m;if(r>m)r%=m;if(r<0)r+=m;return r;}
-//(a ^ n)
-//Complexity: O(log (n))
-template <typename T>T expo(T e, T n){T x=1,p=e;while(n){if(n&1)x=x*p;p=p*p;n>>=1;}return x;}
-//(a ^ n) % m
-//Complexity : O(log (n))
-
-template <typename T>T power(T e, T n, T m){T x=1,p=e;while(n){if(n&1)x=mod(x*p,m);p=mod(p*p,m);n>>=1;}return x;}
-template <typename T>T powerL(T e, T n, T m){T x=1,p=e;while(n){if(n&1)x=mulmod(x,p,m);p=mulmod(p,p,m);n>>=1;}return x;}
-
-template <typename T> T InverseEuler(T a, T m){return (a==1? 1 : power(a, m-2, m));}
-//gcd of 2 numbers a, b
-//Complexity: O(log(max(a, b)))
-template<typename T> T gcd(T a, T b) { return (b ? __gcd(a,b) : a); }
-//lcm of 2 numbers a and b
-//Complexity: O(log(max(a, b)))
-template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b)));}
-template<typename T> T extended_euclid(T a, T b, T &x, T &y){T xx=0,yy=1;y=0;x=1;while(b){T q=a/b,t=b;b=a%b;a=t;t=xx;xx=x-q*xx;x=t;t=yy;yy=y-q*yy;y=t;}return a;}
-template<typename T> T mod_inverse(T a, T n){T x,y;T d = extended_euclid(a, n, x, y);return (d>1?-1:mod_neg(x,n));}
-template<class T> T fast_gcd(T u, T v) {
-    long shl = 0; while ( u && v && u != v) { T eu = u & 1; u >>= eu ^ 1; T ev = v & 1; v >>= ev ^ 1;
-        shl += (~(eu | ev) & 1); T d = u & v & 1 ? (u + v) >> 1 : 0; T dif = (u - v) >> (sizeof(T) * 8 - 1); u -= d & ~dif; v -= d & dif;
-    } return std::max(u, v) << shl;
-}
-// Most immportant one best optimised
-template<class T> bool isPrime(T x) { if (x <= 4 || x % 2 == 0 || x % 3 == 0) return x == 2 || x == 3;
-    for (T i = 5; i * i <= x; i += 6) if (x % i == 0 || x % (i + 2) == 0) return 0; return 1;
-}
+#pragma comment(linker, "/stack:200000000")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+#pragma GCC optimize("unroll-loops")
+#include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
-// tree defined...
 using namespace __gnu_pbds;
-typedef tree <long, null_type, less<long>, rb_tree_tag,
-             tree_order_statistics_node_update> ordered_set;
-//All indexing is 0-based
-//methods: find_by_order(k); & order_of_key(k);
-//To make it an ordered_multiset, use pairs of (value, time_of_insertion)
-//to distinguish values which are similar.
+using namespace std;
 
-LL n,m,k,a[5005];
-LL dp[5005][5005];
+#define ll long long
+#define ull unsigned long long
+#define ld long double
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define vi vector<int>
+#define vll vector<ll>
+#define vc vector<char>
+#define vs vector<string>
+#define vpll vector<pll>
+#define vpii vector<pii>
+#define umap unordered_map
+#define uset unordered_set
+#define PQ priority_queue
 
-LL go(LL idx, LL k){
+#define printa(a,L,R) for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?'\n':' ')
+#define printv(a) printa(a,0,a.size())
+#define print2d(a,r,c) for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?'\n':' ')
+#define pb push_back
+#define eb emplace_back
+#define mt make_tuple
+#define fbo find_by_order
+#define ook order_of_key
+#define MP make_pair
+#define UB upper_bound
+#define LB lower_bound
+#define SQ(x) ((x)*(x))
+#define issq(x) (((ll)(sqrt((x))))*((ll)(sqrt((x))))==(x))
+#define F first
+#define S second
+#define mem(a,x) memset(a,x,sizeof(a))
+#define inf 1e18
+#define E 2.71828182845904523536
+#define gamma 0.5772156649
+#define nl "\n"
+#define lg(r,n) (int)(log2(n)/log2(r))
+#define sz(v) (int)v.size()
+#define pf printf
+#define sf scanf
+#define sf1(a)                scanf("%d",&a)
+#define sf2(a,b)              scanf("%d %d",&a,&b)
+#define sf3(a,b,c)            scanf("%d %d %d",&a,&b,&c)
+#define pf1(a)                printf("%d\n",a);
+#define pf2(a,b)              printf("%d %d\n",a,b)
+#define pf3(a,b,c)            printf("%d %d %d\n",a,b,c)
+#define sf1ll(a)              scanf("%lld",&a)
+#define sf2ll(a,b)            scanf("%I64d %I64d",&a,&b)
+#define sf3ll(a,b,c)          scanf("%I64d %I64d %I64d",&a,&b,&c)
+#define pf1ll(a)              printf("%lld\n",a);
+#define pf2ll(a,b)            printf("%I64d %I64d\n",a,b)
+#define pf3ll(a,b,c)          printf("%I64d %I64d %I64d\n",a,b,c)
+#define _ccase printf("Case %lld: ",++cs)
+#define _case cout<<"Case "<<++cs<<": "
+#define by(x) [](const auto& a, const auto& b) { return a.x < b.x; }
 
-        if(k == 0)  return 0;
-        if(idx == n+1) return -1e15;
-        LL &ans = dp[idx][k];
-        if(ans != -1)   return ans;
-
-        LL t1=0 ;
-        if(idx+m<=n+1) t1=a[idx+m-1]-a[idx-1]+go(idx+m,k-1);
-        LL t2 = go(idx+1,k);
-        //v.push_back(max(t1,t2));
-        return ans = max(t1,t2);
+#define asche cerr<<"Ekhane asche\n";
+#define rev(v) reverse(v.begin(),v.end())
+#define srt(v) sort(v.begin(),v.end())
+#define grtsrt(v) sort(v.begin(),v.end(),greater<ll>())
+#define all(v) v.begin(),v.end()
+#define mnv(v) *min_element(v.begin(),v.end())
+#define mxv(v) *max_element(v.begin(),v.end())
+#define toint(a) atoi(a.c_str())
+#define BeatMeScanf ios_base::sync_with_stdio(false)
+#define valid(tx,ty) (tx>=0&&tx<n&&ty>=0&&ty<m)
+#define one(x) __builtin_popcount(x)
+#define Unique(v) v.erase(unique(all(v)),v.end())
+#define stree l=(n<<1),r=l+1,mid=b+(e-b)/2
+#define fout(x) fixed<<setprecision(x)
+string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
+inline void yes(){cout<<"YES\n";exit(0);}
+inline void no(){cout<<"NO\n";exit(0);}
+template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+//ll dx[]={1,0,-1,0,1,-1,-1,1};
+//ll dy[]={0,1,0,-1,1,1,-1,-1};
+//random_device rd;
+//mt19937 rnd(rd());
+#define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
+void deb(istream_iterator<string> it) {}
+template<typename T, typename... Args>
+void deb(istream_iterator<string> it, T a, Args... args) {
+    cerr << *it << " = " << a << endl;
+    deb(++it, args...);
 }
 
+const int mod=1e9+7;
+const int N=5050;
+const ld eps=1e-9;
+const ld PI=acos(-1.0);
+//ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
+//ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
+//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-int main(){
 
+ll dp[N][N],a[N],sum[N];
+int main()
+{
+    BeatMeScanf;
+    ll i,j,k,n,m,ans=0;
     cin>>n>>m>>k;
-    MYREP(i,1,n){
-        cin>>a[i],a[i] += a[i-1];
+    for(i=1;i<=n;i++) cin>>a[i],sum[i]=sum[i-1]+a[i];
+    for(i=m;i<=n;i++){
+        for(j=1;j<=k;j++) dp[i][j]=max(dp[i-1][j],dp[i-m][j-1]+sum[i]-sum[i-m]);
+        ans=max(ans,dp[i][k]);
     }
-    memset(dp,-1,sizeof dp);
-    cout<<go(1,k)<<"\n";
-
-    //sort(aLL(v));
-    /*
-    REP(i,v.size()){
-        cout<<v[i]<<" ";
-    }*/
-
+    cout<<ans<<nl;
+    return 0;
 }
+///Before submit=>
+///    *check for integer overflow,array bounds
+///    *check for n=1
+
