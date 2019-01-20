@@ -103,7 +103,7 @@ const ld PI=acos(-1.0);
 
 ///Complexity (3^(n/3)) , where n is number of nodes
 int g[51][51];
-///for each i every nodes j!=i must need to be set 1 if
+///for each i every nodes j>i must need to be set 1 if
 ///there is any edge between i and j
 ///1-indexed
 int res;
