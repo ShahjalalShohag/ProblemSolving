@@ -101,91 +101,39 @@ const ld PI=acos(-1.0);
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-
-///Maximum Independent Set
-///0-indexed
-/// O(1.38 ^ n) worst case
-const int MAXN = (52);
-
-int g[MAXN][MAXN], n;
-int mn_deg, comp_size;
-bitset<MAXN> st;
-vector<int> adj[MAXN];
-bool visited[MAXN];
-
-int get_deg(int u)
-{
-	int res = 0;
-	for(int v = 0; v < n; v++)
-		if(st[v]) res += g[u][v];
-
-	return res;
+///Complexity (3^(n/3)) , where n is number of nodes
+int g[51][51];
+///for each i every nodes j!=i must need to be set 1 if
+///there is any edge between i and j
+///1-indexed
+int res;
+long long edges[51];
+void BronKerbosch(int n, long long R, long long P, long long X) {
+    if (P == 0LL && X == 0LL) {
+        int t = 0;
+        for (int i = 0; i < n; i++) if ((1ll << i) & R) t ++;
+        res = max(res, t);
+        return;
+    }
+    long long u = 0;
+    while (!((1ll<<u) & (P|X))) u ++;
+    for (int v = 0; v < n; v++) {
+        if (((1ll << v) & P) && !((1ll << v) & edges[u])) {
+            BronKerbosch(n, R | (1ll << v), P & edges[v], X & edges[v]);
+            P -= (1ll << v);
+            X |= (1ll << v);
+        }
+    }
 }
 
-void dfs(int u)
-{
-	visited[u] = true;
-	mn_deg = min(mn_deg, (int)adj[u].size());
-	comp_size++;
-	for(int v: adj[u])
-		if(!visited[v])
-			dfs(v);
-}
-
-int brute()
-{
-	for(int u = 0; u < n; u++) if(st[u]) visited[u] = false, adj[u].clear();
-	for(int u = 0; u < n; u++)
-		if(st[u]) for(int v = 0; v < n; v++)
-			if(g[u][v] && st[v]) adj[u].push_back(v);
-
-	int res = 0;
-	for(int u = 0; u < n; u++)
-		if(st[u] && !visited[u])
-		{
-            mn_deg = MAXN;
-            comp_size = 0;
-            dfs(u);
-
-			if(mn_deg <= 1) res += ((comp_size + 1) / 2);
-			else res += (comp_size / 2);
-		}
-
+int max_clique (int n) {
+    res = 0;
+    for (int i = 1; i <= n; i++) {
+        edges[i] = 0;
+        for (int j = 1; j <= n; j++)  if (g[i][j]) edges[i - 1] |= ( 1ll << (j - 1) );
+    }
+    BronKerbosch(n, 0, (1ll << n) - 1, 0);
     return res;
-}
-
-int rec()
-{
-	if(!st.count()) return 0;
-
-	int d = -1;
-	for(int v = 0; v < n; v++)
-		if(st[v] && (d == -1 || get_deg(v) > get_deg(d)))
-			d = v;
-
-	if(get_deg(d) <= 2) return brute();
-
-    int ret = 0;
-    bitset<MAXN> prv = st;
-
-    st[d] = 0;
-    ret = max(ret, rec());
-
-	st = prv;
-	st[d] = 0;
-	for(int u = 0; u < n; u++)
-		if(g[u][d]) st[u] = 0;
-
-	ret = max(ret, 1 + rec());
-
-	st = prv;
-	return ret;
-}
-int max_anticlique(int k)
-{
-    n=k;
-	for(int i = 0; i < n; i++) st[i] = 1;
-	return rec();
 }
 
 map<string,int>mp;
@@ -199,7 +147,7 @@ int main()
         int ty;
         if(i<=n) cin>>ty;
         if(ty==1||i>n){
-            for(auto x:se) for(auto y:se) g[x-1][y-1]=1,g[y-1][x-1]=1;
+            for(auto x:se) for(auto y:se) g[x][y]=1,g[y][x]=1;
             se.clear();
         }
         else{
@@ -210,8 +158,9 @@ int main()
             se.insert(p);
         }
     }
-    for(i=0;i<m;i++) g[i][i]=0;
-    cout<<max_anticlique(m)<<nl;
+    for(i=1;i<=m;i++) for(j=1;j<=m;j++) g[i][j]=!g[i][j];
+    for(i=1;i<=m;i++) g[i][i]=0;
+    cout<<max_clique(m)<<nl;
     return 0;
 }
 ///Before submit=>
