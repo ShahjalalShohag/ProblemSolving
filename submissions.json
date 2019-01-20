@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF48651904": {
+    "contest_id": 1015,
+    "language": "GNU C++14",
+    "path": "codeforces\\1015\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Bracket Substring",
+    "problem_url": "https://codeforces.com/contest/1015/problem/F",
+    "submission_id": "CF48651904",
+    "submission_url": "https://codeforces.com/contest/1015/submission/48651904",
+    "tags": [
+      "dp",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Jan/21/2019 04:04"
+  },
   "CF48723931": {
     "contest_id": 1104,
     "language": "GNU C++14",
