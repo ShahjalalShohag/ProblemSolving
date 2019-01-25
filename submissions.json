@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF48938275": {
+    "contest_id": 696,
+    "language": "GNU C++17",
+    "path": "codeforces\\696\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Legen...",
+    "problem_url": "https://codeforces.com/contest/696/problem/D",
+    "submission_id": "CF48938275",
+    "submission_url": "https://codeforces.com/contest/696/submission/48938275",
+    "tags": [
+      "data structures",
+      "dp",
+      "matrices",
+      "strings",
+      "*2500"
+    ],
+    "timestamp": "Jan/25/2019 21:16"
+  },
   "CF48988892": {
     "contest_id": 892,
     "language": "GNU C++17",
