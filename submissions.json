@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF48994076": {
+    "contest_id": 1107,
+    "language": "GNU C++17",
+    "path": "codeforces\\1107\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Digits Sequence Dividing",
+    "problem_url": "https://codeforces.com/contest/1107/problem/A",
+    "submission_id": "CF48994076",
+    "submission_url": "https://codeforces.com/contest/1107/submission/48994076",
+    "tags": [
+      "greedy",
+      "strings",
+      "*900"
+    ],
+    "timestamp": "Jan/26/2019 21:39"
+  },
   "CF48995641": {
     "contest_id": 1107,
     "language": "GNU C++17",
