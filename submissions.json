@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF48988892": {
+    "contest_id": 892,
+    "language": "GNU C++17",
+    "path": "codeforces\\892\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Envy",
+    "problem_url": "https://codeforces.com/contest/892/problem/E",
+    "submission_id": "CF48988892",
+    "submission_url": "https://codeforces.com/contest/892/submission/48988892",
+    "tags": [
+      "graphs",
+      "*2300"
+    ],
+    "timestamp": "Jan/26/2019 19:30"
+  },
   "CF48994076": {
     "contest_id": 1107,
     "language": "GNU C++17",
