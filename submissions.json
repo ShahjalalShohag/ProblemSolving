@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49059043": {
+    "contest_id": 152,
+    "language": "GNU C++17",
+    "path": "codeforces\\152\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Garden",
+    "problem_url": "https://codeforces.com/contest/152/problem/E",
+    "submission_id": "CF49059043",
+    "submission_url": "https://codeforces.com/contest/152/submission/49059043",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "graphs",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Jan/27/2019 20:37"
+  },
   "CF49113267": {
     "contest_id": 912,
     "language": "GNU C++17",
