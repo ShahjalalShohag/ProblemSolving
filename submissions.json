@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49178296": {
+    "contest_id": 311,
+    "language": "GNU C++17",
+    "path": "codeforces\\311\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Cats Transport",
+    "problem_url": "https://codeforces.com/contest/311/problem/B",
+    "submission_id": "CF49178296",
+    "submission_url": "https://codeforces.com/contest/311/submission/49178296",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2400"
+    ],
+    "timestamp": "Jan/30/2019 04:39"
+  },
   "CF49178430": {
     "contest_id": 311,
     "language": "GNU C++17",

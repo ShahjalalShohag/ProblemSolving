@@ -191,11 +191,11 @@ int main()
         last=0;
         pointer=0;
         for(int i=1;i<=m;i++){
-            dp[kk][i]=query(a[i])+i*a[i]-s[i];
             cline nw;
             nw.M=-i;
             nw.C=dp[kk-1][i]+s[i];
             add(nw); ///add line as dp[kk-1][i] is a constant now
+            dp[kk][i]=query(a[i])+i*a[i]-s[i];
         }
     }
     cout<<dp[k][m]<<nl;
@@ -204,5 +204,4 @@ int main()
 ///Before submit=>
 ///    *check for integer overflow,array bounds
 ///    *check for n=1
-
 
