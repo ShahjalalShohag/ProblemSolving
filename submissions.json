@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49225200": {
+    "contest_id": 602,
+    "language": "GNU C++17",
+    "path": "codeforces\\602\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Lipshitz Sequence",
+    "problem_url": "https://codeforces.com/contest/602/problem/D",
+    "submission_id": "CF49225200",
+    "submission_url": "https://codeforces.com/contest/602/submission/49225200",
+    "tags": [
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Jan/31/2019 04:07"
+  },
   "CF49246238": {
     "contest_id": 1106,
     "language": "GNU C++17",
