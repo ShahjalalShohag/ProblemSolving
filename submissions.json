@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49179968": {
+    "contest_id": 17,
+    "language": "GNU C++17",
+    "path": "codeforces\\17\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Notepad",
+    "problem_url": "https://codeforces.com/contest/17/problem/D",
+    "submission_id": "CF49179968",
+    "submission_url": "https://codeforces.com/contest/17/submission/49179968",
+    "tags": [
+      "number theory",
+      "*2400"
+    ],
+    "timestamp": "Jan/30/2019 06:38"
+  },
   "CF49225200": {
     "contest_id": 602,
     "language": "GNU C++17",
