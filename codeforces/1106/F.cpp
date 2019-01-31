@@ -192,101 +192,71 @@ struct matrix
             cout<<t[i][j]<<" \n"[j==n-1];
 	}
 };
+int gcd (int a, int b) {
+    return a ? gcd (b%a, a) : b;
+}
 
-struct DiscreteLogarithm
-{
-    int powmod(int a, int b, int m)
-    {
-        int res = 1;
-        while (b > 0) {
-            if (b & 1) {
-                res = (1LL*res * a) % m;
-            }
-            a = (1LL*a * a) % m;
-            b >>= 1;
+int powmod (int a, int b, int p) {
+    int res = 1;
+    while (b)
+        if (b & 1)
+            res = int (res * 1ll * a % p),  --b;
+        else
+            a = int (a * 1ll * a % p),  b >>= 1;
+    return res;
+}
+
+int generator (int p) {
+    vector<int> fact;
+    int phi = p-1,  n = phi;
+    for (int i=2; i*i<=n; ++i)
+        if (n % i == 0) {
+            fact.push_back (i);
+            while (n % i == 0)
+                n /= i;
         }
-        return res;
+    if (n > 1)
+        fact.push_back (n);
+
+    for (int res=2; res<=p; ++res) {
+        bool ok = true;
+        for (size_t i=0; i<fact.size() && ok; ++i)
+            ok &= powmod (res, phi / fact[i], p) != 1;
+        if (ok)  return res;
+    }
+    return -1;
+}
+
+int get(int n,int k,int a){
+    if (a == 0) {
+        return 1;
     }
 
-    ///returns the primitive root modulo p
-    ///g  is a primitive root modulo p if and only if for any integer a such that
-    ///gcd(a,p)=1, there exists an integer k such that: g^k = a(mod p).
-    ///this code assumes p is prime
-    int PrimitiveRoot(int p)
-    {
-        vector<int> fact;
-        int phi = p-1,  n = phi;///Beware!!! if p is not prime calculate the value of phi
-        for (int i=2; i*i<=n; ++i)
-            if (n % i == 0) {
-                fact.push_back (i);
-                while (n % i == 0)
-                    n /= i;
-            }
-        if (n > 1) fact.push_back (n);
-        for (int res=2; res<=p; ++res) {
-            bool ok = true;
-            for (size_t i=0; i<fact.size() && ok; ++i)
-                ok &= powmod (res, phi / fact[i], p) != 1;
-            if (ok)  return res;
+    int g = generator (n);
+
+    int sq = (int) sqrt (n + .0) + 1;
+    vector < pair<int,int> > dec (sq);
+    for (int i=1; i<=sq; ++i)
+        dec[i-1] = make_pair (powmod (g, int (i * sq * 1ll * k % (n - 1)), n), i);
+    sort (dec.begin(), dec.end());
+    int any_ans = -1;
+    for (int i=0; i<sq; ++i) {
+        int my = int (powmod (g, int (i * 1ll * k % (n - 1)), n) * 1ll * a % n);
+        vector < pair<int,int> >::iterator it =
+            lower_bound (dec.begin(), dec.end(), make_pair (my, 0));
+        if (it != dec.end() && it->first == my) {
+            any_ans = it->second * sq - i;
+            break;
         }
+    }
+    if (any_ans == -1) {
         return -1;
     }
-    /// baby step - giant step
-    ///find any integer x such that a^x = b (mod m)
-    ///where a and m are co-prime
-    int DiscreteLog(int a, int b, int m)
-    {
-        int n = (int) sqrt (m + .0) + 1;
-        int an = 1;
-        for (int i = 0; i < n; ++i) an = (1LL*an * a) % m;
-        map<int, int> vals;
-        for (int p = 1, cur = an; p <= n; ++p) {
-            if (!vals.count(cur)) vals[cur] = p;
-            cur = (1LL*cur * an) % m;
-        }
-        for (int q = 0, cur = b; q <= n; ++q) {
-            if (vals.count(cur)) {
-                int ans = vals[cur] * n - q;
-                return ans;
-            }
-            cur = (1LL*cur * a) % m;
-        }
-        return -1;
-    }
 
-    ///This program finds all numbers x such that x^k = a (mod n)
-    int DiscreteRoot(int k, int a, int n) {
-        if (a == 0) return 1;
-        int g = PrimitiveRoot(n);
-        int phi=n-1;///Beware!!! if n is not a prime calculate the value of phi
-        ///run baby step-giant step
-        int sq = (int) sqrt (n + .0) + 1;
-        vector < pair<int,int> > dec (sq);
-        for (int i=1; i<=sq; ++i) dec[i-1] = make_pair (powmod (g, 1LL*i * sq %phi * k % phi, n), i);
-        sort (dec.begin(), dec.end());
-        int any_ans = -1;
-        for (int i=0; i<sq; ++i) {
-            int my = powmod (g, 1LL* i * k % phi, n) * 1LL * a % n;
-            auto  it =lower_bound (dec.begin(), dec.end(), make_pair (my, 0));
-            if (it != dec.end() && it->first == my) {
-                any_ans = it->second * sq - i;
-                break;
-            }
-        }
-        if(any_ans==-1) return -1;///no solution
-        ///for any answer
-        int delta = (n-1) / __gcd (k, n-1);
-        for (int cur=any_ans%delta; cur<n-1; cur+=delta) return (powmod (g, cur, n));
-
-        ///for all possible answers
-        ///int delta = (n-1) / __gcd(k, n-1);
-        ///vector<int> ans;
-        ///for (int cur = any_ans % delta; cur < n-1; cur += delta) ans.push_back(powmod(g, cur, n));
-        ///sort(ans.begin(), ans.end());
-        ///return ans;
-    }
-}d;
-
+    int delta = (n-1) / gcd (k, n-1);
+    for (int cur=any_ans%delta; cur<n-1; cur+=delta)
+        return (powmod (g, cur, n));
+}
 int p[N];
 int main()
 {
@@ -300,10 +270,11 @@ int main()
     for(i=1;i<k;i++) a.t[i][i-1]=1;
     matrix ans=a.pow(n-k);
     int res=ans.t[0][0];
-    int s=d.DiscreteRoot(res,m,mod+1);
-    cout<<s<<nl;
+    int p=get(mod+1,res,m);
+    cout<<p<<nl;
     return 0;
 }
 ///Before submit=>
 ///    *check for integer overflow,array bounds
 ///    *check for n=1
+
