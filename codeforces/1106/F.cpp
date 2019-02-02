@@ -231,7 +231,6 @@ struct DiscreteLogarithm
         }
         return -1;
     }
-
     /// baby step - giant step
     ///find any integer x such that a^x = b (mod m)
     ///where a and m are co-prime
@@ -240,7 +239,7 @@ struct DiscreteLogarithm
         int n = (int) sqrt (m + .0) + 1;
         int an = 1;
         for (int i = 0; i < n; ++i) an = (1LL*an * a) % m;
-        umap<int, int> vals;
+        map<int, int> vals;
         for (int p = 1, cur = an; p <= n; ++p) {
             if (!vals.count(cur)) vals[cur] = p;
             cur = (1LL*cur * an) % m;
@@ -248,14 +247,14 @@ struct DiscreteLogarithm
         for (int q = 0, cur = b; q <= n; ++q) {
             if (vals.count(cur)) {
                 int ans = vals[cur] * n - q;
-                if(powmod(a,ans,m)==b%m) return ans;
+                return ans;
             }
             cur = (1LL*cur * a) % m;
         }
         return -1;
     }
 
-    ///returns any or all numbers x such that x^k = a (mod n)
+    ///This program finds all numbers x such that x^k = a (mod n)
     int DiscreteRoot(int k, int a, int n) {
         if (a == 0) return 1;
         int g = PrimitiveRoot(n);
@@ -275,7 +274,6 @@ struct DiscreteLogarithm
             }
         }
         if(any_ans==-1) return -1;///no solution
-
         ///for any answer
         int delta = (n-1) / __gcd (k, n-1);
         for (int cur=any_ans%delta; cur<n-1; cur+=delta) return (powmod (g, cur, n));
