@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49587676": {
+    "contest_id": 1110,
+    "language": "GNU C++17",
+    "path": "codeforces\\1110\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Magic Stones",
+    "problem_url": "https://codeforces.com/contest/1110/problem/E",
+    "submission_id": "CF49587676",
+    "submission_url": "https://codeforces.com/contest/1110/submission/49587676",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "sortings",
+      "*2200"
+    ],
+    "timestamp": "Feb/07/2019 20:51"
+  },
   "CF49642335": {
     "contest_id": 1107,
     "language": "GNU C++17",
