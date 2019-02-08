@@ -187,9 +187,10 @@ int main()
     int i,j,k,n,m,u,v,w,cost;
     cin>>n;
     for(i=0;i<n;i++) cin>>a[i]>>b[i]>>t[i];
-    matching_weighted M(n,n);
+    matching_weighted M(n,2*n);
     for(i=0;i<n;i++){
-        for(j=0;j<n;j++) M.addedge(i,j,max(0LL,1LL*a[j]-1LL*min(i,t[j])*b[j]));
+        for(j=0;j<n;j++) M.addedge(i,j,1LL*a[j]-1LL*min(i,t[j])*b[j]);
+        for(j=n;j<2*n;j++) M.addedge(i,j,0);
     }
     cout<<-M.matching()<<nl;
     return 0;
