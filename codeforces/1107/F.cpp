@@ -93,135 +93,92 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=510;
+const int N=2040;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-/// Complexity: O(n^3) but optimized
+/// Complexity:
+///  O(n^3).
+///  Much faster than the Kuhn-Munkres algorithm.
+/// Note:
 ///  It finds minimum cost maximal matching.
+///  To find the minimum cost non-maximal matching,
+///  we add n dummy vertices to the right side.
+
 /// For finding maximum cost maximal matching
+/// take initial value of vector c as 0
 /// add -cost and return -matching()
-///1-indexed
-struct HungarianMatching{
-    long long c[N][N], fx[N], fy[N], d[N];
-    int mx[N], my[N], arg[N], trace[N];
-    queue<int> q;
-    int start, finish, n;
-    const long long inf = 1e18;
-
-    HungarianMatching() {}
-    HungarianMatching(int n):n(n) {
-        for (int i = 1; i <= n; ++i) {
-            fy[i] = mx[i] = my[i] = 0;
-            for (int j = 1; j <= n; ++j) c[i][j] = inf;
-        }
-    }
-
-
-    void addedge(int u, int v, long long cost) {
-        c[u][v] = min(c[u][v], cost);
-    }
-
-    inline long long getC(int u, int v) {
-        return c[u][v] - fx[u] - fy[v];
-    }
-
-    void initBFS() {
-        while (!q.empty()) q.pop();
-        q.push(start);
-        for (int i = 0; i <= n; ++i) trace[i] = 0;
-        for (int v = 1; v <= n; ++v) {
-            d[v] = getC(start, v);
-            arg[v] = start;
-        }
-        finish = 0;
-    }
-
-    void findAugPath() {
-        while (!q.empty()) {
-            int u = q.front(); q.pop();
-            for (int v = 1; v <= n; ++v) if (!trace[v]) {
-                long long w = getC(u, v);
-                if (!w) {
-                    trace[v] = u;
-                    if (!my[v]) {
-                        finish = v;
-                        return;
-                    }
-                    q.push(my[v]);
-                }
-                if (d[v] > w) {
-                    d[v] = w;
-                    arg[v] = u;
-                }
+typedef ll type;
+struct matching_weighted {
+  int l, r;
+  vector<vector<type>> c;
+  matching_weighted(int l, int r) : l(l), r(r), c(l, vector<type>(r,0)) {
+    assert(l <= r);///take care according to this
+  }
+  void addedge(int a, int b, type cost) { c[a][b] = -cost; }
+  type matching(){
+    vector<type> v(r), d(r); /// v: potential
+    vector<int> ml(l, -1), mr(r, -1); /// matching pairs
+    vector<int> idx(r), prev(r);
+    iota(idx.begin(), idx.end(), 0);
+    auto residue = [&](int i, int j) { return c[i][j]-v[j]; };
+    for(int f = 0; f < l; ++f) {
+      for(int j = 0; j < r; ++j) {
+        d[j] = residue(f, j);
+        prev[j] = f;
+      }
+      type w;
+      int j, l;
+      for (int s = 0, t = 0;;) {
+        if(s == t) {
+          l = s;
+          w = d[ idx[t++] ];
+          for(int k = t; k < r; ++k) {
+            j = idx[k];
+            type h = d[j];
+            if (h <= w) {
+              if (h < w) t = s, w = h;
+              idx[k] = idx[t];
+              idx[t++] = j;
             }
+          }
+          for (int k = s; k < t; ++k) {
+            j = idx[k];
+            if (mr[j] < 0) goto aug;
+          }
         }
-    }
-
-    void subX_addY() {
-        long long delta = inf;
-        for (int v = 1; v <= n; ++v) if (trace[v] == 0 && d[v] < delta) {
-            delta = d[v];
-        }
-        // Rotate
-        fx[start] += delta;
-        for (int v = 1; v <= n; ++v) if(trace[v]) {
-            int u = my[v];
-            fy[v] -= delta;
-            fx[u] += delta;
-        } else d[v] -= delta;
-        for (int v = 1; v <= n; ++v) if (!trace[v] && !d[v]) {
-            trace[v] = arg[v];
-            if (!my[v]) {
-                finish = v; return;
+        int q = idx[s++], i = mr[q];
+        for (int k = t; k < r; ++k) {
+          j = idx[k];
+          type h = residue(i, j) - residue(i, q) + w;
+          if (h < d[j]) {
+            d[j] = h;
+            prev[j] = i;
+            if(h == w) {
+              if(mr[j] < 0) goto aug;
+              idx[k] = idx[t];
+              idx[t++] = j;
             }
-            q.push(my[v]);
+          }
         }
+      }
+      aug: for (int k = 0; k < l; ++k)
+        v[ idx[k] ] += d[ idx[k] ] - w;
+      int i;
+      do {
+        mr[j] = i = prev[j];
+        swap(j, ml[i]);
+      } while (i != f);
     }
-
-    void Enlarge() {
-        do {
-            int u = trace[finish];
-            int nxt = mx[u];
-            mx[u] = finish;
-            my[finish] = u;
-            finish = nxt;
-        } while (finish);
-    }
-
-    long long matching() {
-        for (int u = 1; u <= n; ++u) {
-            fx[u] = c[u][1];
-            for (int v = 1; v <= n; ++v) {
-                fx[u] = min(fx[u], c[u][v]);
-            }
-        }
-        for (int v = 1; v <= n; ++v) {
-            fy[v] = c[1][v] - fx[1];
-            for (int u = 1; u <= n; ++u) {
-                fy[v] = min(fy[v], c[u][v] - fx[u]);
-            }
-        }
-
-        for (int u = 1; u <= n; ++u) {
-            start = u;
-            initBFS();
-            while (!finish) {
-                findAugPath();
-                if (!finish) subX_addY();
-            }
-            Enlarge();
-        }
-
-        long long ans = 0;
-        for (int i = 1; i <= n; ++i) ans += c[i][mx[i]];
-        return ans;
-    }
+    type opt = 0;
+    for (int i = 0; i < l; ++i)
+      opt += c[i][ml[i]]; /// (i, ml[i]) is a solution
+    return opt;
+  }
 };
-
 
 int a[N],b[N],t[N];
 int main()
@@ -230,9 +187,9 @@ int main()
     int i,j,k,n,m,u,v,w,cost;
     cin>>n;
     for(i=0;i<n;i++) cin>>a[i]>>b[i]>>t[i];
-    HungarianMatching M(n);
+    matching_weighted M(n,n);
     for(i=0;i<n;i++){
-        for(j=0;j<n;j++) M.addedge(i+1,j+1,-max(0LL,1LL*a[j]-1LL*min(i,t[j])*b[j]));
+        for(j=0;j<n;j++) M.addedge(i,j,max(0LL,1LL*a[j]-1LL*min(i,t[j])*b[j]));
     }
     cout<<-M.matching()<<nl;
     return 0;
