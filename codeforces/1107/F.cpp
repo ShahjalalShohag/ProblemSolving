@@ -227,7 +227,6 @@ int a[N],b[N],t[N];
 int main()
 {
     BeatMeScanf;
-    cin.tie(NULL);
     int i,j,k,n,m,u,v,w,cost;
     cin>>n;
     for(i=0;i<n;i++) cin>>a[i]>>b[i]>>t[i];
