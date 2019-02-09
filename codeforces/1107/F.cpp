@@ -93,7 +93,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=505;
+const int N=510;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
