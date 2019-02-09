@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49642619": {
+    "contest_id": 1107,
+    "language": "GNU C++17",
+    "path": "codeforces\\1107\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Vasya and Endless Credits",
+    "problem_url": "https://codeforces.com/contest/1107/problem/F",
+    "submission_id": "CF49642619",
+    "submission_url": "https://codeforces.com/contest/1107/submission/49642619",
+    "tags": [
+      "dp",
+      "flows",
+      "graph matchings",
+      "graphs",
+      "sortings",
+      "*2600"
+    ],
+    "timestamp": "Feb/09/2019 06:02"
+  },
   "CF49642621": {
     "contest_id": 1107,
     "language": "GNU C++17",
