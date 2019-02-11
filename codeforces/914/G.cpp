@@ -1,37 +1,111 @@
+#pragma comment(linker, "/stack:200000000")
 #pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #pragma GCC optimize("unroll-loops")
-
 #include<bits/stdc++.h>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
 using namespace std;
 
+#define ll long long
+#define ull unsigned long long
+#define ld long double
 #define pii pair<int,int>
 #define pll pair<ll,ll>
+#define vi vector<int>
+#define vll vector<ll>
+#define vc vector<char>
+#define vs vector<string>
+#define vpll vector<pll>
+#define vpii vector<pii>
+#define umap unordered_map
+#define uset unordered_set
+#define PQ priority_queue
+
+#define printa(a,L,R) for(int i=L;i<R;i++) cout<<a[i]<<(i==R-1?'\n':' ')
+#define printv(a) printa(a,0,a.size())
+#define print2d(a,r,c) for(int i=0;i<r;i++) for(int j=0;j<c;j++) cout<<a[i][j]<<(j==c-1?'\n':' ')
+#define pb push_back
 #define eb emplace_back
-#define ll long long
-#define nl '\n'
-#define deb(x) cerr<<#x" = "<<x<<nl
-#define in() ( { int a ; scanf("%d",&a); a; } )
+#define mt make_tuple
+#define fbo find_by_order
+#define ook order_of_key
+#define MP make_pair
+#define UB upper_bound
+#define LB lower_bound
+#define SQ(x) ((x)*(x))
+#define issq(x) (((ll)(sqrt((x))))*((ll)(sqrt((x))))==(x))
+#define F first
+#define S second
+#define mem(a,x) memset(a,x,sizeof(a))
+#define E 2.71828182845904523536
+#define gamma 0.5772156649
+#define nl "\n"
+#define lg(r,n) (int)(log2(n)/log2(r))
+#define sz(v) (int)v.size()
+#define pf printf
+#define sf scanf
+#define sf1(a)                scanf("%d",&a)
+#define sf2(a,b)              scanf("%d %d",&a,&b)
+#define sf3(a,b,c)            scanf("%d %d %d",&a,&b,&c)
+#define pf1(a)                printf("%d\n",a);
+#define pf2(a,b)              printf("%d %d\n",a,b)
+#define pf3(a,b,c)            printf("%d %d %d\n",a,b,c)
+#define sf1ll(a)              scanf("%lld",&a)
+#define sf2ll(a,b)            scanf("%I64d %I64d",&a,&b)
+#define sf3ll(a,b,c)          scanf("%I64d %I64d %I64d",&a,&b,&c)
+#define pf1ll(a)              printf("%lld\n",a);
+#define pf2ll(a,b)            printf("%I64d %I64d\n",a,b)
+#define pf3ll(a,b,c)          printf("%I64d %I64d %I64d\n",a,b,c)
+#define _ccase printf("Case %lld: ",++cs)
+#define _case cout<<"Case "<<++cs<<": "
+#define by(x) [](const auto& a, const auto& b) { return a.x < b.x; }
 
-const int N = 1<<17;
-const int mod = 1e9 + 7;
-
-int qpow(int n, int k)
-{
-    int ans=1;
-    while(k){
-        if(k&1) ans=1LL*ans*n%mod;
-        n=1LL*n*n%mod;
-        k>>=1;
-    }
-    return ans;
+#define asche cerr<<"Ekhane asche\n";
+#define rev(v) reverse(v.begin(),v.end())
+#define srt(v) sort(v.begin(),v.end())
+#define grtsrt(v) sort(v.begin(),v.end(),greater<ll>())
+#define all(v) v.begin(),v.end()
+#define mnv(v) *min_element(v.begin(),v.end())
+#define mxv(v) *max_element(v.begin(),v.end())
+#define toint(a) atoi(a.c_str())
+#define BeatMeScanf ios_base::sync_with_stdio(false)
+#define valid(tx,ty) (tx>=0&&tx<n&&ty>=0&&ty<m)
+#define one(x) __builtin_popcount(x)
+#define Unique(v) v.erase(unique(all(v)),v.end())
+#define stree l=(n<<1),r=l+1,mid=b+(e-b)/2
+#define fout(x) fixed<<setprecision(x)
+string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
+inline void yes(){cout<<"YES\n";exit(0);}
+inline void no(){cout<<"NO\n";exit(0);}
+template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+ll dx[]={1,0,-1,0,1,-1,-1,1};
+ll dy[]={0,1,0,-1,1,1,-1,-1};
+//random_device rd;
+//mt19937 rnd(rd());
+#define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
+void deb(istream_iterator<string> it) {}
+template<typename T, typename... Args>
+void deb(istream_iterator<string> it, T a, Args... args) {
+    cerr << *it << " = " << a << endl;
+    deb(++it, args...);
 }
+
+const int mod=1e9+7;
+const int N=3e5+9;
+const ld eps=1e-9;
+const ld PI=acos(-1.0);
+ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
+ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
+ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
+
 #define MX (1 << 17)
 #define OR 0
 #define AND 1
 #define XOR 2
 int in=qpow(2,mod-2);
-///Fast Walsh-Hadamard Transformation in n log n
+/// Fast Walsh-Hadamard Transformation in n log n
 ///Beware!!! after the convolution the arrays will not be the same again
 ///array sizes must be same and powers of 2
 struct fwht{
@@ -69,7 +143,7 @@ struct fwht{
 
     /// For i = 0 to n - 1, j = 0 to n - 1
     /// v[i flag j] += A[i] * B[j]
-    vector<int> convolution(int n, int* A, int* B, int flag = AND){
+    vi convolution(int n, int* A, int* B, int flag = AND){
         assert(__builtin_popcount(n) == 1); /// n must be a power of 2
         for (int i = 0; i < n; i++) P1[i] = A[i];
         for (int i = 0; i < n; i++) P2[i] = B[i];
@@ -78,152 +152,45 @@ struct fwht{
         walsh_transform(P2, n, flag);
         for (int i = 0; i < n; i++) P1[i] = 1LL*P1[i] * P2[i]%mod;
         inverse_walsh_transform(P1, n, flag);
-        return vector<int>(P1,P1+n);
+        return vi(P1,P1+n);
     }
 
     ///compute A^k where A*A=A convolution A
-    vector<int> pow(int n,int* A,ll k,int flag=AND)
+    vi pow(int n,int* A,ll k,int flag=AND)
     {
         walsh_transform(A,n,flag);
         for(int i=0;i<n;i++) A[i]=qpow(A[i],k);
         inverse_walsh_transform(A,n,flag);
-        return vector<int>(A,A+n);
+        return vi(A,A+n);
     }
 }t;
-///s' $ s defines all subsets of s
-struct SOS
-{
-    const int B=17;///Every input vector must need to be of size 1<<B
-
-    /// z(f(s))=\sum_{s' $ s}{f(s')}
-    ///O(B * 2 ^ B)
-    ///zeta transform is actually SOS DP
-    vector<int> zeta_transform(vector<int> f)
-    {
-        for(int i = 0; i < B; i++) {
-            for(int mask = 0; mask < (1 << B); mask++) {
-                if((mask & (1 << i)) != 0) {
-                    f[mask] += f[mask ^ (1 << i)];///you can change the operator from + to min/gcd to find min/gcd of all f[submasks]
-                }
-            }
-        }
-        return f;
-    }
-
-    ///mu(f(s))=\sum_{s' $ s}{(-1)^|s\s'| * f(s')}
-    ///O(B * 2 ^ B)
-    vector<int> mobius_transform(vector<int> f)
-    {
-        for(int i = 0; i < B; i++) {
-            for(int mask = 0; mask < (1 << B); mask++) {
-                if((mask & (1 << i)) != 0) {
-                    f[mask] -= f[mask ^ (1 << i)];
-                }
-            }
-        }
-        return f;
-    }
-
-    vector<int> inverse_zeta_transform(vector<int> f)
-    {
-        return mobius_transform(f);
-    }
-
-    vector<int> inverse_mobius_transform(vector<int> f)
-    {
-        return zeta_transform(f);
-    }
-
-    /// z(f(s))=\sum_{s' is supermask of s}{f(s')}
-    ///O(B * 2 ^ B)
-    ///zeta transform is actually SOS DP
-    vector<int> zeta_transform_for_supermasks(vector<int> f)
-    {
-        for(int i = 0; i < B; i++) {
-            for(int mask=(1<<B)-1 ; mask>=0 ; mask--){
-                if((mask&(1<<i)) == 0) f[mask] += f[mask^(1<<i)] ;
-            }
-        }
-        return f;
-    }
-
-    ///f*g(s)=sum_{s' $ s} {f(s')*g(s\s')}
-    ///O(B * B * 2 ^ B)
-    vector<int> subset_sum_convolution(vector<int> f, vector<int> g)
-    {
-        vector< vector<int> > fhat(B+1, vector<int> (1<<B, 0));
-        vector< vector<int> > ghat(B+1, vector<int> (1<<B, 0));
-        // Make fhat[][] = {0} and ghat[][] = {0}
-        for(int mask = 0; mask < (1 << B); mask++) {
-            fhat[__builtin_popcount(mask)][mask] = f[mask];
-            ghat[__builtin_popcount(mask)][mask] = g[mask];
-        }
-        // Apply zeta transform on fhat[][] and ghat[][]
-        for(int i = 0; i < B; i++) {
-            for(int j = 0; j < B; j++) {
-                for(int mask = 0; mask < (1 << B); mask++) {
-                    if((mask & (1 << j)) != 0) {
-                        (fhat[i][mask] += fhat[i][mask ^ (1 << j)])%=mod;
-                        (ghat[i][mask] += ghat[i][mask ^ (1 << j)])%=mod;
-                    }
-                }
-            }
-        }
-        vector< vector<int> > h(B+1, vector<int> (1<<B, 0));
-        // Do the convolution and store into h[][] = {0}
-        for(int mask = 0; mask < (1 << B); mask++) {
-            for(int i = 0; i < B; i++) {
-                for(int j = 0; j <= i; j++) {
-                    h[i][mask] += 1LL*fhat[j][mask] * ghat[i - j][mask]%mod;
-                    h[i][mask]%=mod;
-                }
-            }
-        }
-
-        // Apply inverse SOS dp on h[][]
-        for(int i = 0; i < B; i++) {
-            for(int j = 0; j < B; j++) {
-                for(int mask = 0; mask < (1 << B); mask++) {
-                    if((mask & (1 << j)) != 0) {
-                        h[i][mask] -= h[i][mask ^ (1 << j)];
-                        (h[i][mask]+=mod)%=mod;
-                    }
-                }
-            }
-        }
-        vector<int> fog(1<<B, 0);
-        for(int mask = 0; mask < (1 << B); mask++)  fog[mask] = h[__builtin_popcount(mask)][mask];
-        return fog;
-    }
-}sos;
-int a[N], b[N], cnt[N], f[N];
+int a[MX],b[MX],cnt[MX],f[MX];
 int32_t main()
 {
-    int n=in();
-    for(int i=1; i<=n; i++) {int k=in(); cnt[k]++, b[k]++;}
-//    vector<int> va(cnt, cnt+N);
-//    auto conv=sos.subset_sum_convolution(va, va);
-//    for(int i=0; i<N; i++) a[i]=conv[i];
-    for(int i=0; i<N; i++){
+    BeatMeScanf;
+    int i,j,k,n,m;
+    cin>>n;
+    for(i=1;i<=n;i++) cin>>k,cnt[k]++,b[k]++;
+    for(i=0;i<MX;i++){
         int nw=0;
-        for(int j=i; ; j=(j-1)&i){
+        for(int j=i;;j=(j-1)&i){
             nw=(nw+1LL*cnt[j]*cnt[i^j]%mod)%mod;
             if(j==0) break;
         }
         a[i]=nw;
     }
-    vector<int> c=t.convolution(N, cnt, cnt, XOR);
+    vi c=t.convolution(MX,cnt,cnt,XOR);
     f[0]=0,f[1]=1;
-    for(int i=2; i<N; i++) f[i]=(f[i-1]+f[i-2])%mod;
-    for(int i=0; i<N; i++){
+    for(i=2;i<MX;i++) f[i]=(f[i-1]+f[i-2])%mod;
+    for(i=0;i<MX;i++){
         a[i]=1LL*a[i]*f[i]%mod;
         b[i]=1LL*b[i]*f[i]%mod;
         c[i]=1LL*c[i]*f[i]%mod;
     }
-    vector<int> an=t.convolution(N, a, b, AND);
-    vector<int> ans=t.convolution(N, an.data(), c.data(), AND);
+    vi an=t.convolution(MX,a,b,AND);
+    vi ans=t.convolution(MX,an.data(),c.data(),AND);
     int res=0;
-    for(int i=0; i<17; i++) res=(res+ans[1<<i])%mod;
+    for(i=0;i<17;i++) res=(res+ans[1<<i])%mod;
     cout<<res<<nl;
     return 0;
 }
