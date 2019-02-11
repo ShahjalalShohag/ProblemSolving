@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF49782985": {
+    "contest_id": 33,
+    "language": "GNU C++17",
+    "path": "codeforces\\33\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Knights",
+    "problem_url": "https://codeforces.com/contest/33/problem/D",
+    "submission_id": "CF49782985",
+    "submission_url": "https://codeforces.com/contest/33/submission/49782985",
+    "tags": [
+      "geometry",
+      "graphs",
+      "shortest paths",
+      "sortings",
+      "*2000"
+    ],
+    "timestamp": "Feb/12/2019 00:20"
+  },
   "CF49809239": {
     "contest_id": 754,
     "language": "GNU C++17",
