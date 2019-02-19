@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF50154017": {
+    "contest_id": 438,
+    "language": "GNU C++17",
+    "path": "codeforces\\438\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "The Child and Binary Tree",
+    "problem_url": "https://codeforces.com/contest/438/problem/E",
+    "submission_id": "CF50154017",
+    "submission_url": "https://codeforces.com/contest/438/submission/50154017",
+    "tags": [
+      "combinatorics",
+      "divide and conquer",
+      "fft",
+      "number theory",
+      "*3100"
+    ],
+    "timestamp": "Feb/19/2019 15:00"
+  },
   "CF50167482": {
     "contest_id": 1118,
     "language": "GNU C++17",
