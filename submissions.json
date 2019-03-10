@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51118282": {
+    "contest_id": 364,
+    "language": "GNU C++17",
+    "path": "codeforces\\364\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Ghd",
+    "problem_url": "https://codeforces.com/contest/364/problem/D",
+    "submission_id": "CF51118282",
+    "submission_url": "https://codeforces.com/contest/364/submission/51118282",
+    "tags": [
+      "brute force",
+      "math",
+      "probabilities",
+      "*2900"
+    ],
+    "timestamp": "Mar/10/2019 13:59"
+  },
   "CF51122380": {
     "contest_id": 214,
     "language": "GNU C++17",
