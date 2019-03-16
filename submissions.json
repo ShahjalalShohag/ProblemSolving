@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC4599522": {
+    "contest_id": "agc031",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\agc031\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Reversi",
+    "problem_url": "https://atcoder.jp/contests/agc031/tasks/agc031_b",
+    "submission_id": "AC4599522",
+    "submission_url": "https://atcoder.jp/contests/agc031/submissions/4599522",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Mar/16/2019 18:48"
+  },
   "AC4686076": {
     "contest_id": "abc122",
     "language": "C++14 (GCC 5.4.1)",
