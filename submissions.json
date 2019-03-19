@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51513007": {
+    "contest_id": 1141,
+    "language": "GNU C++17",
+    "path": "codeforces\\1141\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Colored Boots",
+    "problem_url": "https://codeforces.com/contest/1141/problem/D",
+    "submission_id": "CF51513007",
+    "submission_url": "https://codeforces.com/contest/1141/submission/51513007",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Mar/19/2019 21:33"
+  },
   "CF51524638": {
     "contest_id": 1141,
     "language": "GNU C++17",
