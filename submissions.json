@@ -624,6 +624,27 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51548384": {
+    "contest_id": 343,
+    "language": "GNU C++17",
+    "path": "codeforces\\343\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Pumping Stations",
+    "problem_url": "https://codeforces.com/contest/343/problem/E",
+    "submission_id": "CF51548384",
+    "submission_url": "https://codeforces.com/contest/343/submission/51548384",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "divide and conquer",
+      "flows",
+      "graphs",
+      "greedy",
+      "trees",
+      "*2900"
+    ],
+    "timestamp": "Mar/20/2019 03:41"
+  },
   "CF51649973": {
     "contest_id": 1139,
     "language": "GNU C++17",
