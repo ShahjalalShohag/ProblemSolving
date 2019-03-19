@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51484697": {
+    "contest_id": 506,
+    "language": "GNU C++17",
+    "path": "codeforces\\506\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Mr. Kitayuta's Gift",
+    "problem_url": "https://codeforces.com/contest/506/problem/E",
+    "submission_id": "CF51484697",
+    "submission_url": "https://codeforces.com/contest/506/submission/51484697",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "matrices",
+      "strings",
+      "*3000"
+    ],
+    "timestamp": "Mar/19/2019 19:05"
+  },
   "CF51489071": {
     "contest_id": 1141,
     "language": "GNU C++17",
