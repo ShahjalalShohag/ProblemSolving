@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51656423": {
+    "contest_id": 1083,
+    "language": "GNU C++17",
+    "path": "codeforces\\1083\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Max Mex",
+    "problem_url": "https://codeforces.com/contest/1083/problem/C",
+    "submission_id": "CF51656423",
+    "submission_url": "https://codeforces.com/contest/1083/submission/51656423",
+    "tags": [
+      "data structures",
+      "trees",
+      "*2900"
+    ],
+    "timestamp": "Mar/22/2019 03:56"
+  },
   "CF51688121": {
     "contest_id": 1140,
     "language": "GNU C++17",
