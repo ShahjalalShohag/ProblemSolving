@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51721401": {
+    "contest_id": 1140,
+    "language": "GNU C++17",
+    "path": "codeforces\\1140\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Palindrome-less Arrays",
+    "problem_url": "https://codeforces.com/contest/1140/problem/E",
+    "submission_id": "CF51721401",
+    "submission_url": "https://codeforces.com/contest/1140/submission/51721401",
+    "tags": [
+      "combinatorics",
+      "divide and conquer",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Mar/22/2019 23:23"
+  },
   "CF51729862": {
     "contest_id": 613,
     "language": "GNU C++17",
