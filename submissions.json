@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF51729862": {
+    "contest_id": 613,
+    "language": "GNU C++17",
+    "path": "codeforces\\613\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Kingdom and its Cities",
+    "problem_url": "https://codeforces.com/contest/613/problem/D",
+    "submission_id": "CF51729862",
+    "submission_url": "https://codeforces.com/contest/613/submission/51729862",
+    "tags": [
+      "dfs and similar",
+      "divide and conquer",
+      "dp",
+      "graphs",
+      "sortings",
+      "trees",
+      "*2800"
+    ],
+    "timestamp": "Mar/23/2019 02:37"
+  },
   "CF52087511": {
     "contest_id": 1144,
     "language": "GNU C++17",
