@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC4692842": {
+    "contest_id": "abc122",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc122\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "We Like AGC",
+    "problem_url": "https://atcoder.jp/contests/abc122/tasks/abc122_d",
+    "submission_id": "AC4692842",
+    "submission_url": "https://atcoder.jp/contests/abc122/submissions/4692842",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Mar/24/2019 18:24"
+  },
   "AC5257427": {
     "contest_id": "agc033",
     "language": "C++14 (GCC 5.4.1)",
