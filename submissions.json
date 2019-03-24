@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC4690286": {
+    "contest_id": "abc122",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc122\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "GeT AC",
+    "problem_url": "https://atcoder.jp/contests/abc122/tasks/abc122_c",
+    "submission_id": "AC4690286",
+    "submission_url": "https://atcoder.jp/contests/abc122/submissions/4690286",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Mar/24/2019 18:13"
+  },
   "AC4692842": {
     "contest_id": "abc122",
     "language": "C++14 (GCC 5.4.1)",
