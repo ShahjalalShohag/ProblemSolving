@@ -98,81 +98,37 @@ const ld eps=1e-9;
 const ld PI=acos(-1.0);
 //ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 //ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
-ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
+//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-#define sz(s) s.size()
-vector<ll> BerlekampMassey(vector<ll> s) {
-	int n = sz(s), L = 0, m = 0;
-	vector<ll> C(n), B(n), T;
-	C[0] = B[0] = 1;
-
-	ll b = 1;
-	for(int i=0;i<n;i++) {
-        ++m;
-		ll d = s[i] % mod;
-		for(int j=1;j<=L;j++) d = (d + C[j] * s[i - j]) % mod;
-		if (!d) continue;
-		T = C; ll coef = d * qpow(b, mod-2) % mod;
-		for(int j=m;j<n;j++) C[j] = (C[j] - coef * B[j - m]) % mod;
-		if (2 * L > i) continue;
-		L = i + 1 - L; B = T; b = d; m = 0;
-	}
-
-	C.resize(L + 1); C.erase(C.begin());
-	for(auto& x:C)  x = (mod - x) % mod;
-	return C;
-}
-///transition-> for(i=0;i<x;i++) f[n]=tr[i]*f[n-i-1]
-///S=starting recurrence
-///k is 0 indexed
-long long linearRec(vector<long long> S, vector<long long> tr, long long k) {
-	long long n = S.size();
-	if(n==0) return 0;
-	auto combine = [&](vector<long long> a, vector<long long> b) {
-		vector<long long> res(n * 2 + 1);
-		for (long long i=0; i<n+1; i++) for (long long j=0; j<n+1; j++)
-			res[i + j] = (res[i + j] + a[i] * b[j]) % mod;
-		for (long long i = 2 * n; i > n; --i) for (long long j=0; j<n; j++)
-			res[i - 1 - j] = (res[i - 1 - j] + res[i] * tr[j]) % mod;
-		res.resize(n + 1);
-		return res;
-	};
-
-	vector<long long> pol(n + 1), e(pol);
-	pol[0] = e[1] = 1;
-
-	for (++k; k; k /= 2) {
-		if (k % 2) pol = combine(pol, e);
-		e = combine(e, e);
-	}
-
-	long long res = 0;
-	for (long long i=0; i<n; i++) res = (res + pol[i + 1] * S[i]) % mod;
-	return res;
-}
 int x;
-const int M=2010;
-vi s[M];
+vi mul(vi a,vi b,int m)
+{
+    int n=a.size();
+    vi ans(n,0);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            int p=(1LL*i*m%x+j)%x;
+            ans[p]=(ans[p]+1LL*a[i]*b[j]%mod)%mod;
+        }
+    }
+    return ans;
+}
 int main()
 {
     int n,i,j,k,m,b;
     cin>>n>>b>>k>>x;
-    for(i=0;i<M;i++) s[i].assign(x,0);
-    for(i=0;i<n;i++) cin>>m,s[0][m%x]++;
-    for(i=1;i<M;i++){
-        for(j=0;j<x;j++){
-            for(int p=0;p<x;p++){
-                int d=(j*10+p)%x;
-                s[i][d]=(s[i][d]+1LL*s[i-1][j]*s[0][p]%mod)%mod;
-            }
-        }
-    }
+    vi a(x,0);
+    for(i=0;i<n;i++) cin>>m,a[m%x]++;
+    vi ans=a;
     b--;
-    vll f;
-    for(i=0;i<M;i++) f.eb(s[i][k]);
-    vll tr=BerlekampMassey(f);
-    f.resize(tr.size());
-    cout<<linearRec(f,tr,b)<<nl;
+    int p=10%x;
+    while(b){
+        if(b&1) ans=mul(ans,a,p);
+        a=mul(a,a,p);
+        b>>=1;
+        p=1LL*p*p%x;
+    }
+    cout<<ans[k]<<nl;
     return 0;
 }
 
