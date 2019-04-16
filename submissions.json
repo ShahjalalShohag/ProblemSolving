@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF52808465": {
+    "contest_id": 375,
+    "language": "GNU C++17",
+    "path": "codeforces\\375\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Red and Black Tree",
+    "problem_url": "https://codeforces.com/contest/375/problem/E",
+    "submission_id": "CF52808465",
+    "submission_url": "https://codeforces.com/contest/375/submission/52808465",
+    "tags": [
+      "dp",
+      "implementation",
+      "math",
+      "*3000"
+    ],
+    "timestamp": "Apr/16/2019 12:55"
+  },
   "CF52828746": {
     "contest_id": 1154,
     "language": "GNU C++17",
