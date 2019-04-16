@@ -123,7 +123,7 @@ int32_t main()
             if(!idx[j]) continue;
             if(p==-1) p=idx[j];
             else{
-                ll nw=1LL*a[p]*j/__gcd(a[p],j);
+                ll nw=1LL*a[p]*j/i;
                 if(nw<ans) ans=nw,x=p,y=idx[j];
                 break;
             }
