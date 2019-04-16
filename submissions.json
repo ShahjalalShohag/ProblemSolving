@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF52846868": {
+    "contest_id": 1154,
+    "language": "GNU C++17",
+    "path": "codeforces\\1154\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Walking Robot",
+    "problem_url": "https://codeforces.com/contest/1154/problem/D",
+    "submission_id": "CF52846868",
+    "submission_url": "https://codeforces.com/contest/1154/submission/52846868",
+    "tags": [
+      "greedy",
+      "*1500"
+    ],
+    "timestamp": "Apr/16/2019 21:24"
+  },
   "CF52852830": {
     "contest_id": 1154,
     "language": "GNU C++17",
