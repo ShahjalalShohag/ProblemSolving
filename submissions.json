@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF52852830": {
+    "contest_id": 1154,
+    "language": "GNU C++17",
+    "path": "codeforces\\1154\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Two Teams",
+    "problem_url": "https://codeforces.com/contest/1154/problem/E",
+    "submission_id": "CF52852830",
+    "submission_url": "https://codeforces.com/contest/1154/submission/52852830",
+    "tags": [
+      "data structures",
+      "implementation",
+      "sortings",
+      "*1800"
+    ],
+    "timestamp": "Apr/16/2019 21:45"
+  },
   "CF52860418": {
     "contest_id": 1154,
     "language": "GNU C++17",
