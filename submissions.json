@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF53149093": {
+    "contest_id": 1155,
+    "language": "GNU C++17",
+    "path": "codeforces\\1155\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Beautiful Array",
+    "problem_url": "https://codeforces.com/contest/1155/problem/D",
+    "submission_id": "CF53149093",
+    "submission_url": "https://codeforces.com/contest/1155/submission/53149093",
+    "tags": [
+      "brute force",
+      "data structures",
+      "divide and conquer",
+      "dp",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "Apr/22/2019 21:42"
+  },
   "CF53155894": {
     "contest_id": 1155,
     "language": "GNU C++17",
