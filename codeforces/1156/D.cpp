@@ -93,7 +93,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=3e5+9;
+const int N=2e5+9;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
@@ -151,7 +151,7 @@ void dfs(int u,int pre=0)
 int32_t main()
 {
     BeatMeScanf;
-    cin.tie(0);
+    //cin.tie(0);
     int i,j,k,n,m,u,v;
     cin>>n;
     for(i=1;i<n;i++) cin>>u>>v>>k,g[u].eb(v,k),g[v].eb(u,k);
