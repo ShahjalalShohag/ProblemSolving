@@ -151,7 +151,7 @@ void dfs(int u,int pre=0)
 int32_t main()
 {
     BeatMeScanf;
-    //cin.tie(0);
+    cin.tie(0);
     int i,j,k,n,m,u,v;
     cin>>n;
     for(i=1;i<n;i++) cin>>u>>v>>k,g[u].eb(v,k),g[v].eb(u,k);
