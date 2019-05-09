@@ -2,7 +2,6 @@
 #pragma GCC optimize("Ofast")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #pragma GCC optimize("unroll-loops")
-
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
@@ -40,11 +39,11 @@ using namespace std;
 #define F first
 #define S second
 #define mem(a,x) memset(a,x,sizeof(a))
-#define inf 1e18
 #define E 2.71828182845904523536
 #define gamma 0.5772156649
 #define nl "\n"
 #define lg(r,n) (int)(log2(n)/log2(r))
+#define sz(v) (int)v.size()
 #define pf printf
 #define sf scanf
 #define sf1(a)                scanf("%d",&a)
@@ -78,13 +77,13 @@ using namespace std;
 #define stree l=(n<<1),r=l+1,mid=b+(e-b)/2
 #define fout(x) fixed<<setprecision(x)
 string tostr(int n) {stringstream rr;rr<<n;return rr.str();}
-inline void nopenot(){cout<<"YES\n";exit(0);}
-inline void nope(){cout<<"NO\n";exit(0);}
+inline void yes(){cout<<"YES\n";exit(0);}
+inline void no(){cout<<"NO\n";exit(0);}
 template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-//ll dx[]={1,0,-1,0,1,-1,-1,1};
-//ll dy[]={0,1,0,-1,1,1,-1,-1};
+ll dx[]={1,0,-1,0,1,-1,-1,1};
+ll dy[]={0,1,0,-1,1,1,-1,-1};
 //random_device rd;
-//mt19937 random(rd());
+//mt19937 rnd(rd());
 #define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
 void deb(istream_iterator<string> it) {}
 template<typename T, typename... Args>
@@ -94,116 +93,88 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=1e3+9;
+const int N=3e5+9;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
-//ll gcd(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
-//ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
-//ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
+ll gc(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
+ll lc(ll a,ll b){return a/gc(a,b)*b;}
+ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-struct aho_corasick
+
+vector<int> build_lps(string p)
 {
-	int link[N];            ///A suffix link for a vertex p is a edge that points to
-                            ///the longest proper suffix of
-                            ///the string corresponding to the vertex p.
-    int psz;                ///tracks node numbers of the trie
-	map<char, int> to[N];   ///tracks the next node
-	int cnt[N][2];
-	void clear()
-	{
-		for(int i = 0; i < psz; i++)
-			cnt[i][0]=cnt[i][1]=0,link[i] = 0, to[i].clear();
-
-		psz = 1;
-	}
-
-	aho_corasick() { psz = N - 2; clear(); }
-
-	void add_word(string s,int idx)
-	{
-		int u = 0;
-		for(char c: s)
-		{
-			if(!to[u].count(c)) to[u][c] = psz++;
-			u = to[u][c];
-		}
-		cnt[u][idx]++;
-	}
-
-	void push_links()
-	{
-		queue<int> q;
-		int u, v, j;
-		char c;
-
-		q.push(0);
-		link[0] = -1;
-
-		while(!q.empty())
-		{
-			u = q.front();
-			q.pop();
-
-			for(auto it: to[u])
-			{
-				v = it.second;
-				c = it.first;
-				j = link[u];
-
-				while(j != -1 && !to[j].count(c)) j = link[j];
-				if(j != -1) link[v] = to[j][c];
-				else link[v] = 0;
-
-				q.push(v);
-			}
-		}
-	}
-	int go(int cur,char c)
+    int sz = p.size();
+    vector<int> lps;
+    lps.assign(sz + 1, 0);
+    int j = 0;
+    lps[0] = 0;
+    for(int i = 1; i < sz; i++)
     {
-        while(cur!=-1 && !to[cur].count(c)) cur=link[cur];
-        if(cur!=-1) cur=to[cur][c];
-        else cur=0;
-        return cur;
+        while(j >= 0 && p[i] != p[j])
+        {
+            if(j >= 1) j = lps[j - 1];
+            else j = -1;
+        }
+        j++;
+        lps[i] = j;
     }
-};
-aho_corasick t;
-void dfs(int u)
-{
-    for(auto v:t.to[u]){
-        t.cnt[v.S][0]+=t.cnt[t.link[v.S]][0];
-        t.cnt[v.S][1]+=t.cnt[t.link[v.S]][1];
-        dfs(v.S);
-    }
+
+    return lps;
 }
-bool vis[110][N];
-int n,dp[110][N];
+vi lps1,lps2;
+int sza,szb,n,dp[55][55][1010],vis[55][55][1010],aa[55][200],bb[55][200];
 string s,a,b;
-int yo(int node,int idx)
+int add1(int j,char ch)
 {
-    if(idx==n) return t.cnt[node][0]-t.cnt[node][1];
-    bool &v=vis[node][idx];
-    if(v) return dp[node][idx];
-    v=1;
-    int ans=t.cnt[node][0]-t.cnt[node][1],res=-2000;
-    if(s[idx]=='*'){
+    if(j==sza) j=lps1[j-1];
+    while(j >= 0 && a[j] != ch)
+			if(j >= 1) j = lps1[j - 1];
+			else j = -1;
+    j++;
+    return j;
+}
+int add2(int j,char ch)
+{
+    if(j==szb) j=lps2[j-1];
+    while(j >= 0 && b[j] != ch)
+			if(j >= 1) j = lps2[j - 1];
+			else j = -1;
+    j++;
+    return j;
+}
+int yo(int i,int j,int k)
+{
+    if(i==n) return (sza==j)-(szb==k);
+    int &r=vis[j][k][i];
+    if(r==1) return dp[j][k][i];
+    r=1;
+    int nw=0;
+    if(sza==j) nw++;
+    if(szb==k) nw--;
+    int ans=-2000;
+    if(s[i]=='*'){
         for(char ch='a';ch<='z';ch++){
-            res=max(res,yo(t.go(node,ch),idx+1));
+            ans=max(ans,yo(i+1,aa[j][ch],bb[k][ch]));
         }
     }
-    else res=yo(t.go(node,s[idx]),idx+1);
-    return dp[node][idx]=res+ans;
+    else ans=yo(i+1,aa[j][s[i]],bb[k][s[i]]);
+    ans+=nw;
+    return dp[j][k][i]=ans;
 }
-int main()
+int32_t main()
 {
-	BeatMeScanf;
-	int i,j,k,m;
-	cin>>s>>a>>b;
-	t.add_word(a,0);
-	t.add_word(b,1);
-	t.push_links();
-	dfs(0);
-	n=s.size();
-	cout<<yo(0,0)<<nl;
-	return 0;
+    BeatMeScanf;
+    int i,j,k,m;
+    cin>>s>>a>>b;
+    n=s.size(),sza=a.size(),szb=b.size();
+    lps1=build_lps(a);
+    lps2=build_lps(b);
+    for(i=0;i<=sza;i++) for(char ch='a';ch<='z';ch++) aa[i][ch]=add1(i,ch);
+    for(i=0;i<=szb;i++) for(char ch='a';ch<='z';ch++) bb[i][ch]=add2(i,ch);
+    cout<<yo(0,0,0)<<nl;
+    return 0;
 }
+///Before submit=>
+///    *check for integer overflow,array bounds
+///    *check for n=1
 
