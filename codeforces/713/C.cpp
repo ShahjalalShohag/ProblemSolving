@@ -93,29 +93,33 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 }
 
 const int mod=1e9+7;
-const int N=3e5+9;
+const int N=3010;
 const ld eps=1e-9;
 const ld PI=acos(-1.0);
 ll gc(ll a,ll b){while(b){ll x=a%b;a=b;b=x;}return a;}
 ll lc(ll a,ll b){return a/gc(a,b)*b;}
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-
-int a[N];
+#define int ll
+int n,dp[N][N],a[N],b[N];
+int yo(int i,int j)
+{
+    if(i>n) return 0;
+    int &ret=dp[i][j];
+    if(ret!=-1) return ret;
+    ret=abs(a[i]-b[j])+yo(i+1,j);
+    if(j+1<=n) ret=min(ret,yo(i,j+1));
+    return ret;
+}
 int32_t main()
 {
     BeatMeScanf;
-    int i,j,k,n,m;
+    int i,j,k,m;
     cin>>n;
-    for(i=1;i<=n;i++) cin>>a[i],a[i]-=i;
-    PQ<int>q;
-    ll ans=0;
-    q.push(a[1]);
-    for(i=2;i<=n;i++){
-        q.push(a[i]);
-        if(q.top()>a[i]) ans+=q.top()-a[i],q.pop(),q.push(a[i]);
-    }
-    cout<<ans<<nl;
+    for(i=1;i<=n;i++) cin>>a[i],a[i]-=i,b[i]=a[i];
+    sort(b+1,b+n+1);
+    mem(dp,-1);
+    cout<<yo(1,1)<<nl;
     return 0;
 }
 ///Before submit=>
