@@ -139,7 +139,6 @@ vi a[N];
 int32_t main()
 {
     BeatMeScanf;
-    cin.tie(0);
     int i,j,k,n,m,x;
     cin>>n>>x;
     for(i=1;i<=n;i++) cin>>k,a[k].eb(i);
