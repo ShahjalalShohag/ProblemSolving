@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54252427": {
+    "contest_id": 137,
+    "language": "GNU C++17",
+    "path": "codeforces\\137\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Permutation",
+    "problem_url": "https://codeforces.com/contest/137/problem/B",
+    "submission_id": "CF54252427",
+    "submission_url": "https://codeforces.com/contest/137/submission/54252427",
+    "tags": [
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "May/16/2019 23:58"
+  },
   "CF54252808": {
     "contest_id": 48,
     "language": "GNU C++17",
