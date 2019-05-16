@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54238014": {
+    "contest_id": 714,
+    "language": "GNU C++17",
+    "path": "codeforces\\714\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Meeting of Old Friends",
+    "problem_url": "https://codeforces.com/contest/714/problem/A",
+    "submission_id": "CF54238014",
+    "submission_url": "https://codeforces.com/contest/714/submission/54238014",
+    "tags": [
+      "implementation",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "May/16/2019 17:41"
+  },
   "CF54238195": {
     "contest_id": 714,
     "language": "GNU C++17",
