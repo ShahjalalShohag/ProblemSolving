@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54278787": {
+    "contest_id": 1163,
+    "language": "GNU C++17",
+    "path": "codeforces\\1163\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Mysterious Code",
+    "problem_url": "https://codeforces.com/contest/1163/problem/D",
+    "submission_id": "CF54278787",
+    "submission_url": "https://codeforces.com/contest/1163/submission/54278787",
+    "tags": [
+      "dp",
+      "strings",
+      "*2100"
+    ],
+    "timestamp": "May/17/2019 18:25"
+  },
   "CF54284681": {
     "contest_id": 1166,
     "language": "GNU C++17",
