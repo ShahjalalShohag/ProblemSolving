@@ -123,7 +123,6 @@ int32_t main()
         basis.clear();
         for(i=1;i<=n;i++) if(a[i]<(1<<k)) add(a[i]);
         srt(basis);
-        srt(vec);
         int s=sz(basis);
         for(i=0;i<(1<<s);i++){
             int kk=0;

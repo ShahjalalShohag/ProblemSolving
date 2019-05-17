@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54274952": {
+    "contest_id": 1163,
+    "language": "GNU C++17",
+    "path": "codeforces\\1163\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Magical Permutation",
+    "problem_url": "https://codeforces.com/contest/1163/problem/E",
+    "submission_id": "CF54274952",
+    "submission_url": "https://codeforces.com/contest/1163/submission/54274952",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "constructive algorithms",
+      "data structures",
+      "graphs",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "May/17/2019 16:42"
+  },
   "CF54274969": {
     "contest_id": 1163,
     "language": "GNU C++17",
