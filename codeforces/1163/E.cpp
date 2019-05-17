@@ -124,10 +124,10 @@ int32_t main()
         for(i=1;i<=n;i++) if(a[i]<(1<<k)) add(a[i]);
         srt(basis);
         srt(vec);
-        int s=sz(vec);
+        int s=sz(basis);
         for(i=0;i<(1<<s);i++){
             int kk=0;
-            for(j=0;j<s;j++) if((i>>j)&1) kk^=vec[j];
+            for(j=0;j<s;j++) if((i>>j)&1) kk^=basis[j];
             pos[kk]=1;
         }
         int ok=1;
