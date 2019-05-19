@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC5475577": {
+    "contest_id": "abc126",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc126\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "XOR Matching",
+    "problem_url": "https://atcoder.jp/contests/abc126/tasks/abc126_f",
+    "submission_id": "AC5475577",
+    "submission_url": "https://atcoder.jp/contests/abc126/submissions/5475577",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "May/19/2019 19:23"
+  },
   "AC5987110": {
     "contest_id": "abc130",
     "language": "C++14 (GCC 5.4.1)",
