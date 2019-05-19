@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54388160": {
+    "contest_id": 606,
+    "language": "GNU C++17",
+    "path": "codeforces\\606\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Testing Robots",
+    "problem_url": "https://codeforces.com/contest/606/problem/B",
+    "submission_id": "CF54388160",
+    "submission_url": "https://codeforces.com/contest/606/submission/54388160",
+    "tags": [
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "May/19/2019 20:34"
+  },
   "CF54388773": {
     "contest_id": 606,
     "language": "GNU C++17",
