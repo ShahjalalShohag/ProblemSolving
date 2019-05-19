@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC5461477": {
+    "contest_id": "abc126",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc126\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "1 or 2",
+    "problem_url": "https://atcoder.jp/contests/abc126/tasks/abc126_e",
+    "submission_id": "AC5461477",
+    "submission_url": "https://atcoder.jp/contests/abc126/submissions/5461477",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "May/19/2019 18:27"
+  },
   "AC5475577": {
     "contest_id": "abc126",
     "language": "C++14 (GCC 5.4.1)",
