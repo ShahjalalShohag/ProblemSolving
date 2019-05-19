@@ -267,8 +267,6 @@ int32_t main()
 	lp::add_constraint(cons,1.0*x,GREATEQ);
 	for(i=0;i<n;i++) cons[i]=1.0*b[i];
 	lp::add_constraint(cons,1.0*y,GREATEQ);
-	for(i=0;i<n;i++) cons[i]=1.0*b[i];
-	lp::add_constraint(cons,1.0*y,GREATEQ);
     long double ret = lp::solve();
     cout<<fout(10)<<ret<<nl;
 	return 0;
