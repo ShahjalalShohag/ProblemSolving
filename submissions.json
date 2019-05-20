@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54418176": {
+    "contest_id": 593,
+    "language": "GNU C++17",
+    "path": "codeforces\\593\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "2Char",
+    "problem_url": "https://codeforces.com/contest/593/problem/A",
+    "submission_id": "CF54418176",
+    "submission_url": "https://codeforces.com/contest/593/submission/54418176",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "May/20/2019 19:51"
+  },
   "CF54447123": {
     "contest_id": 606,
     "language": "GNU C++17",
