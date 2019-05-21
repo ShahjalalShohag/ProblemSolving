@@ -624,6 +624,20 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54447195": {
+    "contest_id": 606,
+    "language": "GNU C++17",
+    "path": "codeforces\\606\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Freelancer's Dreams",
+    "problem_url": "https://codeforces.com/contest/606/problem/E",
+    "submission_id": "CF54447195",
+    "submission_url": "https://codeforces.com/contest/606/submission/54447195",
+    "tags": [
+      "*2400"
+    ],
+    "timestamp": "May/21/2019 17:54"
+  },
   "CF54447241": {
     "contest_id": 606,
     "language": "GNU C++17",

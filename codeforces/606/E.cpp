@@ -101,7 +101,7 @@ ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
 
-#define MAXC 200
+#define MAXC 20
 #define MAXV N
 #define EPS 1e-13
 
@@ -267,7 +267,7 @@ int32_t main()
 	lp::add_constraint(cons,1.0*x,GREATEQ);
 	for(i=0;i<n;i++) cons[i]=1.0*b[i];
 	lp::add_constraint(cons,1.0*y,GREATEQ);
-	for(i=0;i<100;i++) lp::add_constraint(cons,1.0*y,GREATEQ);
+	for(i=0;i<10;i++) lp::add_constraint(cons,1.0*y,GREATEQ);
     long double ret = lp::solve();
     cout<<fout(10)<<ret<<nl;
 	return 0;
