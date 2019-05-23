@@ -101,12 +101,11 @@ ll lc(ll a,ll b){return a/gc(a,b)*b;}
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
 ///Zero Indexed
-///we have vars variables
-///F=(x_0 XXX y_0) and (x_1 XXX y_1) and ... (x_{vars-1} XXX y_{vars-1})
-///here {x_i,y_i} are variables
-///and XXX belongs to {OR,XOR}
-///is there any assignment of variables such that F=true
-
+///F=(x_0 or y_0) and (x_1 or y_1) and ... (x_{vars-1} or y_{vars-1})
+///here y_i belongs to x_i
+///is there any assignment of x_i such that F=true
+///for (x_0 xor y_0) and (x_1 xor y_1)...
+///replace (x_i xor y_i) by (x_i or y_i) and (not x_i or not y_i)
 struct twosat {
 	int n;	/// total size combining +, -. must be even.
 	vector< vector<int> > g, gt;	/// graph, transpose graph
@@ -120,15 +119,9 @@ struct twosat {
 		gt.resize(n);
 	}
 
-	///zero indexed, be careful
-
-    ///if you want to force variable a to be true in OR or XOR combination
-	///add addOR (a,1,a,1);
-	///if you want to force variable a to be false int OR or XOR combination
-	///add addOR (a,0,a,0);
-
-	///(x_a or (not x_b))-> af=1,bf=0
-	void addOR(int a, bool af, int b, bool bf) {
+	/// zero indexed, be careful
+	/// (x_a or (not x_b))-> af=1,bf=0
+	void add(int a, bool af, int b, bool bf) {
 		a += a+(af^1);
 		b += b+(bf^1);
 		g[a^1].push_back(b);	/// !a => b
@@ -136,21 +129,7 @@ struct twosat {
 		gt[b].push_back(a^1);
 		gt[a].push_back(b^1);
 	}
-	///(x_a or x_b)-> af=0,bf=0
-	void addXOR(int a,bool af,int b,bool bf)
-	{
-	    addOR(a,af,b,bf);
-	    addOR(a,!af,b,!bf);
-	}
-	///add this type of condition->
-	///add(a,af,b,bf) means if a is af then b must need to be bf
-	void add(int a,bool af,int b,bool bf)
-	{
-	    a += a+(af^1);
-		b += b+(bf^1);
-		g[a].push_back(b);
-		gt[b].push_back(a);
-	}
+
 	void dfs1(int u) {
 		vis[u] = true;
 		for(int v : g[u]) if(!vis[v]) dfs1(v);
@@ -182,6 +161,8 @@ struct twosat {
 	}
 };
 
+int p[N];
+map<int, int> pos;
 int main() {
 	BeatMeScanf;
 	int i,j,k,n,m,a,b,u,v;
@@ -191,8 +172,8 @@ int main() {
         cin>>u>>v>>k;
         --u;
         --v;
-        if(k) ts.add(u,0,v,0),ts.add(u,1,v,1),ts.add(v,0,u,0),ts.add(v,1,u,1);
-        else ts.add(u,0,v,1),ts.add(u,1,v,0),ts.add(v,0,u,1),ts.add(v,1,u,0);
+        if(k) ts.add(u,0,v,1),ts.add(u,1,v,0);
+        else ts.add(u,1,v,1),ts.add(u,0,v,0);
 	}
 	k=ts.ok();
 	if(!k) cout<<"Impossible\n";
