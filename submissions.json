@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54674561": {
+    "contest_id": 1169,
+    "language": "GNU C++17",
+    "path": "codeforces\\1169\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Pairs",
+    "problem_url": "https://codeforces.com/contest/1169/problem/B",
+    "submission_id": "CF54674561",
+    "submission_url": "https://codeforces.com/contest/1169/submission/54674561",
+    "tags": [
+      "graphs",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "May/26/2019 21:51"
+  },
   "CF54681919": {
     "contest_id": 1169,
     "language": "GNU C++17",
