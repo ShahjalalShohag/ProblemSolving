@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF54681919": {
+    "contest_id": 1169,
+    "language": "GNU C++17",
+    "path": "codeforces\\1169\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Increasing by Modulo",
+    "problem_url": "https://codeforces.com/contest/1169/problem/C",
+    "submission_id": "CF54681919",
+    "submission_url": "https://codeforces.com/contest/1169/submission/54681919",
+    "tags": [
+      "binary search",
+      "greedy",
+      "*1700"
+    ],
+    "timestamp": "May/26/2019 22:23"
+  },
   "CF54905674": {
     "contest_id": 1177,
     "language": "GNU C++17",
