@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF55042295": {
+    "contest_id": 1174,
+    "language": "GNU C++17",
+    "path": "codeforces\\1174\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Ehab and the Expected XOR Problem",
+    "problem_url": "https://codeforces.com/contest/1174/problem/D",
+    "submission_id": "CF55042295",
+    "submission_url": "https://codeforces.com/contest/1174/submission/55042295",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "*1900"
+    ],
+    "timestamp": "Jun/03/2019 21:18"
+  },
   "CF55077209": {
     "contest_id": 1174,
     "language": "GNU C++17",
