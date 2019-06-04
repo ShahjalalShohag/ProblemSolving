@@ -131,22 +131,21 @@ template <int32_t MOD> ostream & operator << (ostream & out, modint<MOD> n) { re
 
 
 modint<mod> dp[N][22][2];
-int n;
-int f(int x,int y)
-{
-    int k=y?3:1;
-    return n/((1<<x)*k);
-};
 int32_t main()
 {
     BeatMeScanf;
-    int i,j,k,m;
+    int i,j,k,n,m;
     cin>>n;
     int cnt=0;
     while((1<<cnt)<=n) cnt++;
     --cnt;
     dp[1][cnt][0]=1;
     if((1<<(cnt-1))*3<=n) dp[1][cnt-1][1]=1;
+    auto f=[&](int x,int y)
+    {
+        int k=y?3:1;
+        return n/((1<<x)*k);
+    };
     for(i=1;i<n;i++){
         for(int x=0;x<=cnt;x++){
             for(int y=0;y<=1;y++){
