@@ -130,7 +130,7 @@ template <int32_t MOD> modint<MOD> operator * (int32_t value, modint<MOD> n) { r
 template <int32_t MOD> ostream & operator << (ostream & out, modint<MOD> n) { return out << n.value; }
 
 
-int dp[N][22][2];
+modint<mod> dp[N][22][2];
 int n;
 int f(int x,int y)
 {
@@ -150,9 +150,9 @@ int32_t main()
     for(i=1;i<n;i++){
         for(int x=0;x<=cnt;x++){
             for(int y=0;y<=1;y++){
-                dp[i+1][x][y]=(dp[i+1][x][y]+1LL*dp[i][x][y]*(f(x,y)-i)%mod)%mod;
-                if(x) dp[i+1][x-1][y]=(dp[i+1][x-1][y]+1LL*dp[i][x][y]*(f(x-1,y)-f(x,y))%mod)%mod;
-                if(y) dp[i+1][x][y-1]=(dp[i+1][x][y-1]+1LL*dp[i][x][y]*(f(x,y-1)-f(x,y))%mod)%mod;
+                dp[i+1][x][y]+=dp[i][x][y]*(f(x,y)-i);
+                if(x) dp[i+1][x-1][y]+=dp[i][x][y]*(f(x-1,y)-f(x,y));
+                if(y) dp[i+1][x][y-1]+=dp[i][x][y]*(f(x,y-1)-f(x,y));
             }
         }
     }
