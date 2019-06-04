@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF55078917": {
+    "contest_id": 1174,
+    "language": "GNU C++17",
+    "path": "codeforces\\1174\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Ehab and the Expected GCD Problem",
+    "problem_url": "https://codeforces.com/contest/1174/problem/E",
+    "submission_id": "CF55078917",
+    "submission_url": "https://codeforces.com/contest/1174/submission/55078917",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "number theory",
+      "*2500"
+    ],
+    "timestamp": "Jun/04/2019 15:54"
+  },
   "CF55078958": {
     "contest_id": 1174,
     "language": "GNU C++17",
