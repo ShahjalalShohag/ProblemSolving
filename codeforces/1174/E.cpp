@@ -130,7 +130,7 @@ template <int32_t MOD> modint<MOD> operator * (int32_t value, modint<MOD> n) { r
 template <int32_t MOD> ostream & operator << (ostream & out, modint<MOD> n) { return out << n.value; }
 
 
-ll dp[2][20][2];
+int dp[N][22][2];
 int n;
 int f(int x,int y)
 {
@@ -147,26 +147,16 @@ int32_t main()
     --cnt;
     dp[1][cnt][0]=1;
     if((1<<(cnt-1))*3<=n) dp[1][cnt-1][1]=1;
-    int nw=1;
     for(i=1;i<n;i++){
-        mem(dp[nw^1],0);
         for(int x=0;x<=cnt;x++){
             for(int y=0;y<=1;y++){
-                dp[nw^1][x][y]+=dp[nw][x][y]*(f(x,y)-i);
-                dp[nw^1][x][y]%=mod;
-                if(x){
-                    dp[nw^1][x-1][y]+=dp[nw][x][y]*(f(x-1,y)-f(x,y));
-                    dp[nw^1][x-1][y]%=mod;
-                }
-                if(y){
-                    dp[nw^1][x][y-1]+=dp[nw][x][y]*(f(x,y-1)-f(x,y));
-                    dp[nw^1][x][y-1]%=mod;
-                }
+                dp[i+1][x][y]=(dp[i+1][x][y]+1LL*dp[i][x][y]*(f(x,y)-i)%mod)%mod;
+                if(x) dp[i+1][x-1][y]=(dp[i+1][x-1][y]+1LL*dp[i][x][y]*(f(x-1,y)-f(x,y))%mod)%mod;
+                if(y) dp[i+1][x][y-1]=(dp[i+1][x][y-1]+1LL*dp[i][x][y]*(f(x,y-1)-f(x,y))%mod)%mod;
             }
         }
-        nw^=1;
     }
-    cout<<dp[nw][0][0]<<nl;
+    cout<<dp[n][0][0]<<nl;
     return 0;
 }
 ///Before submit=>
