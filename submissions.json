@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF55366059": {
+    "contest_id": 1176,
+    "language": "GNU C++17",
+    "path": "codeforces\\1176\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Destroy it!",
+    "problem_url": "https://codeforces.com/contest/1176/problem/F",
+    "submission_id": "CF55366059",
+    "submission_url": "https://codeforces.com/contest/1176/submission/55366059",
+    "tags": [
+      "dp",
+      "implementation",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Jun/09/2019 22:08"
+  },
   "CF55435667": {
     "contest_id": 1182,
     "language": "GNU C++17",
