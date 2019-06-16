@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC5987110": {
+    "contest_id": "abc130",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc130\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Common Subsequence",
+    "problem_url": "https://atcoder.jp/contests/abc130/tasks/abc130_e",
+    "submission_id": "AC5987110",
+    "submission_url": "https://atcoder.jp/contests/abc130/submissions/5987110",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/16/2019 20:02"
+  },
   "AC5987118": {
     "contest_id": "abc130",
     "language": "C++14 (GCC 5.4.1)",
