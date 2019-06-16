@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF55635090": {
+    "contest_id": 1181,
+    "language": "GNU C++17",
+    "path": "codeforces\\1181\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Irrigation",
+    "problem_url": "https://codeforces.com/contest/1181/problem/D",
+    "submission_id": "CF55635090",
+    "submission_url": "https://codeforces.com/contest/1181/submission/55635090",
+    "tags": [
+      "binary search",
+      "data structures",
+      "implementation",
+      "sortings",
+      "trees",
+      "two pointers",
+      "*2200"
+    ],
+    "timestamp": "Jun/16/2019 16:43"
+  },
   "CF55641787": {
     "contest_id": 1181,
     "language": "GNU C++17",
