@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF55784282": {
+    "contest_id": 1185,
+    "language": "GNU C++17",
+    "path": "codeforces\\1185\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Polycarp and Snakes",
+    "problem_url": "https://codeforces.com/contest/1185/problem/E",
+    "submission_id": "CF55784282",
+    "submission_url": "https://codeforces.com/contest/1185/submission/55784282",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*2000"
+    ],
+    "timestamp": "Jun/19/2019 22:18"
+  },
   "CF55787591": {
     "contest_id": 1185,
     "language": "GNU C++17",
