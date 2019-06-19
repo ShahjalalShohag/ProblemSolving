@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF55797239": {
+    "contest_id": 1185,
+    "language": "GNU C++17",
+    "path": "codeforces\\1185\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Two Pizzas",
+    "problem_url": "https://codeforces.com/contest/1185/problem/F",
+    "submission_id": "CF55797239",
+    "submission_url": "https://codeforces.com/contest/1185/submission/55797239",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "*2100"
+    ],
+    "timestamp": "Jun/20/2019 00:10"
+  },
   "CF56081570": {
     "contest_id": 1183,
     "language": "GNU C++17",
