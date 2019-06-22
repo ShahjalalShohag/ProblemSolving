@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC6057994": {
+    "contest_id": "abc131",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc131\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Bite Eating",
+    "problem_url": "https://atcoder.jp/contests/abc131/tasks/abc131_b",
+    "submission_id": "AC6057994",
+    "submission_url": "https://atcoder.jp/contests/abc131/submissions/6057994",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jun/22/2019 18:10"
+  },
   "AC6059402": {
     "contest_id": "abc131",
     "language": "C++14 (GCC 5.4.1)",
