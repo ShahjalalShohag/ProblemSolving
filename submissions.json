@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC6053834": {
+    "contest_id": "abc131",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc131\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Security",
+    "problem_url": "https://atcoder.jp/contests/abc131/tasks/abc131_a",
+    "submission_id": "AC6053834",
+    "submission_url": "https://atcoder.jp/contests/abc131/submissions/6053834",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/22/2019 18:03"
+  },
   "AC6057994": {
     "contest_id": "abc131",
     "language": "C++14 (GCC 5.4.1)",
