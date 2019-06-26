@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF56127506": {
+    "contest_id": 1183,
+    "language": "GNU C++17",
+    "path": "codeforces\\1183\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Topforces Strikes Back",
+    "problem_url": "https://codeforces.com/contest/1183/problem/F",
+    "submission_id": "CF56127506",
+    "submission_url": "https://codeforces.com/contest/1183/submission/56127506",
+    "tags": [
+      "brute force",
+      "math",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Jun/26/2019 23:28"
+  },
   "CF57204306": {
     "contest_id": 1195,
     "language": "GNU C++17",
