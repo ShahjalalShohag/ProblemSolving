@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC6200658": {
+    "contest_id": "abc132",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc132\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Small Products",
+    "problem_url": "https://atcoder.jp/contests/abc132/tasks/abc132_f",
+    "submission_id": "AC6200658",
+    "submission_url": "https://atcoder.jp/contests/abc132/submissions/6200658",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jul/01/2019 00:53"
+  },
   "AC7248319": {
     "contest_id": "abc139",
     "language": "C++14 (GCC 5.4.1)",
