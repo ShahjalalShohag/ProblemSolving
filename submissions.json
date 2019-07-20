@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF57393768": {
+    "contest_id": 1178,
+    "language": "GNU C++17",
+    "path": "codeforces\\1178\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "WOW Factor",
+    "problem_url": "https://codeforces.com/contest/1178/problem/B",
+    "submission_id": "CF57393768",
+    "submission_url": "https://codeforces.com/contest/1178/submission/57393768",
+    "tags": [
+      "dp",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Jul/20/2019 21:57"
+  },
   "CF57395716": {
     "contest_id": 1178,
     "language": "GNU C++17",
