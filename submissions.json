@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF57386798": {
+    "contest_id": 1178,
+    "language": "GNU C++17",
+    "path": "codeforces\\1178\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Prime Minister",
+    "problem_url": "https://codeforces.com/contest/1178/problem/A",
+    "submission_id": "CF57386798",
+    "submission_url": "https://codeforces.com/contest/1178/submission/57386798",
+    "tags": [
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Jul/20/2019 21:42"
+  },
   "CF57393768": {
     "contest_id": 1178,
     "language": "GNU C++17",
