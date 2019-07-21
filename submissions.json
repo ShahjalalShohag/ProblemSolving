@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF57442710": {
+    "contest_id": 1178,
+    "language": "GNU C++17",
+    "path": "codeforces\\1178\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Archaeology",
+    "problem_url": "https://codeforces.com/contest/1178/problem/E",
+    "submission_id": "CF57442710",
+    "submission_url": "https://codeforces.com/contest/1178/submission/57442710",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Jul/21/2019 13:16"
+  },
   "CF57517004": {
     "contest_id": 1197,
     "language": "GNU C++17",
