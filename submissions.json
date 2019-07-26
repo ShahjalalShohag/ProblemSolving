@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF57813462": {
+    "contest_id": 785,
+    "language": "GNU C++17",
+    "path": "codeforces\\785\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Anton and Permutation",
+    "problem_url": "https://codeforces.com/contest/785/problem/E",
+    "submission_id": "CF57813462",
+    "submission_url": "https://codeforces.com/contest/785/submission/57813462",
+    "tags": [
+      "brute force",
+      "data structures",
+      "*2200"
+    ],
+    "timestamp": "Jul/27/2019 00:30"
+  },
   "CF58037857": {
     "contest_id": 1198,
     "language": "GNU C++17",
