@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF59001509": {
+    "contest_id": 1206,
+    "language": "GNU C++17",
+    "path": "codeforces\\1206\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Choose Two Numbers",
+    "problem_url": "https://codeforces.com/contest/1206/problem/A",
+    "submission_id": "CF59001509",
+    "submission_url": "https://codeforces.com/contest/1206/submission/59001509",
+    "tags": [
+      "math",
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Aug/18/2019 19:47"
+  },
   "CF59008371": {
     "contest_id": 1206,
     "language": "GNU C++17",
