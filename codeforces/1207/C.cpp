@@ -74,7 +74,7 @@ int32_t main()
     while(t--){
         int n=in(),a=in(),b=in();
         sf("%s",ch);
-        string s=ch;
+        string s(ch);
         dp[0][0]=b;
         dp[0][1]=1e18;
         for(int i=1;i<=n;i++){
@@ -94,4 +94,3 @@ int32_t main()
 ///Before submit=>
 ///    *check for integer overflow,array bounds
 ///    *check for n=1
-//
