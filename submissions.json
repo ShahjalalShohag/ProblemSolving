@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF59293158": {
+    "contest_id": 1207,
+    "language": "GNU C++17",
+    "path": "codeforces\\1207\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Number Of Permutations",
+    "problem_url": "https://codeforces.com/contest/1207/problem/D",
+    "submission_id": "CF59293158",
+    "submission_url": "https://codeforces.com/contest/1207/submission/59293158",
+    "tags": [
+      "combinatorics",
+      "*1800"
+    ],
+    "timestamp": "Aug/22/2019 21:18"
+  },
   "CF59307531": {
     "contest_id": 1207,
     "language": "GNU C++17",
