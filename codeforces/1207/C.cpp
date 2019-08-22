@@ -65,7 +65,7 @@ const double eps=1e-9;
 const double PI=acos(-1.0);
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-char ch[N];
+char s[N];
 ll dp[N][2];
 int32_t main()
 {
@@ -73,8 +73,7 @@ int32_t main()
     int t=in();
     while(t--){
         int n=in(),a=in(),b=in();
-        sf("%s",ch);
-        string s=ch;
+        sf("%s",s);
         dp[0][0]=b;
         dp[0][1]=1e18;
         for(int i=1;i<=n;i++){
