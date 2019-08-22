@@ -47,41 +47,55 @@ void deb(istream_iterator<string> it, T a, Args... args) {
     deb(++it, args...);
 }
 //template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-namespace IO
-{
-    #define in() ( { int a ; scanf("%d",&a); a; } )
-    #define LL() ( { ll a ; scanf("%lld",&a); a; } )
-    #define ULL() ( { ull a ; scanf("%llu",&a); a; } )
-    #define DD() ({ double a; scanf("%lf", &a); a;})
-    #define CC() ( { char a ; scanf("%c",&a); a; } )
-    #define pf1(a) printf("%d\n",a)
-    #define pf1ll(a) printf("%lld\n",a)
-}
-using namespace IO;
+
 
 const int mod=1e9+7;
 const int N=5e5+1;
 const double eps=1e-9;
 const double PI=acos(-1.0);
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
-
+int in()
+{
+    register int c = getchar();
+    register int x = 0;
+    int neg = 0;
+    for(;((c<48 || c>57) && c != '-');c = getchar());
+    if(c=='-') {neg=1;c=getchar();}
+    for(;c>47 && c<58;c = getchar()) {x = (x<<1) + (x<<3) + c - 48;}
+    if(neg) x=-x;
+    return x;
+}
+inline void out(int n)
+{
+    int N = n<0?-n:n, rev, cnt = 0;
+    rev = N;
+    if (N == 0) { putchar('0'); putchar('\n'); return ;}
+    while ((rev % 10) == 0) { cnt++; rev /= 10;}
+    if(n<0) putchar('-');
+    rev = 0;
+    while (N != 0) { rev = (rev<<3) + (rev<<1) + N % 10; N /= 10;}
+    while (rev != 0) { putchar(rev % 10 + '0'); rev /= 10;}
+    while (cnt--) putchar('0');
+    putchar('\n');
+    return;
+}
 int ans[1010][1010],a[N],bl=700;
 int32_t main()
 {
     ///BeatMeScanf;
     int q=in();
     while(q--){
-        int t=(int)LL(),x=(int)LL(),y=(int)LL();
+        int t=in(),x=in(),y=in();
         if(t==1){
             a[x]+=y;
             for(int i=1;i<=bl;i++) ans[i][x%i]+=y;
         }
         else{
-            if(x<=bl) pf1(ans[x][y]);
+            if(x<=bl) out(ans[x][y]);
             else{
                 int res=0;
                 for(int i=y;i<N;i+=x) res+=a[i];
-                pf1(res);
+                out(res);
             }
         }
     }
