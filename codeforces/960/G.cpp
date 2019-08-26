@@ -102,38 +102,36 @@ const ld PI=acos(-1.0);
 const int N = 1<<18;
 const int mod = 998244353;
 const int root=3;
+using LL = long long;
 int lim, rev[N], w[N], wn[N],inv_lim;
 void reduce(int &x) { x=(x%mod+mod)%mod;}
-int pow(int x, int y, int ans = 1)
-{
-	for (; y; y >>= 1, x = (ll) x * x % mod)
-		if (y & 1) ans = (ll) ans * x % mod;
+int pow(int x, int y, int ans = 1) {
+	for (; y; y >>= 1, x = (LL) x * x % mod)
+		if (y & 1) ans = (LL) ans * x % mod;
 	return ans;
 }
-void nttinit(int len)
-{
+void nttinit(int len) {
 	lim = wn[0] = 1;
 	int s = -1;
     while (lim < len) lim <<= 1, ++s;
 	for (int i = 0; i < lim; ++i) rev[i] = rev[i >> 1] >> 1 | (i & 1) << s;
 	const int g = pow(root, (mod - 1) / lim);
 	inv_lim=pow(lim, mod - 2);
-	for (int i = 1; i < lim; ++i) wn[i] = (ll) wn[i - 1] * g % mod;
+	for (int i = 1; i < lim; ++i) wn[i] = (LL) wn[i - 1] * g % mod;
 }
-void ntt(vi &a, int typ)
-{
+void ntt(vi &a, int typ) {
 	for (int i = 0; i < lim; ++i) if (i < rev[i]) swap(a[i], a[rev[i]]);
 	for (int i = 1; i < lim; i <<= 1) {
 		for (int j = 0, t = lim / i / 2; j < i; ++j) w[j] = wn[j * t];
 		for (int j = 0; j < lim; j += i << 1)
 			for (int k = 0; k < i; ++k) {
-				const int x = a[k + j], y = (ll) a[k + j + i] * w[k] % mod;
+				const int x = a[k + j], y = (LL) a[k + j + i] * w[k] % mod;
 				reduce(a[k + j] += y - mod), reduce(a[k + j + i] = x - y);
 			}
 	}
 	if (!typ) {
         reverse(a.begin() + 1, a.begin() + lim);
-		for (int i = 0; i < lim; ++i) a[i] = (ll) a[i] * inv_lim % mod;
+		for (int i = 0; i < lim; ++i) a[i] = (LL) a[i] * inv_lim % mod;
 	}
 }
 vi multiply(vi &f, vi &g)
@@ -144,74 +142,50 @@ vi multiply(vi &f, vi &g)
     a.resize(lim);
     b.resize(lim);
     ntt(a, 1), ntt(b, 1);
-    for (int i = 0; i < lim; ++i) a[i] = (ll) a[i] * b[i] % mod;
+    for (int i = 0; i < lim; ++i) a[i] = (LL) a[i] * b[i] % mod;
     ntt(a, 0);
-    while((int)a.size()&&a.back()==0) a.pop_back();
     return a;
 }
-int factor[N], ifactor[N];
-///return f(x+c)
-vi shift(vi &f,int c)
-{
-    int n=(int)f.size();
-    nttinit(n+n-1);
-    vi a=f;
-    a.resize(lim);
-    for (int i = 0; i < n; ++i) a[i] = (ll) a[i] * factor[i] % mod;
-    reverse(a.begin(), a.begin()+n);
-    vi b;
-    b.resize(lim);
-    b[0] = 1;
-    for (int i = 1; i < n; ++i) b[i] = (ll) b[i - 1] * c % mod;
-    for (int i = 0; i < n; ++i) b[i] = (ll) b[i] * ifactor[i] % mod;
-    ntt(a, 1), ntt(b, 1);
-    for (int i = 0; i < lim; ++i) a[i] = (ll) a[i] * b[i] % mod;
-    ntt(a, 0), reverse(a.begin(), a.begin() + n);
-    vi g;
-    g.resize(n);
-    for (int i = 0; i < n; ++i) g[i] = (ll) a[i] * ifactor[i] % mod;
-    return g;
-}
-///returns (x+1)*(x+2)*(x+3)...(x+n)
-///O(nlogn)
-vi range_mul(int n) {
-	if (n == 0) return vi({1});
-	if (n & 1) {
-		vi f=range_mul(n - 1);
-		f.push_back(0);
-		for (int i = (int)f.size()-1; i; --i) f[i] = (f[i - 1] + (ll) n * f[i]) % mod;
-		f[0] = (ll) f[0] * n % mod;
-		return f;
-	} else {
-		int n_ = n >> 1;
-		vi f=range_mul(n_);
-		vi tmp=shift(f,n_);
-		return multiply(f, tmp);
-	}
-}
+
+vi vec[N];
 int stirling(int n,int k)
 {
     if(n==0&&k==0) return 1;
     if(n<=0||k<=0) return 0;
-    vi x=vi({0,1});
-    vi y=range_mul(n-1);
-    vi ans=multiply(x,y);
-    if(k>=(int)ans.size()) return 0;
-    return ans[k];
+    int mx=1;
+    while(mx<n) mx<<=1;
+    for(int i=0;i<n;i++){
+        vec[i].eb(i);
+        vec[i].eb(1);
+    }
+    for(int i=n;i<mx;i++) vec[i].eb(1);
+    for(int j=mx;j>1;j>>=1){
+        int d=j>>1;
+        for(int i=0;i<d;i++){
+            vec[i]=multiply(vec[i],vec[i+d]);
+        }
+    }
+    if(k>=vec[0].size()) return 0;
+    return vec[0][k];
 }
 int ncr(int n,int r)
 {
     if(r<0||n<r) return 0;
-    return 1LL*factor[n]*ifactor[r]%mod*ifactor[n-r]%mod;
+    vi f(N,1),ifac(N,1),inv(N,1);
+    for (int i = 2; i <N; i++ ) {
+        inv[i] = (-(1LL*mod/i) * inv[mod%i] ) % mod;
+        inv[i] = (inv[i] + mod)%mod;
+    }
+    for(int i=1;i<N;i++){
+        f[i]=1LL*f[i-1]*i%mod;
+        ifac[i]=1LL*ifac[i-1]*inv[i]%mod;
+    }
+    return 1LL*f[n]*ifac[r]%mod*ifac[n-r]%mod;
 }
 int main()
 {
     BeatMeScanf;
     int i,j,k,n,m,a,b;
-    factor[0] = 1;
-	for (int i = 1; i < N; ++i) factor[i] = (ll) factor[i - 1] * i % mod;
-	ifactor[N - 1] = pow(factor[N - 1], mod - 2);
-	for (int i = N - 1; i; --i) ifactor[i - 1] = (ll) ifactor[i] * i % mod;
     cin>>n>>a>>b;
     cout<<1LL*stirling(n-1,a+b-2)*ncr(a+b-2,a-1)%mod<<nl;
     return 0;
