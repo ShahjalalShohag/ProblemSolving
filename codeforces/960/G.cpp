@@ -131,16 +131,16 @@ void fft(vi &A, int typ) {
 		for (int i = 0; i < lim; ++i) A[i] = (LL) A[i] * il % mod;
 	}
 }
-void poly_mul(vi &f, vi &g,vi &h) { // h(x) = f(x) * g(x)
+vi poly_mul(vi &f, vi &g) { // h(x) = f(x) * g(x)
     int n=(int)f.size()+(int)g.size()-1;
     fftinit(n);
     vi a=f,b=g;
     a.resize(lim);
     b.resize(lim);
-    h.resize(lim);
     fft(a, 1), fft(b, 1);
-    for (int i = 0; i < lim; ++i) h[i] = (LL) a[i] * b[i] % mod;
-    fft(h, 0);
+    for (int i = 0; i < lim; ++i) a[i] = (LL) a[i] * b[i] % mod;
+    fft(a, 0);
+    return a;
 }
 
 vi vec[N];
@@ -158,7 +158,7 @@ int stirling(int n,int k)
     for(int j=mx;j>1;j>>=1){
         int d=j>>1;
         for(int i=0;i<d;i++){
-            poly_mul(vec[i],vec[i+d],vec[i]);
+            vec[i]=poly_mul(vec[i],vec[i+d]);
         }
     }
     if(k>=vec[0].size()) return 0;
