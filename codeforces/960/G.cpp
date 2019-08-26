@@ -103,7 +103,7 @@ const int N = 1<<18;
 const int mod = 998244353;
 const int root=3;
 int lim, rev[N], w[N], wn[N],inv_lim;
-void reduce(int &x) { x=(x+mod)%mod;}
+void reduce(int &x) { x=(x%mod+mod)%mod;}
 int pow(int x, int y, int ans = 1)
 {
 	for (; y; y >>= 1, x = (ll) x * x % mod)
