@@ -103,51 +103,44 @@ const int N = 1<<18;
 const int mod = 998244353;
 const int root=3;
 using LL = long long;
-int lim, rev[N], w[N],inv_lim;
-inline int Pow(int a, int p) {
-	int ret = 1; while(p) {
-		if(p & 1) ret = (ll) ret * a % mod;
-		a = (ll) a * a % mod;
-		p >>= 1;
-	} return ret;
+int lim, s, rev[N], w[N], wn[N], factor[N], ifactor[N], n, k, ans;
+void reduce(int &x) { x=(x%mod+mod)%mod;}
+int pow(int x, int y, int ans = 1) {
+	for (; y; y >>= 1, x = (LL) x * x % mod)
+		if (y & 1) ans = (LL) ans * x % mod;
+	return ans;
 }
-
-void prepare(int &n) {
-    lim=1;
-    while(lim<n) lim<<=1;
-	int sz = 31 - __builtin_clz(lim); sz = abs(sz);
-	int r = Pow(root, (mod - 1) / lim);
-	inv_lim = Pow(lim, mod - 2);
-	w[0] = w[lim] = 1;
-	for(int i = 1; i < lim; ++i) w[i] = (ll)w[i - 1] * r % mod;
-	for(int i = 1; i < lim; ++i) rev[i] = (rev[i >> 1] >> 1) | ((i & 1) << (sz - 1));
+void fftinit(int len) {
+	lim = wn[0] = 1, s = -1; while (lim < len) lim <<= 1, ++s;
+	for (int i = 0; i < lim; ++i) rev[i] = rev[i >> 1] >> 1 | (i & 1) << s;
+	const int g = pow(root, (mod - 1) / lim);
+	for (int i = 1; i < lim; ++i) wn[i] = (LL) wn[i - 1] * g % mod;
 }
-
-void ntt(vi &a, int dir = 0) {
-	for(int i = 1; i < lim - 1; ++i)
-		if(i < rev[i]) swap(a[i], a[rev[i]]);
-	for(int m = 2; m <= lim; m <<= 1) {
-		for(int i = 0; i < lim; i += m) {
-			for(int j = 0; j < (m >> 1); ++j) {
-				int &u = a[i + j], &v = a[i + j + (m >> 1)];
-				int t = (ll)v * w[dir ? lim - lim / m * j : lim / m * j] % mod;
-				v = u - t < 0 ? u - t + mod : u - t;
-			 	u = u + t >= mod ? u + t - mod : u + t;
+void fft(vi &A, int typ) {
+	for (int i = 0; i < lim; ++i) if (i < rev[i]) swap(A[i], A[rev[i]]);
+	for (int i = 1; i < lim; i <<= 1) {
+		for (int j = 0, t = lim / i / 2; j < i; ++j) w[j] = wn[j * t];
+		for (int j = 0; j < lim; j += i << 1)
+			for (int k = 0; k < i; ++k) {
+				const int x = A[k + j], y = (LL) A[k + j + i] * w[k] % mod;
+				reduce(A[k + j] += y - mod), reduce(A[k + j + i] = x - y);
 			}
-		}
-	} if(dir) for(int i = 0; i < lim; ++i) a[i] = (ll) a[i] * inv_lim % mod;
+	}
+	if (!typ) {
+		const int il = pow(lim, mod - 2); reverse(A.begin() + 1, A.begin() + lim);
+		for (int i = 0; i < lim; ++i) A[i] = (LL) A[i] * il % mod;
+	}
 }
-
-vi multiply(vi &f, vi &g) { // return f(x) * g(x)
+void poly_mul(vi &f, vi &g,vi &h) { // h(x) = f(x) * g(x)
     int n=(int)f.size()+(int)g.size()-1;
-    prepare(n);
+    fftinit(n);
     vi a=f,b=g;
     a.resize(lim);
     b.resize(lim);
-    ntt(a, 0), ntt(b, 0);
-    for (int i = 0; i < lim; ++i) a[i] = (LL) a[i] * b[i] % mod;
-    ntt(a, 1);
-    return a;
+    h.resize(lim);
+    fft(a, 1), fft(b, 1);
+    for (int i = 0; i < lim; ++i) h[i] = (LL) a[i] * b[i] % mod;
+    fft(h, 0);
 }
 
 vi vec[N];
@@ -165,7 +158,7 @@ int stirling(int n,int k)
     for(int j=mx;j>1;j>>=1){
         int d=j>>1;
         for(int i=0;i<d;i++){
-            vec[i]=multiply(vec[i],vec[i+d]);
+            poly_mul(vec[i],vec[i+d],vec[i]);
         }
     }
     if(k>=vec[0].size()) return 0;
@@ -193,3 +186,8 @@ int main()
     cout<<1LL*stirling(n-1,a+b-2)*ncr(a+b-2,a-1)%mod<<nl;
     return 0;
 }
+/*
+Before submit=>
+    *check for integer overflow
+    *check for n=1
+*/
