@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF59540344": {
+    "contest_id": 960,
+    "language": "GNU C++17",
+    "path": "codeforces\\960\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Bandit Blues",
+    "problem_url": "https://codeforces.com/contest/960/problem/G",
+    "submission_id": "CF59540344",
+    "submission_url": "https://codeforces.com/contest/960/submission/59540344",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "fft",
+      "math",
+      "*2900"
+    ],
+    "timestamp": "Aug/27/2019 00:37"
+  },
   "CF59558028": {
     "contest_id": 845,
     "language": "GNU C++17",
