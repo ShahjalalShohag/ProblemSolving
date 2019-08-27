@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF59558028": {
+    "contest_id": 845,
+    "language": "GNU C++17",
+    "path": "codeforces\\845\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Shortest Path Problem?",
+    "problem_url": "https://codeforces.com/contest/845/problem/G",
+    "submission_id": "CF59558028",
+    "submission_url": "https://codeforces.com/contest/845/submission/59558028",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "math",
+      "*2300"
+    ],
+    "timestamp": "Aug/27/2019 13:10"
+  },
   "CF59558264": {
     "contest_id": 845,
     "language": "GNU C++17",

@@ -65,61 +65,26 @@ const double eps=1e-9;
 const double PI=acos(-1.0);
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-const int MAXLOG = 31;
-
-struct basis
-{
-    int base[MAXLOG];
-
-    void clear()
-    {
-		for(int i = MAXLOG - 1; i >= 0; i--)
-			base[i] = 0;
-    }
-
-    void add(int val)
-    {
-    	for(int i = MAXLOG - 1; i >= 0; i--)
-			if((val >> i) & 1)
-			{	if(!base[i]) { base[i] = val; return; }
-				else val ^= base[i];
+struct minxor {
+	int best[32], msb;
+	minxor() { memset(best, -1, sizeof best); }
+	void add(int x) {
+		while(x > 0) {
+			msb = 31 - __builtin_clz(x);
+			if(best[msb] == -1) {
+				best[msb] = x;
+				break;
 			}
+			else x = x ^ best[msb];
+		}
 	}
-
-    inline int size()
-    {
-    	int sz = 0;
-    	for(int i = 0; i < MAXLOG; i++)
-			sz += (bool)(base[i]);
-		return sz;
-    }
-
-    int max_xor(int res=0)
-    {
-		for(int i = MAXLOG - 1; i >= 0; i--)
-			if(!((res >> i) & 1) && base[i])
-				res ^= base[i];
-
-		return res;
+	int get(int ret = 0) {
+		for(int i = 31; i >= 0; i--) {
+			if(best[i] != -1) ret = min(ret, ret ^ best[i]);
+		}
+        return ret;
 	}
-    int min_xor(int res=0)
-    {
-		for(int i = MAXLOG - 1; i >= 0; i--)
-			if(((res >> i) & 1) && base[i])
-				res ^= base[i];
-
-		return res;
-	}
-
-    bool can_create(int val)
-    {
-		for(int i = MAXLOG - 1; i >= 0; i--)
-			if(((val >> i) & 1) && base[i])
-				val ^= base[i];
-
-		return (val == 0);
-    }
-}XOR;
+} XOR;
 
 vpii g[N];
 bool vis[N];
@@ -143,7 +108,7 @@ int32_t main()
         g[v].eb(u,w);
     }
     dfs(1);
-    pf1(XOR.min_xor(d[1]^d[n]));
+    pf1(XOR.get(d[1]^d[n]));
     return 0;
 }
 ///Before submit=>
