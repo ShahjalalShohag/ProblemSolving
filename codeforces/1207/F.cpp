@@ -50,7 +50,7 @@ void deb(istream_iterator<string> it, T a, Args... args) {
 namespace IO
 {
     #define in() ( { int a ; scanf("%d",&a); a; } )
-    #define LL() ( { ll a ; scanf("%I64d",&a); a; } )
+    #define LL() ( { ll a ; scanf("%lld",&a); a; } )
     #define ULL() ( { ull a ; scanf("%llu",&a); a; } )
     #define DD() ({ double a; scanf("%lf", &a); a;})
     #define CC() ( { char a ; scanf("%c",&a); a; } )
