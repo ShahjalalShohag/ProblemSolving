@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF60546220": {
+    "contest_id": 1209,
+    "language": "GNU C++17",
+    "path": "codeforces\\1209\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Paint the Digits",
+    "problem_url": "https://codeforces.com/contest/1209/problem/C",
+    "submission_id": "CF60546220",
+    "submission_url": "https://codeforces.com/contest/1209/submission/60546220",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Sep/14/2019 19:43"
+  },
   "CF60549636": {
     "contest_id": 1209,
     "language": "GNU C++17",
