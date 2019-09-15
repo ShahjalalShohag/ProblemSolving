@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC7548761": {
+    "contest_id": "abc141",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc141\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Xor Sum 3",
+    "problem_url": "https://atcoder.jp/contests/abc141/tasks/abc141_f",
+    "submission_id": "AC7548761",
+    "submission_url": "https://atcoder.jp/contests/abc141/submissions/7548761",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Sep/15/2019 20:58"
+  },
   "AC7635944": {
     "contest_id": "agc038",
     "language": "C++14 (GCC 5.4.1)",
