@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF60636666": {
+    "contest_id": 1218,
+    "language": "GNU C++17",
+    "path": "codeforces\\1218\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Workout plan",
+    "problem_url": "https://codeforces.com/contest/1218/problem/F",
+    "submission_id": "CF60636666",
+    "submission_url": "https://codeforces.com/contest/1218/submission/60636666",
+    "tags": [
+      "data structures",
+      "greedy",
+      "*1500"
+    ],
+    "timestamp": "Sep/15/2019 20:07"
+  },
   "CF60676588": {
     "contest_id": 1209,
     "language": "GNU C++17",
