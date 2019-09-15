@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF60636049": {
+    "contest_id": 1218,
+    "language": "GNU C++17",
+    "path": "codeforces\\1218\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Product Tuples",
+    "problem_url": "https://codeforces.com/contest/1218/problem/E",
+    "submission_id": "CF60636049",
+    "submission_url": "https://codeforces.com/contest/1218/submission/60636049",
+    "tags": [
+      "divide and conquer",
+      "fft",
+      "*2500"
+    ],
+    "timestamp": "Sep/15/2019 19:53"
+  },
   "CF60636666": {
     "contest_id": 1218,
     "language": "GNU C++17",
