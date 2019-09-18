@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF60815217": {
+    "contest_id": 1220,
+    "language": "GNU C++17",
+    "path": "codeforces\\1220\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Tourism",
+    "problem_url": "https://codeforces.com/contest/1220/problem/E",
+    "submission_id": "CF60815217",
+    "submission_url": "https://codeforces.com/contest/1220/submission/60815217",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "dsu",
+      "graphs",
+      "greedy",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "Sep/19/2019 02:01"
+  },
   "CF60840904": {
     "contest_id": 1220,
     "language": "GNU C++17",
