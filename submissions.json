@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC7635944": {
+    "contest_id": "agc038",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\agc038\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "01 Matrix",
+    "problem_url": "https://atcoder.jp/contests/agc038/tasks/agc038_a",
+    "submission_id": "AC7635944",
+    "submission_url": "https://atcoder.jp/contests/agc038/submissions/7635944",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/21/2019 18:09"
+  },
   "AC7639536": {
     "contest_id": "agc038",
     "language": "C++14 (GCC 5.4.1)",
