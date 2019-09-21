@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC7639536": {
+    "contest_id": "agc038",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\agc038\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Sorting a Segment",
+    "problem_url": "https://atcoder.jp/contests/agc038/tasks/agc038_b",
+    "submission_id": "AC7639536",
+    "submission_url": "https://atcoder.jp/contests/agc038/submissions/7639536",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Sep/21/2019 18:56"
+  },
   "AC7645204": {
     "contest_id": "agc038",
     "language": "C++14 (GCC 5.4.1)",
