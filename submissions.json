@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8022727": {
+    "contest_id": "abc143",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc143\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "TAKOYAKI FESTIVAL 2019",
+    "problem_url": "https://atcoder.jp/contests/abc143/tasks/abc143_b",
+    "submission_id": "AC8022727",
+    "submission_url": "https://atcoder.jp/contests/abc143/submissions/8022727",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Oct/19/2019 18:03"
+  },
   "AC8024481": {
     "contest_id": "abc143",
     "language": "C++14 (GCC 5.4.1)",
