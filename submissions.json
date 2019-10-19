@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8024481": {
+    "contest_id": "abc143",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc143\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Slimes",
+    "problem_url": "https://atcoder.jp/contests/abc143/tasks/abc143_c",
+    "submission_id": "AC8024481",
+    "submission_url": "https://atcoder.jp/contests/abc143/submissions/8024481",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Oct/19/2019 18:05"
+  },
   "AC8028320": {
     "contest_id": "abc143",
     "language": "C++14 (GCC 5.4.1)",
