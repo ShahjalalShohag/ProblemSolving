@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8167200": {
+    "contest_id": "abc144",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc144\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Gluttony",
+    "problem_url": "https://atcoder.jp/contests/abc144/tasks/abc144_e",
+    "submission_id": "AC8167200",
+    "submission_url": "https://atcoder.jp/contests/abc144/submissions/8167200",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Oct/27/2019 18:48"
+  },
   "AC8179317": {
     "contest_id": "abc144",
     "language": "C++14 (GCC 5.4.1)",
