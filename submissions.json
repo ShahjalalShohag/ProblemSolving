@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8147924": {
+    "contest_id": "abc144",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc144\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "9x9",
+    "problem_url": "https://atcoder.jp/contests/abc144/tasks/abc144_a",
+    "submission_id": "AC8147924",
+    "submission_url": "https://atcoder.jp/contests/abc144/submissions/8147924",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Oct/27/2019 18:01"
+  },
   "AC8150364": {
     "contest_id": "abc144",
     "language": "C++14 (GCC 5.4.1)",
