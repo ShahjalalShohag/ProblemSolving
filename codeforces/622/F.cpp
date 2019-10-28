@@ -1,73 +1,102 @@
+//#pragma comment(linker, "/stack:200000000")
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+//#pragma GCC optimize("unroll-loops")
 #include<bits/stdc++.h>
+//#include<ext/pb_ds/assoc_container.hpp>
+//#include<ext/pb_ds/tree_policy.hpp>
+//using namespace __gnu_pbds;
 using namespace std;
 
-const int N = 3e5 + 9, mod = 1e9 + 7;
+#define ll long long
+#define ull unsigned long long
+#define ld long double
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define vi vector<int>
+#define vll vector<ll>
+#define vpll vector<pll>
+#define vpii vector<pii>
+#define pb push_back
+#define eb emplace_back
+#define mt make_tuple
+#define MP make_pair
+#define fs first
+#define sc second
+#define F first
+#define S second
+#define nl "\n"
+#define asche cerr<<"Ekhane asche\n";
+#define pf printf
+#define sf scanf
+#define mem(a,x) memset(a,x,sizeof(a))
+#define SZ(v) (int)v.size()
+#define all(v) v.begin(),v.end()
+#define one(x) __builtin_popcount(x)
+#define fout(x) fixed<<setprecision(x)
+#define BeatMeScanf ios_base::sync_with_stdio(false)
+//int dx[]={1,0,-1,0,1,-1,-1,1};
+//int dy[]={0,1,0,-1,1,1,-1,-1};
+mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
+#define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); deb(_it, args); }
+void deb(istream_iterator<string> it) {}
+template<typename T, typename... Args>
+void deb(istream_iterator<string> it, T a, Args... args) {
+    cerr << *it << " = " << a << endl;
+    deb(++it, args...);
+}
+//template <typename T> using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+namespace IO
+{
+    #define in() ( { int a ; scanf("%d",&a); a; } )
+    #define LL() ( { ll a ; scanf("%lld",&a); a; } )
+    #define ULL() ( { ull a ; scanf("%llu",&a); a; } )
+    #define DD() ({ double a; scanf("%lf", &a); a;})
+    #define CC() ( { char a ; scanf("%c",&a); a; } )
+    #define pf1(a) printf("%d\n",a)
+    #define pf1ll(a) printf("%lld\n",a)
+}
+using namespace IO;
 
-template <int32_t MOD>
-struct modint {
-    int32_t value;
-    modint() = default;
-    modint(int32_t value_) : value(value_) {}
-    inline modint<MOD> operator + (modint<MOD> other) const { int32_t c = this->value + other.value; return modint<MOD>(c >= MOD ? c - MOD : c); }
-    inline modint<MOD> operator - (modint<MOD> other) const { int32_t c = this->value - other.value; return modint<MOD>(c <    0 ? c + MOD : c); }
-    inline modint<MOD> operator * (modint<MOD> other) const { int32_t c = (int64_t)this->value * other.value % MOD; return modint<MOD>(c < 0 ? c + MOD : c); }
-    inline modint<MOD> & operator += (modint<MOD> other) { this->value += other.value; if (this->value >= MOD) this->value -= MOD; return *this; }
-    inline modint<MOD> & operator -= (modint<MOD> other) { this->value -= other.value; if (this->value <    0) this->value += MOD; return *this; }
-    inline modint<MOD> & operator *= (modint<MOD> other) { this->value = (int64_t)this->value * other.value % MOD; if (this->value < 0) this->value += MOD; return *this; }
-    inline modint<MOD> operator - () const { return modint<MOD>(this->value ? MOD - this->value : 0); }
-    modint<MOD> pow(uint64_t k) const {
-        modint<MOD> x = *this, y = 1;
-        for (; k; k >>= 1) {
-            if (k & 1) y *= x;
-            x *= x;
-        }
-        return y;
+const int mod=1e9+7;
+const int N=3e5+9;
+const double eps=1e-9;
+const double PI=acos(-1.0);
+ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
+
+///p=first n+1 points[1..n+1] of the n degree polynomial,returns f(x)%mod
+///1 indexed,p[0]=0
+int lagrange(vector<int> &p, ll x){
+    int ans = 0;
+    int k = 1;
+    int n = SZ(p);
+    if(x<n) return p[x];
+    for(int i = 2;i<n;++i){
+        k = 1LL*k * (x - i)%mod;
+        k = 1LL*k * qpow((1-i+mod)%mod,mod-2)%mod;
     }
-    modint<MOD> inv() const { return pow(MOD - 2); }  // MOD must be a prime
-    inline modint<MOD> operator /  (modint<MOD> other) const { return *this *  other.inv(); }
-    inline modint<MOD> operator /= (modint<MOD> other)       { return *this *= other.inv(); }
-    inline bool operator == (modint<MOD> other) const { return value == other.value; }
-    inline bool operator != (modint<MOD> other) const { return value != other.value; }
-    inline bool operator < (modint<MOD> other) const { return value < other.value; }
-    inline bool operator > (modint<MOD> other) const { return value > other.value; }
-};
-template <int32_t MOD> modint<MOD> operator * (int64_t value, modint<MOD> n) { return modint<MOD>(value) * n; }
-template <int32_t MOD> modint<MOD> operator * (int32_t value, modint<MOD> n) { return modint<MOD>(value % MOD) * n; }
-template <int32_t MOD> ostream & operator << (ostream & out, modint<MOD> n) { return out << n.value; }
-
-using mint = modint<mod>;
-
-//p = first n + 1 points: a, a+d, ..., a+n*d of the n degree polynomial, returns f(x)
-mint Lagrange(const vector<mint> &p, mint x, mint a = 0, mint d = 1) {
-    int n = p.size() - 1;
-    if (a == 0 and d == 1 and x.value <= n) return p[x.value];
- 
-    vector<mint> pref(n + 1, 1), suf(n + 1, 1);
-    for (int i = 0; i < n; i++) pref[i + 1] = pref[i] * (x - (a + d * i));
-    for (int i = n; i > 0; i--) suf[i - 1] = suf[i] * (x - (a + d * i));
- 
-    vector<mint> fact(n + 1, 1),finv(n + 1, 1);
-    for (int i = 1; i <= n; i++) fact[i] = fact[i - 1] * d * i;
-    finv[n] /= fact[n];
-    for (int i = n; i >= 1; i--) finv[i - 1] = finv[i] * d * i;
- 
-    mint ans = 0;
-    for (int i = 0; i <= n; i++) {
-        mint tmp = p[i] * pref[i] * suf[i] * finv[i] * finv[n-i];
-        if ((n - i) & 1) ans -= tmp;
-        else ans += tmp;
+    for(int i=1;i<n;++i){
+        ans = (ans + 1LL*p[i]*k%mod)%mod;
+        if(i + 1 >= n)break;
+        k = 1LL*k * (x - i) %mod*qpow(x - i - 1,mod-2) %mod;
+        k = 1LL*k * qpow(i,mod-2)%mod;
+        k = 1LL*k * (-1) * (n - 1 - i)%mod;
+        k=(k+mod)%mod;
     }
- 
+    ans = (ans + mod)%mod;
     return ans;
 }
-int32_t main() {
-	int n, k; cin >> n >> k;
-    vector<mint> p;
-    mint sum = 0; p.push_back(0);
-    for (int i = 1; i <= k + 1; i++) {
-    	sum += mint(i).pow(k);
-    	p.push_back(sum);
-    }
-    cout << Lagrange(p, n) << '\n';
+
+int32_t main()
+{
+    int n=in(),k=in();
+    vi p;
+    p.eb(0);
+    int sum=0;
+    for(int i=1;i<=k+2;i++) sum=(sum+qpow(i,k))%mod,p.eb(sum);
+    pf1(lagrange(p,n));
     return 0;
 }
+///Before submit=>
+///    *check for integer overflow,array bounds
+///    *check for n=1

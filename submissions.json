@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF63685658": {
+    "contest_id": 622,
+    "language": "GNU C++17",
+    "path": "codeforces\\622\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "The Sum of the k-th Powers",
+    "problem_url": "https://codeforces.com/contest/622/problem/F",
+    "submission_id": "CF63685658",
+    "submission_url": "https://codeforces.com/contest/622/submission/63685658",
+    "tags": [
+      "math",
+      "*2600"
+    ],
+    "timestamp": "Oct/29/2019 04:25"
+  },
   "CF63785091": {
     "contest_id": 1198,
     "language": "GNU C++17",
