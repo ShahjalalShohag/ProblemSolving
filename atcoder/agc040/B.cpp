@@ -92,7 +92,7 @@ int32_t main()
     int n=in();
     vpii v(n);
     for(auto &x: v) x.F=in(),x.S=in();
-    //for(int i=1;i<n;i++) if(v[i].S>v[0].S) swap(v[0],v[i]);
+    for(int i=1;i<n;i++) if(v[i].S>v[0].S) swap(v[0],v[i]);
     int ans=0;
     sort(all(v));
     ans=max(ans,check(v));
