@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF64390156": {
+    "contest_id": 1243,
+    "language": "GNU C++17",
+    "path": "codeforces\\1243\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "0-1 MST",
+    "problem_url": "https://codeforces.com/contest/1243/problem/D",
+    "submission_id": "CF64390156",
+    "submission_url": "https://codeforces.com/contest/1243/submission/64390156",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "two pointers",
+      "*1900"
+    ],
+    "timestamp": "Nov/06/2019 21:42"
+  },
   "CF64403843": {
     "contest_id": 1243,
     "language": "GNU C++17",
