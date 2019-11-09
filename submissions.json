@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8362391": {
+    "contest_id": "nikkei2019-2-qual",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\nikkei2019-2-qual\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Counting of Trees",
+    "problem_url": "https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_b",
+    "submission_id": "AC8362391",
+    "submission_url": "https://atcoder.jp/contests/nikkei2019-2-qual/submissions/8362391",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Nov/09/2019 19:16"
+  },
   "AC8401116": {
     "contest_id": "agc017",
     "language": "C++14 (GCC 5.4.1)",
