@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8401116": {
+    "contest_id": "agc017",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\agc017\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Game on Tree",
+    "problem_url": "https://atcoder.jp/contests/agc017/tasks/agc017_d",
+    "submission_id": "AC8401116",
+    "submission_url": "https://atcoder.jp/contests/agc017/submissions/8401116",
+    "tags": [
+      "AtCoder",
+      "*1100"
+    ],
+    "timestamp": "Nov/11/2019 23:12"
+  },
   "AC8592554": {
     "contest_id": "ddcc2020-qual",
     "language": "C++14 (GCC 5.4.1)",
