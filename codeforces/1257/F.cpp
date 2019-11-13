@@ -75,7 +75,6 @@ int32_t main()
     }
     sort(all(v));
     v.erase(unique(all(v)),v.end());
-    random_shuffle(all(v));
     for(unsigned int i=0;i<(1<<30);i++){
         unsigned int ans=__builtin_popcount(i^v[0]);
         for(auto x:v){
