@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF64836073": {
+    "contest_id": 1257,
+    "language": "GNU C++17",
+    "path": "codeforces\\1257\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "The Contest",
+    "problem_url": "https://codeforces.com/contest/1257/problem/E",
+    "submission_id": "CF64836073",
+    "submission_url": "https://codeforces.com/contest/1257/submission/64836073",
+    "tags": [
+      "data structures",
+      "dp",
+      "greedy",
+      "*2000"
+    ],
+    "timestamp": "Nov/13/2019 22:13"
+  },
   "CF64845949": {
     "contest_id": 1257,
     "language": "GNU C++17",
