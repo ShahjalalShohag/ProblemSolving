@@ -69,16 +69,16 @@ ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%
 int32_t main()
 {
     int n=in();
-    vector< int> v;
-    for( int i=0;i<n;i++){
+    vector<unsigned int> v;
+    for(unsigned int i=0;i<n;i++){
         int k=in();
         v.eb(k);
     }
     sort(all(v));
     v.erase(unique(all(v)),v.end());
     random_shuffle(all(v));
-    for( int i=0;i<(1<<30);i++){
-         int ans=__builtin_popcount(i^v[0]);
+    for(unsigned int i=0;i<(1<<30);i++){
+        unsigned int ans=__builtin_popcount(i^v[0]);
         for(auto x:v){
             if(__builtin_popcount(x^i)!=ans){
                 ans=-1;
