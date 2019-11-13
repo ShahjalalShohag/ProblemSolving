@@ -1,7 +1,7 @@
-#pragma comment(linker, "/stack:200000000")
-#pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-#pragma GCC optimize("unroll-loops")
+//#pragma comment(linker, "/stack:200000000")
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+//#pragma GCC optimize("unroll-loops")
 #include<bits/stdc++.h>
 //#include<ext/pb_ds/assoc_container.hpp>
 //#include<ext/pb_ds/tree_policy.hpp>
@@ -64,28 +64,41 @@ const double eps=1e-9;
 const double PI=acos(-1.0);
 ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
 
-
+int a[110];
+map<vi,int>mp;
 int32_t main()
 {
     int n=in();
-    vector<unsigned int> v;
-    for(unsigned int i=0;i<n;i++){
-        int k=in();
-        v.eb(k);
-    }
-    sort(all(v));
-    v.erase(unique(all(v)),v.end());
-    for(unsigned int i=0;i<(1<<30);i++){
-        unsigned int ans=__builtin_popcount(i^v[0]);
-        for(auto x:v){
-            if(__builtin_popcount(x^i)!=ans){
-                ans=-1;
-                break;
-            }
+    for(int i=1;i<=n;i++) a[i]=in();
+    for(int mask=0;mask<(1<<15);mask++){
+        vi v;
+        for(int i=1;i<=n;i++){
+            int x=mask^a[i];
+            x&=(1<<15)-1;
+            v.eb(__builtin_popcount(x));
         }
-        if(ans!=-1){
-            cout<<i<<nl;
-            return 0;
+        mp[v]=mask;
+    }
+    int last=(1<<15)-1;
+    last=~last;
+    for(int mask=0;mask<(1<<15);mask++){
+        vi v;
+        int m=0;
+        for(int i=1;i<=n;i++){
+            int x=(mask<<15)^a[i];
+            x&=last;
+            int k=__builtin_popcount(x);
+            m=max(m,k);
+            v.eb(k);
+        }
+        for(int k=m;k<=30;k++){
+            vi p;
+            for(auto x:v) p.eb(k-x);
+            if(mp.find(p)!=mp.end()){
+                int ans=(mask<<15)|mp[p];
+                pf1(ans);
+                return 0;
+            }
         }
     }
     puts("-1");
