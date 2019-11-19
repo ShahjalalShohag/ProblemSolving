@@ -23,13 +23,9 @@ int qpow(int n,int k)
     return ans;
 }
 int t[N];
-inline void add(int &a,int &b)
-{
-    if((a+=b)>=mod) a-=mod;
-}
 void upd(int i,int x)
 {
-    while(i<N)add(t[i],x),i+=i&-i;
+    while(i<N)(t[i]+=x)%=mod,i+=i&-i;
 }
 void upd(int l,int r,int x)
 {
@@ -39,7 +35,7 @@ void upd(int l,int r,int x)
 int query(int i)
 {
     int ans=0;
-    while(i) add(ans,t[i]),i-=i&-i;
+    while(i) (ans+=t[i])%=mod,i-=i&-i;
     return ans;
 }
 int T,st[N],en[N],sz[N],sum[N];
@@ -90,13 +86,13 @@ int32_t main()
                 auto p=x.second;
                 upd(p.first,p.second,1LL*(n-s)*k%mod);
             }
-            add(sum[u],k);
+            (sum[u]+=k)%=mod;
         }
         else{
             int u=in();
             int ans=query(st[u]);
             ans=1LL*ans*inv%mod;
-            add(ans,sum[u]);
+            (ans+=sum[u])%=mod;
             printf("%d\n",ans);
         }
     }
