@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF65340576": {
+    "contest_id": 1253,
+    "language": "GNU C++17",
+    "path": "codeforces\\1253\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Cheap Robot",
+    "problem_url": "https://codeforces.com/contest/1253/problem/F",
+    "submission_id": "CF65340576",
+    "submission_url": "https://codeforces.com/contest/1253/submission/65340576",
+    "tags": [
+      "binary search",
+      "dsu",
+      "graphs",
+      "shortest paths",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Nov/19/2019 16:46"
+  },
   "CF65393646": {
     "contest_id": 1254,
     "language": "GNU C++17",
