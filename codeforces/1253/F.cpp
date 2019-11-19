@@ -123,21 +123,19 @@ int32_t main()
         int u=x.u,v=x.v;
         ll w=x.w;
         if(par[u]==par[v]) continue;
-        u=par[u];
-        v=par[v];
-        if(SZ(nodes[u])>SZ(nodes[v])) swap(u,v);
-        for(auto x:nodes[u]){
+        if(SZ(nodes[par[u]])>SZ(nodes[par[v]])) swap(u,v);
+        int pp=par[u];
+        for(auto x:nodes[pp]){
             for(auto y:query[x]){
                 int id=y.S;
-                if(par[y.F]==v) ans[id]=w;
+                if(par[y.F]==par[v]) ans[id]=w;
             }
-
         }
-        for(auto x:nodes[u]){
-            par[x]=v;
-            nodes[v].eb(x);
+        for(auto x:nodes[pp]){
+            par[x]=par[v];
+            nodes[par[v]].eb(x);
         }
-        nodes[u].clear();
+        nodes[pp].clear();
     }
     for(int i=1;i<=Q;i++) pf1ll(ans[i]);
     return 0;
