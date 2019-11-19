@@ -61,7 +61,6 @@ void yo(int u)
         G[u].eb(sz[g[u][i]],make_pair(st[g[u][i]],en[g[u][j-1]]));
     }
 }
-mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 int32_t main()
 {
     int n=in(),q=in();
@@ -70,9 +69,8 @@ int32_t main()
         g[u].eb(v);
         g[v].eb(u);
     }
-    int root=rnd()%n+1;
-    dfs(root);
-    yo(root);
+    dfs(1);
+    yo(1);
     int inv=qpow(n,mod-2);
     while(q--){
         int ty=in();
