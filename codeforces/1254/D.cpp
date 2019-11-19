@@ -1,3 +1,6 @@
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4")
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -27,23 +30,19 @@ inline void add(int &a,int &b)
 {
     if((a+=b)>=mod) a-=mod;
 }
-const int B=512;
-int A[N],blsum[N];
 void upd(int i,int x)
 {
-    add(A[i],x);
-    add(blsum[i/B],x);
+    while(i<N)add(t[i],x),i+=i&-i;
 }
 void upd(int l,int r,int x)
 {
     upd(l,x);
     upd(r+1,mod-x);
 }
-int query(int x)
+int query(int i)
 {
     int ans=0;
-    for(int i=0;i<x/B;i++) add(ans,blsum[i]);
-    for(int i=x/B*B;i<=x;i++) add(ans,A[i]);
+    while(i) add(ans,t[i]),i-=i&-i;
     return ans;
 }
 int T,st[N],en[N],sz[N],sum[N];
@@ -88,7 +87,7 @@ int32_t main()
             int u=in(),k=in();
             int p=1LL*sz[u]*k%mod;
             upd(1,T,p);
-            upd(st[u],en[u],mod-p);
+            upd(st[u],en[u],(-p+mod)%mod);
             for(auto x:G[u]){
                 int s=x.first;
                 auto p=x.second;
