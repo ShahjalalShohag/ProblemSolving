@@ -27,7 +27,7 @@ inline void add(int &a,int &b)
 {
     if((a+=b)>=mod) a-=mod;
 }
-const int B=600;
+const int B=316;
 int A[N],blsum[N];
 void upd(int i,int x)
 {
