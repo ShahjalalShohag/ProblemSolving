@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8592554": {
+    "contest_id": "ddcc2020-qual",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\ddcc2020-qual\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Majority of Balls",
+    "problem_url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_e",
+    "submission_id": "AC8592554",
+    "submission_url": "https://atcoder.jp/contests/ddcc2020-qual/submissions/8592554",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Nov/24/2019 03:33"
+  },
   "AC8607719": {
     "contest_id": "abc146",
     "language": "C++14 (GCC 5.4.1)",
