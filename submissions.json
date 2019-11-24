@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8623180": {
+    "contest_id": "abc146",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc146\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Sugoroku",
+    "problem_url": "https://atcoder.jp/contests/abc146/tasks/abc146_f",
+    "submission_id": "AC8623180",
+    "submission_url": "https://atcoder.jp/contests/abc146/submissions/8623180",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Nov/24/2019 18:58"
+  },
   "AC8636196": {
     "contest_id": "abc146",
     "language": "C++14 (GCC 5.4.1)",
