@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8607719": {
+    "contest_id": "abc146",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc146\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Can't Wait for Holiday",
+    "problem_url": "https://atcoder.jp/contests/abc146/tasks/abc146_a",
+    "submission_id": "AC8607719",
+    "submission_url": "https://atcoder.jp/contests/abc146/submissions/8607719",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Nov/24/2019 18:05"
+  },
   "AC8609135": {
     "contest_id": "abc146",
     "language": "C++14 (GCC 5.4.1)",
