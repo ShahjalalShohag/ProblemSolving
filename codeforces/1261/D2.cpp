@@ -99,13 +99,11 @@ int32_t main()
     int kp=1;
     for(int i=0; i<ty1; i++) kp=1LL*kp*k%mod;
     for(int i=0; i<(int) ans.size(); i++) ans[i]=1LL*ans[i]*kp%mod;
-    //vector<int> fnal(2*n+1,0);
-    //for(int i=n+1; i<2*n+1; i++) fnal[i]=1;
-    //ans= multiply(ans, fnal);
-    //int res=0;
-    //if(n+ty2<(int)ans.size()) res=ans[n+ty2];
+    vector<int> fnal(2*n+1,0);
+    for(int i=n+1; i<2*n+1; i++) fnal[i]=1;
+    ans= multiply(ans, fnal);
     int res=0;
-    for(int i=n+1; i<2*n+1; i++) if(n+ty2-i>=0&&n+ty2-i<(int)ans.size()) res=(res+ans[n+ty2-i])%mod;
+    if(n+ty2<(int)ans.size()) res=ans[n+ty2];
     printf("%d\n", res);
     return 0;
 }
