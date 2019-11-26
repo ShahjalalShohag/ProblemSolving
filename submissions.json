@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF65744664": {
+    "contest_id": 1261,
+    "language": "GNU C++17",
+    "path": "codeforces\\1261\\D1.cpp",
+    "problem_index": "D1",
+    "problem_name": "Wrong Answer on test 233 (Easy Version)",
+    "problem_url": "https://codeforces.com/contest/1261/problem/D1",
+    "submission_id": "CF65744664",
+    "submission_url": "https://codeforces.com/contest/1261/submission/65744664",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Nov/26/2019 17:45"
+  },
   "CF65745171": {
     "contest_id": 1261,
     "language": "GNU C++17",
