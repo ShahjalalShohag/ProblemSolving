@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF65847872": {
+    "contest_id": 1260,
+    "language": "GNU C++17",
+    "path": "codeforces\\1260\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Infinite Fence",
+    "problem_url": "https://codeforces.com/contest/1260/problem/C",
+    "submission_id": "CF65847872",
+    "submission_url": "https://codeforces.com/contest/1260/submission/65847872",
+    "tags": [
+      "greedy",
+      "math",
+      "number theory",
+      "*1700"
+    ],
+    "timestamp": "Nov/27/2019 20:39"
+  },
   "CF65863877": {
     "contest_id": 1260,
     "language": "GNU C++17",
