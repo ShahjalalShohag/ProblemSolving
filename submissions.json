@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF65886373": {
+    "contest_id": 1260,
+    "language": "GNU C++17",
+    "path": "codeforces\\1260\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Colored Tree",
+    "problem_url": "https://codeforces.com/contest/1260/problem/F",
+    "submission_id": "CF65886373",
+    "submission_url": "https://codeforces.com/contest/1260/submission/65886373",
+    "tags": [
+      "data structures",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Nov/28/2019 04:49"
+  },
   "CF65886393": {
     "contest_id": 1260,
     "language": "GNU C++17",
