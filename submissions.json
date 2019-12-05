@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF66320573": {
+    "contest_id": 1267,
+    "language": "GNU C++17",
+    "path": "codeforces\\1267\\K.cpp",
+    "problem_index": "K",
+    "problem_name": "Key Storage",
+    "problem_url": "https://codeforces.com/contest/1267/problem/K",
+    "submission_id": "CF66320573",
+    "submission_url": "https://codeforces.com/contest/1267/submission/66320573",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Dec/05/2019 19:52"
+  },
   "CF66838785": {
     "contest_id": 1276,
     "language": "GNU C++17",
