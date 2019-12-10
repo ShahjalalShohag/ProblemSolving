@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC8896997": {
+    "contest_id": "abc147",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc147\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Balanced Path",
+    "problem_url": "https://atcoder.jp/contests/abc147/tasks/abc147_e",
+    "submission_id": "AC8896997",
+    "submission_url": "https://atcoder.jp/contests/abc147/submissions/8896997",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Dec/10/2019 15:46"
+  },
   "AC8897519": {
     "contest_id": "abc147",
     "language": "C++14 (GCC 5.4.1)",
