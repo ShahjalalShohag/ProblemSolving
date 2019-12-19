@@ -12,7 +12,7 @@ using namespace std;
 const int N = 3e5 + 9;
 const int mod = 1e9 + 7;
 
-int a[N], cnt[3];
+int a[N], cnt[2];
 int32_t main()
 {
     ios_base::sync_with_stdio(0);
@@ -26,6 +26,7 @@ int32_t main()
         mp[0]=2*n+1;
         for(int i=2*n; i>=n+1; i--){
             cnt[a[i]]++;
+            cerr<<cnt[1]<<' '<<cnt[2];
             int d=cnt[1]-cnt[2];
             mp[d]=i;
         }
@@ -33,6 +34,7 @@ int32_t main()
         cnt[1]=cnt[2]=0;
         for(int i=1; i<=n; i++){
             cnt[a[i]]++;
+            cerr<<cnt[1]<<' '<<cnt[2];
             int d=cnt[2]-cnt[1];
             if(mp.find(d)!=mp.end()){
                 int p=mp[d];

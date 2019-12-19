@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF67227681": {
+    "contest_id": 1278,
+    "language": "GNU C++11",
+    "path": "codeforces\\1278\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Berry Jam",
+    "problem_url": "https://codeforces.com/contest/1278/problem/C",
+    "submission_id": "CF67227681",
+    "submission_url": "https://codeforces.com/contest/1278/submission/67227681",
+    "tags": [
+      "data structures",
+      "dp",
+      "greedy",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Dec/19/2019 21:31"
+  },
   "CF67234292": {
     "contest_id": 1278,
     "language": "GNU C++11",
