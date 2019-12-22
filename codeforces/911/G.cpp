@@ -16,15 +16,15 @@ using namespace std;
 const int N = 2e5 + 9;
 const int mod = 1e9 + 7;
 
-unsigned char a[N];
+unsigned short int a[N];
 int32_t main()
 {
     int n=in();
-    for(int i=1; i<=n; i++) scanf("%hhu", &a[i]);
+    for(int i=1; i<=n; i++) a[i]=in();
     int q=in();
     while(q--){
         int l=in(), r=in();
-        unsigned char x, y; scanf("%hhu%hhu", &x, &y);
+        unsigned short int x=in(), y=in();
         for(int i=l; i<=r; i++) a[i]=a[i]==x?y:a[i];
     }
     for(int i=1; i<=n; i++) printf("%d ", a[i]);
