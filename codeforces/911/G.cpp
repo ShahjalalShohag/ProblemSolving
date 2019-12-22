@@ -25,7 +25,7 @@ int32_t main()
     while(q--){
         int l=in(), r=in();
         unsigned char x, y; scanf("%hhu%hhu", &x, &y);
-        for(int i=l; i<=r; ++i) a[i]=a[i]==x?y:a[i];
+        for(int i=l; i<=r; i++) a[i]=a[i]==x?y:a[i];
     }
     for(int i=1; i<=n; i++) printf("%d ", a[i]);
     puts("");
