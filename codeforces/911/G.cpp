@@ -1,5 +1,5 @@
 #pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,sse4.1,sse4.2,sse4a,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 #pragma GCC optimize("unroll-loops")
 
 #include<bits/stdc++.h>
@@ -16,7 +16,7 @@ using namespace std;
 const int N = 2e5 + 9;
 const int mod = 1e9 + 7;
 
-unsigned short int a[N];
+short int a[N];
 int32_t main()
 {
     int n=in();
@@ -24,7 +24,7 @@ int32_t main()
     int q=in();
     while(q--){
         int l=in(), r=in();
-        unsigned short int x=in(), y=in();
+        short int x=in(), y=in();
         for(int i=l; i<=r; i++) a[i]=a[i]==x?y:a[i];
     }
     for(int i=1; i<=n; i++) printf("%d ", a[i]);
