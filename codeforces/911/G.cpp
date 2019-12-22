@@ -15,6 +15,7 @@ using namespace std;
 
 const int N = 2e5 + 9;
 const int mod = 1e9 + 7;
+
 unsigned char a[N];
 int32_t main()
 {
@@ -24,16 +25,7 @@ int32_t main()
     while(q--){
         int l=in(), r=in();
         unsigned char x, y; scanf("%hhu%hhu", &x, &y);
-        #define DO(i) a[i]=a[i]==x?y:a[i];
-        int i;
-        r-=31;
-        for(int i=l; i<=r; i+=32){
-            #define DO4(i) DO(i) DO(i+1) DO(i+2) DO(i+3)
-            DO4(i); DO4(i+4); DO4(i+8); DO4(i+12); DO4(i+16);
-            DO4(i+20); DO4(i+24); DO4(i+28);
-        }
-        r+=31;
-        for(int i=r-(r-l+1)%32+1; i<=r; i++) DO(i)
+        for(int i=l; i<=r; ++i) a[i]=a[i]==x?y:a[i];
     }
     for(int i=1; i<=n; i++) printf("%d ", a[i]);
     puts("");
