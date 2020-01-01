@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC9278157": {
+    "contest_id": "apc001",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\apc001\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "XOR Tree",
+    "problem_url": "https://atcoder.jp/contests/apc001/tasks/apc001_f",
+    "submission_id": "AC9278157",
+    "submission_url": "https://atcoder.jp/contests/apc001/submissions/9278157",
+    "tags": [
+      "AtCoder",
+      "*1000"
+    ],
+    "timestamp": "Jan/02/2020 00:06"
+  },
   "AC9394924": {
     "contest_id": "abc150",
     "language": "C++14 (GCC 5.4.1)",
