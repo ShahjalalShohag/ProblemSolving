@@ -159,8 +159,8 @@ struct SOS
             ghat[__builtin_popcount(mask)][mask] = g[mask];
         }
         // Apply zeta transform on fhat[][] and ghat[][]
-        for(int i = 0; i <= B; i++) {
-            for(int j = 0; j <= B; j++) {
+        for(int i = 0; i < B; i++) {
+            for(int j = 0; j < B; j++) {
                 for(int mask = 0; mask < (1 << B); mask++) {
                     if((mask & (1 << j)) != 0) {
                         (fhat[i][mask] += fhat[i][mask ^ (1 << j)])%=mod;
@@ -172,7 +172,7 @@ struct SOS
         vector< vector<int> > h(B+1, vector<int> (1<<B, 0));
         // Do the convolution and store into h[][] = {0}
         for(int mask = 0; mask < (1 << B); mask++) {
-            for(int i = 0; i <= B; i++) {
+            for(int i = 0; i < B; i++) {
                 for(int j = 0; j <= i; j++) {
                     h[i][mask] += 1LL*fhat[j][mask] * ghat[i - j][mask]%mod;
                     h[i][mask]%=mod;
@@ -181,8 +181,8 @@ struct SOS
         }
 
         // Apply inverse SOS dp on h[][]
-        for(int i = 0; i <= B; i++) {
-            for(int j = 0; j <= B; j++) {
+        for(int i = 0; i < B; i++) {
+            for(int j = 0; j < B; j++) {
                 for(int mask = 0; mask < (1 << B); mask++) {
                     if((mask & (1 << j)) != 0) {
                         h[i][mask] -= h[i][mask ^ (1 << j)];
@@ -201,9 +201,17 @@ int32_t main()
 {
     int n=in();
     for(int i=1; i<=n; i++) {int k=in(); cnt[k]++, b[k]++;}
-    vector<int> va(cnt, cnt+N);
-    auto conv=sos.subset_sum_convolution(va, va);
-    for(int i=0; i<N; i++) a[i]=conv[i];
+//    vector<int> va(cnt, cnt+N);
+//    auto conv=sos.subset_sum_convolution(va, va);
+//    for(int i=0; i<N; i++) a[i]=conv[i];
+    for(int i=0; i<N; i++){
+        int nw=0;
+        for(int j=i; ; j=(j-1)&i){
+            nw=(nw+1LL*cnt[j]*cnt[i^j]%mod)%mod;
+            if(j==0) break;
+        }
+        a[i]=nw;
+    }
     vector<int> c=t.convolution(N, cnt, cnt, XOR);
     f[0]=0,f[1]=1;
     for(int i=2; i<N; i++) f[i]=(f[i-1]+f[i-2])%mod;
