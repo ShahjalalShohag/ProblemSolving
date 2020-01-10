@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC9394924": {
+    "contest_id": "abc150",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc150\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Xor Shift",
+    "problem_url": "https://atcoder.jp/contests/abc150/tasks/abc150_f",
+    "submission_id": "AC9394924",
+    "submission_url": "https://atcoder.jp/contests/abc150/submissions/9394924",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/10/2020 18:35"
+  },
   "AC9395448": {
     "contest_id": "abc150",
     "language": "C++14 (GCC 5.4.1)",
