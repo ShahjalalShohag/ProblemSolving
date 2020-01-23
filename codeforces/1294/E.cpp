@@ -19,7 +19,6 @@ const int RANDOM = chrono::high_resolution_clock::now().time_since_epoch().count
 struct chash {
     int operator()(int x) const { return x ^ RANDOM; }
 };
-gp_hash_table<int, int, chash> mp2;
 vector<pii> q[2*N];
 int yo(vector<int> a)
 {
@@ -32,14 +31,14 @@ int yo(vector<int> a)
         q[i-1].eb(-(i-1), -i);
         q[i+n-1].eb(-(i-1), i);
     }
-    mp2.clear();
+    gp_hash_table<int, int, chash> mp;
     vector<int> ans(2*n+2, 0);
     for(int i=1; i<=2*n; i++){
-        mp2[a[i]]++;
+        mp[a[i]]++;
         for(auto x: q[i]){
             auto id=x.second;
-            if(id<0) ans[-id]-=mp2[x.first];
-            else ans[id]+=mp2[x.first];
+            if(id<0) ans[-id]-=mp[x.first];
+            else ans[id]+=mp[x.first];
         }
     }
     int res=2e9;
@@ -51,6 +50,7 @@ int yo(vector<int> a)
 }
 vector<int> a[N];
 gp_hash_table<int, int, chash> mp;
+///hudai
 int32_t main()
 {
     int n=in(), m=in();
