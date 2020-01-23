@@ -49,7 +49,6 @@ int yo(vector<int> a)
     return res;
 }
 vector<int> a[N];
-gp_hash_table<int, int, chash> mp;
 int32_t main()
 {
     int n=in(), m=in();
@@ -61,10 +60,10 @@ int32_t main()
     for(int j=1; j<=m; j++){
         vector<int> v;
         for(int i=1; i<=n; i++) v.eb(a[i][j]);
-        mp.clear();
+        gp_hash_table<int, int, chash> mp;
         for(int i=1; i<=n; i++) mp[(i-1)*m+j]=i;
         for(auto &x: v){
-            if(mp[x]) x=mp[x];
+            if(mp.find(x)!=mp.end()) x=mp[x];
             else x=n*m+1;
         }
         ans+=yo(v);
