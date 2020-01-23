@@ -50,7 +50,6 @@ int yo(vector<int> a)
 }
 vector<int> a[N];
 gp_hash_table<int, int, chash> mp;
-///hudai
 int32_t main()
 {
     int n=in(), m=in();
