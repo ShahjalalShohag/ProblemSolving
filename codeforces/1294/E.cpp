@@ -63,7 +63,7 @@ int32_t main()
         gp_hash_table<int, int, chash> mp;
         for(int i=1; i<=n; i++) mp[(i-1)*m+j]=i;
         for(auto &x: v){
-            if(mp.find(x)!=mp.end()) x=mp[x];
+            if(mp[x]) x=mp[x];
             else x=n*m+1;
         }
         ans+=yo(v);
