@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF69557701": {
+    "contest_id": 235,
+    "language": "GNU C++17",
+    "path": "codeforces\\235\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Cyclical Quest",
+    "problem_url": "https://codeforces.com/contest/235/problem/C",
+    "submission_id": "CF69557701",
+    "submission_url": "https://codeforces.com/contest/235/submission/69557701",
+    "tags": [
+      "data structures",
+      "string suffix structures",
+      "strings",
+      "*2700"
+    ],
+    "timestamp": "Jan/26/2020 15:28"
+  },
   "CF69587593": {
     "contest_id": 873,
     "language": "GNU C++17",
