@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC9755557": {
+    "contest_id": "abc153",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc153\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Silver Fox vs Monster",
+    "problem_url": "https://atcoder.jp/contests/abc153/tasks/abc153_f",
+    "submission_id": "AC9755557",
+    "submission_url": "https://atcoder.jp/contests/abc153/submissions/9755557",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jan/26/2020 18:38"
+  },
   "CF100005188": {
     "contest_id": 1455,
     "language": "GNU C++17 (64)",
