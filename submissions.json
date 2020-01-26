@@ -2047,6 +2047,22 @@
     ],
     "timestamp": "Nov/28/2020 18:38"
   },
+  "AC9745518": {
+    "contest_id": "abc153",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc153\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Common Raccoon vs Monster",
+    "problem_url": "https://atcoder.jp/contests/abc153/tasks/abc153_b",
+    "submission_id": "AC9745518",
+    "submission_url": "https://atcoder.jp/contests/abc153/submissions/9745518",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jan/26/2020 18:14"
+  },
   "AC9747451": {
     "contest_id": "abc153",
     "language": "C++14 (GCC 5.4.1)",
