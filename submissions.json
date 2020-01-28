@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF69697236": {
+    "contest_id": 932,
+    "language": "GNU C++17",
+    "path": "codeforces\\932\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Palindrome Partition",
+    "problem_url": "https://codeforces.com/contest/932/problem/G",
+    "submission_id": "CF69697236",
+    "submission_url": "https://codeforces.com/contest/932/submission/69697236",
+    "tags": [
+      "dp",
+      "string suffix structures",
+      "strings",
+      "*2900"
+    ],
+    "timestamp": "Jan/29/2020 03:09"
+  },
   "CF69737865": {
     "contest_id": 1295,
     "language": "GNU C++17",
