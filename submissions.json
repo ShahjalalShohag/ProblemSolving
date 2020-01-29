@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF69795044": {
+    "contest_id": 1295,
+    "language": "GNU C++17",
+    "path": "codeforces\\1295\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Good Contest",
+    "problem_url": "https://codeforces.com/contest/1295/problem/F",
+    "submission_id": "CF69795044",
+    "submission_url": "https://codeforces.com/contest/1295/submission/69795044",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "probabilities",
+      "*2700"
+    ],
+    "timestamp": "Jan/30/2020 01:47"
+  },
   "CF70181066": {
     "contest_id": 528,
     "language": "GNU C++17",
