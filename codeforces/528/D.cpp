@@ -10,10 +10,10 @@ using namespace std;
 const int N = 3e5 + 9;
 const int mod = 1e9 + 7;
 
-const long double PI = acos(-1);
+const double PI = acos(-1);
 struct base {
-	long double a, b;
-	base(long double a = 0, long double b = 0) : a(a), b(b) {}
+	double a, b;
+	base(double a = 0, double b = 0) : a(a), b(b) {}
 	const base operator + (const base &c) const
 		{ return base(a + c.a, b + c.b); }
 	const base operator - (const base &c) const
@@ -28,7 +28,7 @@ void fft(vector<base> &p, bool inv = 0) {
 		if(j < i) swap(p[i], p[j]);
 	}
 	for(int l = 1, m; (m = l << 1) <= n; l <<= 1) {
-		long double ang = 2 * PI / m;
+		double ang = 2 * PI / m;
 		base wn = base(cos(ang), (inv ? 1. : -1.) * sin(ang)), w;
 		for(int i = 0, j, k; i < n; i += m) {
 			for(w = base(1, 0), j = i, k = i + l; j < k; ++j, w = w * wn) {
