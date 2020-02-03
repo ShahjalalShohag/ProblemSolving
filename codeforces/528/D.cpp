@@ -10,51 +10,50 @@ using namespace std;
 const int N = 3e5 + 9;
 const int mod = 1e9 + 7;
 
+using cd = complex<double>;
 const double PI = acos(-1);
-struct base {
-	double a, b;
-	base(double a = 0, double b = 0) : a(a), b(b) {}
-	const base operator + (const base &c) const
-		{ return base(a + c.a, b + c.b); }
-	const base operator - (const base &c) const
-		{ return base(a - c.a, b - c.b); }
-	const base operator * (const base &c) const
-		{ return base(a * c.a - b * c.b, a * c.b + b * c.a); }
-};
-void fft(vector<base> &p, bool inv = 0) {
-	int n = p.size(), i = 0;
-	for(int j = 1; j < n - 1; ++j) {
-		for(int k = n >> 1; k > (i ^= k); k >>= 1);
-		if(j < i) swap(p[i], p[j]);
-	}
-	for(int l = 1, m; (m = l << 1) <= n; l <<= 1) {
-		double ang = 2 * PI / m;
-		base wn = base(cos(ang), (inv ? 1. : -1.) * sin(ang)), w;
-		for(int i = 0, j, k; i < n; i += m) {
-			for(w = base(1, 0), j = i, k = i + l; j < k; ++j, w = w * wn) {
-				base t = w * p[j + l];
-				p[j + l] = p[j] - t;
-				p[j] = p[j] + t;
-			}
-		}
-	}
-	if(inv) for(int i = 0; i < n; ++i) p[i].a /= n, p[i].b /= n;
+
+void fft(vector<cd> & a, bool invert) {
+    int n = a.size();
+    for (int i = 1, j = 0; i < n; i++) {
+        int bit = n >> 1;
+        for (; j & bit; bit >>= 1) j ^= bit;
+        j ^= bit;
+        if (i < j) swap(a[i], a[j]);
+    }
+    for (int len = 2; len <= n; len <<= 1) {
+        double ang = 2 * PI / len * (invert ? -1 : 1);
+        cd wlen(cos(ang), sin(ang));
+        for (int i = 0; i < n; i += len) {
+            cd w(1);
+            for (int j = 0; j < len / 2; j++) {
+                cd u = a[i+j], v = a[i+j+len/2] * w;
+                a[i+j] = u + v;
+                a[i+j+len/2] = u - v;
+                w *= wlen;
+            }
+        }
+    }
+    if (invert) {
+        for (cd & x : a) x /= n;
+    }
 }
-vector<int> multiply(vector<int> &a, vector<int> &b) {
-	int n = a.size(), m = b.size(), t = n + m - 1, sz = 1;
-	while(sz < t) sz <<= 1;
-	vector<base> x(sz), y(sz), z(sz);
-	for(int i = 0 ; i < sz; ++i) {
-		x[i] = i < a.size() ? base(a[i], 0) : base(0, 0);
-		y[i] = i < b.size() ? base(b[i], 0) : base(0, 0);
-	} fft(x), fft(y);
-	for(int i = 0; i < sz; ++i) z[i] = x[i] * y[i];
-	fft(z, 1);
-	vector<int> ret(sz);
-	for(int i = 0; i < sz; ++i) ret[i] = z[i].a + 0.5;
-	while(ret.size() > 1 && ret.back() == 0) ret.pop_back();
-	return ret;
+vector<int> multiply(vector<int> const& a, vector<int> const& b)
+{
+    vector<cd> fa(a.begin(), a.end()), fb(b.begin(), b.end());
+    int n = 1;
+    while (n < a.size() + b.size()) n <<= 1;
+    fa.resize(n);
+    fb.resize(n);
+    fft(fa, false);
+    fft(fb, false);
+    for (int i = 0; i < n; i++) fa[i] *= fb[i];
+    fft(fa, true);
+    vector<int> result(n);
+    for (int i = 0; i < n; i++) result[i] = round(fa[i].real());
+    return result;
 }
+
 int ans[N];
 int32_t main()
 {
