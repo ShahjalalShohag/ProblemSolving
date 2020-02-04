@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF70276102": {
+    "contest_id": 1296,
+    "language": "GNU C++17",
+    "path": "codeforces\\1296\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Berland Beauty",
+    "problem_url": "https://codeforces.com/contest/1296/problem/F",
+    "submission_id": "CF70276102",
+    "submission_url": "https://codeforces.com/contest/1296/submission/70276102",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "greedy",
+      "sortings",
+      "trees",
+      "*2100"
+    ],
+    "timestamp": "Feb/04/2020 21:37"
+  },
   "CF70296041": {
     "contest_id": 1296,
     "language": "GNU C++17",
