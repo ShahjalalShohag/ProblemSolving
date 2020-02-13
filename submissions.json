@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF70940116": {
+    "contest_id": 1303,
+    "language": "GNU C++17",
+    "path": "codeforces\\1303\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Sum of Prefix Sums",
+    "problem_url": "https://codeforces.com/contest/1303/problem/G",
+    "submission_id": "CF70940116",
+    "submission_url": "https://codeforces.com/contest/1303/submission/70940116",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "geometry",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Feb/13/2020 14:05"
+  },
   "CF72361562": {
     "contest_id": 1305,
     "language": "GNU C++17",
