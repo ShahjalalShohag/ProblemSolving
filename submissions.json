@@ -1,4 +1,20 @@
 {
+  "AC10169282": {
+    "contest_id": "abc155",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc155\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Perils in Parallel",
+    "problem_url": "https://atcoder.jp/contests/abc155/tasks/abc155_f",
+    "submission_id": "AC10169282",
+    "submission_url": "https://atcoder.jp/contests/abc155/submissions/10169282",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Feb/17/2020 01:08"
+  },
   "AC10433186": {
     "contest_id": "abc157",
     "language": "C++14 (GCC 5.4.1)",
