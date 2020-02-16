@@ -1,4 +1,20 @@
 {
+  "AC10138121": {
+    "contest_id": "abc155",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc155\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Poor",
+    "problem_url": "https://atcoder.jp/contests/abc155/tasks/abc155_a",
+    "submission_id": "AC10138121",
+    "submission_url": "https://atcoder.jp/contests/abc155/submissions/10138121",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Feb/16/2020 18:08"
+  },
   "AC10147363": {
     "contest_id": "abc155",
     "language": "C++14 (GCC 5.4.1)",
