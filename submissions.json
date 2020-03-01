@@ -1,4 +1,20 @@
 {
+  "AC10434373": {
+    "contest_id": "abc157",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc157\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Duplex Printing",
+    "problem_url": "https://atcoder.jp/contests/abc157/tasks/abc157_a",
+    "submission_id": "AC10434373",
+    "submission_url": "https://atcoder.jp/contests/abc157/submissions/10434373",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Mar/01/2020 18:10"
+  },
   "AC10437837": {
     "contest_id": "abc157",
     "language": "C++14 (GCC 5.4.1)",
