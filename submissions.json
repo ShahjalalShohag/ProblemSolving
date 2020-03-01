@@ -1,4 +1,20 @@
 {
+  "AC10437837": {
+    "contest_id": "abc157",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc157\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Bingo",
+    "problem_url": "https://atcoder.jp/contests/abc157/tasks/abc157_b",
+    "submission_id": "AC10437837",
+    "submission_url": "https://atcoder.jp/contests/abc157/submissions/10437837",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Mar/01/2020 18:16"
+  },
   "AC10442976": {
     "contest_id": "abc157",
     "language": "C++14 (GCC 5.4.1)",
