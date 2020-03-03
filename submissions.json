@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF72361562": {
+    "contest_id": 1305,
+    "language": "GNU C++17",
+    "path": "codeforces\\1305\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Kuroni and the Punishment",
+    "problem_url": "https://codeforces.com/contest/1305/problem/F",
+    "submission_id": "CF72361562",
+    "submission_url": "https://codeforces.com/contest/1305/submission/72361562",
+    "tags": [
+      "math",
+      "number theory",
+      "probabilities",
+      "*2500"
+    ],
+    "timestamp": "Mar/04/2020 00:19"
+  },
   "CF72794478": {
     "contest_id": 1312,
     "language": "GNU C++17",
