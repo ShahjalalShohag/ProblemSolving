@@ -1,4 +1,20 @@
 {
+  "AC11314147": {
+    "contest_id": "abc160",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\abc160\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Distributing Integers",
+    "problem_url": "https://atcoder.jp/contests/abc160/tasks/abc160_f",
+    "submission_id": "AC11314147",
+    "submission_url": "https://atcoder.jp/contests/abc160/submissions/11314147",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Mar/28/2020 19:40"
+  },
   "AC11490220": {
     "contest_id": "abc161",
     "language": "C++14 (GCC 5.4.1)",
