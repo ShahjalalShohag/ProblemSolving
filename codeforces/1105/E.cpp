@@ -1,84 +1,57 @@
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC optimize("unroll-loops")
+
 #include<bits/stdc++.h>
 using namespace std;
 
 const int N = 42;
 
-//0-indexed
-// O(1.38 ^ n) worst case, but works for up to n <= 60 or more
-int g[N][N], n;
-int mn_deg, comp_size;
-bitset<N> st;
-vector<int> adj[N];
-bool vis[N];
-
-int get_deg(int u)
+int g[N][N];
+int res;
+long long edges[51];
+//3 ^ (n / 3)
+void BronKerbosch(int n, long long R, long long P, long long X)
 {
-	int res = 0;
-	for(int v = 0; v < n; v++) if(st[v]) res += g[u][v];
-	return res;
+    if (P == 0LL && X == 0LL) {
+        int t = __builtin_popcountll(R);
+        res = max(res, t);
+        return;
+    }
+    long long u = 0;
+    while (!((1LL<<u) & (P|X))) u ++;
+    for (int v = 0; v < n; v++) {
+        if (((1LL << v) & P) && !((1LL << v) & edges[u])) {
+            BronKerbosch(n, R | (1LL << v), P & edges[v], X & edges[v]);
+            P -= (1LL << v);
+            X |= (1LL << v);
+        }
+    }
 }
 
-void dfs(int u)
+int max_clique (int n)
 {
-	vis[u] = 1;
-	mn_deg = min(mn_deg, (int)adj[u].size());
-	comp_size++;
-	for(int v: adj[u]) if(!vis[v]) dfs(v);
-}
-
-int brute()
-{
-	for(int u = 0; u < n; u++) if(st[u]) vis[u] = 0, adj[u].clear();
-	for(int u = 0; u < n; u++){
-		if(st[u]) for(int v = 0; v < n; v++) if(g[u][v] && st[v]) adj[u].push_back(v);
-	}
-	int res = 0;
-	for(int u = 0; u < n; u++){
-		if(st[u] && !vis[u]){
-            mn_deg = N; comp_size = 0;
-            dfs(u);
-			if(mn_deg <= 1) res += ((comp_size + 1) / 2);
-			else res += (comp_size / 2);
-		}
-	}
+    res = 0;
+    for (int i = 1; i <= n; i++) {
+        edges[i] = 0;
+        for (int j = 1; j <= n; j++)  if (g[i][j]) edges[i - 1] |= ( 1LL << (j - 1) );
+    }
+    BronKerbosch(n, 0, (1LL << n) - 1, 0);
     return res;
 }
-
-int yo()
-{
-	if(!st.count()) return 0;
-	int d = -1;
-	for(int v = 0; v < n; v++){
-		if(st[v] && (d == -1 || get_deg(v) > get_deg(d))) d = v;
-	}
-	if(get_deg(d) <= 2) return brute();
-    int ret = 0; bitset<N> prv = st;
-    st[d] = 0; ret = max(ret, yo());
-	st = prv; st[d] = 0;
-	for(int u = 0; u < n; u++) if(g[u][d]) st[u] = 0;
-	ret = max(ret, 1 + yo());
-	st = prv;
-	return ret;
-}
-int max_anticlique(int k)
-{
-    n = k;
-	for(int i = 0; i < n; i++) st[i] = 1;
-	return yo();
-}
-
 int32_t main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    map<string, int> mp; set<int>se;
+    map<string, int> mp;
+    set<int>se;
     int n, m; cin >> n >> m;
     for(int i = 1; i <= n + 1; i++){
         int ty;
         if(i <= n) cin >> ty;
         if(ty == 1 || i > n){
-            for(auto x: se) for(auto y: se) g[x - 1][y - 1] = 1, g[y - 1][x - 1] = 1;
+            for(auto x: se) for(auto y: se) g[x][y] = 1, g[y][x] = 1;
             se.clear();
         }
         else{
@@ -89,7 +62,8 @@ int32_t main()
             int p = mp[s]; se.insert(p);
         }
     }
-    for(int i = 0; i < m; i++) g[i][i] = 0;
-    cout << max_anticlique(m) << '\n';
+    for(int i = 1; i <= m; i++) for(int j = 1; j <= m; j++) g[i][j] = !g[i][j];
+    for(int i = 1; i <= m; i++) g[i][i] = 0;
+    cout << max_clique(m) << '\n';
     return 0;
 }
