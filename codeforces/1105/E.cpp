@@ -6,37 +6,27 @@ using namespace std;
 
 const int N = 42;
 
-int g[N][N];
-int res;
-long long edges[51];
-//3 ^ (n / 3)
-void BronKerbosch(int n, long long R, long long P, long long X)
+int g[N][N], n;
+long long edges[N];
+map<long long, int> dp;
+int yo(long long mask)
 {
-    if (P == 0LL && X == 0LL) {
-        int t = __builtin_popcountll(R);
-        res = max(res, t);
-        return;
-    }
-    long long u = 0;
-    while (!((1LL<<u) & (P|X))) u ++;
-    for (int v = 0; v < n; v++) {
-        if (((1LL << v) & P) && !((1LL << v) & edges[u])) {
-            BronKerbosch(n, R | (1LL << v), P & edges[v], X & edges[v]);
-            P -= (1LL << v);
-            X |= (1LL << v);
-        }
-    }
+    if(mask == 0) return 0;
+    if(dp.find(mask) != dp.end()) return dp[mask];
+    int i = __builtin_ctzll(mask);
+    int ans = yo(mask - (1LL << i));
+    ans = max(ans, 1 + yo(mask & edges[i]));
+    return dp[mask] = ans;
 }
-
-int max_clique (int n)
+int max_clique_brute(int m)
 {
-    res = 0;
-    for (int i = 1; i <= n; i++) {
+    dp.clear();
+    n = m;
+    for(int i = 1; i <= n; i++){
         edges[i] = 0;
-        for (int j = 1; j <= n; j++)  if (g[i][j]) edges[i - 1] |= ( 1LL << (j - 1) );
+        for(int j = 1; j <= n; j++) if(g[i][j]) edges[i - 1] |= 1LL << (j - 1);
     }
-    BronKerbosch(n, 0, (1LL << n) - 1, 0);
-    return res;
+    return yo((1LL << n) - 1);
 }
 int32_t main()
 {
@@ -63,6 +53,6 @@ int32_t main()
     }
     for(int i = 1; i <= m; i++) for(int j = 1; j <= m; j++) g[i][j] = !g[i][j];
     for(int i = 1; i <= m; i++) g[i][i] = 0;
-    cout << max_clique(m) << '\n';
+    cout << max_clique_brute(m) << '\n';
     return 0;
 }
