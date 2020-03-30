@@ -8,7 +8,7 @@ const int N = 42;
 
 int g[N][N], n;
 long long edges[N];
-map<long long, int> dp;
+gp_hash_table<long long, int> dp;
 int yo(long long mask)
 {
     if(mask == 0) return 0;
