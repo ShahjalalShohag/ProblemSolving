@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF74812082": {
+    "contest_id": 839,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\839\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Mother of Dragons",
+    "problem_url": "https://codeforces.com/contest/839/problem/E",
+    "submission_id": "CF74812082",
+    "submission_url": "https://codeforces.com/contest/839/submission/74812082",
+    "tags": [
+      "brute force",
+      "graphs",
+      "math",
+      "meet-in-the-middle",
+      "*2700"
+    ],
+    "timestamp": "Mar/30/2020 16:58"
+  },
   "CF75065171": {
     "contest_id": 1193,
     "language": "GNU C++17 (64)",
