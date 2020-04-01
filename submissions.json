@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF75173960": {
+    "contest_id": 763,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\763\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Timofey and a flat tree",
+    "problem_url": "https://codeforces.com/contest/763/problem/D",
+    "submission_id": "CF75173960",
+    "submission_url": "https://codeforces.com/contest/763/submission/75173960",
+    "tags": [
+      "data structures",
+      "graphs",
+      "hashing",
+      "shortest paths",
+      "trees",
+      "*2900"
+    ],
+    "timestamp": "Apr/02/2020 01:03"
+  },
   "CF75935252": {
     "contest_id": 86,
     "language": "GNU C++17 (64)",
