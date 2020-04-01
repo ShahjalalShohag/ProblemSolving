@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF75065171": {
+    "contest_id": 1193,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1193\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Amusement Park",
+    "problem_url": "https://codeforces.com/contest/1193/problem/A",
+    "submission_id": "CF75065171",
+    "submission_url": "https://codeforces.com/contest/1193/submission/75065171",
+    "tags": [
+      "*special problem",
+      "dp",
+      "math"
+    ],
+    "timestamp": "Apr/01/2020 16:02"
+  },
   "CF75075826": {
     "contest_id": 1193,
     "language": "GNU C++17 (64)",
