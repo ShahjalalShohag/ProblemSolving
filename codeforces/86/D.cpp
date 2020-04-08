@@ -53,18 +53,10 @@ int32_t main()
     int l = 1, r = 0;
     for(int i = 1; i <= q; i++) {
         int L = Q[i].l, R = Q[i].r;
-        if(R < l){
-            while (l > L) add_left(--l);
-            while (l < L) rem_left(l++);
-            while (r < R) add_right(++r);
-            while (r > R) rem_right(r--);
-        }
-        else{
-            while (r < R) add_right(++r);
-            while (r > R) rem_right(r--);
-            while (l > L) add_left(--l);
-            while (l < L) rem_left(l++);
-        }
+        while (l < L) rem_left(l++);
+        while (l > L) add_left(--l);
+        while (r < R) add_right(++r);
+        while (r > R) rem_right(r--);
         ans[Q[i].id] = sum;
     }
     for(int i = 1; i <= q; i++) cout << ans[i] << '\n';
