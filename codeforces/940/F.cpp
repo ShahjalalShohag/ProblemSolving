@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int N = 1e5 + 1, B = 3500, C = N / B + 1;
+const int N = 1e5 + 1, B = 4500, C = N / B + 1;
 
 struct MEX {
 	int cnt[N * 2], f[520];
