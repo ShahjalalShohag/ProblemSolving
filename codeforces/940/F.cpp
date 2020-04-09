@@ -9,8 +9,8 @@ struct query{
     bool operator < (const query &x) const
     {
         if(l / B == x.l / B){
-            if(r / B == x.r / B) return t < x.t;
-            return r / B < x.r / B;
+            if(r / B == x.r / B) return (t < x.t) ;
+            return (r / B < x.r / B) ;
         }
         return l / B < x.l / B;
     }
@@ -51,8 +51,10 @@ int main()
     int nq = 0, nu = 0;
     for (int i = 1; i <= q; i++) {
         int ty, l, r; cin >> ty >> l >> r;
-        if (ty == 1) ++nq, Q[nq] = {l, r, nu, nq};
-        else ++nu, U[nu].pos = l, U[nu].old = a[l], a[l] = get(r), U[nu].cur = a[l];
+        if (ty == 1) Q[++nq] = {l, r, nu, nq};
+        else {
+            U[++nu].pos = l, U[nu].cur = get(r), U[nu].old = a[l], a[l] = get(r);
+        }
     }
     sort(Q + 1, Q + nq + 1);
     t = nu, l = 1, r = 0;
@@ -60,18 +62,18 @@ int main()
         int L = Q[i].l, R = Q[i].r, T = Q[i].t;
         while(t < T) t++, update(U[t].pos, U[t].cur);
         while(t > T) update(U[t].pos, U[t].old), t--;
-        if(R < l){
+        //if(R < l){
             while(l > L) add(a[--l]);
-            while(l < L) del(a[l++]);
             while(r < R) add(a[++r]);
-            while(r > R) del(a[r--]);
-        }
-        else{
-            while(r < R) add(a[++r]);
-            while(r > R) del(a[r--]);
-            while(l > L) add(a[--l]);
             while(l < L) del(a[l++]);
-        }
+            while(r > R) del(a[r--]);
+        //}
+//        else{
+//            while(r < R) add(a[++r]);
+//            while(r > R) del(a[r--]);
+//            while(l > L) add(a[--l]);
+//            while(l < L) del(a[l++]);
+//        }
         int cur = 1; while(f[cur] > 0) cur++;
         ans[Q[i].id] = cur;
     }
