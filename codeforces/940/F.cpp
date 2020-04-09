@@ -1,53 +1,38 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int N = 1e5 + 1, B = 4500, C = N / B + 1;
+const int N = 2e5 + 9;
+const int B = 2500;
 
-struct MEX {
-	int cnt[N * 2], f[N * 2];
-	MEX() {
-		memset(cnt, 0, sizeof cnt);
-		memset(f, 0, sizeof f);
-	}
-	void add(int x) {
-        f[cnt[x]]--, ++cnt[x], f[cnt[x]]++;
+struct query{
+    int l, r, t, id;
+    bool operator < (const query &x) const
+    {
+        if(l / B == x.l / B){
+            if(r / B == x.r / B) return t < x.t;
+            return r / B < x.r / B;
+        }
+        return l / B < x.l / B;
     }
-    void del(int x) {
-        f[cnt[x]]--, --cnt[x], f[cnt[x]]++;
-    }
-	int get() {
-        int ans = 1;
-        while(f[ans] > 0) ans++;
-        return ans;
-	}
-}t[C * (C + 1) / 2 + 10], ds;
+} Q[N];
+struct upd{
+    int pos, old, cur;
+} U[N];
 
-
-int st[C], en[C], BC = 0;
-int a[N], I[N];
-int query(int l, int r)
-{
-	int L = l / B, R = r / B;
-	if(r != en[R]) R--;
-	if(l != st[L]) L++;
-	if(R < L){
-		for(int i = l; i <= r; i++) ds.add(a[i]);
-		int ans = ds.get();
-		for(int i = l; i <= r; i++) ds.del(a[i]);
-        return ans;
-	}
-	int id = I[L * BC + R];
-    for(int i = l; i < st[L]; i++) t[id].add(a[i]);
-	for(int i = en[R] + 1; i <= r; i++) t[id].add(a[i]);
-	int ans = t[id].get();
-	for(int i = l; i < st[L]; i++) t[id].del(a[i]);
-	for(int i = en[R] + 1; i <= r; i++) t[id].del(a[i]);
-	return ans;
+int a[N];
+int cnt[N], f[N], ans[N], l, r, t;
+inline void add(int x) {
+    f[cnt[x]]--, ++cnt[x], f[cnt[x]]++;
 }
-inline void upd(int id, int pos, int val)
-{
-	t[id].del(a[pos]);
-	t[id].add(val);
+inline void del(int x) {
+    f[cnt[x]]--, --cnt[x], f[cnt[x]]++;
+}
+inline void update(int pos, int x) {
+    if (l <= pos && pos <= r) {
+        add(x);
+        del(a[pos]);
+    }
+    a[pos] = x;
 }
 map <int, int> mp; int nxt = 0;
 int get(int x) {
@@ -59,37 +44,38 @@ int main()
     cin.tie(0);
 
     int n, q; cin >> n >> q;
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i <= n; i++) {
         cin >> a[i];
         a[i] = get(a[i]);
     }
-	for(int i = 0; i < n; i++){
-		if(i % B == 0) st[i / B] = i, BC++;
-		if(i % B == B - 1 || i == n - 1) en[i / B] = i;
-	}
-	int nw = 0;
-	for(int i = 0; i < BC; i++){
-		for(int j = i; j < BC; j++){
-			int id = nw; I[i * BC + j] = nw++;
-			for(int p = st[i]; p <= en[j]; p++) t[id].add(a[p]);
-		}
-	}
-    while(q--){
-        int ty; cin >> ty;
-        if(ty == 1){
-			int l, r; cin >> l >> r; --l; --r;
-			cout << query(l, r) << '\n';
-		}
-		else{
-			int pos, val; cin >> pos >> val; --pos;
-			val = get(val);
-            for(int i = 0; i < BC; i++){
-				for(int j = i; j < BC; j++){
-					if(st[i] <= pos && pos <= en[j]) upd(I[i * BC + j], pos, val);
-                }
-            }
-			a[pos] = val;
-		}
-	}
-	return 0;
+    int nq = 0, nu = 0;
+    for (int i = 1; i <= q; i++) {
+        int ty, l, r; cin >> ty >> l >> r;
+        if (ty == 1) ++nq, Q[nq] = {l, r, nu, nq};
+        else ++nu, U[nu].pos = l, U[nu].old = a[l], a[l] = get(r), U[nu].cur = a[l];
+    }
+    sort(Q + 1, Q + nq + 1);
+    t = nu, l = 1, r = 0;
+    for (int i = 1; i <= nq; i++) {
+        int L = Q[i].l, R = Q[i].r, T = Q[i].t;
+        while(t < T) t++, update(U[t].pos, U[t].cur);
+        while(t > T) update(U[t].pos, U[t].old), t--;
+        if(R < l){
+            while(l > L) add(a[--l]);
+            while(l < L) del(a[l++]);
+            while(r < R) add(a[++r]);
+            while(r > R) del(a[r--]);
+        }
+        else{
+            while(r < R) add(a[++r]);
+            while(r > R) del(a[r--]);
+            while(l > L) add(a[--l]);
+            while(l < L) del(a[l++]);
+        }
+        int cur = 1; while(f[cur] > 0) cur++;
+        ans[Q[i].id] = cur;
+    }
+    for (int i = 1; i <= nq; i++) cout << ans[i] << '\n';
+    return 0;
 }
+
