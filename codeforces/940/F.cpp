@@ -4,16 +4,16 @@ using namespace std;
 const int N = 1e5 + 1, B = 4500, C = N / B + 1;
 
 struct MEX {
-	int cnt[N * 2], f[520];
+	int cnt[N * 2], f[N * 2];
 	MEX() {
 		memset(cnt, 0, sizeof cnt);
 		memset(f, 0, sizeof f);
 	}
 	void add(int x) {
-        if(cnt[x] < 520) f[cnt[x]]--; ++cnt[x]; if(cnt[x] < 520) f[cnt[x]]++;
+        f[cnt[x]]--, ++cnt[x], f[cnt[x]]++;
     }
     void del(int x) {
-        if(cnt[x] < 520) f[cnt[x]]--; --cnt[x]; if(cnt[x] < 520) f[cnt[x]]++;
+        f[cnt[x]]--, --cnt[x], f[cnt[x]]++;
     }
 	int get() {
         int ans = 1;
