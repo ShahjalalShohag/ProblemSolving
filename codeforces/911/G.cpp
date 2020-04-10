@@ -59,7 +59,9 @@ struct treap
     {
         if(!l) { return r;}
         if(!r) { return l;}
+
         if(l->key < r->key) swap(l, r);
+
         node *L, *R;
         split(r, l->pos, L, R);
         l->r = merge_op(l->r, R);
@@ -81,8 +83,19 @@ struct treap
         root = merge(l, mr);
         return mid;
 	}
+	void cmb(node* x)
+	{
+        if(!x) return;
+        if(x -> pos) insert(x -> pos);
+        cmb(x -> l);
+        cmb(x -> r);
+	}
 	void combine(node *x)
 	{
+        //root = merge(root, x);
+//        if(!x) return;
+//        if(!root || x -> sz > root -> sz) swap(x, root);
+//        cmb(x);
         root = merge_op(root, x);
 	}
 	vector<int> ans;
