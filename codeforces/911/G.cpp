@@ -1,7 +1,3 @@
-#pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-#pragma GCC optimize("unroll-loops")
-
 #include<bits/stdc++.h>
 using namespace std;
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
@@ -10,11 +6,17 @@ const int N = 3e5 + 9;
 
 struct node {
 	node *l, *r;
-	int pos, key;
+	int pos, key, sz = 0;
 	node(int position) {
 		l = r = nullptr;
 		pos = position;
 		key = rnd();
+	}
+	void pull()
+	{
+	    sz = 1;
+	    if(l) sz += l -> sz;
+	    if(r) sz += r -> sz;
 	}
 };
 struct treap
@@ -39,15 +41,18 @@ struct treap
 			t->l = r;
 			r = t;
 		}
+		t -> pull();
 	}
 	node* merge(node *l, node *r)
 	{
 		if (!l || !r) return l ? l : r;
 		if (l->key < r->key) {
 			l->r = merge(l->r, r);
+			l -> pull();
 			return l;
 		}
 		r->l = merge(l, r->l);
+		r -> pull();
 		return r;
 	}
 	node* merge_op(node *l, node *r)
@@ -59,6 +64,7 @@ struct treap
         split(r, l->pos, L, R);
         l->r = merge_op(l->r, R);
         l->l = merge_op(L, l->l);
+        l -> pull();
         return l;
     }
 	void insert(int pos)
