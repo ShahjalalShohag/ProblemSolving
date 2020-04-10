@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF76192293": {
+    "contest_id": 1334,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1334\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Substring Search",
+    "problem_url": "https://codeforces.com/contest/1334/problem/G",
+    "submission_id": "CF76192293",
+    "submission_url": "https://codeforces.com/contest/1334/submission/76192293",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "fft",
+      "*2900"
+    ],
+    "timestamp": "Apr/10/2020 22:59"
+  },
   "CF76192500": {
     "contest_id": 1334,
     "language": "GNU C++17 (64)",
