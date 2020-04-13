@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF76621121": {
+    "contest_id": 716,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\716\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Digit Tree",
+    "problem_url": "https://codeforces.com/contest/716/problem/E",
+    "submission_id": "CF76621121",
+    "submission_url": "https://codeforces.com/contest/716/submission/76621121",
+    "tags": [
+      "dfs and similar",
+      "divide and conquer",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Apr/13/2020 23:36"
+  },
   "CF76735262": {
     "contest_id": 757,
     "language": "GNU C++17 (64)",
