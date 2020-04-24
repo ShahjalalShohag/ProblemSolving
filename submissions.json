@@ -1,4 +1,20 @@
 {
+  "AC12281939": {
+    "contest_id": "cf17-tournament-round3-open",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\cf17-tournament-round3-open\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Unicyclic Graph Counting",
+    "problem_url": "https://atcoder.jp/contests/cf17-tournament-round3-open/tasks/asaporo2_f",
+    "submission_id": "AC12281939",
+    "submission_url": "https://atcoder.jp/contests/cf17-tournament-round3-open/submissions/12281939",
+    "tags": [
+      "AtCoder",
+      "*1000"
+    ],
+    "timestamp": "Apr/25/2020 01:38"
+  },
   "AC13023973": {
     "contest_id": "abc167",
     "language": "C++ (GCC 9.2.1)",
