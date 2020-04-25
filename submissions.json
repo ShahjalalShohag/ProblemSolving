@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF77970378": {
+    "contest_id": 1194,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1194\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Another Meme Problem",
+    "problem_url": "https://codeforces.com/contest/1194/problem/G",
+    "submission_id": "CF77970378",
+    "submission_url": "https://codeforces.com/contest/1194/submission/77970378",
+    "tags": [
+      "dp",
+      "*2700"
+    ],
+    "timestamp": "Apr/25/2020 09:02"
+  },
   "CF78240671": {
     "contest_id": 1101,
     "language": "GNU C++17 (64)",
