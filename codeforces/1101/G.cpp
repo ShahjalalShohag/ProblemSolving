@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int N = 2e5 + 9;
+const int N = 3e5 + 9;
 struct Basis {
 	vector<int> a;
 	void insert(int x) {
@@ -33,15 +33,16 @@ struct Basis {
 }t;
 int a[N];
 int32_t main() {
-	ios_base::sync_with_stdio(0);
+   	ios_base::sync_with_stdio(0);
 	cin.tie(0); 
     int n; cin >> n;
     for (int i = 0; i < n; i++) {
     	int k; cin >> k;
     	a[i] = a[i - 1] ^ k;
-    	t.insert(a[i]);
     }
-    if (!a[n - 1]) cout << -1 << '\n';
-    else cout << t.a.size() << '\n';
+    if (!a[n - 1]) return cout << -1 << '\n', 0;
+    t.insert(a[n - 1]);
+    for (int i = n - 2; i >= 0; i--) if (!t.can(a[i])) t.insert(a[i]);
+    cout << t.a.size() << '\n';
     return 0;
 }
