@@ -8,7 +8,7 @@ const int N = 3e5 + 9;
 //for undirected edges just make the directed flag false
 //Complexity: O(min(E^2 *V log V, E logV * flow))
 using T = long long;
-const T inf = 1LL << 61;
+const T inf = 1LL << 62;
 struct MCMF {
     struct edge {
         int u, v;
@@ -96,6 +96,7 @@ struct MCMF {
             for(int i = 0; i < n; i++) if(d[i] < inf) potential[i] = d[i];
         }
         while (flow < goal && dijkstra()) flow += send_flow(t, goal - flow);
+        assert(mxid >= -1);
         flow_through.assign(mxid + 10, 0);
         for (int u = 0; u < n; u++) {
             for (auto v: g[u]) {
@@ -128,8 +129,8 @@ struct LR_Flow{
     }
   	pair<T, T> solve(int _s, int _t) {
    		F.add_edge(_t, _s, inf, 0);
-   		auto ans = F.solve(s, t);
-   		if (ans.first < target) return {-1, -1}; //not feasible
+   		auto ans = F.solve(s, t); 
+   		if (target != ans.first) return {-1, -1}; //not feasible
    		return ans;
    }
 };
@@ -170,4 +171,3 @@ int32_t main()
     }
     return 0;
 }
-//https://codeforces.com/contest/1288/problem/F

@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF78342568": {
+    "contest_id": 1288,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1288\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Red-Blue Graph",
+    "problem_url": "https://codeforces.com/contest/1288/problem/F",
+    "submission_id": "CF78342568",
+    "submission_url": "https://codeforces.com/contest/1288/submission/78342568",
+    "tags": [
+      "constructive algorithms",
+      "flows",
+      "*2900"
+    ],
+    "timestamp": "Apr/28/2020 09:21"
+  },
   "CF78343706": {
     "contest_id": 1288,
     "language": "GNU C++17 (64)",
