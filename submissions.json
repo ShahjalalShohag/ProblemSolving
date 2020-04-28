@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF78353704": {
+    "contest_id": 704,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\704\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Captain America",
+    "problem_url": "https://codeforces.com/contest/704/problem/D",
+    "submission_id": "CF78353704",
+    "submission_url": "https://codeforces.com/contest/704/submission/78353704",
+    "tags": [
+      "flows",
+      "greedy",
+      "*3100"
+    ],
+    "timestamp": "Apr/28/2020 12:49"
+  },
   "CF78444077": {
     "contest_id": 722,
     "language": "GNU C++17 (64)",
