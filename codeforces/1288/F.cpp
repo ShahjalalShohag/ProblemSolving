@@ -3,9 +3,8 @@ using namespace std;
 
 const int N = 3e5 + 9;
 
-//Works for both directed, undirected and with negative cost too
-//doesn't work for negative cycles
-//for undirected edges just make the directed flag false
+//Works for both directed and undirected and with negative cost too
+//for undirected just make the directed flag false
 //Complexity: O(min(E^2 *V log V, E logV * flow))
 using T = long long;
 const T inf = 1LL << 62;
@@ -19,7 +18,7 @@ struct MCMF {
     };
     int n, s, t, mxid; T flow, cost;
     vector<vector<int>> g; vector<edge> e;
-    vector<T> d, potential, flow_through;
+    vector<T> d, potential, flow_through; //extra flow beyond 'low' sent through edge i
     vector<int> par; bool neg;
     MCMF() {}
     MCMF(int _n) { // 0-based indexing
@@ -63,11 +62,11 @@ struct MCMF {
         }
         return d[t] != inf;
     }
-    T send_flow(int v, T cur) {
+    T sendFlow(int v, T cur) {
         if(par[v] == -1) return cur;
         int id = par[v];
         int u = e[id].u; T w = e[id].cost;
-        T f = send_flow(u, min(cur, e[id].cap));
+        T f = sendFlow(u, min(cur, e[id].cap));
         cost += f * w;
         e[id].cap -= f;
         e[id^1].cap += f;
@@ -81,10 +80,10 @@ struct MCMF {
         if (neg) {
             // run Bellman-Ford to find starting potential
             d.assign(n, inf);
-            for (int i = 0, relax = true; i < n && relax; i++) {
+            for (int i = 0, relax = false; i < n && relax; i++, relax = false) {
                 for (int u = 0; u < n; u++) {
-                    for (int k = 0; k < (int)g[u].size(); k++) {
-                        int id = g[u][k];
+                    for (int k = 0; k < g[u].size(); k++) {
+                        int id = g[u][i];
                         int v = e[id].v; T cap = e[id].cap, w = e[id].cost;
                         if (d[v] > d[u] + w && cap > 0) {
                             d[v] = d[u] + w;
@@ -95,7 +94,7 @@ struct MCMF {
             }
             for(int i = 0; i < n; i++) if(d[i] < inf) potential[i] = d[i];
         }
-        while (flow < goal && dijkstra()) flow += send_flow(t, goal - flow);
+        while (flow < goal && dijkstra()) flow += sendFlow(t, goal - flow);
         assert(mxid >= -1);
         flow_through.assign(mxid + 10, 0);
         for (int u = 0; u < n; u++) {
@@ -106,15 +105,12 @@ struct MCMF {
         return make_pair(flow, cost);
     }
 };
-//flow_through[i] = extra flow beyond 'low' sent through edge i
-//it finds the feasible solution with minimum cost
-//not necessarily with maximum flow
-struct LR_Flow{
+struct LRFlow{
     MCMF F;
     int n, s, t;
     T target;
-    LR_Flow() {}
-    LR_Flow(int _n) {
+    LRFlow() {}
+    LRFlow(int _n) {
     	n = _n + 10; s = n - 2, t = n - 1; target = 0;
     	F = MCMF(n);
     }
@@ -129,7 +125,7 @@ struct LR_Flow{
     }
   	pair<T, T> solve(int _s, int _t) {
    		F.add_edge(_t, _s, inf, 0);
-   		auto ans = F.solve(s, t); 
+   		auto ans = F.solve(s, t);
    		if (target != ans.first) return {-1, -1}; //not feasible
    		return ans;
    }
@@ -142,7 +138,7 @@ int32_t main()
     int n1, n2, m, r, b; cin >> n1 >> n2 >> m >> r >> b;
     string s1, s2; cin >> s1 >> s2;
     int s = n1 + n2 + 10, t = s + 1;
-    LR_Flow F(t);
+    LRFlow F(t);
     for (int i = 0; i < m; i++) {
     	int u, v; cin >> u >> v; --u; --v;
     	F.add_edge(u, v + n1, 0, 1, r, i);
