@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF78644629": {
+    "contest_id": 818,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\818\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Four Melodies",
+    "problem_url": "https://codeforces.com/contest/818/problem/G",
+    "submission_id": "CF78644629",
+    "submission_url": "https://codeforces.com/contest/818/submission/78644629",
+    "tags": [
+      "flows",
+      "graphs",
+      "*2600"
+    ],
+    "timestamp": "May/01/2020 16:37"
+  },
   "CF78772965": {
     "contest_id": 802,
     "language": "GNU C++17 (64)",
