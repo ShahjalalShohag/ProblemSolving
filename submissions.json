@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF78773116": {
+    "contest_id": 802,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\802\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Heidi and Library (hard)",
+    "problem_url": "https://codeforces.com/contest/802/problem/C",
+    "submission_id": "CF78773116",
+    "submission_url": "https://codeforces.com/contest/802/submission/78773116",
+    "tags": [
+      "flows",
+      "*2600"
+    ],
+    "timestamp": "May/02/2020 07:37"
+  },
   "CF78879265": {
     "contest_id": 590,
     "language": "GNU C++17 (64)",
