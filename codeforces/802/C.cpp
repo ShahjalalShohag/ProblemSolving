@@ -85,11 +85,10 @@ int32_t main() {
 	int n, k; cin >> n >> k;
 	for (int i = 1; i <= n; i++) cin >> a[i];
 	for (int i = 1; i <= n; i++) cin >> c[i];
-	int s = 2 * n + 1, t = s + 1, tmp = t + 1;
-	MCMF F(tmp); const int M = 1e9;
-	F.add_edge(s, tmp, k, 0); F.add_edge(tmp, t, k, 0);
+	int s = 2 * n + 1, t = s + 1;
+	MCMF F(t); const int M = 1e9;
 	for (int i = 1; i <= n; i++) {
-		F.add_edge(tmp, i, 1, c[a[i]]);
+		F.add_edge(s, i, 1, c[a[i]]);
 		F.add_edge(i, i + n, 1, -M);
 		F.add_edge(i + n, t, 1, 0);
 		for (int j = i + 1; j <= n; j++) {
@@ -97,7 +96,11 @@ int32_t main() {
 			else F.add_edge(i + n, j, 1, 0);
 		}
 	}
-	long long ans = F.solve(s, t, k).second + 1LL * M * n;
+	long long ans = 1e18;
+	for (int i = 1; i <= k; i++) {
+		MCMF nw = F;
+		ans = min(ans, nw.solve(s, t, i).second + 1LL * M * n);
+	}
 	cout << ans << '\n';
     return 0;
 }
