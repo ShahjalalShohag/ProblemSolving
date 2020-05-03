@@ -82,9 +82,9 @@ struct Kuhn {
 		return false;
 	}
 	int maximum_matching() {
-		for (int i = 1; i <= n; i++) shuffle(g[i].begin(), g[i].end(), rnd);
+		//for (int i = 1; i <= n; i++) shuffle(g[i].begin(), g[i].end(), rnd);
 		vector<int> p(n); iota(p.begin(), p.end(), 1);
-		shuffle(p.begin(), p.end(), rnd);
+		//shuffle(p.begin(), p.end(), rnd);
 		bool ok = true;
 		while (ok) {
 			ok = false;
