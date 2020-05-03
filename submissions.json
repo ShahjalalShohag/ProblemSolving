@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF78879361": {
+    "contest_id": 590,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\590\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Birthday",
+    "problem_url": "https://codeforces.com/contest/590/problem/E",
+    "submission_id": "CF78879361",
+    "submission_url": "https://codeforces.com/contest/590/submission/78879361",
+    "tags": [
+      "graph matchings",
+      "strings",
+      "*3200"
+    ],
+    "timestamp": "May/03/2020 16:12"
+  },
   "CF79064371": {
     "contest_id": 612,
     "language": "GNU C++17 (64)",
