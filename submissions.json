@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF79064371": {
+    "contest_id": 612,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\612\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Square Root of Permutation",
+    "problem_url": "https://codeforces.com/contest/612/problem/E",
+    "submission_id": "CF79064371",
+    "submission_url": "https://codeforces.com/contest/612/submission/79064371",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "May/05/2020 20:19"
+  },
   "CF79156458": {
     "contest_id": 1344,
     "language": "GNU C++17 (64)",
