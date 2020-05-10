@@ -1,4 +1,20 @@
 {
+  "AC13104132": {
+    "contest_id": "abc167",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc167\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Bracket Sequencing",
+    "problem_url": "https://atcoder.jp/contests/abc167/tasks/abc167_f",
+    "submission_id": "AC13104132",
+    "submission_url": "https://atcoder.jp/contests/abc167/submissions/13104132",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "May/11/2020 01:19"
+  },
   "AC13119304": {
     "contest_id": "ddcc2020-final",
     "language": "C++14 (GCC 5.4.1)",
