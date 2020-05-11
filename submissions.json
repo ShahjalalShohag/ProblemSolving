@@ -1,4 +1,20 @@
 {
+  "AC13119304": {
+    "contest_id": "ddcc2020-final",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\ddcc2020-final\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Smaller-Suffix-Free Sequences",
+    "problem_url": "https://atcoder.jp/contests/ddcc2020-final/tasks/ddcc2020_final_c",
+    "submission_id": "AC13119304",
+    "submission_url": "https://atcoder.jp/contests/ddcc2020-final/submissions/13119304",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "May/11/2020 15:19"
+  },
   "AC13380311": {
     "contest_id": "abc151",
     "language": "C++14 (GCC 5.4.1)",
