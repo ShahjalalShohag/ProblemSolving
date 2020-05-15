@@ -129,20 +129,26 @@ struct polygon {
     }
     // -1 if strictly inside, 0 if on the polygon, 1 if strictly outside
     int point_inside_convex(const PT& x) {
-        int n = p.size(); assert(n >= 3);
-        int a = orientation(p[0], p[1], x), b = orientation(p[0], p[n - 1], x);
-        if (a < 0 || b > 0) return 1;
-        int l = 1, r = n - 1;
-        while (l + 1 < r) {
-            int mid = l + r >> 1;
-            if (orientation(p[0], p[mid], x) >= 0) l = mid;
-            else r = mid;
+        int n = p.size(), a, b, c;
+        assert(n >= 3);
+        PT g = (p[0] + p[n / 3] + p[n * 2 / 3]) / 3.0;
+        double ag, cg;
+        for (a = 0, b = n; a + 1 < b; ) {
+            c = (a + b) / 2;
+            ag = cross(p[a] - g, x - g);
+            cg = cross(p[c] - g, x - g);
+            if (cross(p[a] - g, p[c] - g) > 0) {
+                if (ag > 0 and cg < 0) b = c; else a = c;
+            } 
+            else {
+                if (ag < 0 and cg > 0) a = c; else b = c;
+            }
         }
-        int k = orientation(p[l], p[r], x);
-        if (k <= 0) return -k;
-        if (l == 1 && a == 0) return 0;
-        if (r == n - 1 && b == 0) return 0;
-        return -1;
+        b %= n;
+        ag = cross(p[a] - x, p[b] - x);
+        if (ag < 0) return 1;
+        if (ag > 0) return -1;
+        return 0;
     }
 };
 int32_t main() {
