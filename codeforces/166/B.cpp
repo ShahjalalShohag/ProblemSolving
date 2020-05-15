@@ -156,16 +156,12 @@ int32_t main() {
     cin.tie(0);
     int n; cin >> n;
     polygon p(n);
-    for (int i = 0; i < n; i++) {
-        int x, y; cin >> x >> y;
-        p.p[i].x = x; p.p[i].y = y;
-    }
+    for (int i = 0; i < n; i++) cin >> p.p[i].x >> p.p[i].y;
     reverse(p.p.begin(), p.p.end());
     int ans = 1;
     int q; cin >> q;
     while (q--) {
-        int a, b; cin >> a >> b;
-        PT x; x.x = a; x.y = b;
+        PT x; cin >> x.x >> x.y;
         ans &= p.point_inside_convex(x) == -1;
     }
     if (ans) cout << "YES\n";
