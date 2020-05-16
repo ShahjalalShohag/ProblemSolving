@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF80268757": {
+    "contest_id": 598,
+    "language": "GNU C++14",
+    "path": "codeforces\\598\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Cut Length",
+    "problem_url": "https://codeforces.com/contest/598/problem/F",
+    "submission_id": "CF80268757",
+    "submission_url": "https://codeforces.com/contest/598/submission/80268757",
+    "tags": [
+      "geometry",
+      "*2900"
+    ],
+    "timestamp": "May/16/2020 06:04"
+  },
   "CF80310406": {
     "contest_id": 1355,
     "language": "GNU C++14",
