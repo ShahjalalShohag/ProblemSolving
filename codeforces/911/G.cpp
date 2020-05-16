@@ -30,7 +30,7 @@ const int N = 2e5 + 9;
 
 int a[N], ans[N];
 bitset<N> bs[101], nw, t;
-signed main() {
+int32_t main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int n; cin >> n;
