@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF80547938": {
+    "contest_id": 1195,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1195\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Geometers Anonymous Club",
+    "problem_url": "https://codeforces.com/contest/1195/problem/F",
+    "submission_id": "CF80547938",
+    "submission_url": "https://codeforces.com/contest/1195/submission/80547938",
+    "tags": [
+      "data structures",
+      "geometry",
+      "math",
+      "sortings",
+      "*2500"
+    ],
+    "timestamp": "May/18/2020 00:48"
+  },
   "CF80604557": {
     "contest_id": 106,
     "language": "GNU C++17 (64)",
