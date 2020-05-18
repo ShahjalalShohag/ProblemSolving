@@ -70,38 +70,26 @@ struct circle {
         r = dist(a, p);
     }
 };
-double fix(double x) {
-  if (x > PI) x -= PI * 2;
-  if (x <= -PI) x += PI * 2;
-  return x;
-}
-int maximum_circle_cover(vector<PT> p, double r) {
-  int n = p.size();
-  int ans = 0;
-  for (int i = 0; i < n; ++i) {
-      vector<pair<double, int>> events = {{-PI, -1}, {PI, 1}};
-      for (int j = 0; j < n; ++j) {
-        if (j == i) continue;
-        double dx = p[j].x - p[i].x, dy = p[j].y - p[i].y;
-        if (hypot(dx, dy) > r * 2) continue;
-        double dir = atan2(dy, dx);
-        double ang = acos(hypot(dx, dy) / 2 / r);
-        double st = fix(dir - ang), ed = fix(dir + ang);
-        events.push_back({st, -1});
-        events.push_back({ed, +1});
-        if (st > ed) {
-          events.push_back({+PI, +1});
-          events.push_back({-PI, -1});
+circle minimum_enclosing_circle(vector<PT> a) {
+    random_shuffle(a.begin(), a.end());
+    int n = a.size();
+    circle c(a[0], 0);
+    for (int i = 1; i < n; i++) {
+        if (sign(dist(c.p, a[i]) - c.r) > 0) {
+            c = circle(a[i], 0);
+            for (int j = 0; j < i; j++) {
+                if (sign(dist(c.p, a[j]) - c.r) > 0) {
+                    c = circle((a[i] + a[j]) / 2, dist(a[i], a[j]) / 2);
+                    for (int k = 0; k < j; k++) {
+                        if (sign(dist(c.p, a[k]) - c.r) > 0) {
+                            c = circle(a[i], a[j], a[k]);
+                        }
+                    }
+                }
+            }
         }
-      }
-      sort(events.begin(), events.end());
-      int cnt = 0;
-      for (auto &&e: events) {
-        cnt -= e.second;
-        ans = max(ans, cnt);
-      }
-  }
-  return ans;
+    }
+    return c;
 }
 int32_t main() {
 	ios_base::sync_with_stdio(0);
@@ -109,12 +97,7 @@ int32_t main() {
 	int n; cin >> n;
 	vector<PT> p(n);
 	for (int i = 0; i < n; i++) cin >> p[i].x >> p[i].y;
-	double l = 0, r = 2001; int it = 200;
-    while (it--) {
-        double mid = (l + r) * 0.5;
-        if (maximum_circle_cover(p, mid) >= n) r = mid;
-        else l = mid;
-    }
-	cout << fixed << setprecision(10) << r << '\n';
+	circle c = minimum_enclosing_circle(p);
+	cout << fixed << setprecision(10) << c.r << '\n';
     return 0;
 }
