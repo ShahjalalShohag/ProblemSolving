@@ -17,8 +17,8 @@ int32_t main() {
 		X += x[i]; Y +=y[i]; Z += z[i];
 	}
 	X /= n; Y /= n; Z /= n;
-	double ratio = 0.998;
-	int it = 10000;
+	double ratio = 1.0;
+	int it = 100000;
 	while (it--) {
 		int id = 0;
 		for (int i = 1; i < n; i++) {
