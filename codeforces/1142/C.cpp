@@ -33,7 +33,6 @@ int32_t main() {
     }
     int ans = up.size() - 1;
     if (up.size() > 1) ans -= up[0].x == up[1].x;
-    if (up.size() > 2) ans -= up.back().x == up[up.size() - 2].x;
     cout << ans << '\n';
     return 0;
 }
