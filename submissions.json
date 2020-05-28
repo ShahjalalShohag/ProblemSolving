@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF81756437": {
+    "contest_id": 1359,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1359\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Mixing Water",
+    "problem_url": "https://codeforces.com/contest/1359/problem/C",
+    "submission_id": "CF81756437",
+    "submission_url": "https://codeforces.com/contest/1359/submission/81756437",
+    "tags": [
+      "binary search",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "May/28/2020 21:27"
+  },
   "CF81773559": {
     "contest_id": 1359,
     "language": "GNU C++17 (64)",
