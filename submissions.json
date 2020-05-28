@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF81825028": {
+    "contest_id": 1359,
+    "language": "GNU C++17",
+    "path": "codeforces\\1359\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "RC Kaboom Show",
+    "problem_url": "https://codeforces.com/contest/1359/problem/F",
+    "submission_id": "CF81825028",
+    "submission_url": "https://codeforces.com/contest/1359/submission/81825028",
+    "tags": [
+      "binary search",
+      "brute force",
+      "data structures",
+      "geometry",
+      "math",
+      "*2900"
+    ],
+    "timestamp": "May/29/2020 01:31"
+  },
   "CF82291929": {
     "contest_id": 1349,
     "language": "GNU C++17 (64)",
