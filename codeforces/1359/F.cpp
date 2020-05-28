@@ -142,8 +142,8 @@ struct event {
     event() {}
     event(double x, int ty, int id) : x(x), ty(ty), id(id) {}
     bool operator < (const event& e) const {
-        if (fabs(x - e.x) >= eps) return x < e.x;
-        return make_pair(ty, id) < make_pair(e.ty, e.id);
+        if (fabs(x - e.x) > eps) return x < e.x;
+        return ty > e.ty;
     }
 };
 typedef set<seg>::iterator iter;
@@ -159,27 +159,24 @@ pair<int, int> any_intersection(const vector<seg>& a) {
 	set<seg> cur;
 	vector<iter> where;
     where.resize((int)a.size());
-    try {
-        for (int i = 0; i < (int)e.size(); ++i) {
-            int id = e[i].id;
-            if (e[i].ty == +1) {
-                iter nxt = cur.lower_bound(a[id]);
-                iter prv = nxt == cur.begin() ? cur.end() : prev(nxt);;
-                if (nxt != cur.end() && intersect(*nxt, a[id])) return make_pair(nxt->id, id);
-                if (prv != cur.end() && intersect(*prv, a[id])) return make_pair(prv->id, id);
-                where[id] = cur.insert(nxt, a[id]);
-            } else {
-            	auto nw = where[id];
-                if (nw == cur.end()) continue;
-                iter nxt = next(nw);
-                iter prv = nw == cur.begin() ? cur.end() : prev(nw);;
-                if (nxt != cur.end() && prv != cur.end() && intersect(*nxt, *prv))
-                    return make_pair(prv->id, nxt->id);
-                cur.erase(nw);
-            }
+    for (int i = 0; i < (int)e.size(); ++i) {
+        int id = e[i].id;
+        if (e[i].ty == +1) {
+            iter nxt = cur.lower_bound(a[id]);
+            iter prv = nxt == cur.begin() ? cur.end() : prev(nxt);;
+            if (nxt != cur.end() && intersect(*nxt, a[id])) return make_pair(nxt->id, id);
+            if (prv != cur.end() && intersect(*prv, a[id])) return make_pair(prv->id, id);
+            where[id] = cur.insert(nxt, a[id]);
+        } else {
+        	auto nw = where[id];
+            if (nw == cur.end()) continue;
+            iter nxt = next(nw);
+            iter prv = nw == cur.begin() ? cur.end() : prev(nw);;
+            if (nxt != cur.end() && prv != cur.end() && intersect(*nxt, *prv))
+                return make_pair(prv->id, nxt->id);
+            cur.erase(nw);
         }
     }
-    catch(...) {return {0, 1};}
     return make_pair(-1, -1);
 }
 PT a[N], d[N];
