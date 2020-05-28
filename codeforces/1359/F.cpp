@@ -115,7 +115,7 @@ struct seg {
     seg(PT a, PT b, int c) {
         p = a; q = b; id = c;
     }
-    double eval_y(double x) const {
+    double get_y(double x) const {
         if (fabs(p.x - q.x) < eps) return p.y;
         return p.y + (q.y - p.y) * (x - p.x) / (q.x - p.x);
     }
@@ -134,7 +134,7 @@ bool intersect (const seg & a, const seg & b) {
 }
 bool operator < (const seg& a, const seg& b) {
     double x = max(min(a.p.x, a.q.x), min(b.p.x, b.q.x));
-    return a.eval_y(x) < b.eval_y(x);
+    return a.get_y(x) < b.get_y(x) - eps;
 }
 struct event {
     double x;
@@ -194,7 +194,7 @@ int32_t main() {
     }
     double l = 0, r = 1e12;
     int ok = 0;
-    while (r - l >= 1e-7) {
+    while (r - l >= 1e-8) {
         double mid = (l + r) * 0.5;
         vector<seg> v;
         for (int i = 0; i < n; i++) {
