@@ -1,4 +1,20 @@
 {
+  "AC13921173": {
+    "contest_id": "agc005",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\agc005\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Many Easy Problems",
+    "problem_url": "https://atcoder.jp/contests/agc005/tasks/agc005_f",
+    "submission_id": "AC13921173",
+    "submission_url": "https://atcoder.jp/contests/agc005/submissions/13921173",
+    "tags": [
+      "AtCoder",
+      "*1900"
+    ],
+    "timestamp": "Jun/01/2020 15:09"
+  },
   "AC14156665": {
     "contest_id": "arc058",
     "language": "C++14 (GCC 5.4.1)",
