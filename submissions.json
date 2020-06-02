@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF82291929": {
+    "contest_id": 1349,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1349\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Slime and Biscuits",
+    "problem_url": "https://codeforces.com/contest/1349/problem/D",
+    "submission_id": "CF82291929",
+    "submission_url": "https://codeforces.com/contest/1349/submission/82291929",
+    "tags": [
+      "math",
+      "probabilities",
+      "*3200"
+    ],
+    "timestamp": "Jun/02/2020 15:34"
+  },
   "CF82452717": {
     "contest_id": 626,
     "language": "GNU C++17 (64)",
