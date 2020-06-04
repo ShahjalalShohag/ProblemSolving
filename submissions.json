@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF82454759": {
+    "contest_id": 466,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\466\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Increase Sequence",
+    "problem_url": "https://codeforces.com/contest/466/problem/D",
+    "submission_id": "CF82454759",
+    "submission_url": "https://codeforces.com/contest/466/submission/82454759",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "*2100"
+    ],
+    "timestamp": "Jun/04/2020 12:41"
+  },
   "CF82501966": {
     "contest_id": 1361,
     "language": "GNU C++17 (64)",
