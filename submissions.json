@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF82608250": {
+    "contest_id": 1286,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1286\\C1.cpp",
+    "problem_index": "C1",
+    "problem_name": "Madhouse (Easy version)",
+    "problem_url": "https://codeforces.com/contest/1286/problem/C1",
+    "submission_id": "CF82608250",
+    "submission_url": "https://codeforces.com/contest/1286/submission/82608250",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "interactive",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "Jun/05/2020 13:44"
+  },
   "CF82674857": {
     "contest_id": 1310,
     "language": "GNU C++17 (64)",
