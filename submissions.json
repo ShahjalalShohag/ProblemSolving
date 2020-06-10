@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF83279585": {
+    "contest_id": 212,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\212\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Privatization",
+    "problem_url": "https://codeforces.com/contest/212/problem/A",
+    "submission_id": "CF83279585",
+    "submission_url": "https://codeforces.com/contest/212/submission/83279585",
+    "tags": [
+      "flows",
+      "graphs",
+      "*3000"
+    ],
+    "timestamp": "Jun/10/2020 13:54"
+  },
   "CF83280378": {
     "contest_id": 1240,
     "language": "GNU C++17 (64)",
