@@ -1,4 +1,20 @@
 {
+  "AC14160815": {
+    "contest_id": "arc059",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\arc059\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Children and Candies",
+    "problem_url": "https://atcoder.jp/contests/arc059/tasks/arc059_c",
+    "submission_id": "AC14160815",
+    "submission_url": "https://atcoder.jp/contests/arc059/submissions/14160815",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Jun/10/2020 19:49"
+  },
   "AC14161382": {
     "contest_id": "arc059",
     "language": "C++14 (GCC 5.4.1)",
