@@ -1,4 +1,20 @@
 {
+  "AC14162606": {
+    "contest_id": "arc060",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\arc060\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Tak and Hotels",
+    "problem_url": "https://atcoder.jp/contests/arc060/tasks/arc060_c",
+    "submission_id": "AC14162606",
+    "submission_url": "https://atcoder.jp/contests/arc060/submissions/14162606",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jun/10/2020 20:59"
+  },
   "AC14163520": {
     "contest_id": "arc060",
     "language": "C++14 (GCC 5.4.1)",
