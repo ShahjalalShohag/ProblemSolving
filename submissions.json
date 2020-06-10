@@ -1,4 +1,20 @@
 {
+  "AC14163520": {
+    "contest_id": "arc060",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\arc060\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Best Representation",
+    "problem_url": "https://atcoder.jp/contests/arc060/tasks/arc060_d",
+    "submission_id": "AC14163520",
+    "submission_url": "https://atcoder.jp/contests/arc060/submissions/14163520",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Jun/10/2020 21:44"
+  },
   "AC14174869": {
     "contest_id": "arc061",
     "language": "C++14 (GCC 5.4.1)",
