@@ -1,4 +1,20 @@
 {
+  "AC14178757": {
+    "contest_id": "arc064",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\arc064\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Rotated Palindromes",
+    "problem_url": "https://atcoder.jp/contests/arc064/tasks/arc064_d",
+    "submission_id": "AC14178757",
+    "submission_url": "https://atcoder.jp/contests/arc064/submissions/14178757",
+    "tags": [
+      "AtCoder",
+      "*1000"
+    ],
+    "timestamp": "Jun/11/2020 18:45"
+  },
   "AC14220043": {
     "contest_id": "tokiomarine2020",
     "language": "C++ (GCC 9.2.1)",
