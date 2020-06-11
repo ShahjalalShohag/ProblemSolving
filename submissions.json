@@ -1,4 +1,20 @@
 {
+  "AC14176357": {
+    "contest_id": "arc062",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\arc062\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Painting Graphs with AtCoDeer",
+    "problem_url": "https://atcoder.jp/contests/arc062/tasks/arc062_d",
+    "submission_id": "AC14176357",
+    "submission_url": "https://atcoder.jp/contests/arc062/submissions/14176357",
+    "tags": [
+      "AtCoder",
+      "*1300"
+    ],
+    "timestamp": "Jun/11/2020 16:43"
+  },
   "AC14178757": {
     "contest_id": "arc064",
     "language": "C++14 (GCC 5.4.1)",
