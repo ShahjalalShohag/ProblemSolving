@@ -1,4 +1,20 @@
 {
+  "AC14174869": {
+    "contest_id": "arc061",
+    "language": "C++14 (GCC 5.4.1)",
+    "path": "atcoder\\arc061\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Card Game for Three",
+    "problem_url": "https://atcoder.jp/contests/arc061/tasks/arc061_d",
+    "submission_id": "AC14174869",
+    "submission_url": "https://atcoder.jp/contests/arc061/submissions/14174869",
+    "tags": [
+      "AtCoder",
+      "*1100"
+    ],
+    "timestamp": "Jun/11/2020 15:09"
+  },
   "AC14176357": {
     "contest_id": "arc062",
     "language": "C++14 (GCC 5.4.1)",
