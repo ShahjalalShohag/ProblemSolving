@@ -37,7 +37,7 @@ int32_t main() {
 		int i = rnd() % n + 1, j = rnd() % n + 1;
 		if (i == j) continue;
 		int k = query(i, j);
-		if (__builtin_popcount(k) <= 4) {
+		if (__builtin_popcount(k) <= 5) {
 			id = i; break;
 		}
 	}
