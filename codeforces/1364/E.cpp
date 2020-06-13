@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 const int N = 3000;
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 int query(int i, int j) {
@@ -37,7 +37,7 @@ int32_t main() {
 		int i = rnd() % n + 1, j = rnd() % n + 1;
 		if (i == j) continue;
 		int k = query(i, j);
-		if (__builtin_popcount(k) <= 6) {
+		if (__builtin_popcount(k) <= 4) {
 			id = i; break;
 		}
 	}
