@@ -44,10 +44,8 @@ struct SuffixAutomaton {
             if (t[p].len + 1 == t[q].len) t[cur].link = q;
             else {
                 int clone = sz++;
+                t[clone] = t[q];
                 t[clone].len = t[p].len + 1;
-                t[clone].nxt = t[q].nxt;
-                t[clone].link = t[q].link;
-                t[clone].firstpos = t[q].firstpos;
                 while (p != -1 && t[p].nxt[c] == q) {
                     t[p].nxt[c] = clone;
                     p = t[p].link;
