@@ -26,28 +26,14 @@ struct SuffixAutomaton {
         t[0].len = 0; t[0].link = -1; t[0].firstpos = 0;
     }
     void extend(char c) {
-        int p = last;
-    	if (t[p].nxt.count(c)) {
-            int q = t[p].nxt[c];
-            if (t[q].len == t[p].len + 1) {
-                last = q;
-                return;
-            }
-            int clone = sz++;
-            t[clone] = t[q];
-            t[clone].len = t[p].len + 1;
-            t[q].link = clone;
-            last = clone;
-            while (p != -1 && t[p].nxt[c] == q) {
-                t[p].nxt[c] = clone;
-                p = t[p].link;
-            }
-            return;
-        }
+    	if (t[last].nxt.count(c) && t[t[last].nxt[c]].len == t[last].len + 1) {
+    		last = t[last].nxt[c];
+    		return;
+    	}
         int cur = sz++;
         t[cur].len = t[last].len + 1;
         t[cur].firstpos = t[cur].len;
-        p = last;
+        int p = last;
         while (p != -1 && !t[p].nxt.count(c)) {
             t[p].nxt[c] = cur;
             p = t[p].link;
@@ -58,8 +44,10 @@ struct SuffixAutomaton {
             if (t[p].len + 1 == t[q].len) t[cur].link = q;
             else {
                 int clone = sz++;
-                t[clone] = t[q];
                 t[clone].len = t[p].len + 1;
+                t[clone].nxt = t[q].nxt;
+                t[clone].link = t[q].link;
+                t[clone].firstpos = t[q].firstpos;
                 while (p != -1 && t[p].nxt[c] == q) {
                     t[p].nxt[c] = clone;
                     p = t[p].link;
@@ -93,9 +81,6 @@ int32_t main() {
     	sa.last = 0;
     }
     for (int i = 1; i < sa.sz; i++) g[sa.t[i].link].push_back(i);
-    for (int i = 1; i < sa.sz; i++) {
-        assert(sa.t[sa.t[i].link].len < sa.t[i].len);
-    }
    	sa.dfs(0);
   	long long ans = 0;
    	for (int i = 1; i < sa.sz; i++) ans = max(ans, a[i] * sa.t[i].len);
