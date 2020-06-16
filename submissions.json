@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF83907962": {
+    "contest_id": 616,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\616\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Expensive Strings",
+    "problem_url": "https://codeforces.com/contest/616/problem/F",
+    "submission_id": "CF83907962",
+    "submission_url": "https://codeforces.com/contest/616/submission/83907962",
+    "tags": [
+      "string suffix structures",
+      "strings",
+      "*2700"
+    ],
+    "timestamp": "Jun/16/2020 15:34"
+  },
   "CF83918219": {
     "contest_id": 204,
     "language": "GNU C++17 (64)",
