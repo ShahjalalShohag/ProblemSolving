@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF83918219": {
+    "contest_id": 204,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\204\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Little Elephant and Strings",
+    "problem_url": "https://codeforces.com/contest/204/problem/E",
+    "submission_id": "CF83918219",
+    "submission_url": "https://codeforces.com/contest/204/submission/83918219",
+    "tags": [
+      "data structures",
+      "implementation",
+      "string suffix structures",
+      "two pointers",
+      "*2800"
+    ],
+    "timestamp": "Jun/16/2020 17:47"
+  },
   "CF83932022": {
     "contest_id": 1367,
     "language": "GNU C++17 (64)",
