@@ -1,4 +1,20 @@
 {
+  "AC14495582": {
+    "contest_id": "agc046",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\agc046\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Takahashikun, The Strider",
+    "problem_url": "https://atcoder.jp/contests/agc046/tasks/agc046_a",
+    "submission_id": "AC14495582",
+    "submission_url": "https://atcoder.jp/contests/agc046/submissions/14495582",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jun/20/2020 18:04"
+  },
   "AC14498761": {
     "contest_id": "agc046",
     "language": "C++ (GCC 9.2.1)",
