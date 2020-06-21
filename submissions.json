@@ -1,4 +1,20 @@
 {
+  "AC14600631": {
+    "contest_id": "arc066",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc066\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Contest with Drinks Hard",
+    "problem_url": "https://atcoder.jp/contests/arc066/tasks/arc066_d",
+    "submission_id": "AC14600631",
+    "submission_url": "https://atcoder.jp/contests/arc066/submissions/14600631",
+    "tags": [
+      "AtCoder",
+      "*1400"
+    ],
+    "timestamp": "Jun/22/2020 05:45"
+  },
   "AC14601096": {
     "contest_id": "arc067",
     "language": "C++ (GCC 9.2.1)",
