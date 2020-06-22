@@ -1,4 +1,20 @@
 {
+  "AC14601096": {
+    "contest_id": "arc067",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc067\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Grouping",
+    "problem_url": "https://atcoder.jp/contests/arc067/tasks/arc067_c",
+    "submission_id": "AC14601096",
+    "submission_url": "https://atcoder.jp/contests/arc067/submissions/14601096",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jun/22/2020 06:32"
+  },
   "AC14664953": {
     "contest_id": "arc068",
     "language": "C++ (GCC 9.2.1)",
