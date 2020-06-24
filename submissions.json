@@ -1,4 +1,20 @@
 {
+  "AC14664953": {
+    "contest_id": "arc068",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc068\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Snuke Line",
+    "problem_url": "https://atcoder.jp/contests/arc068/tasks/arc068_c",
+    "submission_id": "AC14664953",
+    "submission_url": "https://atcoder.jp/contests/arc068/submissions/14664953",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jun/25/2020 01:11"
+  },
   "AC14683541": {
     "contest_id": "arc069",
     "language": "C++ (GCC 9.2.1)",
