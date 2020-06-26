@@ -1,4 +1,20 @@
 {
+  "AC14703427": {
+    "contest_id": "arc074",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc074\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "RGB Sequence",
+    "problem_url": "https://atcoder.jp/contests/arc074/tasks/arc074_c",
+    "submission_id": "AC14703427",
+    "submission_url": "https://atcoder.jp/contests/arc074/submissions/14703427",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Jun/27/2020 01:26"
+  },
   "AC14851983": {
     "contest_id": "agc016",
     "language": "C++ (GCC 9.2.1)",
