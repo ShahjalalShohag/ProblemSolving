@@ -1,4 +1,20 @@
 {
+  "AC14873618": {
+    "contest_id": "arc084",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc084\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Small Multiple",
+    "problem_url": "https://atcoder.jp/contests/arc084/tasks/arc084_b",
+    "submission_id": "AC14873618",
+    "submission_url": "https://atcoder.jp/contests/arc084/submissions/14873618",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Jul/01/2020 01:26"
+  },
   "AC15785382": {
     "contest_id": "agc047",
     "language": "C++ (GCC 9.2.1)",
