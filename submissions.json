@@ -1,4 +1,20 @@
 {
+  "AC15785382": {
+    "contest_id": "agc047",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\agc047\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Product Modulo",
+    "problem_url": "https://atcoder.jp/contests/agc047/tasks/agc047_c",
+    "submission_id": "AC15785382",
+    "submission_url": "https://atcoder.jp/contests/agc047/submissions/15785382",
+    "tags": [
+      "AtCoder",
+      "*800"
+    ],
+    "timestamp": "Aug/09/2020 19:17"
+  },
   "AC15785432": {
     "contest_id": "agc047",
     "language": "C++ (GCC 9.2.1)",
