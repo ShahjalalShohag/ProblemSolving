@@ -1,4 +1,20 @@
 {
+  "AC15787529": {
+    "contest_id": "agc047",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\agc047\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "First Second",
+    "problem_url": "https://atcoder.jp/contests/agc047/tasks/agc047_b",
+    "submission_id": "AC15787529",
+    "submission_url": "https://atcoder.jp/contests/agc047/submissions/15787529",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Aug/09/2020 19:45"
+  },
   "AC15909483": {
     "contest_id": "abc175",
     "language": "C++ (GCC 9.2.1)",
