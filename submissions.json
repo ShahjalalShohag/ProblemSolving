@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF89952287": {
+    "contest_id": 1398,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1398\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Controversial Rounds",
+    "problem_url": "https://codeforces.com/contest/1398/problem/F",
+    "submission_id": "CF89952287",
+    "submission_url": "https://codeforces.com/contest/1398/submission/89952287",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dp",
+      "greedy",
+      "two pointers",
+      "*2500"
+    ],
+    "timestamp": "Aug/14/2020 22:31"
+  },
   "CF90090273": {
     "contest_id": 1392,
     "language": "GNU C++17 (64)",
