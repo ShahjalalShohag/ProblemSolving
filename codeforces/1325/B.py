@@ -1,4 +1,3 @@
-import sys
-I = sys.stdin.readline
-for _ in range(int(I())):
-	I(); print(len(set(I().split())))
+for _ in range(int(input())):
+	input()
+	print(len(set(input().split())))
