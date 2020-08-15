@@ -1,4 +1,20 @@
 {
+  "AC15914294": {
+    "contest_id": "abc175",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc175\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Making Triangle",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/abc175_b",
+    "submission_id": "AC15914294",
+    "submission_url": "https://atcoder.jp/contests/abc175/submissions/15914294",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Aug/15/2020 18:05"
+  },
   "AC15919284": {
     "contest_id": "abc175",
     "language": "C++ (GCC 9.2.1)",
