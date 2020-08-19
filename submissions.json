@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF90376214": {
+    "contest_id": 1332,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1332\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Independent Set",
+    "problem_url": "https://codeforces.com/contest/1332/problem/F",
+    "submission_id": "CF90376214",
+    "submission_url": "https://codeforces.com/contest/1332/submission/90376214",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "Aug/19/2020 15:39"
+  },
   "CF90546691": {
     "contest_id": 1401,
     "language": "GNU C++17 (64)",
