@@ -1,4 +1,20 @@
 {
+  "AC16040473": {
+    "contest_id": "arc100",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc100\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Or Plus Max",
+    "problem_url": "https://atcoder.jp/contests/arc100/tasks/arc100_c",
+    "submission_id": "AC16040473",
+    "submission_url": "https://atcoder.jp/contests/arc100/submissions/16040473",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Aug/19/2020 16:12"
+  },
   "AC16408398": {
     "contest_id": "arc087",
     "language": "C++ (GCC 9.2.1)",
