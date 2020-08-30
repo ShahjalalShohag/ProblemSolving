@@ -71,7 +71,7 @@ int32_t main() {
 	Dinic F(n + 3);
 	int s = n + 1, t = n + 2;
 	for (int i = 1; i <= n; i++) {
-		if (a[i] < 0) F.add_edge(s, i, -a[i]);
+		if (a[i] <= 0) F.add_edge(s, i, -a[i]);
 		else F.add_edge(i, t, a[i]);
 		for (int j = i + i; j <= n; j += i) {
 			F.add_edge(i, j, inf);
