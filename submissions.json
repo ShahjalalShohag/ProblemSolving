@@ -1,4 +1,20 @@
 {
+  "AC16689019": {
+    "contest_id": "abc178",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc178\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Dist Max",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/abc178_e",
+    "submission_id": "AC16689019",
+    "submission_url": "https://atcoder.jp/contests/abc178/submissions/16689019",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Sep/13/2020 18:13"
+  },
   "AC16706251": {
     "contest_id": "abc178",
     "language": "C++ (GCC 9.2.1)",
