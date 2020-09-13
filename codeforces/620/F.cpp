@@ -26,7 +26,7 @@ int32_t main() {
 		int cur = a[i];
 		for (int j = i + 1; j <= n; j++) {
 			int k = a[i] > a[j] ? f[a[i]] ^ f[a[j] - 1] : f[a[j]] ^ f[a[i] - 1];
-			cur = max(cur, k);
+			cur = cur > k ? cur : k;
 			dp[j] = cur;
 		}
 		for (int j = 1; j <= q; j++) {
