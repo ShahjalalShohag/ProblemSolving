@@ -1,4 +1,20 @@
 {
+  "AC16680992": {
+    "contest_id": "abc178",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc178\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Ubiquity",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/abc178_c",
+    "submission_id": "AC16680992",
+    "submission_url": "https://atcoder.jp/contests/abc178/submissions/16680992",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/13/2020 18:04"
+  },
   "AC16684262": {
     "contest_id": "abc178",
     "language": "C++ (GCC 9.2.1)",
