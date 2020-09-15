@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF92899583": {
+    "contest_id": 702,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\702\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Analysis of Pathes in Functional Graph",
+    "problem_url": "https://codeforces.com/contest/702/problem/E",
+    "submission_id": "CF92899583",
+    "submission_url": "https://codeforces.com/contest/702/submission/92899583",
+    "tags": [
+      "data structures",
+      "graphs",
+      "*2100"
+    ],
+    "timestamp": "Sep/15/2020 18:16"
+  },
   "CF92905663": {
     "contest_id": 1418,
     "language": "GNU C++17 (64)",
