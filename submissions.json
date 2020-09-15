@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF92910754": {
+    "contest_id": 702,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\702\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "T-Shirts",
+    "problem_url": "https://codeforces.com/contest/702/problem/F",
+    "submission_id": "CF92910754",
+    "submission_url": "https://codeforces.com/contest/702/submission/92910754",
+    "tags": [
+      "data structures",
+      "*2800"
+    ],
+    "timestamp": "Sep/15/2020 20:29"
+  },
   "CF93012791": {
     "contest_id": 938,
     "language": "GNU C++17 (64)",
