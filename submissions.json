@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93080524": {
+    "contest_id": 938,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\938\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Shortest Path Queries",
+    "problem_url": "https://codeforces.com/contest/938/problem/G",
+    "submission_id": "CF93080524",
+    "submission_url": "https://codeforces.com/contest/938/submission/93080524",
+    "tags": [
+      "bitmasks",
+      "data structures",
+      "dsu",
+      "graphs",
+      "*2900"
+    ],
+    "timestamp": "Sep/18/2020 04:40"
+  },
   "CF93080556": {
     "contest_id": 938,
     "language": "GNU C++17 (64)",

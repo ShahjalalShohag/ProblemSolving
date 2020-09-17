@@ -10,6 +10,7 @@ struct Basis {
 	    if (!x) return;
 	    for (auto &i: a) if ((i ^ x) < i) i ^= x;
 	    a.push_back(x);
+	    sort(a.begin(), a.end());
 	}	
 	int minxor(int x = 0) {
 	    for (auto &i: a) x = min(x, x ^ i);
