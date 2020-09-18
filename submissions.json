@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93085036": {
+    "contest_id": 196,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\196\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Opening Portals",
+    "problem_url": "https://codeforces.com/contest/196/problem/E",
+    "submission_id": "CF93085036",
+    "submission_url": "https://codeforces.com/contest/196/submission/93085036",
+    "tags": [
+      "dsu",
+      "graphs",
+      "shortest paths",
+      "*2600"
+    ],
+    "timestamp": "Sep/18/2020 08:44"
+  },
   "CF93103667": {
     "contest_id": 314,
     "language": "GNU C++17 (64)",
