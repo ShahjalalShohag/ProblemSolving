@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93083575": {
+    "contest_id": 196,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\196\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Infinite Maze",
+    "problem_url": "https://codeforces.com/contest/196/problem/B",
+    "submission_id": "CF93083575",
+    "submission_url": "https://codeforces.com/contest/196/submission/93083575",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "*2000"
+    ],
+    "timestamp": "Sep/18/2020 07:36"
+  },
   "CF93084095": {
     "contest_id": 196,
     "language": "GNU C++17 (64)",
