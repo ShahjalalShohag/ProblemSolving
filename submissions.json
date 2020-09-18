@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93084095": {
+    "contest_id": 196,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\196\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Paint Tree",
+    "problem_url": "https://codeforces.com/contest/196/problem/C",
+    "submission_id": "CF93084095",
+    "submission_url": "https://codeforces.com/contest/196/submission/93084095",
+    "tags": [
+      "constructive algorithms",
+      "divide and conquer",
+      "geometry",
+      "sortings",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "Sep/18/2020 08:01"
+  },
   "CF93085036": {
     "contest_id": 196,
     "language": "GNU C++17 (64)",
