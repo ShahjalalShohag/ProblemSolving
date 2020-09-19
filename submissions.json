@@ -1,4 +1,20 @@
 {
+  "AC16892330": {
+    "contest_id": "abc179",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc179\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Simplified Reversi",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/abc179_f",
+    "submission_id": "AC16892330",
+    "submission_url": "https://atcoder.jp/contests/abc179/submissions/16892330",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Sep/19/2020 20:12"
+  },
   "AC16922680": {
     "contest_id": "acl1",
     "language": "C++ (GCC 9.2.1)",
