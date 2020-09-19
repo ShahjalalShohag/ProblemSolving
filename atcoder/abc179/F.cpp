@@ -8,15 +8,19 @@ int32_t main() {
 	set<pair<int, int>> se[2];
 	se[0].insert({n, n});
 	se[1].insert({n, n});
-	long long ans = 1LL * (n - 2) * (n - 2);
 	while (q--) {
 		int ty, i; cin >> ty >> i;
 		ty--;
 		auto it = se[ty].lower_bound({i, -1});
 		int k = (*it).second;
-		ans -= k - 2;
 		se[ty ^ 1].insert({(k - 1), i});
 	}
+	long long ans = 1LL * (n - 2) * (n - 2);
+	for (int i = 0; i < 2; i++) {
+		for (auto x: se[i]) {
+			if (x.second != n) ans -= x.first - 1;
+		}
+	}	
 	cout << ans << '\n';
     return 0;
 }
