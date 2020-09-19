@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93263918": {
+    "contest_id": 1419,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1419\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Decryption",
+    "problem_url": "https://codeforces.com/contest/1419/problem/E",
+    "submission_id": "CF93263918",
+    "submission_url": "https://codeforces.com/contest/1419/submission/93263918",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "math",
+      "number theory",
+      "*2100"
+    ],
+    "timestamp": "Sep/19/2020 22:25"
+  },
   "CF93272282": {
     "contest_id": 1419,
     "language": "GNU C++17 (64)",
