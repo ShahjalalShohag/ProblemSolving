@@ -1,4 +1,20 @@
 {
+  "AC16922711": {
+    "contest_id": "acl1",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\acl1\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Moving Pieces",
+    "problem_url": "https://atcoder.jp/contests/acl1/tasks/acl1_c",
+    "submission_id": "AC16922711",
+    "submission_url": "https://atcoder.jp/contests/acl1/submissions/16922711",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Sep/20/2020 21:26"
+  },
   "AC17022377": {
     "contest_id": "abl",
     "language": "C++ (GCC 9.2.1)",
