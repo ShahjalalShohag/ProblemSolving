@@ -1,5 +1,3 @@
-import sys
-input = sys.stdin.buffer.readline
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
 mp = {}
