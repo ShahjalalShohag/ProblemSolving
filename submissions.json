@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93517762": {
+    "contest_id": 1283,
+    "language": "PyPy 3",
+    "path": "codeforces\\1283\\D.py",
+    "problem_index": "D",
+    "problem_name": "Christmas Trees",
+    "problem_url": "https://codeforces.com/contest/1283/problem/D",
+    "submission_id": "CF93517762",
+    "submission_url": "https://codeforces.com/contest/1283/submission/93517762",
+    "tags": [
+      "graphs",
+      "greedy",
+      "shortest paths",
+      "*1800"
+    ],
+    "timestamp": "Sep/23/2020 03:12"
+  },
   "CF93518776": {
     "contest_id": 1283,
     "language": "PyPy 3",
