@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93518776": {
+    "contest_id": 1283,
+    "language": "PyPy 3",
+    "path": "codeforces\\1283\\E.py",
+    "problem_index": "E",
+    "problem_name": "New Year Parties",
+    "problem_url": "https://codeforces.com/contest/1283/problem/E",
+    "submission_id": "CF93518776",
+    "submission_url": "https://codeforces.com/contest/1283/submission/93518776",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Sep/23/2020 03:42"
+  },
   "CF93579739": {
     "contest_id": 118,
     "language": "PyPy 3",
