@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93579739": {
+    "contest_id": 118,
+    "language": "PyPy 3",
+    "path": "codeforces\\118\\D.py",
+    "problem_index": "D",
+    "problem_name": "Caesar's Legions",
+    "problem_url": "https://codeforces.com/contest/118/problem/D",
+    "submission_id": "CF93579739",
+    "submission_url": "https://codeforces.com/contest/118/submission/93579739",
+    "tags": [
+      "dp",
+      "*1700"
+    ],
+    "timestamp": "Sep/23/2020 22:16"
+  },
   "CF93600134": {
     "contest_id": 736,
     "language": "GNU C++17 (64)",
