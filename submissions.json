@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93600401": {
+    "contest_id": 736,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\736\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Tennis Championship",
+    "problem_url": "https://codeforces.com/contest/736/problem/A",
+    "submission_id": "CF93600401",
+    "submission_url": "https://codeforces.com/contest/736/submission/93600401",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "dfs and similar",
+      "dp",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Sep/24/2020 06:24"
+  },
   "CF93601939": {
     "contest_id": 736,
     "language": "GNU C++17 (64)",
