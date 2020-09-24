@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93602279": {
+    "contest_id": 736,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\736\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Permutations",
+    "problem_url": "https://codeforces.com/contest/736/problem/D",
+    "submission_id": "CF93602279",
+    "submission_url": "https://codeforces.com/contest/736/submission/93602279",
+    "tags": [
+      "math",
+      "matrices",
+      "*2800"
+    ],
+    "timestamp": "Sep/24/2020 07:35"
+  },
   "CF93651889": {
     "contest_id": 1420,
     "language": "GNU C++17 (64)",
