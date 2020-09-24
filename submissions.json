@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93721602": {
+    "contest_id": 1420,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1420\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Battle Lemmings",
+    "problem_url": "https://codeforces.com/contest/1420/problem/E",
+    "submission_id": "CF93721602",
+    "submission_url": "https://codeforces.com/contest/1420/submission/93721602",
+    "tags": [
+      "dp",
+      "greedy",
+      "*2500"
+    ],
+    "timestamp": "Sep/25/2020 00:05"
+  },
   "CF93973944": {
     "contest_id": 1416,
     "language": "GNU C++17 (64)",
