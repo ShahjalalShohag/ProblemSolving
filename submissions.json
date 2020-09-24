@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF93654858": {
+    "contest_id": 1420,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1420\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Rock and Lever",
+    "problem_url": "https://codeforces.com/contest/1420/problem/B",
+    "submission_id": "CF93654858",
+    "submission_url": "https://codeforces.com/contest/1420/submission/93654858",
+    "tags": [
+      "bitmasks",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Sep/24/2020 20:41"
+  },
   "CF93662304": {
     "contest_id": 1420,
     "language": "GNU C++17 (64)",
