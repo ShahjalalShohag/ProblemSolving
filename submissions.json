@@ -1,4 +1,20 @@
 {
+  "AC17030074": {
+    "contest_id": "abl",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abl\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Flat Subsequence",
+    "problem_url": "https://atcoder.jp/contests/abl/tasks/abl_d",
+    "submission_id": "AC17030074",
+    "submission_url": "https://atcoder.jp/contests/abl/submissions/17030074",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Sep/26/2020 18:10"
+  },
   "AC17033767": {
     "contest_id": "abl",
     "language": "C++ (GCC 9.2.1)",
