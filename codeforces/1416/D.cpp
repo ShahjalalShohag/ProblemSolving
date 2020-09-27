@@ -112,6 +112,5 @@ int32_t main() {
 			cout << f.first << '\n';
 		}
 	}
-   return 0;
+    return 0;
 }
-// https://codeforces.com/contest/1416/submission/94027308
