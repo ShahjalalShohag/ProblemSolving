@@ -624,6 +624,21 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF94132029": {
+    "contest_id": 1426,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1426\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Symmetric Matrix",
+    "problem_url": "https://codeforces.com/contest/1426/problem/B",
+    "submission_id": "CF94132029",
+    "submission_url": "https://codeforces.com/contest/1426/submission/94132029",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Sep/28/2020 19:36"
+  },
   "CF94132444": {
     "contest_id": 1426,
     "language": "GNU C++17 (64)",
