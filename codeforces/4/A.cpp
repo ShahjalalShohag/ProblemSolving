@@ -6,7 +6,7 @@ int32_t main() {
    cin.tie(0);
    int n; cin >> n;
    if (n % 2 == 0) {
-      if (n != 2) {
+   	if (n != 2) {
    		cout << "YES\n";
    		return 0;
    	}
