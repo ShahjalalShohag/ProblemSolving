@@ -624,6 +624,26 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF94390308": {
+    "contest_id": 1408,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1408\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Clusterization Counting",
+    "problem_url": "https://codeforces.com/contest/1408/problem/G",
+    "submission_id": "CF94390308",
+    "submission_url": "https://codeforces.com/contest/1408/submission/94390308",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "dsu",
+      "fft",
+      "graphs",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Oct/01/2020 14:54"
+  },
   "CF94664408": {
     "contest_id": 1422,
     "language": "GNU C++17 (64)",
