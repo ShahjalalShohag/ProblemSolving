@@ -1,4 +1,20 @@
 {
+  "AC17182646": {
+    "contest_id": "arc104",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc104\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Multiset Mean",
+    "problem_url": "https://atcoder.jp/contests/arc104/tasks/arc104_d",
+    "submission_id": "AC17182646",
+    "submission_url": "https://atcoder.jp/contests/arc104/submissions/17182646",
+    "tags": [
+      "AtCoder",
+      "*700"
+    ],
+    "timestamp": "Oct/04/2020 00:59"
+  },
   "AC17336678": {
     "contest_id": "arc105",
     "language": "C++ (GCC 9.2.1)",
