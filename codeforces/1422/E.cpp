@@ -50,18 +50,18 @@ void add_edge(int u, int p, char c) { // p --c--> u
     par[u][i] = par[par[u][i - 1]][i - 1];
   }
 }
-mint get_hash(int u, int v) { // v is a parent of u
-  return h[u] - h[v] * pw[dep[u] - dep[v]];
+mint get_hash(int u, int v) { // u is a parent of v
+  return h[v] - h[u] * pw[dep[v] - dep[u]];
 }
 bool cmp(int u, int v) { // string from u to 1 < string from v to 1 ?
   int d = min(dep[u], dep[v]);
-  if (get_hash(u, Kth(u, d)) == get_hash(v, Kth(v, d))) {
+  if (get_hash(Kth(u, d), u) == get_hash(Kth(v, d), v)) {
     return dep[u] < dep[v];
   }
   int l = 1, r = d, cur = 0;
   while (l <= r) {
     int mid = l + r >> 1;
-    if (get_hash(u, Kth(u, mid)) == get_hash(v, Kth(v, mid))) {
+    if (get_hash(Kth(u, mid), u) == get_hash(Kth(v, mid), v)) {
       l = mid + 1;
       cur = mid;
     }
