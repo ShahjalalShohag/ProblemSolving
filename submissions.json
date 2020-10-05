@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF94782670": {
+    "contest_id": 1423,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1423\\J.cpp",
+    "problem_index": "J",
+    "problem_name": "Bubble Cup hypothesis",
+    "problem_url": "https://codeforces.com/contest/1423/problem/J",
+    "submission_id": "CF94782670",
+    "submission_url": "https://codeforces.com/contest/1423/submission/94782670",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "dp",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "Oct/05/2020 20:56"
+  },
   "CF95154487": {
     "contest_id": 1427,
     "language": "GNU C++17 (64)",
