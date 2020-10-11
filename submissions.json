@@ -1,4 +1,20 @@
 {
+  "AC17336678": {
+    "contest_id": "arc105",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc105\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Fourtune Cookies",
+    "problem_url": "https://atcoder.jp/contests/arc105/tasks/arc105_a",
+    "submission_id": "AC17336678",
+    "submission_url": "https://atcoder.jp/contests/arc105/submissions/17336678",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Oct/11/2020 19:32"
+  },
   "AC17338115": {
     "contest_id": "arc105",
     "language": "C++ (GCC 9.2.1)",
