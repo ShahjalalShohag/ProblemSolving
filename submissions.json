@@ -624,6 +624,22 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF95863526": {
+    "contest_id": 1421,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1421\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Putting Bricks in the Wall",
+    "problem_url": "https://codeforces.com/contest/1421/problem/B",
+    "submission_id": "CF95863526",
+    "submission_url": "https://codeforces.com/contest/1421/submission/95863526",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Oct/18/2020 15:18"
+  },
   "CF95872059": {
     "contest_id": 1421,
     "language": "GNU C++17 (64)",
