@@ -1,4 +1,20 @@
 {
+  "AC17613154": {
+    "contest_id": "arc106",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc106\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Values",
+    "problem_url": "https://atcoder.jp/contests/arc106/tasks/arc106_b",
+    "submission_id": "AC17613154",
+    "submission_url": "https://atcoder.jp/contests/arc106/submissions/17613154",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Oct/24/2020 18:09"
+  },
   "AC17627844": {
     "contest_id": "arc106",
     "language": "C++ (GCC 9.2.1)",
