@@ -6,7 +6,7 @@ const int N = 3e5 + 9, B = 320;
 struct query {
   int l, r, id;
   bool operator < (const query &x) const {
-    if(l / B == x.l / B) return ((l / B) & 1)? r > x.r: r < x.r;
+    if(l / B == x.l / B) return r < x.r;
     return l / B < x.l / B;
   }
 } Q[N];
