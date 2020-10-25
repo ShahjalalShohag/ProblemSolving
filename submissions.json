@@ -624,6 +624,27 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF96657399": {
+    "contest_id": 1434,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1434\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Perform Easily",
+    "problem_url": "https://codeforces.com/contest/1434/problem/A",
+    "submission_id": "CF96657399",
+    "submission_url": "https://codeforces.com/contest/1434/submission/96657399",
+    "tags": [
+      "binary search",
+      "brute force",
+      "data structures",
+      "dp",
+      "greedy",
+      "sortings",
+      "two pointers",
+      "*1900"
+    ],
+    "timestamp": "Oct/25/2020 17:21"
+  },
   "CF96666806": {
     "contest_id": 1434,
     "language": "GNU C++17 (64)",
