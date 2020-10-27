@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF96906173": {
+    "contest_id": 1437,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1437\\G.cpp",
+    "problem_index": "G",
+    "problem_name": "Death DBMS",
+    "problem_url": "https://codeforces.com/contest/1437/problem/G",
+    "submission_id": "CF96906173",
+    "submission_url": "https://codeforces.com/contest/1437/submission/96906173",
+    "tags": [
+      "data structures",
+      "string suffix structures",
+      "strings",
+      "trees",
+      "*2600"
+    ],
+    "timestamp": "Oct/27/2020 21:46"
+  },
   "CF96914925": {
     "contest_id": 1437,
     "language": "GNU C++17 (64)",
