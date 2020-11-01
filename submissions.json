@@ -624,6 +624,23 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF97307920": {
+    "contest_id": 1444,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1444\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Division",
+    "problem_url": "https://codeforces.com/contest/1444/problem/A",
+    "submission_id": "CF97307920",
+    "submission_url": "https://codeforces.com/contest/1444/submission/97307920",
+    "tags": [
+      "brute force",
+      "math",
+      "number theory",
+      "*1500"
+    ],
+    "timestamp": "Nov/01/2020 17:12"
+  },
   "CF97354172": {
     "contest_id": 1444,
     "language": "GNU C++17 (64)",
