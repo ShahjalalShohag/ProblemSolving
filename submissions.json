@@ -624,6 +624,24 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF97476598": {
+    "contest_id": 1442,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1442\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Sum",
+    "problem_url": "https://codeforces.com/contest/1442/problem/D",
+    "submission_id": "CF97476598",
+    "submission_url": "https://codeforces.com/contest/1442/submission/97476598",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "dp",
+      "greedy",
+      "*2800"
+    ],
+    "timestamp": "Nov/02/2020 21:57"
+  },
   "CF97494571": {
     "contest_id": 1442,
     "language": "GNU C++17 (64)",
