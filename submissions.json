@@ -624,6 +624,25 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF97628722": {
+    "contest_id": 1386,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1386\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Joker",
+    "problem_url": "https://codeforces.com/contest/1386/problem/C",
+    "submission_id": "CF97628722",
+    "submission_url": "https://codeforces.com/contest/1386/submission/97628722",
+    "tags": [
+      "*special problem",
+      "bitmasks",
+      "data structures",
+      "divide and conquer",
+      "dsu",
+      "*2800"
+    ],
+    "timestamp": "Nov/04/2020 17:37"
+  },
   "CF98281664": {
     "contest_id": 1438,
     "language": "GNU C++17 (64)",
