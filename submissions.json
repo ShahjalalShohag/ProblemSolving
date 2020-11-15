@@ -624,6 +624,27 @@
     ],
     "timestamp": "Dec/17/2020 21:49"
   },
+  "CF98504545": {
+    "contest_id": 1158,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1158\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "The Party and Sweets",
+    "problem_url": "https://codeforces.com/contest/1158/problem/A",
+    "submission_id": "CF98504545",
+    "submission_url": "https://codeforces.com/contest/1158/submission/98504545",
+    "tags": [
+      "binary search",
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "math",
+      "sortings",
+      "two pointers",
+      "*1500"
+    ],
+    "timestamp": "Nov/16/2020 02:15"
+  },
   "CF98507104": {
     "contest_id": 1158,
     "language": "GNU C++17 (64)",
