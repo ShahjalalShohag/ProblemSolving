@@ -1,4 +1,20 @@
 {
+  "AC18135113": {
+    "contest_id": "abc183",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc183\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Queen on Grid",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/abc183_e",
+    "submission_id": "AC18135113",
+    "submission_url": "https://atcoder.jp/contests/abc183/submissions/18135113",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Nov/15/2020 18:30"
+  },
   "AC18143311": {
     "contest_id": "abc183",
     "language": "C++ (GCC 9.2.1)",
