@@ -1,4 +1,20 @@
 {
+  "AC18129263": {
+    "contest_id": "abc183",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc183\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Water Heater",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/abc183_d",
+    "submission_id": "AC18129263",
+    "submission_url": "https://atcoder.jp/contests/abc183/submissions/18129263",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Nov/15/2020 18:16"
+  },
   "AC18135113": {
     "contest_id": "abc183",
     "language": "C++ (GCC 9.2.1)",
