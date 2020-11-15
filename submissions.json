@@ -1,4 +1,20 @@
 {
+  "AC18143311": {
+    "contest_id": "abc183",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc183\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Confluence",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/abc183_f",
+    "submission_id": "AC18143311",
+    "submission_url": "https://atcoder.jp/contests/abc183/submissions/18143311",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Nov/15/2020 19:00"
+  },
   "AC18257064": {
     "contest_id": "arc108",
     "language": "C++ (GCC 9.2.1)",
