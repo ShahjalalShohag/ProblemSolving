@@ -1,4 +1,20 @@
 {
+  "AC18278280": {
+    "contest_id": "arc108",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc108\\F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Paint Tree",
+    "problem_url": "https://atcoder.jp/contests/arc108/tasks/arc108_f",
+    "submission_id": "AC18278280",
+    "submission_url": "https://atcoder.jp/contests/arc108/submissions/18278280",
+    "tags": [
+      "AtCoder",
+      "*900"
+    ],
+    "timestamp": "Nov/21/2020 19:26"
+  },
   "AC18452269": {
     "contest_id": "arc109",
     "language": "C++ (GCC 9.2.1)",
