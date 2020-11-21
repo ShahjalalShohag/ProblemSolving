@@ -1,4 +1,20 @@
 {
+  "AC18268232": {
+    "contest_id": "arc108",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc108\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Keep Graph Connected",
+    "problem_url": "https://atcoder.jp/contests/arc108/tasks/arc108_c",
+    "submission_id": "AC18268232",
+    "submission_url": "https://atcoder.jp/contests/arc108/submissions/18268232",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Nov/21/2020 18:37"
+  },
   "AC18278280": {
     "contest_id": "arc108",
     "language": "C++ (GCC 9.2.1)",
