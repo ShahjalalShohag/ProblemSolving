@@ -1,4 +1,20 @@
 {
+  "AC18460089": {
+    "contest_id": "arc109",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc109\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Large RPS Tournament",
+    "problem_url": "https://atcoder.jp/contests/arc109/tasks/arc109_c",
+    "submission_id": "AC18460089",
+    "submission_url": "https://atcoder.jp/contests/arc109/submissions/18460089",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Nov/28/2020 18:38"
+  },
   "CF100005188": {
     "contest_id": 1455,
     "language": "GNU C++17 (64)",
