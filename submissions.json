@@ -1,4 +1,20 @@
 {
+  "AC18455282": {
+    "contest_id": "arc109",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\arc109\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "log",
+    "problem_url": "https://atcoder.jp/contests/arc109/tasks/arc109_b",
+    "submission_id": "AC18455282",
+    "submission_url": "https://atcoder.jp/contests/arc109/submissions/18455282",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Nov/28/2020 18:19"
+  },
   "AC18460089": {
     "contest_id": "arc109",
     "language": "C++ (GCC 9.2.1)",
