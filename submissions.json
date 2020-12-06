@@ -1,4 +1,22 @@
 {
+  "CF100582867": {
+    "contest_id": 1450,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1450\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Capitalism",
+    "problem_url": "https://codeforces.com/contest/1450/problem/E",
+    "submission_id": "CF100582867",
+    "submission_url": "https://codeforces.com/contest/1450/submission/100582867",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "shortest paths",
+      "*2700"
+    ],
+    "timestamp": "Dec/07/2020 00:30"
+  },
   "CF100585838": {
     "contest_id": 19,
     "language": "GNU C++17 (64)",
