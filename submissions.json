@@ -1,4 +1,20 @@
 {
+  "CF100720085": {
+    "contest_id": 549,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\549\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Yura and Developers",
+    "problem_url": "https://codeforces.com/contest/549/problem/F",
+    "submission_id": "CF100720085",
+    "submission_url": "https://codeforces.com/contest/549/submission/100720085",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "*2800"
+    ],
+    "timestamp": "Dec/09/2020 00:18"
+  },
   "CF100911183": {
     "contest_id": 1461,
     "language": "GNU C++17 (64)",
