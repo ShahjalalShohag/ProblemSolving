@@ -1,4 +1,23 @@
 {
+  "CF100946641": {
+    "contest_id": 1461,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1461\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Water Level",
+    "problem_url": "https://codeforces.com/contest/1461/problem/E",
+    "submission_id": "CF100946641",
+    "submission_url": "https://codeforces.com/contest/1461/submission/100946641",
+    "tags": [
+      "brute force",
+      "graphs",
+      "greedy",
+      "implementation",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "Dec/11/2020 21:59"
+  },
   "CF100960810": {
     "contest_id": 1461,
     "language": "GNU C++17 (64)",
