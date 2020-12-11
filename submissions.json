@@ -1,4 +1,20 @@
 {
+  "CF100976005": {
+    "contest_id": 700,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\700\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Cool Slogans",
+    "problem_url": "https://codeforces.com/contest/700/problem/E",
+    "submission_id": "CF100976005",
+    "submission_url": "https://codeforces.com/contest/700/submission/100976005",
+    "tags": [
+      "string suffix structures",
+      "strings",
+      "*3300"
+    ],
+    "timestamp": "Dec/12/2020 03:30"
+  },
   "CF100977097": {
     "contest_id": 338,
     "language": "GNU C++17 (64)",
