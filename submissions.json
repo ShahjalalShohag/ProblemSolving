@@ -1,4 +1,21 @@
 {
+  "CF100960810": {
+    "contest_id": 1461,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1461\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "Mathematical Expression",
+    "problem_url": "https://codeforces.com/contest/1461/problem/F",
+    "submission_id": "CF100960810",
+    "submission_url": "https://codeforces.com/contest/1461/submission/100960810",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "*2700"
+    ],
+    "timestamp": "Dec/11/2020 23:14"
+  },
   "CF100976005": {
     "contest_id": 700,
     "language": "GNU C++17 (64)",
