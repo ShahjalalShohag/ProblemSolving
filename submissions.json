@@ -1,4 +1,20 @@
 {
+  "CF101063187": {
+    "contest_id": 512,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\512\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Fox And Travelling",
+    "problem_url": "https://codeforces.com/contest/512/problem/D",
+    "submission_id": "CF101063187",
+    "submission_url": "https://codeforces.com/contest/512/submission/101063187",
+    "tags": [
+      "dp",
+      "trees",
+      "*2900"
+    ],
+    "timestamp": "Dec/13/2020 04:47"
+  },
   "CF101173791": {
     "contest_id": 671,
     "language": "GNU C++17 (64)",
