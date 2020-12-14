@@ -1,4 +1,20 @@
 {
+  "CF101173791": {
+    "contest_id": 671,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\671\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Ultimate Weirdness of an Array",
+    "problem_url": "https://codeforces.com/contest/671/problem/C",
+    "submission_id": "CF101173791",
+    "submission_url": "https://codeforces.com/contest/671/submission/101173791",
+    "tags": [
+      "data structures",
+      "number theory",
+      "*2800"
+    ],
+    "timestamp": "Dec/14/2020 19:33"
+  },
   "CF101259774": {
     "contest_id": 1462,
     "language": "GNU C++17 (64)",
