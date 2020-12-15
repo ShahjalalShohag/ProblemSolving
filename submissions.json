@@ -1,4 +1,21 @@
 {
+  "CF101267463": {
+    "contest_id": 1462,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1462\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Unique Number",
+    "problem_url": "https://codeforces.com/contest/1462/problem/C",
+    "submission_id": "CF101267463",
+    "submission_url": "https://codeforces.com/contest/1462/submission/101267463",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Dec/15/2020 20:44"
+  },
   "CF101273415": {
     "contest_id": 1462,
     "language": "GNU C++17 (64)",
