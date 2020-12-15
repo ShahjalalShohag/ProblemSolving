@@ -1,4 +1,21 @@
 {
+  "CF101273415": {
+    "contest_id": 1462,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1462\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Last Year's Substring",
+    "problem_url": "https://codeforces.com/contest/1462/problem/B",
+    "submission_id": "CF101273415",
+    "submission_url": "https://codeforces.com/contest/1462/submission/101273415",
+    "tags": [
+      "dp",
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Dec/15/2020 20:50"
+  },
   "CF101280924": {
     "contest_id": 1462,
     "language": "GNU C++17 (64)",
