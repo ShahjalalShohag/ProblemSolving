@@ -1,4 +1,19 @@
 {
+  "CF101415648": {
+    "contest_id": 587,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\587\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Duff as a Queen",
+    "problem_url": "https://codeforces.com/contest/587/problem/E",
+    "submission_id": "CF101415648",
+    "submission_url": "https://codeforces.com/contest/587/submission/101415648",
+    "tags": [
+      "data structures",
+      "*2900"
+    ],
+    "timestamp": "Dec/16/2020 16:52"
+  },
   "CF101497939": {
     "contest_id": 1279,
     "language": "GNU C++17 (64)",
