@@ -1,4 +1,20 @@
 {
+  "CF101497939": {
+    "contest_id": 1279,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1279\\F.cpp",
+    "problem_index": "F",
+    "problem_name": "New Year and Handle Change",
+    "problem_url": "https://codeforces.com/contest/1279/problem/F",
+    "submission_id": "CF101497939",
+    "submission_url": "https://codeforces.com/contest/1279/submission/101497939",
+    "tags": [
+      "binary search",
+      "dp",
+      "*2800"
+    ],
+    "timestamp": "Dec/17/2020 17:29"
+  },
   "CF101529424": {
     "contest_id": 1463,
     "language": "GNU C++17 (64)",
