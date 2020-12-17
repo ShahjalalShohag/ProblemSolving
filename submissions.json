@@ -1,0 +1,19 @@
+{
+  "CF101559782": {
+    "contest_id": 1463,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1463\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Pairs",
+    "problem_url": "https://codeforces.com/contest/1463/problem/D",
+    "submission_id": "CF101559782",
+    "submission_url": "https://codeforces.com/contest/1463/submission/101559782",
+    "tags": [
+      "binary search",
+      "constructive algorithms",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "Dec/17/2020 21:49"
+  }
+}

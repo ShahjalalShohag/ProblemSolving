@@ -12,4 +12,4 @@ A repository to keep track of problem solving practise, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-{submission_placeholder}
+1 | [D - Pairs](https://codeforces.com/contest/1463/problem/D) | [GNU C++17 (64)](./codeforces/1463/D.cpp) | `binary search` `constructive algorithms` `greedy` `*1900` | Dec/17/2020 21:49 | 
